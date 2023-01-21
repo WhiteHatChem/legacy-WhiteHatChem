@@ -9,14 +9,17 @@ interface SimilarMolecule {
     psychonaut_names: string[] | null;
     tripsit_names: string[] | null;
     isomerd_names: string[] | null;
+    isod_ids: number[] | null;
     dist: number
 }
 
 interface NPSJsonFile {
+    inchi: string
     name: string
     psychonaut_names: string[] | null;
     tripsit_names: string[] | null;
     isomerd_names: string[] | null;
+    isod_ids: number[] | null;
     sim: Array<SimilarMolecule>
     synonyms: Array<string> | null
     svg: string
@@ -30,7 +33,7 @@ export async function getStaticPaths({ paginate } : any) {
     }))
 }
 
-const { name, psychonaut_names, tripsit_names, isomerd_names, synonyms, svg, sim } = Astro.props as NPSJsonFile
+const { inchi, name, psychonaut_names, tripsit_names, isomerd_names, isod_ids, synonyms, svg, sim } = Astro.props as NPSJsonFile
 ---
 
 <Base title="Compounds.">
@@ -38,49 +41,53 @@ const { name, psychonaut_names, tripsit_names, isomerd_names, synonyms, svg, sim
         <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
                 { svg && <ComponentSvg svg={svg} name={name}/> }
-                <div class="flex flex-col text-xl">
+                <div class="flex flex-col text-xl gap-2">
                     {
-                        tripsit_names && tripsit_names.map(name => <a class="flex items-center" href={`https://drugs.tripsit.me/${name}`} target="_blank">
+                        tripsit_names && tripsit_names.map(name => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://drugs.tripsit.me/${name}`} target="_blank">
                             <CompoundName name={name} site="tripsit"/>
-                            <p class="ml-4 mr-2 text-sm text-neutral-400">
+                            <p class="text-sm text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
                                 Check on tripsit
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
+                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
+                                </svg>
                             </p>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
-                                <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                            </svg>
                         </a>)
                     }
                     {
-                        psychonaut_names && psychonaut_names.map(name => <a class="flex items-center" href={`https://psychonautwiki.org/wiki/${name}`} target="_blank">
+                        psychonaut_names && psychonaut_names.map(name => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://psychonautwiki.org/wiki/${name}`} target="_blank">
                             <CompoundName name={name} site="psychonaut"/>
-                            <p class="ml-4 mr-2 text-sm text-neutral-400">
+                            <p class="text-sm text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
                                 Check on psychonaut
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
+                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
+                                </svg>
                             </p>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
-                                <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                            </svg>
                         </a>)
                     }
                     {
-                        isomerd_names && isomerd_names.map(name => <a class="flex items-center" href={`https://psychonautwiki.org/wiki/${name}`} target="_blank">
+                        isomerd_names && isomerd_names.map((name, i) => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://isomerdesign.com/PiHKAL/explore.php?id=${isod_ids![i]}`} target="_blank">
                             <CompoundName name={name} site="isomerdesign"/>
-                            <p class="ml-4 mr-2 text-sm text-neutral-400">
+                            <p class="text-sm text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
                                 Check on isomerdesgin
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
+                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
+                                </svg>
                             </p>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400">
-                                <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                            </svg>
                         </a>)
                     }
                     {
-                        synonyms && synonyms.length > 0 && <p class="leading-snug text-sm mt-4">
+                        synonyms && synonyms.length > 0 && <p class="break-all leading-snug text-sm mt-4">
                             <span class="">Synonyms:</span>
                             <span class="font-gray font-light text-neutral-800">{synonyms.join(',')}</span>
                         </p>
                     }
+                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800">{inchi}</span>
+                  </p>
                 </div>
             </div>
 
@@ -93,7 +100,7 @@ const { name, psychonaut_names, tripsit_names, isomerd_names, synonyms, svg, sim
                             const sim = Math.pow(Math.max(100-x.dist, 0)/100, 4.);
                             const green = Math.round(255 * sim);
                             const red = Math.round(255 * (1-sim));
-                            return <a href={`/molecule/${x.name}`} class="flex lg:flex-row flex-col items-center justify-between h-16 border rounded p-2">
+                            return <a href={`/molecule/${x.name}`} class="flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border rounded p-2">
                                 <div class="flex flex-col">
                                     {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
                                     {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
