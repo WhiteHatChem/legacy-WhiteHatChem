@@ -27,8 +27,14 @@ def generate_json_from_normalized(
     for k, v in output.items():
         v['name'] = k
 
-    # generate and add images
-    for k, v in tqdm(output.items(), desc='Generating svgs'):
+    count = 0
+
+    for k, v in tqdm(output.items(), desc='Generating images'):
+
+        toxic = v['search'] == 0
+        if toxic:
+            continue
+
         if v['inchi'] is not None:
             f_name = f"{v['name']}.svg"
             svg_path = os.path.join(img_path, f_name)
@@ -37,8 +43,13 @@ def generate_json_from_normalized(
             f_name = None
         v['svg'] = f_name
 
-    # add similar molecules
-    for k, v in tqdm(output.items(), desc='Processing similarity'):
+
+    for k, v in tqdm(output.items(), desc='Generating similarity'):
+
+        toxic = v['search'] == 0
+        if toxic:
+            continue
+
         v['sim'] = []
         for dist, idx in zip(v['distances'], v['indices']):
             idx = str(idx)
@@ -47,15 +58,26 @@ def generate_json_from_normalized(
                 'psychonaut_names': output[idx]['psychonaut_names'],
                 'tripsit_names': output[idx]['tripsit_names'],
                 'isomerd_names': output[idx]['isomerd_names'],
+                'isod_ids': output[idx]['isod_ids'],
+                'hsdb_names': output[idx]['hsdb_names'],
+                'cid': output[idx]['cid'],
+                'toxic': output[idx]['search'] == 0,
                 'dist': dist
             })
 
-    # save jsons
-    for k, v in tqdm(output.items(), desc='Saving jsons'):
+    for k, v in tqdm(output.items(), desc='Saving JSONs'):
+
+        toxic = v['search'] == 0
+        if toxic:
+            continue
+
         f_name = f"{v['name']}.json"
         f_path = os.path.join(output_path, f_name)
         with open(f_path, 'w+') as fo:
             json.dump(v, fo, indent=2)
+
+        count += 1
+    print(f"Generated {count} jsons.")
 
 
 def inchi_to_svg(inchi, path):
