@@ -12,7 +12,7 @@ export interface MoleculeData {
   sim: Array<SimilarMolecule>
   synonyms: Array<string> | null
   svg: string
-  search: boolean
+  search: number
 }
 
 export interface SimilarMolecule {
@@ -24,4 +24,5 @@ export interface SimilarMolecule {
   hsdb_names: string[] | null;
   cid: number[] | null;
   dist: number
+  toxic: boolean
 }

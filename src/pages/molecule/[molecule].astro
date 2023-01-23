@@ -4,6 +4,7 @@ import Main from '../../layouts/Main.astro';
 import ComponentSvg from '../../components/ComponentSvg.astro'
 import CompoundName from '../../components/CompoundName.astro';
 import CompoundNameLink from '../../components/CompoundNameLink.astro';
+import PercentBar from '../../components/PercentBar.astro';
 import type { MoleculeData } from '../../common/types';
 
 export async function getStaticPaths({ paginate } : any) {
@@ -54,27 +55,26 @@ const {
                     <div class="flex flex-col mt-4 gap-2">
                         { sim.map((x) => {
                             const sim = Math.pow(Math.max(100-x.dist, 0)/100, 4.);
-                            const green = Math.round(255 * sim);
-                            const red = Math.round(255 * (1-sim));
-                            return <a href={`/molecule/${x.name}`} class="flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+                            return (
+                              !x.toxic ? <a href={`/molecule/${x.name}`} class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
                                 <div class="flex flex-col">
                                     {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
                                     {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
                                     {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
+                                    {x.hsdb_names && x.hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
                                 </div>
-                                <span class="flex items-center w-full lg:w-min">
-                                    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">{`${(Math.round(sim * 1000) / 10).toFixed(1)}%`}</p>
-                                    <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-                                        <div
-                                            class="h-full rounded text-xs"
-                                            style={{
-                                                width: `${100 * sim}%`,
-                                                backgroundColor: `rgb(${red}, ${green}, 0)`,
-                                            }}
-                                        />
-                                    </div>
-                                </span>
-                            </a>
+                                <PercentBar sim={sim}/>
+                              </a> :
+                              <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+                                  <div class="flex flex-col">
+                                      {x.hsdb_names && x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
+                                        <CompoundName toxic={x.toxic} name={name} site="pubchem"/>
+                                      </a>)}
+                                  </div>
+                                  <PercentBar sim={sim}/>
+                              </div>
+
+                            )
                         }) }
                     </div>
                 </div>

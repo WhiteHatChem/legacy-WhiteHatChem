@@ -1,10 +1,10 @@
 import type { FunctionalComponent } from "preact";
 import { useCallback, useEffect, useState } from "preact/hooks";
-import { useLocalStorage } from "../common/hooks";
+import { useLocalStorage, useTheme } from "../common/hooks";
 import type { Theme } from "../common/types";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useLocalStorage<Theme>("theme", "light");
+  const [theme, setTheme] = useTheme("theme", "light");
 
   const onClick = useCallback(() => {
     setTheme(theme === "light" ? "dark" : "light");
