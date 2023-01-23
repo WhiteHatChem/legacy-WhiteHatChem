@@ -3,37 +3,25 @@ import Base from '../../layouts/Base.astro';
 import Main from '../../layouts/Main.astro';
 import ComponentSvg from '../../components/ComponentSvg.astro'
 import CompoundName from '../../components/CompoundName.astro';
-
-interface SimilarMolecule {
-    name: string
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-    isod_ids: number[] | null;
-    dist: number
-}
-
-interface NPSJsonFile {
-    inchi: string
-    name: string
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-    isod_ids: number[] | null;
-    sim: Array<SimilarMolecule>
-    synonyms: Array<string> | null
-    svg: string
-}
+import CompoundNameLink from '../../components/CompoundNameLink.astro';
+import type { MoleculeData } from '../../common/types';
 
 export async function getStaticPaths({ paginate } : any) {
-	const allNPS = await Astro.glob<{ name : string }>('../../../data/json/*.json');
+	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
     return allNPS.map((x) => ({
         params: { molecule: x.name },
         props: x
     }))
 }
 
-const { inchi, name, psychonaut_names, tripsit_names, isomerd_names, isod_ids, synonyms, svg, sim } = Astro.props as NPSJsonFile
+const {
+  inchi, name,
+  psychonaut_names,
+  tripsit_names,
+  isomerd_names, isod_ids,
+  hsdb_names, cid,
+  synonyms, svg, sim
+} = Astro.props as MoleculeData;
 ---
 
 <Base title="Compounds.">
@@ -42,42 +30,10 @@ const { inchi, name, psychonaut_names, tripsit_names, isomerd_names, isod_ids, s
             <div class="w-full flex flex-col items-center mb-8">
                 { svg && <ComponentSvg svg={svg} name={name}/> }
                 <div class="flex flex-col text-xl gap-2">
-                    {
-                        tripsit_names && tripsit_names.map(name => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://drugs.tripsit.me/${name}`} target="_blank">
-                            <CompoundName name={name} site="tripsit"/>
-                            <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
-                                Check on tripsit
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
-                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                                </svg>
-                            </p>
-                        </a>)
-                    }
-                    {
-                        psychonaut_names && psychonaut_names.map(name => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://psychonautwiki.org/wiki/${name}`} target="_blank">
-                            <CompoundName name={name} site="psychonaut"/>
-                            <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
-                                Check on psychonaut
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
-                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                                </svg>
-                            </p>
-                        </a>)
-                    }
-                    {
-                        isomerd_names && isomerd_names.map((name, i) => <a class="flex flex-col lg:flex-row lg:items-center" href={`https://isomerdesign.com/PiHKAL/explore.php?id=${isod_ids![i]}`} target="_blank">
-                            <CompoundName name={name} site="isomerdesign"/>
-                            <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
-                                Check on isomerdesgin
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
-                                    <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
-                                    <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
-                                </svg>
-                            </p>
-                        </a>)
-                    }
+                    <CompoundNameLink names={tripsit_names} ids={null} site={'tripsit'} />
+                    <CompoundNameLink names={psychonaut_names} ids={null} site={'psychonaut'} />
+                    <CompoundNameLink names={isomerd_names} ids={isod_ids} site={'isomerdesign'} />
+                    <CompoundNameLink names={hsdb_names} ids={cid} site={'pubchem'} />
                     {
                         synonyms && synonyms.length > 0 && <p class="break-all leading-snug text-sm mt-4">
                             <span class="">Synonyms:</span>

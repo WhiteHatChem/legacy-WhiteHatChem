@@ -2,17 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import Main from '../../layouts/Main.astro';
 import CompoundCard from '../../components/CompoundCard.astro';
+import type { MoleculeData } from '../../common/types';
 
-interface IParams {
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-    synonyms: string[] | null;
-	name: string;
-    svg: string
-}
 
-const molecules = await Astro.glob<IParams>('../../../data/json/*.json');
+const molecules = await Astro.glob<MoleculeData>('../../../data/json/*.json');
 
 const search = '';
 ---
@@ -75,7 +68,7 @@ const search = '';
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
                 {
-                    molecules.map((x: IParams) => {
+                    molecules.map((x: MoleculeData) => {
                         const id = `${x.name.toLowerCase()}_${x.synonyms?.join('_')}`;
                         return (
                             <span

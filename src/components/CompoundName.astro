@@ -2,10 +2,11 @@
 import psychonaut from '../assets/img/psychonaut_icon.png'
 import tripsit from '../assets/img/tripsit_icon.png'
 import isomerdesign from '../assets/img/isomerdesign_icon.png'
+import pubchem from '../assets/img/pubchem_icon.png'
 
 export interface Props {
     name: string;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign';
+    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem';
 }
 
 const { name, site } = Astro.props;
@@ -20,7 +21,13 @@ function truncate(str: string, length: number) {
 
 <div class="flex flex-row items-center gap-2">
     <img
-        src={site === 'psychonaut' ? psychonaut : site === 'tripsit' ? tripsit : isomerdesign}
+        src={
+          site === 'psychonaut' ? psychonaut :
+          site === 'tripsit' ? tripsit :
+          site === 'isomerdesign' ? isomerdesign :
+          site === 'pubchem' ? pubchem :
+          ''
+        }
         class="w-4 rounded"
         alt={site}
     />
