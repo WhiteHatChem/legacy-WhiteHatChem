@@ -2,6 +2,7 @@
 import json
 import os
 
+from tqdm import tqdm
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
@@ -24,21 +25,10 @@ def generate_json_from_normalized(
 
     # create names
     for k, v in output.items():
-        names = []
-        if v['psychonaut_names'] is not None:
-            names.append(f'psyc_{"_".join(v["psychonaut_names"])}')
-        if v['tripsit_names'] is not None:
-            names.append(f'trip_{"_".join(v["tripsit_names"])}')
-        if v['isomerd_names'] is not None:
-            names.append(f'isomer_{"_".join(v["isomerd_names"])}')
-        if len(names) == 0:
-            names.append('null_{k}')
-            print(f"WARNING: no name for {k}")
-        name = '_'.join(names).replace(' ', '_').replace('/', '_').replace('.', '_').replace('#', '_')[:100]
-        v['name'] = name
+        v['name'] = k
 
     # generate and add images
-    for k, v in output.items():
+    for k, v in tqdm(output.items(), desc='Generating svgs'):
         if v['inchi'] is not None:
             f_name = f"{v['name']}.svg"
             svg_path = os.path.join(img_path, f_name)
@@ -48,7 +38,7 @@ def generate_json_from_normalized(
         v['svg'] = f_name
 
     # add similar molecules
-    for k, v in output.items():
+    for k, v in tqdm(output.items(), desc='Processing similarity'):
         v['sim'] = []
         for dist, idx in zip(v['distances'], v['indices']):
             idx = str(idx)
@@ -61,7 +51,7 @@ def generate_json_from_normalized(
             })
 
     # save jsons
-    for k, v in output.items():
+    for k, v in tqdm(output.items(), desc='Saving jsons'):
         f_name = f"{v['name']}.json"
         f_path = os.path.join(output_path, f_name)
         with open(f_path, 'w+') as fo:

@@ -1,16 +1,9 @@
 ---
 import ComponentSvg from './ComponentSvg.astro'
 import CompoundName from './CompoundName.astro';
+import type { MoleculeData } from '../common/types';
 
-export interface Props {
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-	  name: string;
-    svg: string
-}
-
-const { psychonaut_names, tripsit_names, isomerd_names, name, svg } = Astro.props;
+const { psychonaut_names, tripsit_names, isomerd_names, hsdb_names, name, svg } = Astro.props as MoleculeData;
 ---
 
 <a
@@ -21,6 +14,7 @@ const { psychonaut_names, tripsit_names, isomerd_names, name, svg } = Astro.prop
         {psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
         {tripsit_names && tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
         {isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
+        {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
     <ComponentSvg svg={svg} name={name}/>
