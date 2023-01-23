@@ -9,6 +9,7 @@ const { name, svg } = Astro.props;
 
 {
     svg ? <img
+        style="filter: invert(80%);"
         src={`/svg/${svg}`}
         alt={`depiction of ${name}`}
         loading="lazy"
