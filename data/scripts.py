@@ -77,6 +77,7 @@ def generate_json_from_normalized(
             json.dump(v, fo, indent=2)
 
         count += 1
+
     print(f"Generated {count} jsons.")
 
 

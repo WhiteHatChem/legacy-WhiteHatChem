@@ -5,6 +5,7 @@ import ComponentSvg from '../../components/ComponentSvg.astro'
 import CompoundName from '../../components/CompoundName.astro';
 import CompoundNameLink from '../../components/CompoundNameLink.astro';
 import PercentBar from '../../components/PercentBar.astro';
+import MoleculeViewer from '../../components/MoleculeViewer';
 import type { MoleculeData } from '../../common/types';
 
 export async function getStaticPaths({ paginate } : any) {
@@ -29,7 +30,7 @@ const {
 	<Main active="home">
         <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
-                { svg && <ComponentSvg svg={svg} name={name}/> }
+                <MoleculeViewer svg={svg} inchi={inchi} client:load/>
                 <div class="flex flex-col text-xl gap-2">
                     <CompoundNameLink names={tripsit_names} ids={null} site={'tripsit'} />
                     <CompoundNameLink names={psychonaut_names} ids={null} site={'psychonaut'} />

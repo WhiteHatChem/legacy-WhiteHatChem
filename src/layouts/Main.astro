@@ -83,8 +83,9 @@ const { active } = Astro.props;
 		</div>
 		<!-- mobile -->
 		<div class="flex md:hidden">
+      <ThemeToggle client:load/>
 			<input class="mobile-menu-toggler hidden" type="checkbox" id="side-menu"/>
-			<label class="hamburger p-2" for="side-menu"><Hamburger style="cursor-pointer w-6 h-6"/></label>
+			<label class="hamburger p-2 ml-2" for="side-menu"><Hamburger style="cursor-pointer w-6 h-6"/></label>
 
 			<div class="mobile-menu" aria-modal="true" role="dialog">
 				<!-- background blur -->
