@@ -1,0 +1,20 @@
+---
+layout: ../../layouts/Blog.astro
+title: "Correlation in crowdsourced NPS assay data"
+author: "Zach"
+date: "26 Jan 2023"
+---
+import Curve from '../../components/blog/Curve.astro';
+
+
+
+## Lorem ipsum ent
+
+A correlation appears to exist between the minimum common oral dosage and the maximum common oral dosage for all the substances listed on [psychonaut](https://psychonautwiki.org/) and [tripsit](https://drugs.tripsit.me/), for which the necessary information is available. This represents a total of 453 dosage pairs. The Pearson coefficient is equal to *0.98*. This suggests that the maximum common oral dose can be estimated from the minimum common oral dose and vice versa, with the formulas:
+
+<div style="text-align: center"> *oral.dose.common.max=1.77 * oral.dose.common.min + 2.95* </div>
+<div style="text-align: center"> *oral.dose.common.min= 0.56 * oral.dose.common.max - 1.67* </div>
+
+**Be careful** with this simplistic generality, you can explore the many counter examples in the graph above. It is also possible that the data was entered with a similar rule in mind and therefore does not reflect any biological truth.
+
+<Curve/>

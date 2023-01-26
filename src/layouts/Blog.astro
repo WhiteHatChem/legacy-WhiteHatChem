@@ -1,0 +1,44 @@
+---
+import Base from './Base.astro';
+import Main from './Main.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<style>
+  article :global(h2) {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    margin-top: 0.5rem; /* 12px */
+    margin-bottom: 1rem; /* 12px */
+    font-weight: 500;
+  }
+
+  article :global(h3) {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+    margin-top: 0.5rem; /* 12px */
+    margin-bottom: 0.5rem; /* 12px */
+    font-weight: 500;
+  }
+
+  article :global(p) {
+    margin-top: 0.75rem; /* 12px */
+    margin-bottom: 0.75rem; /* 12px */
+  }
+</style>
+
+<Base title="Blog">
+	<Main active="blog">
+    <section class="main-width mt-8">
+      <h1 class="text-4xl font-bold mb-4">{frontmatter.title}</h1>
+      <div class="flex flex-row mb-4 gap-2">
+        <p class="dark:text-neutral-300 text-neutral-700">{frontmatter.author}</p>
+        <p class="text-gray-500">{frontmatter.date}</p>
+      </div>
+      <article class="text-justify">
+        <slot />
+      </article>
+    </section>
+	</Main>
+</Base>

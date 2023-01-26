@@ -26,3 +26,9 @@ export interface SimilarMolecule {
   dist: number
   toxic: boolean
 }
+
+export interface Blog {
+  title: string
+  date: string
+  author: string
+}
