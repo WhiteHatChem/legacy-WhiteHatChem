@@ -1,12 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Main from '../../layouts/Main.astro';
-import ComponentSvg from '../../components/ComponentSvg.astro'
-import CompoundName from '../../components/CompoundName.astro';
-import CompoundNameLink from '../../components/CompoundNameLink.astro';
 import PercentBar from '../../components/PercentBar.astro';
+import CompoundSimilarities from '../../components/CompoundSimilarities.astro';
+import CompoundNameLink from '../../components/CompoundNameLink.astro';
+import SimilarityTab from '../../components/SimilarityTab';
 import MoleculeViewer from '../../components/MoleculeViewer';
 import type { MoleculeData } from '../../common/types';
+import dist from '@astrojs/preact';
 
 export async function getStaticPaths({ paginate } : any) {
 	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
@@ -22,9 +23,68 @@ const {
   tripsit_names,
   isomerd_names, isod_ids,
   hsdb_names, cid,
-  synonyms, svg, sim
+  synonyms, svg,
+  struct_sim, binding_sim, binding_affinities
 } = Astro.props as MoleculeData;
+
+const docking_sites = [
+  "AF-P08588-F1-model_v1_box_1",
+  "AF-P08908-F1-model_v1_box_0",
+  "AF-P13945-F1-model_v1_box_3",
+  "AF-P18089-F1-model_v1_box_5",
+  "AF-P21728-F1-model_v1_box_10",
+  "AF-P21918-F1-model_v1_box_4",
+  "AF-P21918-F1-model_v1_box_6",
+  "AF-P25100-F1-model_v1_box_8",
+  "AF-P28221-F1-model_v1_box_0",
+  "AF-P28221-F1-model_v1_box_1",
+  "AF-P28221-F1-model_v1_box_3",
+  "AF-P28566-F1-model_v1_box_2",
+  "AF-P46098-F1-model_v1_box_5",
+  "AF-P46098-F1-model_v1_box_7",
+  "AF-P47898-F1-model_v1_box_3",
+  "AF-Q9Y2T6-F1-model_v1_box_3",
+  "P08913_6KUX_A_box_0",
+  "P08913_6KUX_A_box_1",
+  "P14416_6CM4_A_box_0",
+  "P14416_6CM4_A_box_6",
+  "P18825_6KUW_A_box_0",
+  "P18825_6KUW_A_box_1",
+  "P21917_5WIU_A_box_0",
+  "P21917_5WIU_A_box_2",
+  "P28222_4IAR_A_box_0",
+  "P28222_4IAR_A_box_1",
+  "P28223_6WGT_C_box_2",
+  "P28223_6WGT_C_box_4",
+  "P28335_6BQH_A_box_0",
+  "P28335_6BQH_A_box_2",
+  "P28335_6BQH_A_box_5",
+  "P35462_3PBL_A_box_0",
+  "P35462_3PBL_A_box_3",
+  "P41595_4IB4_A_box_0",
+]
+
+const binding_affinities_processed = binding_affinities && binding_affinities.map((x, i) => {
+  const site = docking_sites[i];
+  const docking_type = site[0];
+  const id = docking_type === 'P' ? site.split('_')[1] : site.split('-')[1];
+  const url = docking_type === 'A' ? `https://alphafold.ebi.ac.uk/entry/${id}` : `https://www.rcsb.org/structure/${id}`;
+  return {
+    dist: x,
+    site: docking_sites[i],
+    url
+  }
+});
 ---
+
+<style>
+  li.active {
+    display: block;
+  }
+  li:not(.active) {
+    display: none;
+  }
+</style>
 
 <Base title="Compounds.">
 	<Main active="home">
@@ -48,38 +108,61 @@ const {
                   </p>
                 </div>
             </div>
-
-            <div class="w-full flex flex-col items-center mt-16">
-                <div class="w-full max-w-2xl flex flex-col">
-                    <span class="text-xl font-bold">Most structurally similar compounds:</span>
-                    <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">The percentage is a metric of how structurally similar those molecules are, which is often strongly correlated with their effects. Take these informations with a grain of salt for now we are improving our methods to analyse molecules. We will provide more information on how those similarities are computed later</span>
-                    <div class="flex flex-col mt-4 gap-2">
-                        { sim.map((x) => {
-                            const sim = Math.pow(Math.max(100-x.dist, 0)/100, 4.);
-                            return (
-                              !x.toxic ? <a href={`/molecule/${x.name}`} class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-                                <div class="flex flex-col">
-                                    {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
-                                    {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
-                                    {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
-                                    {x.hsdb_names && x.hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
-                                </div>
-                                <PercentBar sim={sim}/>
-                              </a> :
-                              <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-                                  <div class="flex flex-col">
-                                      {x.hsdb_names && x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
-                                        <CompoundName toxic={x.toxic} name={name} site="pubchem"/>
-                                      </a>)}
-                                  </div>
-                                  <PercentBar sim={sim}/>
-                              </div>
-
-                            )
-                        }) }
-                    </div>
+        </section>
+        <section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-8">Similarities</h2>
+          <SimilarityTab
+            client:load
+            defaultActiveTab="struct"
+            availables={{
+              struct: struct_sim !== null,
+              interact: binding_sim !== null,
+              affinity: binding_affinities !== null
+            }}
+            labels={{
+              struct: 'Structural',
+              interact: 'Interactions',
+              affinity: 'Affinities'
+            }}
+          />
+          <ul class="mt-4" id="similarities-tab-content">
+            <li class="w-full flex flex-col active" id="struct">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
+                <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100-x, 0)/100, 4.)} />
+            </li>
+            {binding_sim && <li class="w-full flex flex-col" id="interact">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Compound which have the most similar interactions with the brain. The percentage is a measure of how similar the interactions with the brain are between two drugs.</span>
+                <CompoundSimilarities sim={binding_sim} filter={x => Math.min(x, 1.0)}/>
+            </li>}
+            {binding_affinities_processed && <li class="w-full flex flex-col" id="affinity">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
+                <div class="flex flex-col mt-4 gap-2">
+                  { binding_affinities_processed.sort((a,b) => (b.dist - a.dist)).map((x) => {
+                      return (
+                        <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+                            <a href={x.url} target="_blank" class="flex flex-row gap-2">
+                              <svg
+                                class="w-5 text-neutral-600 dark:text-neutral-400"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                              </svg>
+                              {x.site}
+                            </a>
+                            <PercentBar sim={x.dist}/>
+                        </div>
+                      )
+                  })}
                 </div>
-            </div>
+            </li>}
+          </ul>
+
         </section>
 	</Main>
 </Base>

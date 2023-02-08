@@ -9,7 +9,9 @@ export interface MoleculeData {
   isod_ids: number[] | null;
   hsdb_names: string[] | null;
   cid: number[] | null;
-  sim: Array<SimilarMolecule>
+  struct_sim: Array<SimilarMolecule>
+  binding_sim: Array<SimilarMolecule> | null
+  binding_affinities: Array<number> | null
   synonyms: Array<string> | null
   svg: string
   search: number

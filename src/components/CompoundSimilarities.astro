@@ -1,0 +1,38 @@
+---
+import CompoundName from './CompoundName.astro';
+import PercentBar from './PercentBar.astro';
+import type { SimilarMolecule } from '../common/types';
+
+export interface Props {
+  sim: Array<SimilarMolecule>,
+  filter: (x: number) => number
+}
+
+const { sim, filter } = Astro.props as Props;
+---
+
+
+<div class="flex flex-col mt-4 gap-2">
+  { sim.sort((a,b) => (filter(b.dist) - filter(a.dist))).map((x) => {
+      const sim = filter(x.dist);
+      return (
+        !x.toxic ? <a href={`/molecule/${x.name}`} class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
+              {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
+              {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
+              {x.hsdb_names && x.hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
+          </div>
+          <PercentBar sim={sim}/>
+        </a> :
+        <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                {x.hsdb_names && x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
+                  <CompoundName toxic={x.toxic} name={name} site="pubchem"/>
+                </a>)}
+            </div>
+            <PercentBar sim={sim}/>
+        </div>
+      )
+  })}
+</div>
