@@ -131,11 +131,11 @@ const binding_affinities_processed = binding_affinities && binding_affinities.ma
                 <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100-x, 0)/100, 4.)} />
             </li>
             {binding_sim && <li class="w-full flex flex-col" id="interact">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Compound which have the most similar interactions with the brain. The percentage is a measure of how similar the interactions with the brain are between two drugs.</span>
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be be a proxy to how similarly they interact with the brain.</span>
                 <CompoundSimilarities sim={binding_sim} filter={x => Math.min(x, 1.0)}/>
             </li>}
             {binding_affinities_processed && <li class="w-full flex flex-col" id="affinity">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
                 <div class="flex flex-col mt-4 gap-2">
                   { binding_affinities_processed.sort((a,b) => (b.dist - a.dist)).map((x) => {
                       return (
