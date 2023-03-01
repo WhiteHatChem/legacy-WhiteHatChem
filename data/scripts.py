@@ -41,6 +41,7 @@ def useful_data(data):
 		"search",
 		"name",
 		"svg",
+		"sdf",
 		"struct_sim",
 		"binding_sim",
 		"binding_affinities",
@@ -49,7 +50,8 @@ def useful_data(data):
 
 def generate_json_from_normalized(
 	output_path='json/',
-	img_path='../public/svg'
+	imgs_path='../public/svg',
+	sdfs_path='../public/sdf',
 ):
 	with open(BASE_PATH, 'r') as fi:
 		base_data = json.load(fi)
@@ -75,12 +77,18 @@ def generate_json_from_normalized(
 		if toxic:
 			continue
 		if v['inchi'] is not None:
-			f_name = f"{v['name']}.svg"
-			svg_path = os.path.join(img_path, f_name)
+			svg_name = f"{v['name']}.svg"
+			sdf_name = f"{v['name']}.sdf"
+			
+			svg_path = os.path.join(imgs_path, svg_name)
+			sdf_path = os.path.join(sdfs_path, sdf_name)
 			inchi_to_svg(v['inchi'], svg_path)
+			inchi_to_sdf(v['inchi'], sdf_path)
 		else:
-			f_name = None
-		v['svg'] = f_name
+			svg_name = None
+			sdf_name = None
+		v['svg'] = svg_name
+		v['sdf'] = sdf_name
 
 
 	for k, v in tqdm(output.items(), desc='Generating structural similarity'):
@@ -160,6 +168,16 @@ def inchi_to_svg(inchi, path):
 
 	with open(path, "w+") as f:
 		f.write(svg)
+
+def inchi_to_sdf(inchi, path):
+	m = Chem.inchi.MolFromInchi(inchi)
+	m = Chem.AddHs(m)
+    # Generate the 3D coordinates
+	AllChem.EmbedMolecule(m,maxAttempts=5000,randomSeed=72)
+    # useRandomCoords=True
+   # rdmolops.RemoveStereochemistry() 
+	AllChem.MMFFOptimizeMolecule(m)
+	Chem.MolToMolFile(m, path)
 
 if __name__ == "__main__":
 	generate_json_from_normalized()

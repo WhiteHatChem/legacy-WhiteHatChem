@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 
 interface MoleculeViewerProps {
   svg: string | null;
-  inchi: string;
+  name: string;
 }
 
 const useScript = (url: string) => {
@@ -30,7 +30,7 @@ const useScript = (url: string) => {
   return scriptLoadedSuccessfully;
 }
 
-export default function MoleculeViewer({ svg, inchi }: MoleculeViewerProps) {
+export default function MoleculeViewer({ svg, name }: MoleculeViewerProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [view3D, setView3D] = useState(false);
   const [SDF, setSDF] = useState<string | null>(null);
@@ -41,14 +41,14 @@ export default function MoleculeViewer({ svg, inchi }: MoleculeViewerProps) {
     const abortController = new AbortController();
     try {
       fetch(
-        `https://cactus.nci.nih.gov/chemical/structure/${inchi}/file?format=sdf&get3d=True`,
+        `/sdf/${name}.sdf`,
         { signal: abortController.signal }
       ).then((res) => res.text()).then((sdf) => setSDF(sdf));
     } catch (e) {
       if (!abortController.signal.aborted) {console.log(`Aborted: ${e}`)}
     }
     return () => abortController.abort();
-  }, [inchi]);
+  }, [name]);
 
   // Load NGL
   useEffect(() => {
