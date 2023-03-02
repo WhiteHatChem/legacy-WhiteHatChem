@@ -103,6 +103,7 @@ def generate_jsons(
 	for k, v in tqdm(output.items(), desc='Generating less addictive affinities'):
 		if v['toxic']: continue
 		if v['less_addictive_distances'] is None or v['less_addictive_indices'] is None: continue
+		if len(v['less_addictive_distances']) == 0 or len(v['less_addictive_indices']) == 0: continue
 
 		v['less_addictive_sim'] = []
 		for dist, idx in zip(v['less_addictive_distances'], v['less_addictive_indices']):
