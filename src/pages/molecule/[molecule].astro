@@ -83,8 +83,8 @@ const {
                   client:load
                   defaultActiveTab="dist_main"
                   tabs={[
-                    { id: 'dist_main', label: 'Similar affinities', available: struct_sim !== null },
-                    { id: 'dist_less', label: 'Similar affinities less', available: binding_affinities !== null },
+                    { id: 'dist_main', label: 'Similar affinities', available: binding_sim !== null },
+                    { id: 'dist_dopa', label: 'Similar dopaminergic affinities', available: less_addictive_sim !== null },
                     { id: 'profile', label: 'Affinities Profile', available: binding_affinities !== null },
                   ]}
                   tabsSelector="#nested-tab-content>li"
@@ -92,11 +92,11 @@ const {
                 <ul class="mt-4" id="nested-tab-content">
                     {binding_sim && <li class="w-full flex flex-col active" id="dist_main">
                         <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
-                        <CompoundSimilarities sim={binding_sim} filter={x => Math.min(x, 1.0)}/>
+                        <CompoundSimilarities sim={binding_sim} filter={x => 1./(1.+Math.exp(-(x-144.)/52.))}/>
                     </li>}
-                    {less_addictive_sim && <li class="w-full flex flex-col" id="dist_less">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities when the less addictive molecules are removed. The percentage is a measure of how similar the binding affinities of the molecules are</span>
-                        <CompoundSimilarities sim={less_addictive_sim} filter={x => Math.min(x, 1.0)}/>
+                    {less_addictive_sim && <li class="w-full flex flex-col" id="dist_dopa">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
+                        <CompoundSimilarities sim={less_addictive_sim} filter={x => 1./(1.+Math.exp(-(x-563.)/298.))}/>
                     </li>}
                     {binding_affinities && <li class="w-full flex flex-col" id="profile">
                         <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
