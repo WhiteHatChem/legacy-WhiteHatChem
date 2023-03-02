@@ -8,25 +8,13 @@ from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem.Draw.MolDrawing import DrawingOptions
 
-BASE_PATH = 'drugs.json'
-BINDING_AFFINITY_PATH = 'binding_affinities.json'
+PATH = 'full_drugs.json'
 
-def inchi_to_index(base_data):
-	index = {v: k for k, v in base_data['inchi'].items()}
-	def f(inchi):
-		return index[inchi]
+def index_to_inchi(data):
+	index = {i: k for i, k in enumerate(data['cid'])}
+	def f(idx):
+		return index[idx]
 	return f
-
-def convert_binding_data(data, inchi2idx):
-	local_index_to_inchi = {i: k for i,k in enumerate(data['affinities'])}
-	output = {}
-	for i, inchi in enumerate(data['affinities']):
-		output[inchi2idx(inchi)] = {
-			'indices': map(lambda x : inchi2idx(local_index_to_inchi[x]), data['indices'][inchi]),
-			'distances': data['distances'][inchi],
-			'affinities': data['affinities'][inchi],
-		}
-	return output
 
 def useful_data(data):
 	useful_rows = [
@@ -44,108 +32,99 @@ def useful_data(data):
 		"sdf",
 		"struct_sim",
 		"binding_sim",
+		"less_addictive_sim",
 		"binding_affinities",
 	]
 	return {k: data.get(k, None) for k in useful_rows}
 
-def generate_json_from_normalized(
+def generate_jsons(
 	output_path='json/',
 	imgs_path='../public/svg',
 	sdfs_path='../public/sdf',
 ):
-	with open(BASE_PATH, 'r') as fi:
-		base_data = json.load(fi)
-	with open(BINDING_AFFINITY_PATH, 'r') as fi:
-		binding_affinity_data = json.load(fi)
+	with open(PATH, 'r') as fi:
+		data = json.load(fi)
 
-	output = {k: {} for k, v in base_data['inchi'].items()}
-	inchi2idx = inchi_to_index(base_data)
-	serialized_binding_data = convert_binding_data(binding_affinity_data, inchi2idx)
+	output = {k: {} for k, v in data['cid'].items()}
+	idx2inchi = index_to_inchi(data)
 
 	# add normalized data
-	for k1, v1 in base_data.items():
-		
+	for k1, v1 in data.items():
 		for k2, v2 in v1.items():
 			output[k2][k1] = v2
 
-	# create names
-	for k, v in output.items():
-		v['name'] = k
+	# add toxicity, inchi, and name
+	for i, (k, v) in enumerate(output.items()):
+		v['toxic'] = v['search'] == 0
+		v['name'] = i
+		v['inchi'] = k
 
 	for k, v in tqdm(output.items(), desc='Generating images'):
-		toxic = v['search'] == 0
-		if toxic:
-			continue
-		if v['inchi'] is not None:
-			svg_name = f"{v['name']}.svg"
-			sdf_name = f"{v['name']}.sdf"
-			
-			svg_path = os.path.join(imgs_path, svg_name)
-			sdf_path = os.path.join(sdfs_path, sdf_name)
-			inchi_to_svg(v['inchi'], svg_path)
-			inchi_to_sdf(v['inchi'], sdf_path)
-		else:
-			svg_name = None
-			sdf_name = None
-		v['svg'] = svg_name
-		v['sdf'] = sdf_name
+		if v['toxic']: continue
 
+		svg_name = f"{v['name']}.svg"
+		sdf_name = f"{v['name']}.sdf"
+		
+		svg_path = os.path.join(imgs_path, svg_name)
+		inchi_to_svg(v['inchi'], svg_path)
+		v['svg'] = svg_name
+
+		""" save time
+		sdf_path = os.path.join(sdfs_path, sdf_name)
+		inchi_to_sdf(v['inchi'], sdf_path)
+		v['sdf'] = sdf_name
+		"""
 
 	for k, v in tqdm(output.items(), desc='Generating structural similarity'):
-		toxic = v['search'] == 0
-		if toxic:
-			continue
+		if v['toxic']: continue
+
 		v['struct_sim'] = []
-		for dist, idx in zip(v['distances'], v['indices']):
-			idx = str(idx)
+		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
+			other_molecule = output[idx2inchi(idx)]
+			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
 			v['struct_sim'].append({
-				'name': output[idx]['name'],
-				'psychonaut_names': output[idx]['psychonaut_names'],
-				'tripsit_names': output[idx]['tripsit_names'],
-				'isomerd_names': output[idx]['isomerd_names'],
-				'isod_ids': output[idx]['isod_ids'],
-				'hsdb_names': output[idx]['hsdb_names'],
-				'cid': output[idx]['cid'],
-				'toxic': output[idx]['search'] == 0,
+				**{k: other_molecule[k] for k in useful_col},
 				'dist': dist
 			})
 
 	for k, v in tqdm(output.items(), desc='Generating binding affinities'):
-		toxic = v['search'] == 0
-		if toxic:
-			continue
-		if k not in serialized_binding_data:
-			continue
-		indices = serialized_binding_data[k]['indices']
-		distances = serialized_binding_data[k]['distances']
+		if v['toxic']: continue
+		if v['affinity_distances'] is None or v['affinity_indices'] is None: continue
+
 		v['binding_sim'] = []
-		for dist, idx in zip(distances, indices):
-			idx = str(idx)
+		for dist, idx in zip(v['affinity_distances'], v['affinity_indices']):
+			other_molecule = output[idx2inchi(idx)]
+			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
 			v['binding_sim'].append({
-				'name': output[idx]['name'],
-				'psychonaut_names': output[idx]['psychonaut_names'],
-				'tripsit_names': output[idx]['tripsit_names'],
-				'isomerd_names': output[idx]['isomerd_names'],
-				'isod_ids': output[idx]['isod_ids'],
-				'hsdb_names': output[idx]['hsdb_names'],
-				'cid': output[idx]['cid'],
-				'toxic': output[idx]['search'] == 0,
-				'dist': dist,
+				**{k: other_molecule[k] for k in useful_col},
+				'dist': dist
+			})
+
+	for k, v in tqdm(output.items(), desc='Generating less addictive affinities'):
+		if v['toxic']: continue
+		if v['less_addictive_distances'] is None or v['less_addictive_indices'] is None: continue
+
+		v['less_addictive_sim'] = []
+		for dist, idx in zip(v['less_addictive_distances'], v['less_addictive_indices']):
+			other_molecule = output[idx2inchi(idx)]
+			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
+			v['less_addictive_sim'].append({
+				**{k: other_molecule[k] for k in useful_col},
+				'dist': dist
 			})
 
 	for k, v in tqdm(output.items(), desc='Generating affinities'):
-		toxic = v['search'] == 0
-		if toxic:
-			continue
-		if k not in serialized_binding_data:
-			continue
-		v['binding_affinities'] = serialized_binding_data[k]['affinities']
+		if v['toxic']: continue
+	
+		v['binding_affinities'] = {}
+		for k1, v1 in v.items():
+			if k1.startswith('AF-') or '_A_box' in k1:
+				v['binding_affinities'][k1] = v1
 
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
-		toxic = v['search'] == 0
-		if toxic:
-			continue
+		if v['toxic']: continue
+
 		f_name = f"{v['name']}.json"
 		f_path = os.path.join(output_path, f_name)
 		with open(f_path, 'w+') as fo:
@@ -180,4 +159,4 @@ def inchi_to_sdf(inchi, path):
 	Chem.MolToMolFile(m, path)
 
 if __name__ == "__main__":
-	generate_json_from_normalized()
+	generate_jsons()
