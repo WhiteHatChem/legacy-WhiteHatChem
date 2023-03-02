@@ -116,10 +116,13 @@ def generate_jsons(
 	for k, v in tqdm(output.items(), desc='Generating affinities'):
 		if v['toxic']: continue
 	
-		v['binding_affinities'] = {}
+		affinities = {}
 		for k1, v1 in v.items():
 			if k1.startswith('AF-') or '_A_box' in k1:
-				v['binding_affinities'][k1] = v1
+				if v1 is None: continue
+				affinities[k1] = v1
+		if affinities: 	
+			v['binding_affinities'] = affinities
 
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
