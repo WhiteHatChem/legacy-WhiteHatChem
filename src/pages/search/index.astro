@@ -7,7 +7,17 @@ import type { MoleculeData } from '../../common/types';
 
 const molecules = await Astro.glob<MoleculeData>('../../../data/json/*.json');
 
-const search = '';
+function molecule_identifiers(molecule: MoleculeData) {
+    let names : Array<string> = [];
+    if (molecule.psychonaut_names) { names = names.concat(molecule.psychonaut_names);}
+    if (molecule.tripsit_names) { names = names.concat(molecule.tripsit_names);}
+    if (molecule.isomerd_names) { names = names.concat(molecule.isomerd_names);}
+    if (molecule.hsdb_names) { names = names.concat(molecule.hsdb_names);}
+
+    let identifiers= `${names.join('_')}_${molecule.synonyms?.join('_')}`
+    return identifiers.toLowerCase();
+}
+
 ---
 <script>
     const urlSearchParams = new URLSearchParams(window.location.search);
@@ -68,17 +78,14 @@ const search = '';
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
                 {
-                    molecules.map((x: MoleculeData) => {
-                        const id = `${x.name.toLowerCase()}_${x.synonyms?.join('_')}`;
-                        return (
-                            <span
-                                id={id}
-                                class="searchable"
-                            >
-                                <CompoundCard {...x}/>
-                            </span>
-                        )
-                    })
+                    molecules.map((x: MoleculeData) => (
+                        <span
+                            id={molecule_identifiers(x)}
+                            class="searchable"
+                        >
+                            <CompoundCard {...x}/>
+                        </span>
+                    ))
                 }
             </div>
         </section>

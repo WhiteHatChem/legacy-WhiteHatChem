@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 
 interface MoleculeViewerProps {
   svg: string | null;
-  name: string;
+  inchi: string;
 }
 
 const useScript = (url: string) => {
@@ -30,7 +30,7 @@ const useScript = (url: string) => {
   return scriptLoadedSuccessfully;
 }
 
-export default function MoleculeViewer({ svg, name }: MoleculeViewerProps) {
+export default function MoleculeViewer({ svg, inchi }: MoleculeViewerProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [view3D, setView3D] = useState(false);
   const [SDF, setSDF] = useState<string | null>(null);
@@ -41,14 +41,14 @@ export default function MoleculeViewer({ svg, name }: MoleculeViewerProps) {
     const abortController = new AbortController();
     try {
       fetch(
-        `/sdf/${name}.sdf`,
+        `https://cactus.nci.nih.gov/chemical/structure/${inchi}/file?format=sdf&get3d=True`,
         { signal: abortController.signal }
       ).then((res) => res.text()).then((sdf) => setSDF(sdf));
     } catch (e) {
       if (!abortController.signal.aborted) {console.log(`Aborted: ${e}`)}
     }
     return () => abortController.abort();
-  }, [name]);
+  }, [inchi]);
 
   // Load NGL
   useEffect(() => {
@@ -103,9 +103,12 @@ export default function MoleculeViewer({ svg, name }: MoleculeViewerProps) {
       onClick={() => setView3D(!view3D)}
       class={`
         absolute top-0 right-0 py-1 px-3
-        flex items-center gap-2
-        bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-lg
-        ${ view3D && "bg-neutral-800 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-800"}
+        flex items-center gap-2 rounded-lg
+        ${
+            view3D ?
+            "bg-neutral-800 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-800" :
+            "bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200"
+          }
       `}
     >
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">

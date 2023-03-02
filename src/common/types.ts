@@ -2,7 +2,7 @@ export type Theme = "light" | "dark";
 
 export interface MoleculeData {
   inchi: string
-  name: string
+  name: number
   psychonaut_names: string[] | null;
   tripsit_names: string[] | null;
   isomerd_names: string[] | null;

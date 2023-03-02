@@ -41,7 +41,7 @@ const {
 	<Main active="home">
         <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
-                <MoleculeViewer svg={svg} name={name} client:load/>
+                <MoleculeViewer svg={svg} inchi={inchi} client:load/>
                 <div class="flex flex-col text-xl gap-2">
                     <CompoundNameLink names={tripsit_names} ids={null} site={'tripsit'} />
                     <CompoundNameLink names={psychonaut_names} ids={null} site={'psychonaut'} />
