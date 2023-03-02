@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL3B24H8NW"></script>
+    
+
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<title>Compounds</title>
+    <script>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+    
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
+	<link rel="stylesheet" href="/assets/dosing.c52aefd7.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
+		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
+
+<header class="py-6 md:py-10 astro-6TGVXP5Q">
+	<nav class="flex justify-between items-center main-width astro-6TGVXP5Q">
+		<div class="astro-6TGVXP5Q">
+			<a href="/" class="flex flex-row items-center md:gap-4 gap-2 astro-6TGVXP5Q">
+				<img src="/assets/main.76ea4ae3.png" class="w-14 astro-6TGVXP5Q" alt="whitehatchemistry">
+				<div class="flex flex-col items-center text-neutral-800 dark:text-neutral-200 leading-tight font-bold text-lg astro-6TGVXP5Q">
+					<span class="astro-6TGVXP5Q">White<span class="text-indigo-600 dark:text-indigo-400 astro-6TGVXP5Q">Hat</span></span>
+					<span class=" astro-6TGVXP5Q">Chemistry</span>
+				</div>
+			</a>
+		</div>
+		<!-- desktop -->
+		<div class="gap-2 items-stretch hidden md:flex astro-6TGVXP5Q">
+			<a role="link" href="#support" class="
+      flex items-center py-1 px-3 rounded-xl transition duration-150
+      hover:bg-indigo-100 dark:hover:bg-neutral-700
+      active:bg-indigo-200 
+      hover:text-neutral-800 dark:hover:text-neutral-200
+      text-neutral-600 dark:text-neutral-400
+    ">
+    Support us
+</a>
+			<a role="link" href="/blog" class="
+      flex items-center py-1 px-3 rounded-xl transition duration-150
+      hover:bg-indigo-100 dark:hover:bg-neutral-700
+      active:bg-indigo-200 
+      hover:text-neutral-800 dark:hover:text-neutral-200
+      text-neutral-600 dark:text-neutral-400
+    ">
+    Blog
+</a>
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+        py-1.5 px-3 rounded-xl transition duration-150
+        hover:bg-indigo-100 dark:hover:bg-neutral-700
+        active:bg-indigo-200 
+        hover:text-neutral-800 dark:hover:text-neutral-200
+        text-neutral-600 dark:text-neutral-400
+      "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path></svg></button></astro-island>
+
+			<a role="link" href="https://discord.gg/SKGhEsWT7R" class="
+      flex items-center py-1 px-3 rounded-xl transition duration-150
+      hover:bg-indigo-100 dark:hover:bg-neutral-700
+      active:bg-indigo-200 
+      hover:text-neutral-800 dark:hover:text-neutral-200
+      text-neutral-600 dark:text-neutral-400
+    ">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor" class="w-6 h-6 astro-6TGVXP5Q">
+					<g id="图层_2" data-name="图层 2" class="astro-6TGVXP5Q">
+					<g id="Discord_Logos" data-name="Discord Logos" class="astro-6TGVXP5Q">
+						<g id="Discord_Logo_-_Large_-_White" data-name="Discord Logo - Large - White" class="astro-6TGVXP5Q">
+						<path class="cls-1 astro-6TGVXP5Q" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path>
+						</g>
+					</g>
+					</g>
+				</svg>
+</a>
+			<a href="/list/1" class="
+          flex items-center py-1 px-3 rounded-xl          
+          text-white dark:text-black
+          bg-indigo-400 dark:bg-indigo-400
+          hover:bg-indigo-600 dark:hover:bg-indigo-200
+          transition duration-150 astro-6TGVXP5Q">
+				Search NPS
+			</a>
+		</div>
+		<!-- mobile -->
+		<div class="flex md:hidden astro-6TGVXP5Q">
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+        py-1.5 px-3 rounded-xl transition duration-150
+        hover:bg-indigo-100 dark:hover:bg-neutral-700
+        active:bg-indigo-200 
+        hover:text-neutral-800 dark:hover:text-neutral-200
+        text-neutral-600 dark:text-neutral-400
+      "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path></svg></button></astro-island>
+			<input class="mobile-menu-toggler hidden astro-6TGVXP5Q" type="checkbox" id="side-menu">
+			<label class="hamburger p-2 ml-2 astro-6TGVXP5Q" for="side-menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg></label>
+
+			<div class="mobile-menu astro-6TGVXP5Q" aria-modal="true" role="dialog">
+				<!-- background blur -->
+				<div class="fixed inset-0 flex content-start p-4 astro-6TGVXP5Q">
+					<label class="absolute inset-0 cursor-pointer backdrop-blur bg-neutral-900/10 z-10 astro-6TGVXP5Q" for="side-menu" aria-hidden="true"></label>
+					<div class="
+						absolute inset-x-0 mx-4 mt-16 
+						flex flex-col p-4 
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5
+						z-20
+					 astro-6TGVXP5Q">
+					
+						<a href="https://discord.gg/SKGhEsWT7R" class="flex items-center p-2 w-full astro-6TGVXP5Q">
+							Join our Discord
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor" class="w-5 h-5 ml-2 astro-6TGVXP5Q">
+								<g id="图层_2" data-name="图层 2" class="astro-6TGVXP5Q">
+								<g id="Discord_Logos" data-name="Discord Logos" class="astro-6TGVXP5Q">
+									<g id="Discord_Logo_-_Large_-_White" data-name="Discord Logo - Large - White" class="astro-6TGVXP5Q">
+									<path class="cls-1 astro-6TGVXP5Q" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path>
+									</g>
+								</g>
+								</g>
+							</svg>
+						</a>
+						<a href="/blog" class="block p-2 w-full">
+    Blog
+</a>
+						<a href="/list/1" class="block p-2 w-full">
+    Compounds
+</a>
+						<hr class="m-2 border-neutral-400/20 astro-6TGVXP5Q">
+						<a href="/about" class="block p-2 w-full">
+    About
+</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<section class="main-width">
+            <h1 class="
+                font-bold text-4xl mb-20
+                text-center lg:text-left
+            ">
+                New Psychoactive Substances
+            </h1>
+
+            <form action="/search" class="w-full flex flex-col items-center mb-16">
+                <div class="w-full max-w-lg flex items-center gap-2">
+                    <label for="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-neutral-600 dark:text-neutral-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                          </svg>
+                    </label>
+                    <input class="w-full text-xl outline-none bg-transparent border-b border-neutral-300 dark:border-neutral-600 focus:border-indigo-400 dark:focus:border-indigo-400" type="text" name="q" id="search" placeholder="Search compounds">
+                </div>
+            </form>
+
+            <!-- NPS grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
+                <a href="/molecule/3677" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="BOBE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              BOBE
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3677.svg" alt="depiction of 3677" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3678" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="β-MeO-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              β-MeO-DOB
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3678.svg" alt="depiction of 3678" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3679" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-iPr-PCA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-iPr-PCA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3679.svg" alt="depiction of 3679" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/368" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="4-emc" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-emc
+            </h2>
+</div>
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-EMC" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-EMC
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/368.svg" alt="depiction of 368" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3680" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4C-C" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4C-C
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3680.svg" alt="depiction of 3680" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3681" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="α-CMe-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              α-CMe-M
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3681.svg" alt="depiction of 3681" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3682" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DOFM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DOFM
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3682.svg" alt="depiction of 3682" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3683" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Fluoroescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Fluoroescaline
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3683.svg" alt="depiction of 3683" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3684" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4C-I" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4C-I
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3684.svg" alt="depiction of 3684" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3685" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Methyl DOI" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Methyl DOI
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3685.svg" alt="depiction of 3685" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3686" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4C-N" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4C-N
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3686.svg" alt="depiction of 3686" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3687" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-tBuPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-tBuPEA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3687.svg" alt="depiction of 3687" loading="lazy" width="400px" height="400px">
+</a>
+            </div>
+
+            <!-- Page selection -->
+            <div class="flex gap-4 justify-center w-full lg:mt-12 mt-10">
+                <a href="/list/248">248</a>
+                <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> 249 </p>
+                <a href="/list/250">250</a>
+
+            </div>
+        </section>
+
+<footer class="main-width mt-10 astro-6TGVXP5Q">
+	<div id="support" class=" astro-6TGVXP5Q">
+		<h1 class="text-xl mb-4 astro-6TGVXP5Q">Support us</h1>
+		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-6TGVXP5Q">If you like what we do, you can support us by donating here:</p>
+		<span class="w-full flex flex-col items-center astro-6TGVXP5Q">
+			<span class="flex items-center gap-2 astro-6TGVXP5Q">
+				<img src="/assets/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-6TGVXP5Q">
+				BTC: 
+				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-6TGVXP5Q">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+		</span>
+		
+	</div>
+	<div class="flex flex-row py-10 border-t border-neutral-400/20 dark:border-neutral-600 mt-10 astro-6TGVXP5Q">
+		<span class="text-sm text-neutral-600 dark:text-neutral-400 astro-6TGVXP5Q">
+			Copyright © 2022 WhiteHatChemistry. All rights reserved.
+		</span>
+	</div>
+</footer>
+	</body></html>
