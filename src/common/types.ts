@@ -9,12 +9,13 @@ export interface MoleculeData {
   isod_ids: number[] | null;
   hsdb_names: string[] | null;
   cid: number[] | null;
-  struct_sim: Array<SimilarMolecule>
-  binding_sim: Array<SimilarMolecule> | null
-  binding_affinities: Array<number> | null
-  synonyms: Array<string> | null
-  svg: string
-  search: number
+  struct_sim: Array<SimilarMolecule>;
+  binding_sim: Array<SimilarMolecule> | null;
+  less_addictive_sim: Array<SimilarMolecule> | null;
+  binding_affinities: { [key: string]: number } | null;
+  synonyms: Array<string> | null;
+  svg: string;
+  search: number;
 }
 
 export interface SimilarMolecule {

@@ -1,13 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Main from '../../layouts/Main.astro';
-import PercentBar from '../../components/PercentBar.astro';
 import CompoundSimilarities from '../../components/CompoundSimilarities.astro';
 import CompoundNameLink from '../../components/CompoundNameLink.astro';
-import SimilarityTab from '../../components/SimilarityTab';
+import TabGroup from '../../components/TabGroup';
 import MoleculeViewer from '../../components/MoleculeViewer';
+import ProteinAffinities from '../../components/ProteinAffinities.astro';
 import type { MoleculeData } from '../../common/types';
-import dist from '@astrojs/preact';
 
 export async function getStaticPaths({ paginate } : any) {
 	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
@@ -24,57 +23,9 @@ const {
   isomerd_names, isod_ids,
   hsdb_names, cid,
   synonyms, svg,
-  struct_sim, binding_sim, binding_affinities
+  struct_sim, binding_sim, less_addictive_sim, binding_affinities
 } = Astro.props as MoleculeData;
 
-const docking_sites = [
-  "AF-P08588-F1-model_v1_box_1",
-  "AF-P08908-F1-model_v1_box_0",
-  "AF-P13945-F1-model_v1_box_3",
-  "AF-P18089-F1-model_v1_box_5",
-  "AF-P21728-F1-model_v1_box_10",
-  "AF-P21918-F1-model_v1_box_4",
-  "AF-P21918-F1-model_v1_box_6",
-  "AF-P25100-F1-model_v1_box_8",
-  "AF-P28221-F1-model_v1_box_0",
-  "AF-P28221-F1-model_v1_box_1",
-  "AF-P28221-F1-model_v1_box_3",
-  "AF-P28566-F1-model_v1_box_2",
-  "AF-P46098-F1-model_v1_box_5",
-  "AF-P46098-F1-model_v1_box_7",
-  "AF-P47898-F1-model_v1_box_3",
-  "AF-Q9Y2T6-F1-model_v1_box_3",
-  "P08913_6KUX_A_box_0",
-  "P08913_6KUX_A_box_1",
-  "P14416_6CM4_A_box_0",
-  "P14416_6CM4_A_box_6",
-  "P18825_6KUW_A_box_0",
-  "P18825_6KUW_A_box_1",
-  "P21917_5WIU_A_box_0",
-  "P21917_5WIU_A_box_2",
-  "P28222_4IAR_A_box_0",
-  "P28222_4IAR_A_box_1",
-  "P28223_6WGT_C_box_2",
-  "P28223_6WGT_C_box_4",
-  "P28335_6BQH_A_box_0",
-  "P28335_6BQH_A_box_2",
-  "P28335_6BQH_A_box_5",
-  "P35462_3PBL_A_box_0",
-  "P35462_3PBL_A_box_3",
-  "P41595_4IB4_A_box_0",
-]
-
-const binding_affinities_processed = binding_affinities && binding_affinities.map((x, i) => {
-  const site = docking_sites[i];
-  const docking_type = site[0];
-  const id = docking_type === 'P' ? site.split('_')[1] : site.split('-')[1];
-  const url = docking_type === 'A' ? `https://alphafold.ebi.ac.uk/entry/${id}` : `https://www.rcsb.org/structure/${id}`;
-  return {
-    dist: x,
-    site: docking_sites[i],
-    url
-  }
-});
 ---
 
 <style>
@@ -111,56 +62,48 @@ const binding_affinities_processed = binding_affinities && binding_affinities.ma
         </section>
         <section class="main-width flex flex-col items-left mt-16">
           <h2 class="font-bold text-2xl mb-8">Similarities</h2>
-          <SimilarityTab
+          <TabGroup
             client:load
             defaultActiveTab="struct"
-            availables={{
-              struct: struct_sim !== null,
-              interact: binding_sim !== null,
-              affinity: binding_affinities !== null
-            }}
-            labels={{
-              struct: 'Structural',
-              interact: 'Interactions',
-              affinity: 'Affinities'
-            }}
+            tabs={[
+              { id: 'struct', label: 'Structural', available: struct_sim !== null },
+              { id: 'affinity', label: 'Affinities', available: binding_affinities !== null },
+            ]}
+            tabsSelector="#similarities-tab-content>li"
           />
           <ul class="mt-4" id="similarities-tab-content">
             <li class="w-full flex flex-col active" id="struct">
                 <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
                 <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100-x, 0)/100, 4.)} />
             </li>
-            {binding_sim && <li class="w-full flex flex-col" id="interact">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be be a proxy to how similarly they interact with the brain.</span>
-                <CompoundSimilarities sim={binding_sim} filter={x => Math.min(x, 1.0)}/>
-            </li>}
-            {binding_affinities_processed && <li class="w-full flex flex-col" id="affinity">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
-                <div class="flex flex-col mt-4 gap-2">
-                  { binding_affinities_processed.sort((a,b) => (b.dist - a.dist)).map((x) => {
-                      return (
-                        <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-                            <a href={x.url} target="_blank" class="flex flex-row gap-2">
-                              <svg
-                                class="w-5 text-neutral-600 dark:text-neutral-400"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              >
-                                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
-                              </svg>
-                              {x.site}
-                            </a>
-                            <PercentBar sim={x.dist}/>
-                        </div>
-                      )
-                  })}
-                </div>
-            </li>}
+            <li class="w-full flex flex-col" id="affinity">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
+                <div class="w-full pt-4" />
+                <TabGroup
+                  client:load
+                  defaultActiveTab="dist_main"
+                  tabs={[
+                    { id: 'dist_main', label: 'Similar affinities', available: struct_sim !== null },
+                    { id: 'dist_less', label: 'Similar affinities less', available: binding_affinities !== null },
+                    { id: 'profile', label: 'Affinities Profile', available: binding_affinities !== null },
+                  ]}
+                  tabsSelector="#nested-tab-content>li"
+                />
+                <ul class="mt-4" id="nested-tab-content">
+                    {binding_sim && <li class="w-full flex flex-col active" id="dist_main">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
+                        <CompoundSimilarities sim={binding_sim} filter={x => Math.min(x, 1.0)}/>
+                    </li>}
+                    {less_addictive_sim && <li class="w-full flex flex-col" id="dist_less">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities when the less addictive molecules are removed. The percentage is a measure of how similar the binding affinities of the molecules are</span>
+                        <CompoundSimilarities sim={less_addictive_sim} filter={x => Math.min(x, 1.0)}/>
+                    </li>}
+                    {binding_affinities && <li class="w-full flex flex-col" id="profile">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
+                        <ProteinAffinities affinities={binding_affinities} />
+                    </li>}
+                </ul>
+            </li>
           </ul>
 
         </section>

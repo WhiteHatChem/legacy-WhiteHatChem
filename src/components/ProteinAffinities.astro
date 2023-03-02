@@ -1,0 +1,83 @@
+---
+export interface Props {
+  affinities: { [key: string]: number };
+}
+
+const { affinities } = Astro.props as Props;
+
+// Group affinities by protein prefix
+const grouped_affinities = Object.entries(affinities).reduce((acc, [key, value]) => {
+    let protein = '';
+    let docking_site = '';
+    let score = value;
+
+    if (key[0] === 'A') {
+        protein = key.split('-').slice(0, 2).join('-');
+        docking_site = key.split('-').slice(-1)[0];
+
+        const min = -9.;
+        const max = 214.;
+        score = 1. - (value - min) / (max - min);
+    } else if (key[0] === 'P') {
+        protein = key.split('_').slice(0, 2).join('_');
+        docking_site = key.split('_').slice(-1)[0];
+        const min = -8.;
+        const max = 149.;
+        score = 1. - (value - min) / (max - min);
+    }
+    if (!acc[protein]) {
+        acc[protein] = [];
+    }
+    acc[protein].push({ site: docking_site, value: score });
+    return acc;
+}, {} as { [key: string]: { site: string; value: number }[] });
+
+const protein2url = (protein : string) => {
+  const docking_type = protein[0];
+  const id = docking_type === 'P' ? protein.split('_')[1] : protein.split('-')[1];
+  const url = docking_type === 'A' ? `https://alphafold.ebi.ac.uk/entry/${id}` : `https://www.rcsb.org/structure/${id}`;
+  return url;
+} 
+---
+
+<div class="flex flex-col mt-4 gap-2">
+    { Object.entries(grouped_affinities).map(([protein, sites_data]) => {
+        return (
+        <div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href={protein2url(protein)} target="_blank" class="flex flex-row gap-2">
+                <svg
+                class="w-5 text-neutral-600 dark:text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                {protein}
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                {
+                    sites_data.map(data => {
+                        const { site, value } = data;
+                        return <div
+                            class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600"
+                            title={`Docking site ${site}: ${(100. * value).toFixed(1)}%`}
+                        >
+                            <div
+                                class="w-full bg-green-400 dark:bg-green-500"
+                                style={{
+                                    height: `${100 * value}%`,
+                                }}
+                            />
+                        </div>
+                    })
+                }
+            </div>
+        </div>
+        )
+    })}
+</div>
