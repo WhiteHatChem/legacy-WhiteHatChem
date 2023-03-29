@@ -8,13 +8,12 @@ from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem.Draw.MolDrawing import DrawingOptions
 
-PATH = 'full_drugs.json'
+PATH = 'drugs_metabolites.json'
+METABOLISM_PATH = 'drugs_metabolites.json'
 
-def index_to_inchi(data):
-	index = {i: k for i, k in enumerate(data['cid'])}
-	def f(idx):
-		return index[idx]
-	return f
+DOCKING_SITES = [
+	'AF-A5X5Y0'
+] # TODO
 
 def useful_data(data):
 	useful_rows = [
@@ -45,8 +44,9 @@ def generate_jsons(
 	with open(PATH, 'r') as fi:
 		data = json.load(fi)
 
-	output = {k: {} for k, v in data['cid'].items()}
-	idx2inchi = index_to_inchi(data)
+	output = {k: {} for k, _ in data['index'].items()}
+	idx2inchi = data['index']
+	inchi2idx = {v: k for k,v in idx2inchi.items()}
 
 	# add normalized data
 	for k1, v1 in data.items():
@@ -54,13 +54,14 @@ def generate_jsons(
 			output[k2][k1] = v2
 
 	# add toxicity, inchi, and name
-	for i, (k, v) in enumerate(output.items()):
+	for k, v in output.items():
 		v['toxic'] = v['search'] == 0
-		v['name'] = i
-		v['inchi'] = k
+		v['nogen'] = v['toxic'] or v['metabolite']
+		v['name'] = k
+		v['inchi'] = v['index']
 
 	for k, v in tqdm(output.items(), desc='Generating images'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 
 		svg_name = f"{v['name']}.svg"
 		sdf_name = f"{v['name']}.sdf"
@@ -76,7 +77,7 @@ def generate_jsons(
 		"""
 
 	for k, v in tqdm(output.items(), desc='Generating structural similarity'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 
 		v['struct_sim'] = []
 		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
@@ -88,7 +89,7 @@ def generate_jsons(
 			})
 
 	for k, v in tqdm(output.items(), desc='Generating binding affinities'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 		if v['affinity_distances'] is None or v['affinity_indices'] is None: continue
 
 		v['binding_sim'] = []
@@ -101,7 +102,7 @@ def generate_jsons(
 			})
 
 	for k, v in tqdm(output.items(), desc='Generating less addictive affinities'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 		if v['less_addictive_distances'] is None or v['less_addictive_indices'] is None: continue
 		if len(v['less_addictive_distances']) == 0 or len(v['less_addictive_indices']) == 0: continue
 
@@ -115,19 +116,34 @@ def generate_jsons(
 			})
 
 	for k, v in tqdm(output.items(), desc='Generating affinities'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 	
-		affinities = {}
-		for k1, v1 in v.items():
-			if k1.startswith('AF-') or '_A_box' in k1:
-				if v1 is None: continue
-				affinities[k1] = v1
-		if affinities: 	
+		if v['affinity_emdeddings'] is not None:
+			affinities = {}
+			for aff, site in zip(v['affinity_emdeddings'], DOCKING_SITES):
+				affinities[site] = aff
 			v['binding_affinities'] = affinities
+
+	# Add metabolism data
+	with open(METABOLISM_PATH, 'r') as fi:
+		metabolism_data = json.load(fi)
+
+	def parse_reaction(reaction):
+		return {
+			'name': reaction[0],
+			'enzymes': reaction[1].split('\n'),
+			'products': reaction[2]
+		}
+
+	for i, inchi in metabolism_data['inchi']:
+		metabolism = {'anterior': [], 'posterior': []}
+		for reaction in metabolism_data['anteriors'][i]:
+			metabolism['anterior'].append
+		
 
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
-		if v['toxic']: continue
+		if v['nogen']: continue
 
 		f_name = f"{v['name']}.json"
 		f_path = os.path.join(output_path, f_name)
