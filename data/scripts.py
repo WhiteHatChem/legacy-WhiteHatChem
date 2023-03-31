@@ -9,7 +9,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem.Draw.MolDrawing import DrawingOptions
 
 PATH = 'drugs_metabolites.json'
-METABOLISM_PATH = 'drugs_metabolites.json'
+METABOLISM_PATH = 'metabolism.json'
 
 DOCKING_SITES = [
 	'AF-A5X5Y0-F1-model_v1_box_0',
@@ -268,12 +268,15 @@ def generate_jsons(
 
 		v['struct_sim'] = []
 		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
-			other_molecule = output[str(idx)]
-			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
-			v['struct_sim'].append({
-				**{k: other_molecule[k] for k in useful_col},
-				'dist': dist
-			})
+			try:
+				other_molecule = output[str(idx)]
+				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
+				v['struct_sim'].append({
+					**{k: other_molecule[k] for k in useful_col},
+					'dist': dist
+				})
+			except KeyError:
+				print(f"KeyError: {idx} not found in output")
 
 	for k, v in tqdm(output.items(), desc='Generating binding affinities'):
 		if v['nogen']: continue
@@ -281,12 +284,15 @@ def generate_jsons(
 
 		v['binding_sim'] = []
 		for dist, idx in zip(v['affinity_distances'], v['affinity_indices']):
-			other_molecule = output[str(idx)]
-			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
-			v['binding_sim'].append({
-				**{k: other_molecule[k] for k in useful_col},
-				'dist': dist
-			})
+			try:
+				other_molecule = output[str(idx)]
+				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
+				v['binding_sim'].append({
+					**{k: other_molecule[k] for k in useful_col},
+					'dist': dist
+				})
+			except KeyError:
+				print(f"KeyError: {idx} not found in output")
 
 	for k, v in tqdm(output.items(), desc='Generating less addictive affinities'):
 		if v['nogen']: continue
@@ -295,12 +301,15 @@ def generate_jsons(
 
 		v['less_addictive_sim'] = []
 		for dist, idx in zip(v['less_addictive_distances'], v['less_addictive_indices']):
-			other_molecule = output[str(idx)]
-			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
-			v['less_addictive_sim'].append({
-				**{k: other_molecule[k] for k in useful_col},
-				'dist': dist
-			})
+			try:
+				other_molecule = output[str(idx)]
+				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
+				v['less_addictive_sim'].append({
+					**{k: other_molecule[k] for k in useful_col},
+					'dist': dist
+				})
+			except KeyError:
+				print(f"KeyError: {idx} not found in output")
 
 	for k, v in tqdm(output.items(), desc='Generating affinities'):
 		if v['nogen']: continue
@@ -316,23 +325,29 @@ def generate_jsons(
 		metabolism_data = json.load(fi)
 
 	def parse_reaction(reaction):
-		useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
+		useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 		return {
 			'name': reaction[0],
 			'enzymes': reaction[2].split('\n'),
 			'product': {k: output[inchi2idx[reaction[3]]][k] for k in useful_col}
 		}
 
-	for i, inchi in tqdm(metabolism_data['inchi'], desc='Metabolism data'):
+	for i, inchi in tqdm(metabolism_data['inchi'].items(), desc='Metabolism data'):
 		key = str(i)
 		if not metabolism_data['is_drug'][key]: continue
 
 		anterior = []
 		for reaction in metabolism_data['anteriors'][key]:
-			anterior.append(parse_reaction(reaction))
+			try:
+				anterior.append(parse_reaction(reaction))
+			except KeyError:
+				print(f"KeyError: {reaction[3]} not found in output")
 		posterior = []
 		for reaction in metabolism_data['posteriors'][key]:
-			posterior.append(parse_reaction(reaction))
+			try:
+				posterior.append(parse_reaction(reaction))
+			except KeyError:
+				print(f"KeyError: {reaction[3]} not found in output")
 		metabolism = {
 			'anterior': anterior if len(anterior) > 0 else None,
 			'posterior': posterior if len(posterior) > 0 else None,
