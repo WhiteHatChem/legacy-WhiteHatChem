@@ -17,5 +17,5 @@ const { psychonaut_names, tripsit_names, isomerd_names, hsdb_names, name, svg } 
         {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
-    <ComponentSvg svg={svg} name={name}/>
+    <ComponentSvg svg={svg} name={name.toString()}/>
 </a>

@@ -18,7 +18,7 @@ const grouped_affinities = Object.entries(affinities).reduce((acc, [key, value])
         const min = -9.;
         const max = 214.;
         score = 1. - (value - min) / (max - min);
-    } else if (key[0] === 'P') {
+    } else if (key[0] === 'P' || key[0] === 'Q') {
         protein = key.split('_').slice(0, 2).join('_');
         docking_site = key.split('_').slice(-1)[0];
         const min = -8.;
