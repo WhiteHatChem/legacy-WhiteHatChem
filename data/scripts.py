@@ -12,8 +12,193 @@ PATH = 'drugs_metabolites.json'
 METABOLISM_PATH = 'drugs_metabolites.json'
 
 DOCKING_SITES = [
-	'AF-A5X5Y0'
-] # TODO
+	'AF-A5X5Y0-F1-model_v1_box_0',
+	'AF-A5X5Y0-F1-model_v1_box_2',
+	'AF-A5X5Y0-F1-model_v1_box_3',
+	'AF-A5X5Y0-F1-model_v1_box_4',
+	'AF-O95264-F1-model_v1_box_2',
+	'AF-O95264-F1-model_v1_box_3',
+	'AF-P08588-F1-model_v1_box_1',
+	'AF-P08588-F1-model_v1_box_2',
+	'AF-P08588-F1-model_v1_box_5',
+	'AF-P08908-F1-model_v1_box_0',
+	'AF-P08908-F1-model_v1_box_10',
+	'AF-P08908-F1-model_v1_box_2',
+	'AF-P08908-F1-model_v1_box_3',
+	'AF-P08908-F1-model_v1_box_4',
+	'AF-P08908-F1-model_v1_box_7',
+	'AF-P13945-F1-model_v1_box_1',
+	'AF-P13945-F1-model_v1_box_3',
+	'AF-P13945-F1-model_v1_box_6',
+	'AF-P13945-F1-model_v1_box_8',
+	'AF-P18089-F1-model_v1_box_1',
+	'AF-P18089-F1-model_v1_box_2',
+	'AF-P18089-F1-model_v1_box_3',
+	'AF-P18089-F1-model_v1_box_5',
+	'AF-P21728-F1-model_v1_box_10',
+	'AF-P21728-F1-model_v1_box_4',
+	'AF-P21728-F1-model_v1_box_8',
+	'AF-P21728-F1-model_v1_box_9',
+	'AF-P21918-F1-model_v1_box_4',
+	'AF-P21918-F1-model_v1_box_6',
+	'AF-P21918-F1-model_v1_box_8',
+	'AF-P25100-F1-model_v1_box_11',
+	'AF-P25100-F1-model_v1_box_12',
+	'AF-P25100-F1-model_v1_box_3',
+	'AF-P25100-F1-model_v1_box_5',
+	'AF-P25100-F1-model_v1_box_6',
+	'AF-P25100-F1-model_v1_box_8',
+	'AF-P28221-F1-model_v1_box_0',
+	'AF-P28221-F1-model_v1_box_1',
+	'AF-P28221-F1-model_v1_box_2',
+	'AF-P28221-F1-model_v1_box_3',
+	'AF-P28221-F1-model_v1_box_5',
+	'AF-P28221-F1-model_v1_box_6',
+	'AF-P28566-F1-model_v1_box_0',
+	'AF-P28566-F1-model_v1_box_1',
+	'AF-P28566-F1-model_v1_box_10',
+	'AF-P28566-F1-model_v1_box_2',
+	'AF-P28566-F1-model_v1_box_3',
+	'AF-P28566-F1-model_v1_box_4',
+	'AF-P28566-F1-model_v1_box_5',
+	'AF-P28566-F1-model_v1_box_7',
+	'AF-P30939-F1-model_v1_box_0',
+	'AF-P30939-F1-model_v1_box_1',
+	'AF-P30939-F1-model_v1_box_2',
+	'AF-P30939-F1-model_v1_box_5',
+	'AF-P34969-F1-model_v1_box_0',
+	'AF-P34969-F1-model_v1_box_10',
+	'AF-P34969-F1-model_v1_box_3',
+	'AF-P34969-F1-model_v1_box_5',
+	'AF-P34969-F1-model_v1_box_6',
+	'AF-P34969-F1-model_v1_box_8',
+	'AF-P35368-F1-model_v1_box_11',
+	'AF-P35368-F1-model_v1_box_12',
+	'AF-P35368-F1-model_v1_box_3',
+	'AF-P35368-F1-model_v1_box_6',
+	'AF-P35368-F1-model_v1_box_7',
+	'AF-P35368-F1-model_v1_box_8',
+	'AF-P35372-F1-model_v1_box_0',
+	'AF-P35372-F1-model_v1_box_10',
+	'AF-P35372-F1-model_v1_box_3',
+	'AF-P46098-F1-model_v1_box_0',
+	'AF-P46098-F1-model_v1_box_11',
+	'AF-P46098-F1-model_v1_box_4',
+	'AF-P46098-F1-model_v1_box_5',
+	'AF-P46098-F1-model_v1_box_7',
+	'AF-P47898-F1-model_v1_box_2',
+	'AF-P47898-F1-model_v1_box_3',
+	'AF-P47898-F1-model_v1_box_4',
+	'AF-P47898-F1-model_v1_box_5',
+	'AF-P47898-F1-model_v1_box_8',
+	'AF-P50406-F1-model_v1_box_11',
+	'AF-P50406-F1-model_v1_box_12',
+	'AF-P50406-F1-model_v1_box_2',
+	'AF-P50406-F1-model_v1_box_5',
+	'AF-P50406-F1-model_v1_box_7',
+	'AF-P50406-F1-model_v1_box_8',
+	'AF-P50406-F1-model_v1_box_9',
+	'AF-Q5BJF2-F1-model_v1_box_0',
+	'AF-Q8WXA8-F1-model_v1_box_1',
+	'AF-Q8WXA8-F1-model_v1_box_10',
+	'AF-Q8WXA8-F1-model_v1_box_3',
+	'AF-Q8WXA8-F1-model_v1_box_4',
+	'AF-Q9NZT2-F1-model_v1_box_0',
+	'AF-Q9NZT2-F1-model_v1_box_8',
+	'AF-Q9Y2T6-F1-model_v1_box_1',
+	'AF-Q9Y2T6-F1-model_v1_box_2',
+	'AF-Q9Y2T6-F1-model_v1_box_3',
+	'AF-Q9Y2T6-F1-model_v1_box_5',
+	'AF-Q9Y2T6-F1-model_v1_box_6',
+	'AF-Q9Y2T6-F1-model_v1_box_7',
+	'P07550_2R4R_A_box_0',
+	'P07550_2R4R_A_box_3',
+	'P07550_2R4R_A_box_5',
+	'P07550_2R4R_A_box_8',
+	'P07550_2R4R_A_box_9',
+	'P08913_6KUX_A_box_0',
+	'P08913_6KUX_A_box_1',
+	'P08913_6KUX_A_box_2',
+	'P08913_6KUX_A_box_4',
+	'P14416_6CM4_A_box_0',
+	'P14416_6CM4_A_box_1',
+	'P14416_6CM4_A_box_4',
+	'P14416_6CM4_A_box_6',
+	'P14416_6CM4_A_box_7',
+	'P18825_6KUW_A_box_0',
+	'P18825_6KUW_A_box_1',
+	'P18825_6KUW_A_box_3',
+	'P18825_6KUW_A_box_4',
+	'P18825_6KUW_A_box_5',
+	'P18825_6KUW_A_box_6',
+	'P18825_6KUW_A_box_7',
+	'P21554_5U09_A_box_0',
+	'P21554_5U09_A_box_1',
+	'P21554_5U09_A_box_10',
+	'P21554_5U09_A_box_12',
+	'P21554_5U09_A_box_2',
+	'P21554_5U09_A_box_3',
+	'P21554_5U09_A_box_5',
+	'P21554_5U09_A_box_6',
+	'P21554_5U09_A_box_7',
+	'P21554_5U09_A_box_8',
+	'P21917_5WIU_A_box_0',
+	'P21917_5WIU_A_box_1',
+	'P21917_5WIU_A_box_2',
+	'P21917_5WIU_A_box_3',
+	'P21917_5WIU_A_box_4',
+	'P28222_4IAR_A_box_0',
+	'P28222_4IAR_A_box_1',
+	'P28222_4IAR_A_box_11',
+	'P28222_4IAR_A_box_2',
+	'P28222_4IAR_A_box_3',
+	'P28222_4IAR_A_box_4',
+	'P28222_4IAR_A_box_7',
+	'P28222_4IAR_A_box_8',
+	'P28222_4IAR_A_box_9',
+	'P28223_6WGT_C_box_0',
+	'P28223_6WGT_C_box_2',
+	'P28223_6WGT_C_box_3',
+	'P28223_6WGT_C_box_4',
+	'P28223_6WGT_C_box_5',
+	'P28335_6BQH_A_box_0',
+	'P28335_6BQH_A_box_1',
+	'P28335_6BQH_A_box_2',
+	'P28335_6BQH_A_box_3',
+	'P28335_6BQH_A_box_4',
+	'P28335_6BQH_A_box_5',
+	'P34972_5ZTY_A_box_0',
+	'P34972_5ZTY_A_box_1',
+	'P34972_5ZTY_A_box_10',
+	'P34972_5ZTY_A_box_2',
+	'P34972_5ZTY_A_box_3',
+	'P34972_5ZTY_A_box_4',
+	'P34972_5ZTY_A_box_7',
+	'P35462_3PBL_A_box_0',
+	'P35462_3PBL_A_box_1',
+	'P35462_3PBL_A_box_2',
+	'P35462_3PBL_A_box_3',
+	'P35462_3PBL_A_box_7',
+	'P35462_3PBL_A_box_8',
+	'P41143_4N6H_A_box_0',
+	'P41143_4N6H_A_box_1',
+	'P41143_4N6H_A_box_2',
+	'P41143_4N6H_A_box_3',
+	'P41143_4N6H_A_box_4',
+	'P41145_4DJH_A_box_0',
+	'P41145_4DJH_A_box_1',
+	'P41145_4DJH_A_box_2',
+	'P41145_4DJH_A_box_3',
+	'P41145_4DJH_A_box_4',
+	'P41145_4DJH_A_box_5',
+	'P41146_5DHG_B_box_0',
+	'P41146_5DHG_B_box_2',
+	'P41595_4IB4_A_box_0',
+	'P41595_4IB4_A_box_3',
+	'Q99720_5HK1_C_box_0',
+	'Q99720_5HK1_C_box_1',
+	'Q99720_5HK1_C_box_2'
+]
 
 def useful_data(data):
 	useful_rows = [
@@ -33,6 +218,8 @@ def useful_data(data):
 		"binding_sim",
 		"less_addictive_sim",
 		"binding_affinities",
+		"metabolism",
+		"metabolite"
 	]
 	return {k: data.get(k, None) for k in useful_rows}
 
@@ -81,8 +268,8 @@ def generate_jsons(
 
 		v['struct_sim'] = []
 		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
-			other_molecule = output[idx2inchi(idx)]
-			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
+			other_molecule = output[str(idx)]
+			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 			v['struct_sim'].append({
 				**{k: other_molecule[k] for k in useful_col},
 				'dist': dist
@@ -94,8 +281,8 @@ def generate_jsons(
 
 		v['binding_sim'] = []
 		for dist, idx in zip(v['affinity_distances'], v['affinity_indices']):
-			other_molecule = output[idx2inchi(idx)]
-			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
+			other_molecule = output[str(idx)]
+			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
 			v['binding_sim'].append({
 				**{k: other_molecule[k] for k in useful_col},
 				'dist': dist
@@ -108,8 +295,8 @@ def generate_jsons(
 
 		v['less_addictive_sim'] = []
 		for dist, idx in zip(v['less_addictive_distances'], v['less_addictive_indices']):
-			other_molecule = output[idx2inchi(idx)]
-			useful_col = [ 'name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic' ]
+			other_molecule = output[str(idx)]
+			useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
 			v['less_addictive_sim'].append({
 				**{k: other_molecule[k] for k in useful_col},
 				'dist': dist
@@ -129,17 +316,28 @@ def generate_jsons(
 		metabolism_data = json.load(fi)
 
 	def parse_reaction(reaction):
+		useful_col = ['name', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 		return {
 			'name': reaction[0],
-			'enzymes': reaction[1].split('\n'),
-			'products': reaction[2]
+			'enzymes': reaction[2].split('\n'),
+			'product': {k: output[inchi2idx[reaction[3]]][k] for k in useful_col}
 		}
 
-	for i, inchi in metabolism_data['inchi']:
-		metabolism = {'anterior': [], 'posterior': []}
-		for reaction in metabolism_data['anteriors'][i]:
-			metabolism['anterior'].append
-		
+	for i, inchi in tqdm(metabolism_data['inchi'], desc='Metabolism data'):
+		key = str(i)
+		if not metabolism_data['is_drug'][key]: continue
+
+		anterior = []
+		for reaction in metabolism_data['anteriors'][key]:
+			anterior.append(parse_reaction(reaction))
+		posterior = []
+		for reaction in metabolism_data['posteriors'][key]:
+			posterior.append(parse_reaction(reaction))
+		metabolism = {
+			'anterior': anterior if len(anterior) > 0 else None,
+			'posterior': posterior if len(posterior) > 0 else None,
+		}
+		output[inchi2idx[inchi]]['metabolism'] = metabolism
 
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
