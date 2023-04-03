@@ -32,7 +32,7 @@
       window.localStorage.setItem("theme", theme);
     </script>
 	<link rel="stylesheet" href="/assets/dosing.22dfb97c.css" />
-<link rel="stylesheet" href="/assets/_molecule_.996e261d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+<link rel="stylesheet" href="/assets/_molecule_.ce44c43d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
 
@@ -157,14 +157,14 @@
 	</nav>
 </header>
 
-<section class="main-width mt-8 astro-PTMKMQOL">
-            <div class="w-full flex flex-col items-center mb-8 astro-PTMKMQOL">
-                <astro-island uid="1bQ9pr" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;2160.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-8-16(18)12-13-17-9-4-6-11-19(17)21/h3-6,8-11H,7,12-15H2,1-2H3&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/2160.svg" alt="depiction of 2160.svg" /><button class="
+<section class="main-width mt-8">
+            <div class="w-full flex flex-col items-center mb-8">
+                <astro-island uid="2cayC4" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;2160.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-8-16(18)12-13-17-9-4-6-11-19(17)21/h3-6,8-11H,7,12-15H2,1-2H3&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/2160.svg" alt="depiction of 2160.svg" /><button class="
         absolute top-0 right-0 py-1 px-3
         flex items-center gap-2 rounded-lg
         bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
       "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg>3D</button></div></astro-island>
-                <div class="flex flex-col text-xl gap-2 astro-PTMKMQOL">
+                <div class="flex flex-col text-xl gap-2">
                     
                     
                     <a class="flex flex-col lg:flex-row lg:items-center" href="https://isomerdesign.com/PiHKAL/explore.php?id=11014" target="_blank">
@@ -195,19 +195,19 @@
           </svg>
       </p>
   </a>
-                    <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                            <span class=" astro-PTMKMQOL">Synonyms:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">IMIPRAMINE [INN],50-49-7,2241983-10-6,NCGC00015563-09,AB00053486,MRF-0000592,CAS-113-52-0,NCGC00015563-03,Spectrum2_000990,NSC169866,Spectrum3_000466,5,6-Dihydro-N-(3-(dimethylamino)propyl)-11H-dibenz(b,e)azepine,Oprea1_200908,Tofranil, base,NSC-169866,3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N,N-dimethylpropan-1-amine,Berkomine,SK-Pramine,Imizin (Salt/Mix),Imipramine (INN),Spectrum_000915,Nelipramin,AB00053486_16,IMIPRAMINE [MI],Imizinum (Salt/Mix),5H-Dibenz(b,f)azepine, 5-(3-(dimethylamino)propyl)-10,11-dihydro-,NCGC00024253-04,SY246340,CS-0013621,NSC 169866,Imipramine [INN:BAN],Tofranil (hydrochloride),AKOS016010320,Prestwick3_000072,5-(3-(Dimethylamino)propyl)-10,f)azepine,SDCCGSBI-0050680.P005,IMIPRAMINE [MART.],NCGC00015563-13,5-(3-Dimethylaminopropyl)-10,f)azepine,Q58396,Imavate (Salt/Mix),Imidol,NINDS_000559,N-(.gamma.-Dimethylaminopropyl)iminodibenzyl,EN300-708790,5-(3-Dimethylaminopropyl)-10,11-dihydro-5H-dibenzo(b,f)azepine,Irmin,SPBio_002204,AB00053486_17,NCGC00015563-06,SBI-0050680.P004,W-109253,IMIPRAMINE [VANDF],3-(5H-DIBENZO[B,F]AZEPIN-5-YL)-N,N-DIMETHYLPROPAN-1-AMINE,MFCD31699979,NCGC00015563-11,IMIPRAMINE [HSDB],10,11-Dihydro-N,N-dimethyl-5H-dibenz[b,f]azepine-5-propanamine,Janimine,TRIMIPRAMINE MALEATE IMPURITY D [EP IMPURITY],Tox21_110174,Dynaprin,Tofranil (TN),5H-Dibenz(b,f)azepine-5-propanamine, 10,11-dihydro-N,N-dimethyl-,Surplix (Salt/Mix),5H-Dibenz(b, 5-(3-(dimethylamino)propyl)-10,11-dihydro-,Eupramin,L000739,CLOMIPRAMINE HYDROCHLORIDE IMPURITY B [EP IMPURITY],Imipramina [INN-Spanish],5-(3-(Dimethylamino)propyl)-10,11-dihydro-5H-dibenz(b,f)azepine,Imidobenzyle,Spectrum5_000864,KBio2_006531,DTXSID1043881,SK-Pramine (Salt/Mix),AB00053486-15,BSPBio_002172,Censtin,BRN 0256892,5-[3-(dimethylamino)propyl]-10,11-dihydro-5H-dibenz[b,f]azepine,HSDB 3100,FT-0670319,5H-Dibenz(b,5-[3-(dimethylamino)propyl]-10,11-dihydro-mixed with ethyl alcohol,NCGC00015563-10,Prestwick0_000072,Intalpram,IMIPRAMINE [WHO-DD],BDBM50010859,KBio2_003963,ZINC20245,DSSTox_CID_23881,N,N-Dimethyl-10,11-dihydro-5H-dibenzo[b,f]azepine-5-propanamine-2,8-D2,Iramil,2,2&#39;-(3-Dimethylaminopropylimino)dibenzyl,Psychoforin,1-(3-Dimethylaminopropyl)-4,5-dihydro-2,3,6,7-dibenzazepine,1-(3-Dimethylaminopropyl)-4,3,6,7-dibenzazepine,10,11-Dihydro-5-(3-(dimethylamino)propyl)-5H-dibenz[b,f]azepine,DSSTox_RID_80080,5H-Dibenz[b, 5-[3-(dimethylamino)propyl]-10,11-dihydro-,CHEMBL11,STL416211,Janimine (hydrochloride),Imizin,NCGC00015563-05,Dimipressin,Psychoforin (Salt/Mix),CCG-36485,KBio2_001395,Tox21_110174_1,NCGC00015563-08,Sermonil,5H-Dibenz[b,f]azepine-5-propanamine, 10,11-dihydro-N,N-dimethyl-,HMS2089G08,NCGC00015563-02,2,2&#39;-(3-Dimethylaminopropylimino)bibenzyl,Antideprin,KBio1_000559,Melipramine,N-(gamma-Dimethylaminopropyl)iminodibenzyl,ORG-2463,Prestwick1_000072,NCGC00015563-04,CCRIS 9173,EINECS 200-042-1,imipramine,3-(10,11-dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine,Tofranil (free base),IXX,Spectrum4_000016,BPBio1_000313,TRIMIPRAMINE MALEATE IMPURITY, IMIPRAMINE- [USP IMPURITY],KBio3_001392,BRD-K38436528-003-15-4,Tofranil,Censtim,Imipramin,Imipraminum,Imizine (Salt/Mix),CAS-50-49-7,Eupramin (Salt/Mix),Timolet,NCGC00015563-07,SPBio_001059,WLN: T C676 BN&amp;T&amp;J B3N1&amp;1,Melipramin,Dpid,Imipramina,DSSTox_GSID_43881,3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N,N-dimethyl-propan-1-amine,Prestwick2_000072,Cristalia,NCGC00015563-01,5H-Dibenz(b,f)azepine, 10,11-dihydro-5-(3-(dimethylamino)propyl)-,(3-{2-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-yl}propyl)dimethylamine,G-22355 (Salt/Mix),Imavate,CHEBI:47499,(3-{2-azatricyclo[9.4.0.0,3,8]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-yl}propyl)dimethylamine,Promiben,5-(3-(dimethylamino)propyl)-10,11-dihydro-5H-dibenz[b,f]azepine;10,11-Dehydroimipramine;Depramine,Tofranil base,Imipramine,HY-B1490A,NCGC00024253-03,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethyl-1-propanamine,5,e)azepine,Imipramina [Italian],GTPL357,FT-0697093,DB00458,Imiprin,Declomipramine,5H-Dibenz(b, 10,11-dihydro-5-(3-(dimethylamino)propyl)-,N-(3-Dimethylaminopropyl)-o-iminodibenzyl,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethyl-1-propanamine #,BSPBio_000283,5H-Dibenz[b, 10,11-dihydro-N,N-dimethyl-,KBioSS_001395,5,e]azepine,Trimipramine maleate impurity, imipramine-,BIDD:GT0116,Surplix,Imizinum,Clomipramine HCl EP Impurity B,Lopac0_000702,NCGC00015563-25,Imipraminum [INN-Latin],C07049,Impramine,UNII-OGG85SX4E4,Dyna-zina,5H-Dibenz[b,f]azepine, 5-[3-(dimethylamino)propyl]-10,11-dihydro-,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine;3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine,IDI1_000559,D08070,BRD-K38436528-003-05-5,OGG85SX4E4,Lopac-I-7379,3-(10,11-dihydro-5h-dibenz[b,f]azepin-5-yl)propyldimethylamine,KBioGR_000391,Clomipramine EP Impurity B; 10,11-Dihydro-N,N-dimethyl-5H-dibenz[b,f]azepine-5-propanamine,DivK1c_000559,Tofranil (Salt/Mix),SCHEMBL34282</span>
+                    <p class="break-all leading-snug text-sm mt-4">
+                            <span class="">Synonyms:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">IMIPRAMINE [INN],50-49-7,2241983-10-6,NCGC00015563-09,AB00053486,MRF-0000592,CAS-113-52-0,NCGC00015563-03,Spectrum2_000990,NSC169866,Spectrum3_000466,5,6-Dihydro-N-(3-(dimethylamino)propyl)-11H-dibenz(b,e)azepine,Oprea1_200908,Tofranil, base,NSC-169866,3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N,N-dimethylpropan-1-amine,Berkomine,SK-Pramine,Imizin (Salt/Mix),Imipramine (INN),Spectrum_000915,Nelipramin,AB00053486_16,IMIPRAMINE [MI],Imizinum (Salt/Mix),5H-Dibenz(b,f)azepine, 5-(3-(dimethylamino)propyl)-10,11-dihydro-,NCGC00024253-04,SY246340,CS-0013621,NSC 169866,Imipramine [INN:BAN],Tofranil (hydrochloride),AKOS016010320,Prestwick3_000072,5-(3-(Dimethylamino)propyl)-10,f)azepine,SDCCGSBI-0050680.P005,IMIPRAMINE [MART.],NCGC00015563-13,5-(3-Dimethylaminopropyl)-10,f)azepine,Q58396,Imavate (Salt/Mix),Imidol,NINDS_000559,N-(.gamma.-Dimethylaminopropyl)iminodibenzyl,EN300-708790,5-(3-Dimethylaminopropyl)-10,11-dihydro-5H-dibenzo(b,f)azepine,Irmin,SPBio_002204,AB00053486_17,NCGC00015563-06,SBI-0050680.P004,W-109253,IMIPRAMINE [VANDF],3-(5H-DIBENZO[B,F]AZEPIN-5-YL)-N,N-DIMETHYLPROPAN-1-AMINE,MFCD31699979,NCGC00015563-11,IMIPRAMINE [HSDB],10,11-Dihydro-N,N-dimethyl-5H-dibenz[b,f]azepine-5-propanamine,Janimine,TRIMIPRAMINE MALEATE IMPURITY D [EP IMPURITY],Tox21_110174,Dynaprin,Tofranil (TN),5H-Dibenz(b,f)azepine-5-propanamine, 10,11-dihydro-N,N-dimethyl-,Surplix (Salt/Mix),5H-Dibenz(b, 5-(3-(dimethylamino)propyl)-10,11-dihydro-,Eupramin,L000739,CLOMIPRAMINE HYDROCHLORIDE IMPURITY B [EP IMPURITY],Imipramina [INN-Spanish],5-(3-(Dimethylamino)propyl)-10,11-dihydro-5H-dibenz(b,f)azepine,Imidobenzyle,Spectrum5_000864,KBio2_006531,DTXSID1043881,SK-Pramine (Salt/Mix),AB00053486-15,BSPBio_002172,Censtin,BRN 0256892,5-[3-(dimethylamino)propyl]-10,11-dihydro-5H-dibenz[b,f]azepine,HSDB 3100,FT-0670319,5H-Dibenz(b,5-[3-(dimethylamino)propyl]-10,11-dihydro-mixed with ethyl alcohol,NCGC00015563-10,Prestwick0_000072,Intalpram,IMIPRAMINE [WHO-DD],BDBM50010859,KBio2_003963,ZINC20245,DSSTox_CID_23881,N,N-Dimethyl-10,11-dihydro-5H-dibenzo[b,f]azepine-5-propanamine-2,8-D2,Iramil,2,2&#39;-(3-Dimethylaminopropylimino)dibenzyl,Psychoforin,1-(3-Dimethylaminopropyl)-4,5-dihydro-2,3,6,7-dibenzazepine,1-(3-Dimethylaminopropyl)-4,3,6,7-dibenzazepine,10,11-Dihydro-5-(3-(dimethylamino)propyl)-5H-dibenz[b,f]azepine,DSSTox_RID_80080,5H-Dibenz[b, 5-[3-(dimethylamino)propyl]-10,11-dihydro-,CHEMBL11,STL416211,Janimine (hydrochloride),Imizin,NCGC00015563-05,Dimipressin,Psychoforin (Salt/Mix),CCG-36485,KBio2_001395,Tox21_110174_1,NCGC00015563-08,Sermonil,5H-Dibenz[b,f]azepine-5-propanamine, 10,11-dihydro-N,N-dimethyl-,HMS2089G08,NCGC00015563-02,2,2&#39;-(3-Dimethylaminopropylimino)bibenzyl,Antideprin,KBio1_000559,Melipramine,N-(gamma-Dimethylaminopropyl)iminodibenzyl,ORG-2463,Prestwick1_000072,NCGC00015563-04,CCRIS 9173,EINECS 200-042-1,imipramine,3-(10,11-dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine,Tofranil (free base),IXX,Spectrum4_000016,BPBio1_000313,TRIMIPRAMINE MALEATE IMPURITY, IMIPRAMINE- [USP IMPURITY],KBio3_001392,BRD-K38436528-003-15-4,Tofranil,Censtim,Imipramin,Imipraminum,Imizine (Salt/Mix),CAS-50-49-7,Eupramin (Salt/Mix),Timolet,NCGC00015563-07,SPBio_001059,WLN: T C676 BN&amp;T&amp;J B3N1&amp;1,Melipramin,Dpid,Imipramina,DSSTox_GSID_43881,3-(5,6-dihydrobenzo[b][1]benzazepin-11-yl)-N,N-dimethyl-propan-1-amine,Prestwick2_000072,Cristalia,NCGC00015563-01,5H-Dibenz(b,f)azepine, 10,11-dihydro-5-(3-(dimethylamino)propyl)-,(3-{2-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-yl}propyl)dimethylamine,G-22355 (Salt/Mix),Imavate,CHEBI:47499,(3-{2-azatricyclo[9.4.0.0,3,8]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-yl}propyl)dimethylamine,Promiben,5-(3-(dimethylamino)propyl)-10,11-dihydro-5H-dibenz[b,f]azepine;10,11-Dehydroimipramine;Depramine,Tofranil base,Imipramine,HY-B1490A,NCGC00024253-03,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethyl-1-propanamine,5,e)azepine,Imipramina [Italian],GTPL357,FT-0697093,DB00458,Imiprin,Declomipramine,5H-Dibenz(b, 10,11-dihydro-5-(3-(dimethylamino)propyl)-,N-(3-Dimethylaminopropyl)-o-iminodibenzyl,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethyl-1-propanamine #,BSPBio_000283,5H-Dibenz[b, 10,11-dihydro-N,N-dimethyl-,KBioSS_001395,5,e]azepine,Trimipramine maleate impurity, imipramine-,BIDD:GT0116,Surplix,Imizinum,Clomipramine HCl EP Impurity B,Lopac0_000702,NCGC00015563-25,Imipraminum [INN-Latin],C07049,Impramine,UNII-OGG85SX4E4,Dyna-zina,5H-Dibenz[b,f]azepine, 5-[3-(dimethylamino)propyl]-10,11-dihydro-,3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine;3-(10,11-Dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine,IDI1_000559,D08070,BRD-K38436528-003-05-5,OGG85SX4E4,Lopac-I-7379,3-(10,11-dihydro-5h-dibenz[b,f]azepin-5-yl)propyldimethylamine,KBioGR_000391,Clomipramine EP Impurity B; 10,11-Dihydro-N,N-dimethyl-5H-dibenz[b,f]azepine-5-propanamine,DivK1c_000559,Tofranil (Salt/Mix),SCHEMBL34282</span>
                         </p>
-                     <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                      <span class=" astro-PTMKMQOL">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">InChI=1S/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-8-16(18)12-13-17-9-4-6-11-19(17)21/h3-6,8-11H,7,12-15H2,1-2H3</span>
+                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-8-16(18)12-13-17-9-4-6-11-19(17)21/h3-6,8-11H,7,12-15H2,1-2H3</span>
                   </p>
                 </div>
             </div>
-        </section><section class="main-width flex flex-col items-left mt-16 astro-PTMKMQOL">
-          <h2 class="font-bold text-2xl mb-8 astro-PTMKMQOL">Similarities</h2>
-          <astro-island uid="27BD02" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+        </section><section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-8">Similarities</h2>
+          <astro-island uid="Z1HWAYE" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -223,9 +223,9 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Metabolism</button></div></astro-island>
-          <ul class="mt-4 astro-PTMKMQOL" id="similarities-tab-content">
-            <li class="w-full flex flex-col active astro-PTMKMQOL" id="struct">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
+          <ul class="mt-4" id="similarities-tab-content">
+            <li class="w-full flex flex-col active" id="struct">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
                 <div class="flex flex-col mt-4 gap-2">
   <a href="/molecule/2142" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
@@ -642,10 +642,10 @@
         </div>
 </div>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="affinity">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
-                <div class="w-full pt-4 astro-PTMKMQOL"></div>
-                <astro-island uid="1UW6XA" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+            <li class="w-full flex flex-col" id="affinity">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
+                <div class="w-full pt-4"></div>
+                <astro-island uid="1AHVVr" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -661,9 +661,9 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Affinities Profile</button></div></astro-island>
-                <ul class="mt-4 astro-PTMKMQOL" id="nested-tab-content">
-                    <li class="w-full flex flex-col active astro-PTMKMQOL" id="dist_main">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
+                <ul class="mt-4" id="nested-tab-content">
+                    <li class="w-full flex flex-col active" id="dist_main">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
                         <div class="flex flex-col mt-4 gap-2">
   <a href="/molecule/2135" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
@@ -1177,8 +1177,8 @@
         </a>
 </div>
                     </li>
-                    <li class="w-full flex flex-col astro-PTMKMQOL" id="dist_dopa">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
+                    <li class="w-full flex flex-col" id="dist_dopa">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
                         <div class="flex flex-col mt-4 gap-2">
   <a href="/molecule/1788" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
@@ -1733,8 +1733,8 @@
         </a>
 </div>
                     </li>
-                    <li class="w-full flex flex-col astro-PTMKMQOL" id="profile">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
+                    <li class="w-full flex flex-col" id="profile">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
                         <div class="flex flex-col mt-4 gap-2">
     <div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/A5X5Y0" target="_blank" class="flex flex-row gap-2">
@@ -2493,11 +2493,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="metabolism">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Interaction of this molecule with metabolism</span>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolize this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+            <li class="w-full flex flex-col" id="metabolism">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Interaction of this molecule with metabolism</span>
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolize this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">N-Glucuronidation of tertiary aliphatic amine</div>
     <div class="flex flex-row items-center">
@@ -2670,9 +2670,9 @@
 </span>
                   </div>
                 </div>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolism produce from this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolism produce from this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">N-Glucuronidation of tertiary aliphatic amine</div>
     <div class="flex flex-row items-center">

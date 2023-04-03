@@ -32,7 +32,7 @@
       window.localStorage.setItem("theme", theme);
     </script>
 	<link rel="stylesheet" href="/assets/dosing.22dfb97c.css" />
-<link rel="stylesheet" href="/assets/_molecule_.996e261d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+<link rel="stylesheet" href="/assets/_molecule_.ce44c43d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
 
@@ -157,14 +157,14 @@
 	</nav>
 </header>
 
-<section class="main-width mt-8 astro-PTMKMQOL">
-            <div class="w-full flex flex-col items-center mb-8 astro-PTMKMQOL">
-                <astro-island uid="2gJDYM" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;248.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C21H25N3O2S/c25-14-16-26-15-13-23-9-11-24(12-10-23)21-17-5-1-3-7-19(17)27-20-8-4-2-6-18(20)22-21/h1-8,25H,9-16H2&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/248.svg" alt="depiction of 248.svg" /><button class="
+<section class="main-width mt-8">
+            <div class="w-full flex flex-col items-center mb-8">
+                <astro-island uid="ZvOPcJ" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;248.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C21H25N3O2S/c25-14-16-26-15-13-23-9-11-24(12-10-23)21-17-5-1-3-7-19(17)27-20-8-4-2-6-18(20)22-21/h1-8,25H,9-16H2&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/248.svg" alt="depiction of 248.svg" /><button class="
         absolute top-0 right-0 py-1 px-3
         flex items-center gap-2 rounded-lg
         bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
       "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg>3D</button></div></astro-island>
-                <div class="flex flex-col text-xl gap-2 astro-PTMKMQOL">
+                <div class="flex flex-col text-xl gap-2">
                     <a class="flex flex-col lg:flex-row lg:items-center" href="https://drugs.tripsit.me/quetiapine" target="_blank">
       <div class="flex flex-row items-center gap-2">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="quetiapine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
@@ -221,19 +221,19 @@
           </svg>
       </p>
   </a>
-                    <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                            <span class=" astro-PTMKMQOL">Synonyms:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">ICI204636,SPECTRUM1505187,HSDB 7557,NSC-758918,2-[2-(4-benzo[b][1,5]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethanol,NCGC00095911-04,Ethanol, 2-[2-(4-dibenzo[b,f][1,4]thiazepin-11-yl-1-piperazinyl)ethoxy]-,BIDD:GT0279,Seroquel,GTPL50,CS-1171,AKOS003588973,URKOMYMAXPYINW-UHFFFAOYSA-,NSC758918,HY-14544,SMR000550491,quetiapinum,QUETIAPINE [VANDF],MFCD00866699,DB01224,A802457,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0,3,8]pentadeca-1(11),3(8),4,6,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,QUETIAPINE [WHO-DD],EN300-708802,quetiapina,AB00640033-09,2-[2-(4-dibenzo[b,f][1,4]thiazepin-11-ylpiperazin-1-yl)ethoxy]ethanol,UNII-BGL0JSY5SI,SR-01000759335-5,CHEMBL716,HMS3372B05,11-[4-[2-(2-Hydroxyethoxy)ethyl]-1-piperazinyl]dibenzo[b,f][1,4]thiazepine,2-(2-(4-dibenzo[b,f][1,4] thiazepine-11-yl-1-piperazinyl)ethoxy)ethanol,SR-01000759335-7,NSC801189,NSC 758918,FT-0658790,Co-Quetiapine,DSSTox_GSID_23546,s5741,BBL029071,BDBM50095890,HMS3744E21,DTXSID9023546,D08456,HMS2093K06,C07397,NSC-801189,Quetiapine fumarate,ZM-204636,2-(2-(4-Dibenzo(b,f)(1,4)thiazepin-11-yl-1-piperazinyl)ethoxy)ethanol,CHEBI:8707,Ketipinor,QUETIAPINE [HSDB],HMS3886C22,seroquel,MLS001195658,HMS2231O11,Tox21_111537,111974-69-7,DSSTox_CID_3546,quetiapine,MRF-0000010,Quetiapine [INN:BAN],2-{[2-(4-dibenzo[b,f][1,4]thiazepin-11-ylpiperazin-1-yl)ethyl]oxy}ethanol,(E)-2-(2-(4-(Dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethanol,2-{2-[4-(dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl]ethoxy}ethanol,AS-35258,MLS001165710,AB00640033-10,STL373578,SR-01000759335,CAS-111974-69-7,NCGC00095911-01,Quetiapine,74Q697,2-[2-(4-Dibenzo[b,f][1,4]thiazepin-11-yl-1-piperazinyl)ethoxy]ethanol,Q408535,L001200,ICI 204636,ZINC19632628,NCGC00095911-03,Pharmakon1600-01505187,2-(2-(4-(dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethan-1-ol,BRD-K68867920-001-05-2,2-(2-(4-dibenzo[b,f]-[1,4]thiazepine-11-yl-1-piperazinyl)ethoxy)ethanol,2-(2-(4-(Dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethanol,Ethanol, 2-(2-(4-dibenzo(b,f)(1,4)thiazepin-11-yl-1-piperazinyl)ethoxy)-,Quetiapin,CCG-213347,BCP23508,2-[2-(4-benzo[b][1,4]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethanol,SBI-0206776.P001,FK949E,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3,5,7,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,Norsic,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,QUETIAPINE [MI],NCGC00095911-06,BGL0JSY5SI,QUETIAPINE [INN],Tox21_111537_1,Norsic (TN),SCHEMBL7932,Quetiapine extended release,2-(2-(4-DIBENZO(B,F)(1,4)THIAZEPIN-11-YLPIPERAZIN-1-YL)ETHOXY)ETHANOL,Quetiapine (INN),Seroquel (Fumarate),DSSTox_RID_77073,111974-72-2,AB00640033_12,AB00640033_11</span>
+                    <p class="break-all leading-snug text-sm mt-4">
+                            <span class="">Synonyms:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">ICI204636,SPECTRUM1505187,HSDB 7557,NSC-758918,2-[2-(4-benzo[b][1,5]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethanol,NCGC00095911-04,Ethanol, 2-[2-(4-dibenzo[b,f][1,4]thiazepin-11-yl-1-piperazinyl)ethoxy]-,BIDD:GT0279,Seroquel,GTPL50,CS-1171,AKOS003588973,URKOMYMAXPYINW-UHFFFAOYSA-,NSC758918,HY-14544,SMR000550491,quetiapinum,QUETIAPINE [VANDF],MFCD00866699,DB01224,A802457,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0,3,8]pentadeca-1(11),3(8),4,6,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,QUETIAPINE [WHO-DD],EN300-708802,quetiapina,AB00640033-09,2-[2-(4-dibenzo[b,f][1,4]thiazepin-11-ylpiperazin-1-yl)ethoxy]ethanol,UNII-BGL0JSY5SI,SR-01000759335-5,CHEMBL716,HMS3372B05,11-[4-[2-(2-Hydroxyethoxy)ethyl]-1-piperazinyl]dibenzo[b,f][1,4]thiazepine,2-(2-(4-dibenzo[b,f][1,4] thiazepine-11-yl-1-piperazinyl)ethoxy)ethanol,SR-01000759335-7,NSC801189,NSC 758918,FT-0658790,Co-Quetiapine,DSSTox_GSID_23546,s5741,BBL029071,BDBM50095890,HMS3744E21,DTXSID9023546,D08456,HMS2093K06,C07397,NSC-801189,Quetiapine fumarate,ZM-204636,2-(2-(4-Dibenzo(b,f)(1,4)thiazepin-11-yl-1-piperazinyl)ethoxy)ethanol,CHEBI:8707,Ketipinor,QUETIAPINE [HSDB],HMS3886C22,seroquel,MLS001195658,HMS2231O11,Tox21_111537,111974-69-7,DSSTox_CID_3546,quetiapine,MRF-0000010,Quetiapine [INN:BAN],2-{[2-(4-dibenzo[b,f][1,4]thiazepin-11-ylpiperazin-1-yl)ethyl]oxy}ethanol,(E)-2-(2-(4-(Dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethanol,2-{2-[4-(dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl]ethoxy}ethanol,AS-35258,MLS001165710,AB00640033-10,STL373578,SR-01000759335,CAS-111974-69-7,NCGC00095911-01,Quetiapine,74Q697,2-[2-(4-Dibenzo[b,f][1,4]thiazepin-11-yl-1-piperazinyl)ethoxy]ethanol,Q408535,L001200,ICI 204636,ZINC19632628,NCGC00095911-03,Pharmakon1600-01505187,2-(2-(4-(dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethan-1-ol,BRD-K68867920-001-05-2,2-(2-(4-dibenzo[b,f]-[1,4]thiazepine-11-yl-1-piperazinyl)ethoxy)ethanol,2-(2-(4-(Dibenzo[b,f][1,4]thiazepin-11-yl)piperazin-1-yl)ethoxy)ethanol,Ethanol, 2-(2-(4-dibenzo(b,f)(1,4)thiazepin-11-yl-1-piperazinyl)ethoxy)-,Quetiapin,CCG-213347,BCP23508,2-[2-(4-benzo[b][1,4]benzothiazepin-6-ylpiperazin-1-yl)ethoxy]ethanol,SBI-0206776.P001,FK949E,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3,5,7,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,Norsic,2-[2-(4-{2-thia-9-azatricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,9,12,14-heptaen-10-yl}piperazin-1-yl)ethoxy]ethan-1-ol,QUETIAPINE [MI],NCGC00095911-06,BGL0JSY5SI,QUETIAPINE [INN],Tox21_111537_1,Norsic (TN),SCHEMBL7932,Quetiapine extended release,2-(2-(4-DIBENZO(B,F)(1,4)THIAZEPIN-11-YLPIPERAZIN-1-YL)ETHOXY)ETHANOL,Quetiapine (INN),Seroquel (Fumarate),DSSTox_RID_77073,111974-72-2,AB00640033_12,AB00640033_11</span>
                         </p>
-                     <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                      <span class=" astro-PTMKMQOL">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">InChI=1S/C21H25N3O2S/c25-14-16-26-15-13-23-9-11-24(12-10-23)21-17-5-1-3-7-19(17)27-20-8-4-2-6-18(20)22-21/h1-8,25H,9-16H2</span>
+                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C21H25N3O2S/c25-14-16-26-15-13-23-9-11-24(12-10-23)21-17-5-1-3-7-19(17)27-20-8-4-2-6-18(20)22-21/h1-8,25H,9-16H2</span>
                   </p>
                 </div>
             </div>
-        </section><section class="main-width flex flex-col items-left mt-16 astro-PTMKMQOL">
-          <h2 class="font-bold text-2xl mb-8 astro-PTMKMQOL">Similarities</h2>
-          <astro-island uid="ZfTccg" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+        </section><section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-8">Similarities</h2>
+          <astro-island uid="Z2nYXwd" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -249,9 +249,9 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Metabolism</button></div></astro-island>
-          <ul class="mt-4 astro-PTMKMQOL" id="similarities-tab-content">
-            <li class="w-full flex flex-col active astro-PTMKMQOL" id="struct">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
+          <ul class="mt-4" id="similarities-tab-content">
+            <li class="w-full flex flex-col active" id="struct">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
                 <div class="flex flex-col mt-4 gap-2">
   <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
@@ -651,10 +651,10 @@
         </div>
 </div>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="affinity">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
-                <div class="w-full pt-4 astro-PTMKMQOL"></div>
-                <astro-island uid="Zu6y0f" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,false]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button disabled class="
+            <li class="w-full flex flex-col" id="affinity">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
+                <div class="w-full pt-4"></div>
+                <astro-island uid="ZwGYE4" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,false]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button disabled class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -670,17 +670,17 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Affinities Profile</button></div></astro-island>
-                <ul class="mt-4 astro-PTMKMQOL" id="nested-tab-content">
+                <ul class="mt-4" id="nested-tab-content">
                     
                     
                     
                 </ul>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="metabolism">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Interaction of this molecule with metabolism</span>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolize this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+            <li class="w-full flex flex-col" id="metabolism">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Interaction of this molecule with metabolism</span>
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolize this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">Alkyl-OH-glucuronidation</div>
     <div class="flex flex-row items-center">
@@ -918,9 +918,9 @@
 </span>
                   </div>
                 </div>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolism produce from this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolism produce from this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">Alkyl-OH-glucuronidation</div>
     <div class="flex flex-row items-center">

@@ -32,7 +32,7 @@
       window.localStorage.setItem("theme", theme);
     </script>
 	<link rel="stylesheet" href="/assets/dosing.22dfb97c.css" />
-<link rel="stylesheet" href="/assets/_molecule_.996e261d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+<link rel="stylesheet" href="/assets/_molecule_.ce44c43d.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
 
@@ -157,14 +157,14 @@
 	</nav>
 </header>
 
-<section class="main-width mt-8 astro-PTMKMQOL">
-            <div class="w-full flex flex-col items-center mb-8 astro-PTMKMQOL">
-                <astro-island uid="1vwcKo" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;2115.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C19H21N/c1-20-14-6-11-19-17-9-4-2-7-15(17)12-13-16-8-3-5-10-18(16)19/h2-5,7-11,20H,6,12-14H2,1H3&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/2115.svg" alt="depiction of 2115.svg" /><button class="
+<section class="main-width mt-8">
+            <div class="w-full flex flex-col items-center mb-8">
+                <astro-island uid="1XxUyA" component-url="/MoleculeViewer.4117dd44.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;svg&quot;:[0,&quot;2115.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C19H21N/c1-20-14-6-11-19-17-9-4-2-7-15(17)12-13-16-8-3-5-10-18(16)19/h2-5,7-11,20H,6,12-14H2,1H3&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/2115.svg" alt="depiction of 2115.svg" /><button class="
         absolute top-0 right-0 py-1 px-3
         flex items-center gap-2 rounded-lg
         bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
       "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg>3D</button></div></astro-island>
-                <div class="flex flex-col text-xl gap-2 astro-PTMKMQOL">
+                <div class="flex flex-col text-xl gap-2">
                     
                     
                     <a class="flex flex-col lg:flex-row lg:items-center" href="https://isomerdesign.com/PiHKAL/explore.php?id=9410" target="_blank">
@@ -195,19 +195,19 @@
           </svg>
       </p>
   </a>
-                    <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                            <span class=" astro-PTMKMQOL">Synonyms:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">NSC 757234,UNII-BL03SY4LXB,BIDD:PXR0187,Noritren,SPBio_002287,AB00052061_16,methyl(3-{tricyclo[9.4.0.0,3,8]pentadeca-1(15),3,5,7,11,13-hexaen-2-ylidene}propyl)amine,3-(5,6-dihydrodibenzo[[?],[?]][7]annulen-11-ylidene)-N-methyl-propan-1-amine,NCGC00014483-16,3-(10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methyl-1-propanamine,10,11-dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-Delta5,gamma-propylamine,Demethylamitriptyline,KBio2_006657,HMS2091J20,NCGC00014483-23,BL03SY4LXB,KSC-315-028-,HY-118620,Psychostyl,5H-Dibenzo(a,d)cycloheptene-delta(sup 5),gamma-propylamine, 10,11-dihydro-N-methyl-,ZINC1530741,Sesaval,nortriptylina,Nortriptilina [DCIT],Demethylamitriptylene,Pamelor,SDCCGSBI-0050843.P006,EN300-57709,Desmethylamitriptyline,1-Propanamine, 3-(10,11-dihydro-5H-dibenzo(a,d)cyclohepten-5-ylidene)-N-methyl-,NCGC00014483-11,10,11-Dihydro-5-(3-methylaminopropylidene)-5H-dibenzo[a,d][1,4]cycloheptene,QTL1_000063,BRN 2216786,CAS-894-71-3,NSC757234,NCGC00014483,Lopac0_000868,EINECS 200-788-8,BPBio1_000076,methyl({3-[(2E)-tricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3,5,7,12,14-hexaen-2-ylidene]propyl})amine,Avantyl,KBioGR_000870,DB00540,Nortriptylinum [INN-Latin],NCI169453,Prestwick2_000254,KBio2_004089,Nortriptyline [INN:BAN],Desitriptilina,SCHEMBL34527,CS-0067638,Demethylamitryptyline,Spectrum3_000526,Noramitriptyline,NCGC00014483-08,NCIStruc2_000700,5H-Dibenzo[a,d]cycloheptene-.DELTA.5,.gamma.-propylamine, 10,11-dihydro-N-methyl-,NCGC00014483-02,Nortryptiline,IDI1_000151,NCIOpen2_004361,Pamelor hydrochloride,N-Methyl-3-(10,11-dihydro-5H-dibenzo(a,d)cyclohepten-5-yliden)propylamin,AMITRIPTYLINE HYDROCHLORIDE IMPURITY C [EP IMPURITY],CCG-38266,Nortrilen,5-[3-(Methylamino)propylidene]dibenzo[a,E]cyclohepta[1,5]diene,Psychostyl (Salt/Mix),US8629135, SW-02,Nortryptyline,Amitryptyline, demethyl-,GTPL2404,Triptyline-M nor,NCGC00024261-05,NSC-757234,PDSP2_001788,Spectrum4_000455,SPBio_001093,Nortriptyline (INN),Pharmakon1600-01500442,Sensaval,CHEBI:7640,10,11-Dihydro-5-(3-methylaminopropylidene)-5H-dibenzo(a,d)(1,4)cycloheptene,72-69-5,(2)10,11-Dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-.delta.5.gamma.-propylamine,10,11-Dihydro-N-methyl-5H-dibenzo(a,d)cycloheptene-delta(5,gamma)-propylamine,10,11-dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-Delta(5,gamma)-propylamine,Prestwick3_000254,BRD-K91263825-003-03-2,MRF-0000480,KBio2_001521,NSC169453,NCGC00014483-04,Ateben,Nortriptilina,C07274,SPECTRUM1500442,10,11-Dihydro-N-methyl-5H-dibenzo(a,d)cycloheptane-.DELTA.,.gamma.-propylamine,DivK1c_000151,NCGC00014483-10,Aventyl,KBio1_000151,NCGC00014483-09,HMS500H13,KBioSS_001521,NORTRIPTYLINE [INN],NINDS_000151,NCGC00024261-03,5-(alpha-Methylaminopropylidene)dibenzo(a,d)cyclohepta(1,4)diene,NCGC00014483-14,NORTRIPTYLINE [WHO-DD],NCGC00014483-07,HMS1920B20,DTXSID9023384,10,11-DIHYDRO-N-METHYL-5H-DIBENZO(A,D)CYCLOHEPTENE-D(SUP5,.GAMMA.)-PROPYLAMINE,NCGC00014483-03,3-(10,11-Dihydro-5H-dibenzo(a,d)cyclohepten-5-ylidene)-N-methylpropylamine,Spectrum_001041,Spectrum2_000997,NSC78248,NCGC00014483-06,N-methyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)propan-1-amine,3-(10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-ylidene)-N-methylpropan-1-amine,Nortriptylene hydrochloride,NCGC00014483-12,KBio3_001611,Lopac-N-7261,1-Propanamine, 3-(10,11-dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methyl-,BDBM112777,methyl({3-[(2E)-tricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-ylidene]propyl})amine,SR-01000000223-4,NCI60_001354,BSPBio_002111,Prestwick1_000254,nortriptyline,NCIStruc1_000856,5-(3-(Methylamino)propylidene)dibenzo(a,e)cyclohepta(1,5)diene,3-(10,11-DIHYDRO-5H-DIBENZO(A,D)(7)ANNULEN-5-YLIDENE)-N-METHYLPROPAN-1-AMINE,BSPBio_000068,SBI-0050843.P004,KUC112478N,CCRIS 9175,21B,5-(3-Methylaminopropylidene)-10,11-dihydro-5H-dibenzo(a,d)cycloheptene,CHEMBL445,Aventyl;Desitriptilina,AB00052061,Lumbeck,Nortriptyline,3-(10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methylpropylamine,Q61387,NCI-169453,Prestwick0_000254,Spectrum5_001377,Nortriptylinum,HSDB 3371,Nortrilen (TN),NCGC00014483-05,NCGC00024261-04,NCGC00024261-06,NORTRIPTYLINE [MI],D08288,PDSP1_001805,NORTRIPTYLINE [VANDF]</span>
+                    <p class="break-all leading-snug text-sm mt-4">
+                            <span class="">Synonyms:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">NSC 757234,UNII-BL03SY4LXB,BIDD:PXR0187,Noritren,SPBio_002287,AB00052061_16,methyl(3-{tricyclo[9.4.0.0,3,8]pentadeca-1(15),3,5,7,11,13-hexaen-2-ylidene}propyl)amine,3-(5,6-dihydrodibenzo[[?],[?]][7]annulen-11-ylidene)-N-methyl-propan-1-amine,NCGC00014483-16,3-(10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methyl-1-propanamine,10,11-dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-Delta5,gamma-propylamine,Demethylamitriptyline,KBio2_006657,HMS2091J20,NCGC00014483-23,BL03SY4LXB,KSC-315-028-,HY-118620,Psychostyl,5H-Dibenzo(a,d)cycloheptene-delta(sup 5),gamma-propylamine, 10,11-dihydro-N-methyl-,ZINC1530741,Sesaval,nortriptylina,Nortriptilina [DCIT],Demethylamitriptylene,Pamelor,SDCCGSBI-0050843.P006,EN300-57709,Desmethylamitriptyline,1-Propanamine, 3-(10,11-dihydro-5H-dibenzo(a,d)cyclohepten-5-ylidene)-N-methyl-,NCGC00014483-11,10,11-Dihydro-5-(3-methylaminopropylidene)-5H-dibenzo[a,d][1,4]cycloheptene,QTL1_000063,BRN 2216786,CAS-894-71-3,NSC757234,NCGC00014483,Lopac0_000868,EINECS 200-788-8,BPBio1_000076,methyl({3-[(2E)-tricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3,5,7,12,14-hexaen-2-ylidene]propyl})amine,Avantyl,KBioGR_000870,DB00540,Nortriptylinum [INN-Latin],NCI169453,Prestwick2_000254,KBio2_004089,Nortriptyline [INN:BAN],Desitriptilina,SCHEMBL34527,CS-0067638,Demethylamitryptyline,Spectrum3_000526,Noramitriptyline,NCGC00014483-08,NCIStruc2_000700,5H-Dibenzo[a,d]cycloheptene-.DELTA.5,.gamma.-propylamine, 10,11-dihydro-N-methyl-,NCGC00014483-02,Nortryptiline,IDI1_000151,NCIOpen2_004361,Pamelor hydrochloride,N-Methyl-3-(10,11-dihydro-5H-dibenzo(a,d)cyclohepten-5-yliden)propylamin,AMITRIPTYLINE HYDROCHLORIDE IMPURITY C [EP IMPURITY],CCG-38266,Nortrilen,5-[3-(Methylamino)propylidene]dibenzo[a,E]cyclohepta[1,5]diene,Psychostyl (Salt/Mix),US8629135, SW-02,Nortryptyline,Amitryptyline, demethyl-,GTPL2404,Triptyline-M nor,NCGC00024261-05,NSC-757234,PDSP2_001788,Spectrum4_000455,SPBio_001093,Nortriptyline (INN),Pharmakon1600-01500442,Sensaval,CHEBI:7640,10,11-Dihydro-5-(3-methylaminopropylidene)-5H-dibenzo(a,d)(1,4)cycloheptene,72-69-5,(2)10,11-Dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-.delta.5.gamma.-propylamine,10,11-Dihydro-N-methyl-5H-dibenzo(a,d)cycloheptene-delta(5,gamma)-propylamine,10,11-dihydro-N-methyl-5H-dibenzo[a,d]cycloheptene-Delta(5,gamma)-propylamine,Prestwick3_000254,BRD-K91263825-003-03-2,MRF-0000480,KBio2_001521,NSC169453,NCGC00014483-04,Ateben,Nortriptilina,C07274,SPECTRUM1500442,10,11-Dihydro-N-methyl-5H-dibenzo(a,d)cycloheptane-.DELTA.,.gamma.-propylamine,DivK1c_000151,NCGC00014483-10,Aventyl,KBio1_000151,NCGC00014483-09,HMS500H13,KBioSS_001521,NORTRIPTYLINE [INN],NINDS_000151,NCGC00024261-03,5-(alpha-Methylaminopropylidene)dibenzo(a,d)cyclohepta(1,4)diene,NCGC00014483-14,NORTRIPTYLINE [WHO-DD],NCGC00014483-07,HMS1920B20,DTXSID9023384,10,11-DIHYDRO-N-METHYL-5H-DIBENZO(A,D)CYCLOHEPTENE-D(SUP5,.GAMMA.)-PROPYLAMINE,NCGC00014483-03,3-(10,11-Dihydro-5H-dibenzo(a,d)cyclohepten-5-ylidene)-N-methylpropylamine,Spectrum_001041,Spectrum2_000997,NSC78248,NCGC00014483-06,N-methyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)propan-1-amine,3-(10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-ylidene)-N-methylpropan-1-amine,Nortriptylene hydrochloride,NCGC00014483-12,KBio3_001611,Lopac-N-7261,1-Propanamine, 3-(10,11-dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methyl-,BDBM112777,methyl({3-[(2E)-tricyclo[9.4.0.0^{3,8}]pentadeca-1(11),3(8),4,6,12,14-hexaen-2-ylidene]propyl})amine,SR-01000000223-4,NCI60_001354,BSPBio_002111,Prestwick1_000254,nortriptyline,NCIStruc1_000856,5-(3-(Methylamino)propylidene)dibenzo(a,e)cyclohepta(1,5)diene,3-(10,11-DIHYDRO-5H-DIBENZO(A,D)(7)ANNULEN-5-YLIDENE)-N-METHYLPROPAN-1-AMINE,BSPBio_000068,SBI-0050843.P004,KUC112478N,CCRIS 9175,21B,5-(3-Methylaminopropylidene)-10,11-dihydro-5H-dibenzo(a,d)cycloheptene,CHEMBL445,Aventyl;Desitriptilina,AB00052061,Lumbeck,Nortriptyline,3-(10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-ylidene)-N-methylpropylamine,Q61387,NCI-169453,Prestwick0_000254,Spectrum5_001377,Nortriptylinum,HSDB 3371,Nortrilen (TN),NCGC00014483-05,NCGC00024261-04,NCGC00024261-06,NORTRIPTYLINE [MI],D08288,PDSP1_001805,NORTRIPTYLINE [VANDF]</span>
                         </p>
-                     <p class="break-all leading-snug text-sm mt-4 astro-PTMKMQOL">
-                      <span class=" astro-PTMKMQOL">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 astro-PTMKMQOL">InChI=1S/C19H21N/c1-20-14-6-11-19-17-9-4-2-7-15(17)12-13-16-8-3-5-10-18(16)19/h2-5,7-11,20H,6,12-14H2,1H3</span>
+                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C19H21N/c1-20-14-6-11-19-17-9-4-2-7-15(17)12-13-16-8-3-5-10-18(16)19/h2-5,7-11,20H,6,12-14H2,1H3</span>
                   </p>
                 </div>
             </div>
-        </section><section class="main-width flex flex-col items-left mt-16 astro-PTMKMQOL">
-          <h2 class="font-bold text-2xl mb-8 astro-PTMKMQOL">Similarities</h2>
-          <astro-island uid="27BD02" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+        </section><section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-8">Similarities</h2>
+          <astro-island uid="Z1HWAYE" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Structural\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolism\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -223,9 +223,9 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Metabolism</button></div></astro-island>
-          <ul class="mt-4 astro-PTMKMQOL" id="similarities-tab-content">
-            <li class="w-full flex flex-col active astro-PTMKMQOL" id="struct">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
+          <ul class="mt-4" id="similarities-tab-content">
+            <li class="w-full flex flex-col active" id="struct">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
                 <div class="flex flex-col mt-4 gap-2">
   <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
@@ -631,10 +631,10 @@
         </div>
 </div>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="affinity">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
-                <div class="w-full pt-4 astro-PTMKMQOL"></div>
-                <astro-island uid="1UW6XA" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;],&quot;class&quot;:[0,&quot;astro-PTMKMQOL&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+            <li class="w-full flex flex-col" id="affinity">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Similarities computed based on affinities of molecules with selected proteins docking site.</span>
+                <div class="w-full pt-4"></div>
+                <astro-island uid="1AHVVr" component-url="/TabGroup.fd7e4c4a.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Similar affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Similar dopaminergic affinities\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Affinities Profile\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
 						disabled:opacity-50 disabled:cursor-not-allowed
 						px-3 py-1 rounded-xl
 						bg-neutral-200 dark:bg-neutral-700
@@ -650,9 +650,9 @@
 						
 						border border-neutral-300 dark:border-neutral-600
 					">Affinities Profile</button></div></astro-island>
-                <ul class="mt-4 astro-PTMKMQOL" id="nested-tab-content">
-                    <li class="w-full flex flex-col active astro-PTMKMQOL" id="dist_main">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
+                <ul class="mt-4" id="nested-tab-content">
+                    <li class="w-full flex flex-col active" id="dist_main">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities. The percentage is a measure of how similar the binding affinities of the molecules are, which should be a proxy to how similarly they interact with the brain.</span>
                         <div class="flex flex-col mt-4 gap-2">
   <a href="/molecule/1997" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
@@ -1174,8 +1174,8 @@
         </a>
 </div>
                     </li>
-                    <li class="w-full flex flex-col astro-PTMKMQOL" id="dist_dopa">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
+                    <li class="w-full flex flex-col" id="dist_dopa">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
                         <div class="flex flex-col mt-4 gap-2">
   <a href="/molecule/341" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
@@ -1726,8 +1726,8 @@
         </a>
 </div>
                     </li>
-                    <li class="w-full flex flex-col astro-PTMKMQOL" id="profile">
-                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 astro-PTMKMQOL">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
+                    <li class="w-full flex flex-col" id="profile">
+                        <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Binding affinities with a list of 34 predefined docking sites. Those affinities are used to compute the interactions similarities.</span>
                         <div class="flex flex-col mt-4 gap-2">
     <div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/A5X5Y0" target="_blank" class="flex flex-row gap-2">
@@ -2486,11 +2486,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="w-full flex flex-col astro-PTMKMQOL" id="metabolism">
-                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug astro-PTMKMQOL">Interaction of this molecule with metabolism</span>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolize this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+            <li class="w-full flex flex-col" id="metabolism">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Interaction of this molecule with metabolism</span>
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolize this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
     <div class="flex flex-row items-center">
@@ -2589,9 +2589,9 @@
 </span>
                   </div>
                 </div>
-                <div class="astro-PTMKMQOL">
-                  <div class="my-4 text-lg astro-PTMKMQOL">Reactions that metabolism produce from this molecule</div>
-                  <div class="flex flex-col gap-2 astro-PTMKMQOL">
+                <div>
+                  <div class="my-4 text-lg">Reactions that metabolism produce from this molecule</div>
+                  <div class="flex flex-col gap-2">
                     <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
     <div class="flex flex-row items-center">
