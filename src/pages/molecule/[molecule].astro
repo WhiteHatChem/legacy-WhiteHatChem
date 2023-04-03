@@ -4,6 +4,7 @@ import Main from '../../layouts/Main.astro';
 import CompoundSimilarities from '../../components/CompoundSimilarities.astro';
 import CompoundNameLink from '../../components/CompoundNameLink.astro';
 import TabGroup from '../../components/TabGroup';
+import Reaction from '../../components/Reaction.astro';
 import MoleculeViewer from '../../components/MoleculeViewer';
 import ProteinAffinities from '../../components/ProteinAffinities.astro';
 import type { MoleculeData } from '../../common/types';
@@ -23,7 +24,8 @@ const {
   isomerd_names, isod_ids,
   hsdb_names, cid,
   synonyms, svg,
-  struct_sim, binding_sim, less_addictive_sim, binding_affinities
+  struct_sim, binding_sim, less_addictive_sim, binding_affinities,
+  metabolism
 } = Astro.props as MoleculeData;
 
 ---
@@ -68,6 +70,7 @@ const {
             tabs={[
               { id: 'struct', label: 'Structural', available: struct_sim !== null },
               { id: 'affinity', label: 'Affinities', available: binding_affinities !== null },
+              { id: 'metabolism', label: 'Metabolism', available: metabolism !== null },
             ]}
             tabsSelector="#similarities-tab-content>li"
           />
@@ -103,6 +106,21 @@ const {
                         <ProteinAffinities affinities={binding_affinities} />
                     </li>}
                 </ul>
+            </li>
+            <li class="w-full flex flex-col" id="metabolism">
+                <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Interaction of this molecule with metabolism</span>
+                {metabolism && metabolism.anterior && <div>
+                  <div class="my-4 text-lg">Reactions that metabolize this molecule</div>
+                  <div class="flex flex-col gap-2">
+                    {metabolism.anterior.map(x => <Reaction reaction={x}/>)}
+                  </div>
+                </div>}
+                {metabolism && metabolism.anterior && <div>
+                  <div class="my-4 text-lg">Reactions that metabolism produce from this molecule</div>
+                  <div class="flex flex-col gap-2">
+                    {metabolism.anterior.map(x => <Reaction reaction={x}/>)}
+                  </div>
+                </div>}
             </li>
           </ul>
 

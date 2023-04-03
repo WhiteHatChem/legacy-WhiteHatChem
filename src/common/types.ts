@@ -16,10 +16,32 @@ export interface MoleculeData {
   synonyms: Array<string> | null;
   svg: string;
   search: number;
+  metabolism: {
+    anterior: Array<Reaction> | null
+    posterior: Array<Reaction> | null
+  } | null
+}
+
+export interface Reaction {
+  name: string;
+  enzymes: Array<string>;
+  product: {
+    name: string;
+    inchi: string;
+    psychonaut_names: string[] | null;
+    tripsit_names: string[] | null;
+    isomerd_names: string[] | null;
+    isod_ids: number[] | null;
+    hsdb_names: string[] | null;
+    cid: number[] | null;
+    toxic: boolean
+    metabolite: boolean
+  }
 }
 
 export interface SimilarMolecule {
   name: string
+  inchi: string;
   psychonaut_names: string[] | null;
   tripsit_names: string[] | null;
   isomerd_names: string[] | null;
@@ -28,6 +50,7 @@ export interface SimilarMolecule {
   cid: number[] | null;
   dist: number
   toxic: boolean
+  metabolite: boolean
 }
 
 export interface Blog {

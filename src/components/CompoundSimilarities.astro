@@ -16,11 +16,17 @@ const { sim, filter } = Astro.props as Props;
   { sim.sort((a,b) => (filter(b.dist) - filter(a.dist))).map((x) => {
       const sim = filter(x.dist);
       return (
-        x.toxic ? <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        x.toxic || x.metabolite ? <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                {x.hsdb_names && x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
-                  <CompoundName toxic={x.toxic} name={name} site="pubchem"/>
-                </a>)}
+                {(x.hsdb_names && x.hsdb_names.length > 0) ?
+                    x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
+                        <CompoundName toxic={x.toxic} metabolite={x.metabolite} name={name} site="pubchem"/>
+                    </a>)
+                :(x.cid && x.cid.length > 0) ?
+                    x.cid.map((cid, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${cid}`} target="_blank">
+                        <CompoundName toxic={x.toxic} metabolite={x.metabolite} name={x.inchi} site="pubchem"/>
+                    </a>)
+                : <CompoundName name={x.inchi} site="none"/>}
             </div>
             <PercentBar sim={sim}/>
         </div> : <a href={`/molecule/${x.name}`} class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">

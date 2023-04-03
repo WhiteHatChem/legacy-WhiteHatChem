@@ -6,11 +6,12 @@ import pubchem from '../assets/img/pubchem_icon.png'
 
 export interface Props {
     name: string;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem';
+    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'none';
     toxic?: boolean;
+    metabolite?: boolean;
 }
 
-const { name, site, toxic } = Astro.props;
+const { name, site, toxic, metabolite } = Astro.props;
 
 function truncate(str: string, length: number) {
     if (str.length > length) {
@@ -22,7 +23,13 @@ function truncate(str: string, length: number) {
 
 <div class="flex flex-row items-center gap-2">
     {
-        toxic ? (  
+        site === 'none' ? (
+          <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+          <h2 title={name} class="text-neutral-500 text-sm leading-tight">{truncate(name,20)}</h2>
+        ) : metabolite ? (
+          <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>
+          <h2 title={name} class="text-violet-500 text-sm leading-tight">Metabolite: {truncate(name,15)}</h2>
+        ) : toxic ? (  
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 text-rose-500">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
           </svg>
