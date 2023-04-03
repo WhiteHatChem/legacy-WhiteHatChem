@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/assets/dosing.c52aefd7.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+	<link rel="stylesheet" href="/assets/dosing.22dfb97c.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
 
@@ -64,7 +64,7 @@
     ">
     Blog
 </a>
-      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.3e871f59.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
         py-1.5 px-3 rounded-xl transition duration-150
         hover:bg-indigo-100 dark:hover:bg-neutral-700
         active:bg-indigo-200 
@@ -100,7 +100,7 @@
 		</div>
 		<!-- mobile -->
 		<div class="flex md:hidden astro-6TGVXP5Q">
-      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.3e871f59.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
         py-1.5 px-3 rounded-xl transition duration-150
         hover:bg-indigo-100 dark:hover:bg-neutral-700
         active:bg-indigo-200 
@@ -175,170 +175,166 @@
 
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
-                <a href="/molecule/3633" class="flex flex-col items-center group">
+                <a href="/molecule/3648" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-(2H-1,3-Benzodioxol-5-yl)-N,N-dimethylpropan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-(2H-1,3-Benzodioxo...
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DMA-hemiFly-5" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DMA-hemiFly-5
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3633.svg" alt="depiction of 3633" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3634" class="flex flex-col items-center group">
+    <img class="dark:invert-[.8]" src="/svg/3648.svg" alt="depiction of 3648" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3649" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="ED-N-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              ED-N-DMPEA
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3634.svg" alt="depiction of 3634" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3635" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="α-Pr-MDPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              α-Pr-MDPEA
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3635.svg" alt="depiction of 3635" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3636" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-[2-(2H-1,3-Benzodioxol-5-yl)ethyl]propan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-[2-(2H-1,3-Benzodi...
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3636.svg" alt="depiction of 3636" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3637" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(2H-1,3-Benzodioxol-4-yl)-N-methylbutan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(2H-1,3-Benzodioxol-5-yl)-3-methylbutan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
               1-(2H-1,3-Benzodioxo...
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3637.svg" alt="depiction of 3637" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3638" class="flex flex-col items-center group">
+    <img class="dark:invert-[.8]" src="/svg/3649.svg" alt="depiction of 3649" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/365" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
-        
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="α-Et-α-Me-MDPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              α-Et-α-Me-MDPEA
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="g-130" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              g-130
+            </h2>
+</div>
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="G-130" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              G-130
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3638.svg" alt="depiction of 3638" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3639" class="flex flex-col items-center group">
+    <img class="dark:invert-[.8]" src="/svg/365.svg" alt="depiction of 365" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3650" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-(2H-1,3-Benzodioxol-5-yl)-N-ethyl-N-methylethan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-(2H-1,3-Benzodioxo...
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3639.svg" alt="depiction of 3639" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/364" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="mephenmetrazine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              mephenmetrazine
-            </h2>
-</div>
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Phendimetrazine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Phendimetrazine
-            </h2>
-</div>
-        <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Antapentan" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Antapentan
-            </h2>
-</div>
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/364.svg" alt="depiction of 364" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3640" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,3-MDE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2,3-MDE
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3640.svg" alt="depiction of 3640" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3641" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-[1-(2H-1,3-Benzodioxol-5-yl)ethyl]propan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-[1-(2H-1,3-Benzodioxol-5-yl)ethyl]propan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
               N-[1-(2H-1,3-Benzodi...
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3641.svg" alt="depiction of 3641" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3642" class="flex flex-col items-center group">
+    <img class="dark:invert-[.8]" src="/svg/3650.svg" alt="depiction of 3650" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3651" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Methoxy-2-{3-[(prop-2-en-1-yl)oxy]phenyl}ethan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-Methoxy-2-{3-[(pro...
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,3-MDDMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,3-MDDMA
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3642.svg" alt="depiction of 3642" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/3643" class="flex flex-col items-center group">
+    <img class="dark:invert-[.8]" src="/svg/3651.svg" alt="depiction of 3651" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3652" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
         <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MAPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              MAPEA
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="HMDMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              HMDMA
             </h2>
 </div>
         
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/3643.svg" alt="depiction of 3643" loading="lazy" width="400px" height="400px">
+    <img class="dark:invert-[.8]" src="/svg/3652.svg" alt="depiction of 3652" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3653" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-[2-(2H-1,3-Benzodioxol-5-yl)ethyl]propan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-[2-(2H-1,3-Benzodi...
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3653.svg" alt="depiction of 3653" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3654" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(2,5-Dimethoxyphenyl)-2-(dimethylamino)ethan-1-one" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-(2,5-Dimethoxyphen...
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3654.svg" alt="depiction of 3654" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3655" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MCPA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MCPA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3655.svg" alt="depiction of 3655" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3656" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-(2,4,5-Trimethoxyphenyl)cyclopropan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-(2,4,5-Trimethoxyp...
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3656.svg" alt="depiction of 3656" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3657" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Hemi-flyscaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Hemi-flyscaline
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3657.svg" alt="depiction of 3657" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/3658" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(7-Methoxy-2H-1,3-benzodioxol-5-yl)butan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-(7-Methoxy-2H-1,3-...
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/3658.svg" alt="depiction of 3658" loading="lazy" width="400px" height="400px">
 </a>
             </div>
 

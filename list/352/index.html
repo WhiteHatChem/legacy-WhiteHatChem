@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/assets/dosing.c52aefd7.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
+	<link rel="stylesheet" href="/assets/dosing.22dfb97c.css" /><script type="module" src="/hoisted.c0173f07.js"></script></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script>
 
@@ -64,7 +64,7 @@
     ">
     Blog
 </a>
-      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.3e871f59.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
         py-1.5 px-3 rounded-xl transition duration-150
         hover:bg-indigo-100 dark:hover:bg-neutral-700
         active:bg-indigo-200 
@@ -100,7 +100,7 @@
 		</div>
 		<!-- mobile -->
 		<div class="flex md:hidden astro-6TGVXP5Q">
-      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.819f2832.js" component-export="default" renderer-url="/client.08201e4e.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+      <astro-island uid="Z1lRXwY" component-url="/ThemeToggle.3e871f59.js" component-export="default" renderer-url="/client.83253383.js" props="{&quot;class&quot;:[0,&quot;astro-6TGVXP5Q&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
         py-1.5 px-3 rounded-xl transition duration-150
         hover:bg-indigo-100 dark:hover:bg-neutral-700
         active:bg-indigo-200 
@@ -175,111 +175,7 @@
 
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
-                <a href="/molecule/970" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DMMDA-2" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DMMDA-2
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/970.svg" alt="depiction of 970" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/971" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="METHYL-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              METHYL-DOB
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/971.svg" alt="depiction of 971" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/972" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Clenbuterol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Clenbuterol
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/972.svg" alt="depiction of 972" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/973" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Mefenorex" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Mefenorex
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/973.svg" alt="depiction of 973" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/974" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-EF" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-EF
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/974.svg" alt="depiction of 974" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/975" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-Methylbenzylpiperazine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3-Methylbenzylpipera...
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/975.svg" alt="depiction of 975" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/976" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Oxotremorine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Oxotremorine
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/976.svg" alt="depiction of 976" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/977" class="flex flex-col items-center group">
-    <div class="flex flex-col">
-        
-        
-        <div class="flex flex-row items-center gap-2">
-    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="(1R,4S,5S,6S)-4-(Methionylamino)-2,2-dioxo-2λ6-thiabicyclo[3.1.0]hexane-4,6-dicarboxylic acid" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              (1R,4S,5S,6S)-4-(Met...
-            </h2>
-</div>
-        
-    </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
-    <img class="dark:invert-[.8]" src="/svg/977.svg" alt="depiction of 977" loading="lazy" width="400px" height="400px">
-</a><a href="/molecule/978" class="flex flex-col items-center group">
+                <a href="/molecule/978" class="flex flex-col items-center group">
     <div class="flex flex-col">
         
         
@@ -339,6 +235,110 @@
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
     <img class="dark:invert-[.8]" src="/svg/980.svg" alt="depiction of 980" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/981" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Propylamphetamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Propylamphetamine
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/981.svg" alt="depiction of 981" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/982" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Etafedrine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Etafedrine
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/982.svg" alt="depiction of 982" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/983" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Et-PMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Et-PMA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/983.svg" alt="depiction of 983" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/984" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Mirogabalin" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Mirogabalin
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/984.svg" alt="depiction of 984" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/985" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2CD-5ETO" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2CD-5ETO
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/985.svg" alt="depiction of 985" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/986" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="ψ-DOM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              ψ-DOM
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/986.svg" alt="depiction of 986" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/987" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,4-DiMeO-MA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3,4-DiMeO-MA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/987.svg" alt="depiction of 987" loading="lazy" width="400px" height="400px">
+</a><a href="/molecule/988" class="flex flex-col items-center group">
+    <div class="flex flex-col">
+        
+        
+        <div class="flex flex-row items-center gap-2">
+    <img src="/assets/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DMMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DMMA
+            </h2>
+</div>
+        
+    </div>
+    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"></div>
+    <img class="dark:invert-[.8]" src="/svg/988.svg" alt="depiction of 988" loading="lazy" width="400px" height="400px">
 </a>
             </div>
 
