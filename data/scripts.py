@@ -242,7 +242,7 @@ def generate_jsons(
 
 	# add toxicity, inchi, and name
 	for k, v in output.items():
-		v['toxic'] = bool(v['search'])
+		v['toxic'] = not(bool(v['search']))
 		v['nogen'] = bool(v['toxic']) or bool(v['metabolite'])
 		v['metabolite'] = bool(v['metabolite'])
 		v['name'] = k
