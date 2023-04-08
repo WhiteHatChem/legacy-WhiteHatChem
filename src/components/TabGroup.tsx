@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'preact/hooks';
+import { useCallback, useEffect, useState } from 'preact/hooks';
 
 interface Props {
 	tabs: Array<{
@@ -17,6 +17,9 @@ const TabGroup = ({ tabs, defaultActiveTab, tabsSelector }: Props) => {
 		document.querySelectorAll(`${tabsSelector}#${id}`).forEach((el) => el.classList.add('active'));
 		setActiveTab(id);
 	}, []);
+	useEffect(() => {
+		toggleTab(defaultActiveTab);
+	}, [defaultActiveTab]);
 	return (
 		<div className="flex flex-wrap flex-row gap-2">
 			{tabs.map((tab) => (
