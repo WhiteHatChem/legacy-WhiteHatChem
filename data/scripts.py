@@ -242,8 +242,9 @@ def generate_jsons(
 
 	# add toxicity, inchi, and name
 	for k, v in output.items():
-		v['toxic'] = v['search'] == 0
-		v['nogen'] = v['toxic'] or v['metabolite']
+		v['toxic'] = bool(v['search'])
+		v['nogen'] = bool(v['toxic']) or bool(v['metabolite'])
+		v['metabolite'] = bool(v['metabolite'])
 		v['name'] = k
 		v['inchi'] = v['index']
 
@@ -265,6 +266,7 @@ def generate_jsons(
 
 	for k, v in tqdm(output.items(), desc='Generating structural similarity'):
 		if v['nogen']: continue
+		if v['structural_distances'] is None or v['structural_indices'] is None: continue
 
 		v['struct_sim'] = []
 		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
