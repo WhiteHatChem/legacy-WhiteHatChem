@@ -77,7 +77,7 @@ const has_sim = default_sim !== null;
             <ul class="mt-4" id="similarities-tab-content">
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Most structurally similar compounds. The percentage is a measure of how structurally similar those molecules are, which is often strongly correlated with their effects.</span>
-                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100-x, 0)/100, 4.)} />
+                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100.0-x, 0)/100.0, 4.0) * (99.0/100.0)} />
                   : <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">No structural similarities available.</span>}
               </li>
               <li class="w-full flex flex-col" id="affinity">
