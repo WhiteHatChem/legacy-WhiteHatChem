@@ -6,11 +6,16 @@ import type { MoleculeData } from '../../common/types';
 
 
 export async function getStaticPaths({ paginate } : any) {
-	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
-    return paginate(allNPS, { pageSize: 12 });
+	const allNPS = import.meta.glob('../../../data/json/*.json');
+    const data = Object.values(allNPS).map(x => ({ data: x }));
+    return paginate(data, { pageSize: 12 });
 }
 
 const { page } = Astro.props;
+const loaded_data : Array<MoleculeData> = await Promise.all(page.data.map(async (x: {data: () => Promise<MoleculeData>}) => {
+    const data = await x.data();
+    return data;
+}));
 ---
 
 <Base title="Compounds">
@@ -42,11 +47,7 @@ const { page } = Astro.props;
 
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
-                {
-                    page.data.map((x: MoleculeData) =>
-                        <CompoundCard {...x}/>
-                    )
-                }
+                { loaded_data.map(async (x) => <CompoundCard {...x}/>) }
             </div>
 
             <!-- Page selection -->
@@ -54,7 +55,6 @@ const { page } = Astro.props;
                 {page.url.prev ? <a href={page.url.prev}>{page.currentPage - 1}</a> : null}
                 <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> {page.currentPage} </p>
                 {page.url.next ? <a href={page.url.next}>{page.currentPage + 1}</a> : null}
-
             </div>
         </section>
 	</Main>
