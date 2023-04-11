@@ -1,16 +1,25 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Main from '../../layouts/Main.astro';
-import CompoundCard from '../../components/CompoundCard.astro';
-import type { MoleculeData } from '../../common/types';
+import Base from '../../../layouts/Base.astro';
+import Main from '../../../layouts/Main.astro';
+import CompoundCard from '../../../components/CompoundCard.astro';
+import type { MoleculeData } from '../../../common/types';
+import { Lang, languagesList, useTranslations } from '../../../i18n/i18n';
 
 
 export async function getStaticPaths({ paginate } : any) {
-	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
-    return paginate(allNPS, { pageSize: 12 });
+	const allNPS = await Astro.glob<MoleculeData>('../../../../data/json/*.json');
+    return languagesList.map(lang => paginate(
+        allNPS,
+        {
+            params: { lang: lang},
+            pageSize: 12
+        }
+    ));
 }
 
 const { page } = Astro.props;
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
 ---
 
 <Base title="Compounds">
@@ -54,7 +63,6 @@ const { page } = Astro.props;
                 {page.url.prev ? <a href={page.url.prev}>{page.currentPage - 1}</a> : null}
                 <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> {page.currentPage} </p>
                 {page.url.next ? <a href={page.url.next}>{page.currentPage + 1}</a> : null}
-
             </div>
         </section>
 	</Main>

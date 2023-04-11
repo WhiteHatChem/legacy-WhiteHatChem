@@ -1,21 +1,27 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Main from '../../layouts/Main.astro';
-import CompoundSimilarities from '../../components/CompoundSimilarities.astro';
-import CompoundNameLink from '../../components/CompoundNameLink.astro';
-import TabGroup from '../../components/TabGroup';
-import Reaction from '../../components/Reaction.astro';
-import MoleculeViewer from '../../components/MoleculeViewer';
-import ProteinAffinities from '../../components/ProteinAffinities.astro';
-import type { MoleculeData } from '../../common/types';
+import Base from '../../../layouts/Base.astro';
+import Main from '../../../layouts/Main.astro';
+import CompoundSimilarities from '../../../components/CompoundSimilarities.astro';
+import CompoundNameLink from '../../../components/CompoundNameLink.astro';
+import TabGroup from '../../../components/TabGroup';
+import Reaction from '../../../components/Reaction.astro';
+import MoleculeViewer from '../../../components/MoleculeViewer';
+import ProteinAffinities from '../../../components/ProteinAffinities.astro';
+import { languagesList, useTranslations, Lang } from '../../../i18n/i18n';
+import type { MoleculeData } from '../../../common/types';
 
-export async function getStaticPaths({ paginate } : any) {
-	const allNPS = await Astro.glob<MoleculeData>('../../../data/json/*.json');
-    return allNPS.map((x) => ({
-        params: { molecule: x.name },
-        props: x
+export async function getStaticPaths() {
+	const allNPS = await Astro.glob<MoleculeData>('../../../../data/json/*.json');
+  return languagesList.map((lang) => (
+    allNPS.map((x) => ({
+      params: { molecule: x.name, lang: lang },
+      props: x
     }))
+  )).flat()
 }
+
+const { molecule, lang } = Astro.params as { molecule: string, lang: Lang };
+const t = useTranslations(lang);
 
 const {
   inchi, name,
@@ -34,7 +40,6 @@ const default_sim = (
   (metabolism !== null) ? 'metabolism' :
   null
 );
-const has_sim = default_sim !== null;
 ---
 
 <Base title="Compounds.">

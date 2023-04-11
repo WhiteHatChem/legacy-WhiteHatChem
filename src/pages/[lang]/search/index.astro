@@ -1,11 +1,20 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Main from '../../layouts/Main.astro';
-import CompoundCard from '../../components/CompoundCard.astro';
-import type { MoleculeData } from '../../common/types';
+import Base from '../../../layouts/Base.astro';
+import Main from '../../../layouts/Main.astro';
+import CompoundCard from '../../../components/CompoundCard.astro';
+import type { MoleculeData } from '../../../common/types';
+import { Lang, languagesList, useTranslations } from '../../../i18n/i18n';
 
+export async function getStaticPaths() {
+  return languagesList.map((lang) => ({
+    params: { lang: lang },
+  }));
+}
 
-const molecules = await Astro.glob<MoleculeData>('../../../data/json/*.json');
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+
+const molecules = await Astro.glob<MoleculeData>('../../../../data/json/*.json');
 
 function molecule_identifiers(molecule: MoleculeData) {
     let names : Array<string> = [];
@@ -17,8 +26,8 @@ function molecule_identifiers(molecule: MoleculeData) {
     let identifiers= `${names.join('_')}_${molecule.synonyms?.join('_')}`
     return identifiers.toLowerCase();
 }
-
 ---
+
 <script>
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());

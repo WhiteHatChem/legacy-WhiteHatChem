@@ -5,6 +5,7 @@ import MainLogo from '../assets/icons/main.png';
 import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import ThemeToggle from '../components/ThemeToggle';
+import { getLangFromUrl } from '../i18n/i18n';
 
 
 export interface Props {
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 const { active } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <style>
@@ -32,7 +34,7 @@ const { active } = Astro.props;
 	<nav class="flex justify-between items-center main-width">
 		<div>
 			<a
-				href="/"
+				href={`/${lang}/`}
 				class="flex flex-row items-center md:gap-4 gap-2"
 			>
 				<img
@@ -51,7 +53,7 @@ const { active } = Astro.props;
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex">
 			<HeaderButton href="#support">Support us</HeaderButton>
-			<HeaderButton href="/blog">Blog</HeaderButton>
+			<HeaderButton href={`/${lang}/blog`}>Blog</HeaderButton>
       <ThemeToggle client:load/>
 
 			<HeaderButton href="https://discord.gg/SKGhEsWT7R">
@@ -71,7 +73,7 @@ const { active } = Astro.props;
 				</svg>
       </HeaderButton>
 			<a
-				href="/list/1"
+				href={`/${lang}/list/1`}
 				class="
           flex items-center py-1 px-3 rounded-xl          
           text-white dark:text-black
@@ -125,10 +127,10 @@ const { active } = Astro.props;
 								</g>
 							</svg>
 						</a>
-						<HamburgerButton href="/blog">Blog</HamburgerButton>
-						<HamburgerButton href="/list/1">Compounds</HamburgerButton>
+						<HamburgerButton href={`/${lang}/blog`}>Blog</HamburgerButton>
+						<HamburgerButton href={`/${lang}/list/1`}>Compounds</HamburgerButton>
 						<hr class="m-2 border-neutral-400/20">
-						<HamburgerButton href="/about">About</HamburgerButton>
+						<HamburgerButton href={`/${lang}/about`}>About</HamburgerButton>
 					</div>
 				</div>
 			</div>

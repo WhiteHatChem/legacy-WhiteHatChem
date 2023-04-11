@@ -2,12 +2,14 @@
 import ComponentSvg from './ComponentSvg.astro'
 import CompoundName from './CompoundName.astro';
 import type { MoleculeData } from '../common/types';
+import { getLangFromUrl } from '../i18n/i18n';
 
 const { psychonaut_names, tripsit_names, isomerd_names, hsdb_names, name, svg } = Astro.props as MoleculeData;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <a
-    href={`/molecule/${name}`}
+    href={`/${lang}/molecule/${name}`}
     class="flex flex-col items-center group"
 >
     <div class="flex flex-col">
