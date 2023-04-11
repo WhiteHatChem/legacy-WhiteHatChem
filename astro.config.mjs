@@ -10,7 +10,7 @@ import sitemap from "astro-sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://whitehatchem.github.io',
+  site: 'https://whitehatchem.github.io/',
   integrations: [
     preact(),
     tailwind({
