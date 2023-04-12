@@ -5,6 +5,7 @@ import MainLogo from '../assets/icons/main.png';
 import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import ThemeToggle from '../components/ThemeToggle';
+import LanguagePicker from '../components/LanguagePicker.astro';
 import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
 
 
@@ -50,7 +51,8 @@ const t = useTranslations(lang);
 		<div class="gap-2 items-stretch hidden md:flex">
 			<HeaderButton href="#support">{t('layout.support_us')}</HeaderButton>
 			<HeaderButton href={i18n_href('/blog',lang)}>Blog</HeaderButton>
-      <ThemeToggle client:load/>
+			<LanguagePicker />
+      		<ThemeToggle client:load/>
 
 			<HeaderButton href="https://discord.gg/SKGhEsWT7R">
 				<svg
@@ -67,7 +69,7 @@ const t = useTranslations(lang);
 					</g>
 					</g>
 				</svg>
-      </HeaderButton>
+      		</HeaderButton>
 			<a
 				href={i18n_href('/list/1', lang)}
 				class="
@@ -81,10 +83,11 @@ const t = useTranslations(lang);
 			</a>
 		</div>
 		<!-- mobile -->
-		<div class="flex md:hidden">
-      <ThemeToggle client:load/>
+		<div class="flex gap-2 md:hidden">
+			<LanguagePicker />
+      		<ThemeToggle client:load/>
 			<input class="mobile-menu-toggler hidden" type="checkbox" id="side-menu"/>
-			<label class="hamburger p-2 ml-2" for="side-menu"><Hamburger style="cursor-pointer w-6 h-6"/></label>
+			<label class="hamburger p-2" for="side-menu"><Hamburger style="cursor-pointer w-6 h-6"/></label>
 
 			<div class="mobile-menu" aria-modal="true" role="dialog">
 				<!-- background blur -->
