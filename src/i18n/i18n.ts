@@ -28,3 +28,8 @@ export function useTranslations(lang: Lang) {
     return ui[lang][key] || ui[defaultLang][key];
   }
 }
+
+// add language to internal href without language
+export function i18n_href(href: string, lang: Lang) {
+  return href.startsWith('/') ? `/${lang}${href}` : href;
+}

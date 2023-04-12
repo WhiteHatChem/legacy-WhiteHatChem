@@ -1,7 +1,7 @@
 ---
 import CompoundName from './CompoundName.astro';
 import type { Reaction } from '../common/types'
-import { getLangFromUrl } from '../i18n/i18n';
+import { getLangFromUrl, i18n_href } from '../i18n/i18n';
 export interface Props {
   reaction: Reaction;
 }
@@ -24,7 +24,10 @@ const lang = getLangFromUrl(Astro.url);
                     <CompoundName toxic={x.toxic} metabolite={x.metabolite} name={x.inchi} site="pubchem"/>
                 </a>)
             : <CompoundName name={x.inchi} site="none"/>}
-        </span> : <a href={`/${lang}/molecule/${x.name}`} class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2">
+        </span> : <a
+            href={i18n_href(`/molecule/${x.name}`, lang)}
+            class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2"
+        >
             {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
             {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
             {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}

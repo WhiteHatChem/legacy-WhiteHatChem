@@ -5,7 +5,7 @@ import MainLogo from '../assets/icons/main.png';
 import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import ThemeToggle from '../components/ThemeToggle';
-import { getLangFromUrl } from '../i18n/i18n';
+import { getLangFromUrl, i18n_href } from '../i18n/i18n';
 
 
 export interface Props {
@@ -34,7 +34,7 @@ const lang = getLangFromUrl(Astro.url);
 	<nav class="flex justify-between items-center main-width">
 		<div>
 			<a
-				href={`/${lang}/`}
+				href={i18n_href('/', lang)}
 				class="flex flex-row items-center md:gap-4 gap-2"
 			>
 				<img
@@ -53,7 +53,7 @@ const lang = getLangFromUrl(Astro.url);
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex">
 			<HeaderButton href="#support">Support us</HeaderButton>
-			<HeaderButton href={`/${lang}/blog`}>Blog</HeaderButton>
+			<HeaderButton href={i18n_href('/blog',lang)}>Blog</HeaderButton>
       <ThemeToggle client:load/>
 
 			<HeaderButton href="https://discord.gg/SKGhEsWT7R">
@@ -73,7 +73,7 @@ const lang = getLangFromUrl(Astro.url);
 				</svg>
       </HeaderButton>
 			<a
-				href={`/${lang}/list/1`}
+				href={i18n_href('/list/1', lang)}
 				class="
           flex items-center py-1 px-3 rounded-xl          
           text-white dark:text-black
@@ -127,10 +127,10 @@ const lang = getLangFromUrl(Astro.url);
 								</g>
 							</svg>
 						</a>
-						<HamburgerButton href={`/${lang}/blog`}>Blog</HamburgerButton>
-						<HamburgerButton href={`/${lang}/list/1`}>Compounds</HamburgerButton>
+						<HamburgerButton href={i18n_href('/blog',lang)}>Blog</HamburgerButton>
+						<HamburgerButton href={i18n_href('/list/1',lang)}>Compounds</HamburgerButton>
 						<hr class="m-2 border-neutral-400/20">
-						<HamburgerButton href={`/${lang}/about`}>About</HamburgerButton>
+						<HamburgerButton href={i18n_href('/about',lang)}>About</HamburgerButton>
 					</div>
 				</div>
 			</div>
