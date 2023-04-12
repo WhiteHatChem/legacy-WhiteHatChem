@@ -1,9 +1,15 @@
 import fr_ui from './fr';
 import en_ui from './en';
+import de_ui from './de';
+import es_ui from './es';
+import ru_ui from './ru';
 
 export const languages = {
   en: 'English',
   fr: 'Français',
+  de:'Deutsch,
+  es:'Español',
+  ru:'Pусский',
 };
 
 export const languagesList = Object.keys(languages);
@@ -13,6 +19,9 @@ export const defaultLang = 'en';
 export const ui = {
   en: en_ui,
   fr: fr_ui,
+  de:de_ui,
+  es:es_ui,
+  ru:ru_ui
 } as const;
 
 export type Lang = keyof typeof ui;
