@@ -5,15 +5,11 @@ import MainLogo from '../assets/icons/main.png';
 import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import ThemeToggle from '../components/ThemeToggle';
-import { getLangFromUrl, i18n_href } from '../i18n/i18n';
+import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
 
 
-export interface Props {
-	active: 'home' | 'blog'
-}
-
-const { active } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <style>
@@ -52,7 +48,7 @@ const lang = getLangFromUrl(Astro.url);
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex">
-			<HeaderButton href="#support">Support us</HeaderButton>
+			<HeaderButton href="#support">{t('layout.support_us')}</HeaderButton>
 			<HeaderButton href={i18n_href('/blog',lang)}>Blog</HeaderButton>
       <ThemeToggle client:load/>
 
@@ -81,7 +77,7 @@ const lang = getLangFromUrl(Astro.url);
           hover:bg-indigo-600 dark:hover:bg-indigo-200
           transition duration-150"
 			>
-				Search NPS
+				{t('layout.search_nps')}
 			</a>
 		</div>
 		<!-- mobile -->
@@ -111,7 +107,7 @@ const lang = getLangFromUrl(Astro.url);
 							href="https://discord.gg/SKGhEsWT7R"
 							class="flex items-center p-2 w-full"
 						>
-							Join our Discord
+							{t('layout.join_discord')}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 127.14 96.36"
@@ -128,9 +124,9 @@ const lang = getLangFromUrl(Astro.url);
 							</svg>
 						</a>
 						<HamburgerButton href={i18n_href('/blog',lang)}>Blog</HamburgerButton>
-						<HamburgerButton href={i18n_href('/list/1',lang)}>Compounds</HamburgerButton>
+						<HamburgerButton href={i18n_href('/list/1',lang)}>{t('layout.compounds')}</HamburgerButton>
 						<hr class="m-2 border-neutral-400/20">
-						<HamburgerButton href={i18n_href('/about',lang)}>About</HamburgerButton>
+						<HamburgerButton href={i18n_href('/about',lang)}>{t('layout.about')}</HamburgerButton>
 					</div>
 				</div>
 			</div>
@@ -142,8 +138,8 @@ const lang = getLangFromUrl(Astro.url);
 
 <footer class="main-width mt-10">
 	<div id="support" class="">
-		<h1 class="text-xl mb-4">Support us</h1>
-		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4">If you like what we do, you can support us by donating here:</p>
+		<h1 class="text-xl mb-4">{t('layout.support_us')}</h1>
+		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4">{t('support.sent1')}:</p>
 		<span class="w-full flex flex-col items-center">
 			<span class="flex items-center gap-2">
 				<img src={Bitcoin} alt="btc" class="w-4 h-4"/>
