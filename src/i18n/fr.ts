@@ -10,6 +10,5 @@ export default {
   'home.hero1': "Rester en phase avec le",
   'home.hero2': "monde",
   'home.hero3': "des NPS",
-
-  'molecule.checkon': "Détails sur",
+// TODO
 }
