@@ -1,18 +1,21 @@
 ---
 import CompoundName from './CompoundName.astro';
 import type { Reaction } from '../common/types'
+import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
 export interface Props {
   reaction: Reaction;
 }
 
 const { reaction } = Astro.props;
 const x = reaction.product;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
     <div class="underline">{reaction.name}</div>
     <div class="flex flex-row items-center">
-        Product: {x.toxic || x.metabolite ? <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+        {t('reaction.product')}: {x.toxic || x.metabolite ? <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
             {(x.hsdb_names && x.hsdb_names.length > 0) ?
                 x.hsdb_names.map((name, i) => <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid![i]}`} target="_blank">
                     <CompoundName toxic={x.toxic} metabolite={x.metabolite} name={name} site="pubchem"/>
@@ -22,12 +25,15 @@ const x = reaction.product;
                     <CompoundName toxic={x.toxic} metabolite={x.metabolite} name={x.inchi} site="pubchem"/>
                 </a>)
             : <CompoundName name={x.inchi} site="none"/>}
-        </span> : <a href={`/molecule/${x.name}`} class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2">
+        </span> : <a
+            href={i18n_href(`/molecule/${x.name}`, lang)}
+            class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2"
+        >
             {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
             {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
             {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
             {x.hsdb_names && x.hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
         </a>}
     </div> 
-    <div> Enzymes: <span class="text-neutral-600 dark:text-neutral-400">{reaction.enzymes.join(', ')}</span></div> 
+    <div> {t('reaction.enzymes')}: <span class="text-neutral-600 dark:text-neutral-400">{reaction.enzymes.join(', ')}</span></div> 
 </span>
