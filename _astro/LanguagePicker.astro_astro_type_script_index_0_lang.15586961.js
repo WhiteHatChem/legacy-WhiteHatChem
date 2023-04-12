@@ -1,0 +1,1 @@
+window.dataLayer=window.dataLayer||[];function e(){dataLayer.push(arguments)}e("js",new Date);e("config","G-LL3B24H8NW");function c(n){const a=n.currentTarget.value,[s,i,...t]=window.location.pathname.split("/"),o=t.join("/");window.location.pathname=`/${a}/${o}`}const l=document.querySelectorAll("#lang-select");for(const n of l)n.addEventListener("change",c);
