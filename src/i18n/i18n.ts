@@ -7,7 +7,7 @@ import ru_ui from './ru';
 export const languages = {
   en: 'English',
   fr: 'Français',
-  de:'Deutsch,
+  de:'Deutsch',
   es:'Español',
   ru:'Pусский',
 };
