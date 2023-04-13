@@ -44,6 +44,7 @@ export default {
 'layout.join_discord': 'Tritt unserem Discord bei',
 'layout.compounds': 'Verbindungen',
 'layout.about': 'Über uns',
+'layout.blog': 'Bloggen',
 
 'support.sent1': 'Wenn Ihnen gefällt, was wir tun, können Sie uns durch eine Spende hier unterstützen',
 

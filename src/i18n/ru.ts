@@ -44,6 +44,7 @@ export default {
 'layout.join_discord': 'Присоединиться к нашему Discord',
 'layout.compounds': 'Соединения',
 'layout.about': 'О нас',
+'layout.blog': 'Блог',
 
 'support.sent1': 'Если вам нравится то, что мы делаем, вы можете поддержать нас, сделав пожертвование здесь',
 

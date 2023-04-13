@@ -50,7 +50,7 @@ const t = useTranslations(lang);
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex">
 			<HeaderButton href="#support">{t('layout.support_us')}</HeaderButton>
-			<HeaderButton href={i18n_href('/blog',lang)}>Blog</HeaderButton>
+			<HeaderButton href={i18n_href('/blog',lang)}>{t('layout.blog')}</HeaderButton>
 			<LanguagePicker />
       		<ThemeToggle client:load/>
 
