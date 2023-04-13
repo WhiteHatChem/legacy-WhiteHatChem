@@ -101,11 +101,11 @@ const default_sim = (
                   <ul class="mt-4" id="nested-tab-content">
                       {binding_sim && <li class="w-full flex flex-col active" id="dist_main">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent4')}</span>
-                          <CompoundSimilarities sim={binding_sim} filter={x => 1./(1.+Math.exp(-(x-144.)/52.))}/>
+                          <CompoundSimilarities sim={binding_sim} filter={x => 1./(1.+Math.exp(-(x-0.1)/0.35))}/>
                       </li>}
                       {less_addictive_sim && <li class="w-full flex flex-col" id="dist_dopa">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent5')}</span>
-                          <CompoundSimilarities sim={less_addictive_sim} filter={x => 1./(1.+Math.exp(-(x-563.)/298.))}/>
+                          <CompoundSimilarities sim={less_addictive_sim} filter={x => 1./(1.+Math.exp(-(x-0.001)/0.005))}/>
                       </li>}
                       {binding_affinities && <li class="w-full flex flex-col" id="profile">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent6')}</span>
