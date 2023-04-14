@@ -1,0 +1,12 @@
+---
+layout: ../../../layouts/Blog.astro
+title: "What Is A Prodrug?"
+author: "Zach"
+date: "14 Apr 2023"
+---
+import { languagesList } from '../../../i18n/i18n';
+export async function getStaticPaths() {
+  return languagesList.map((lang) => ({
+    params: { lang: lang },
+  }));
+}
