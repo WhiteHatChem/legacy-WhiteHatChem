@@ -5,7 +5,7 @@ export default {
 'home.our_mission': "Notre mission",
 'home.latest': "Dernières recherches",
 'home.explore': "Explorer",
-'home.why': "Pourquoi ?",
+'home.why': "Pourquoi cette plateforme ?",
 'home.discord': "Rejoignez la communauté sur Discord",
 'home.hero1': "Rester à jour avec le",
 'home.hero2': "monde en constante évolution",
@@ -13,8 +13,7 @@ export default {
 'home.sent1': "Analyse de pointe",
 'home.sent2': "des dernières découvertes",
 'home.sent3': "Nous développons des outils d'apprentissage profond permettant d'identifier et d'analyser rapidement, précisément et de manière rentable les NPS, afin de réduire les conséquences sur la santé publique de l'abus de drogues de synthèse.",
-'home.sent4': "Le marché des drogues illicites a été transformé par la prolifération de drogues de synthèse produites clandestinement, conçues pour imiter les actions physiologiques de drogues plus connues tout en contournant les lois sur le contrôle des drogues. La charge que représente l'abus de NPS pour la santé publique oblige les laboratoires toxicologiques, policiers et douaniers à rechercher ces substances dans les saisies effectuées par les forces de l'ordre et les échantillons biologiques. Cependant, l'identification des NPS émergentes est difficile en raison de la diversité chimique de ces substances et de la nature éphémère de leur présence sur le marché illicite.",
-'home.sent5': "Nous proposons une plateforme en ligne de pointe et des outils d'apprentissage profond qui permettent d'identifier et d'analyser de nouvelles drogues de synthèse. Grâce à une base de données de molécules connues et à des techniques d'apprentissage profond de pointe, nos algorithmes peuvent extrapoler de nouvelles substances pour en prédire les propriétés. Il s'agit d'un outil précieux pour les forces de l'ordre, les responsables de la santé publique et les laboratoires qui travaillent à suivre l'évolution constante du paysage du marché illicite des drogues.",
+'home.sent4': "Face à l'émergence rapide de nouvelles substances psychoactives de synthèse (NPS) et à l'inaccessibilité des informations fiables, notre mission est de réduire les risques pour les usagers en proposant une source d'information à jour et fiable. La plateforme WhiteHatChem vise à combler ce vide en interconnectant les substances répertoriées, en fournissant des données pertinentes et en s'appuyant sur les avancées en bio-informatique. En mettant l'accent sur la réduction des risques et en offrant des informations précises sur les interactions, les effets, les métabolismes et la disponibilité des NPS, nous souhaitons contribuer à une meilleure connaissance et sensibilisation pour tous les acteurs concernés : usagers, professionnels de la santé, chercheurs et laboratoires d'analyse. Ensemble, œuvrons pour une approche plus sûre et éclairée face à ces nouvelles substances.",
 
 'molecule.checkon': "Vérifier sur",
 'molecule.synonyms': "Synonymes",

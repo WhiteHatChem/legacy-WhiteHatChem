@@ -5,7 +5,7 @@ export default {
 'home.our_mission': "Unsere Mission",
 'home.latest': "Aktuelle Forschung",
 'home.explore': "Erkunden",
-'home.why': "Warum?",
+'home.why': "Warum diese Plattform?",
 'home.discord': "Tritt der Community auf Discord bei",
 'home.hero1': "Schritt halten mit der",
 'home.hero2': "sich ständig verändernden",
@@ -13,8 +13,7 @@ export default {
 'home.sent1': "State-of-the-Art-Analyse",
 'home.sent2': "neuester Entdeckungen",
 'home.sent3': "Wir entwickeln Deep-Learning-Tools, die schnell, genau und kosteneffizient NPS identifizieren und analysieren können, um die öffentliche Gesundheitslast durch den Missbrauch von Designerdrogen zu reduzieren.",
-'home.sent4': "Der illegale Drogenmarkt wurde durch die Verbreitung von heimlich hergestellten Designerdrogen neu geformt. Diese sind darauf ausgelegt, die physiologischen Wirkungen bekannterer Drogenmissbräuche nachzuahmen und gleichzeitig Drogenkontrollgesetzen zu entgehen. Die öffentliche Gesundheitslast durch NPS-Missbrauch verpflichtet toxikologische, polizeiliche und zollamtliche Labore, sie in beschlagnahmten Beweismitteln und biologischen Proben zu untersuchen. Die Identifizierung neuer NPS ist jedoch aufgrund ihrer chemischen Vielfalt und der flüchtigen Natur ihres Auftretens auf dem illegalen Markt eine Herausforderung.",
-'home.sent5': "Wir bieten eine hochmoderne Online-Plattform und Deep-Learning-Tools zur Identifizierung und Analyse neuer Designerdrogen. Mithilfe einer Datenbank bekannter Moleküle und modernster Deep-Learning-Techniken können unsere Algorithmen auf neue Substanzen extrapolieren, um deren Eigenschaften vorherzusagen. Dies ist ein wertvolles Instrument für Strafverfolgungsbehörden, Gesundheitsbeamte und Labore, die sich bemühen, mit der sich ständig verändernden Landschaft des illegalen Drogenmarktes Schritt zu halten.",
+'home.sent4': "Angesichts der raschen Entstehung neuer synthetischer psychoaktiver Substanzen (NPS) und des Mangels an zugänglichen zuverlässigen Informationen besteht unsere Mission darin, die Risiken für die Benutzer zu verringern, indem wir eine aktuelle und vertra uenswürdige Informationsquelle bereitstellen. WhiteHatChem zielt darauf ab, diese Lücke zu schließen, indem es die aufgelisteten Substanzen miteinander verbindet, relevante Daten bereitstellt und sich auf Fortschritte in der Bioinformatik stützt. Indem wir uns auf Risikominderung konzentrieren und genaue Informationen über Wechselwirkungen, Wirkungen, Stoffwechsel und Verfügbarkeit von NPS bereitstellen, möchten wir zu einem besseren Wissen und Bewusstsein für alle Beteiligten beitragen: Benutzer, medizinisches Fachpersonal, Forscher und analytische Labore. Gemeinsam arbeiten wir auf einen sichereren und besser informierten Umgang mit diesen neuen Substanzen hin.",
 
 'molecule.checkon': "Prüfen auf",
 'molecule.synonyms': "Synonyme",

@@ -5,7 +5,7 @@ export default {
   'home.our_mission': "Our Mission",
   'home.latest': "Latest Research",
   'home.explore': "Explore",
-  'home.why': "Why?",
+  'home.why': "Why this platform?",
   'home.discord': "Join the community on Discord",
   'home.hero1': "Keeping up with the",
   'home.hero2': "ever-changing",
@@ -13,8 +13,7 @@ export default {
   'home.sent1': "State-of-the-art analysis",
   'home.sent2': "of latest discoveries",
   'home.sent3': "We develop Deep-Learning tools that can rapidly, accurately, and cost-effectively identify and analyse NPS, to reduce the public health burden of designer drugs abuse.",
-  'home.sent4': "The illicit drug market has been reshaped by the proliferation of clandestinely produced designer drugs, which are designed to mimic the physiological actions of better-known drugs of abuse while skirting drug control laws. The public health burden of NPS abuse obliges toxicological, police, and customs laboratories to screen for them in law enforcement seizures and biological samples. However, the identification of emerging NPSs is challenging due to the chemical diversity of these substances and the fleeting nature of their appearance on the illicit market.",
-  'home.sent5': "We provide a cutting-edge online platform and Deep Learning tools that helps identify and analyse new designer drug. Using a database of known molecules and state-of-the-art Deep Learning techniques, our algorithms can extrapolate to new substances to predict their properties. This is a valuable tool for law enforcement, public health officials, and laboratories who are working to keep up with the ever-changing landscape of the illicit drug market.",
+  'home.sent4': "In response to the rapid emergence of new synthetic psychoactive substances (NPS) and the lack of accessible reliable information, our mission is to reduce risks for users by providing an up-to-date and trustworthy source of information. WhiteHatChem aims to bridge this gap by interconnecting the listed substances, offering relevant data, and relying on advances in bioinformatics. By emphasizing risk reduction and providing accurate information on interactions, effects, metabolism, and availability of NPS, we strive to contribute to better knowledge and awareness for all stakeholders: users, healthcare professionals, researchers, and analytical laboratories. Together, let's work towards a safer and more informed approach to these new substances.",
 
   'molecule.checkon': "Check on",
   'molecule.synonyms': "Synonyms",
