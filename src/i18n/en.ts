@@ -2,7 +2,7 @@ export default {
   'nps': 'New Psychoactive Substances',
 
   'home.mission': "We provide Deep Learning solutions that can identify and analyse new psychoactive substances (NPS).",
-  'home.our_mission': "Our Mission",
+  'home.reachus': "Reach us",
   'home.latest': "Latest Research",
   'home.explore': "Explore",
   'home.why': "Why this platform?",
