@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Support us
-</a>
-			<a role="link" href="/en/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Blog
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/en/blog" class="block p-2 w-full">
+    Blog
+</a>
+						<a href="/en/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Support us
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/en/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Search NPS
 			</a>
 		</div>
@@ -246,14 +261,17 @@
       </p>
   </a>
                     
+
                     <p class="break-all leading-snug text-sm mt-4">
-                            <span class="">Synonyms:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">6,8β-Dimethylergolin-9β-yl acetate,(8β,9β)-6,8-Dimethylergolin-9-yl acetate,(6aR,9S,10S,10aR)-7,9-Dimethyl-4,6,6a,7,8,9,10,10a-octahydroindolo[4,3-fg]quinolin-10-yl acetate</span>
-                        </p>
-                     <p class="break-all leading-snug text-sm mt-4">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C18H22N2O2/c1-10-9-20(3)15-7-12-8-19-14-6-4-5-13(16(12)14)17(15)18(10)22-11(2)21/h4-6,8,10,15,17-19H,7,9H2,1-3H3</span>
-                  </p>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Synonyms:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">(6aR,9S,10S,10aR)-7,9-Dimethyl-4,6,6a,7,8,9,10,10a-octahydroindolo[4,3-fg]quinolin-10-yl acetate,6,8β-Dimethylergolin-9β-yl acetate,(8β,9β)-6,8-Dimethylergolin-9-yl acetate</span>
+                        </p>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -546,35 +564,7 @@
       <div class="h-full rounded text-xs" style="width:34.865278683397676%;background-color:rgb(166, 89, 0)"></div>
   </div>
 </span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/448357" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C16H19NO5/c1-17-10-5-6-12(17)14(15(19)20)13(8-10)22-16(21)9-3-2-4-11(18)7-9/h2-4,7,10,12-14,18H,5-6,8H2,1H3,(H,19,20)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C16H19...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">34.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:34.7860343559574%;background-color:rgb(166, 89, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/71308330" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C16H19NO5/c1-17-10-4-7-12(17)14(15(19)20)13(8-10)22-16(21)9-2-5-11(18)6-3-9/h2-3,5-6,10,12-14,18H,4,7-8H2,1H3,(H,19,20)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C16H19...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">34.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:34.47549927994982%;background-color:rgb(167, 88, 0)"></div>
-  </div>
-</span>
-        </div><a href="/en/molecule/2201" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/en/molecule/2201" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -610,7 +600,7 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7081981" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/6545292" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C16H20N2O/c1-18-8-10(9-19)5-13-12-3-2-4-14-16(12)11(7-17-14)6-15(13)18/h2-4,7,10,13,15,17,19H,5-6,8-9H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C16H20...</h2>
 </div>
@@ -802,6 +792,40 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:33.10232340564506%;background-color:rgb(171, 84, 0)"></div>
+  </div>
+</span>
+        </a><a href="/en/molecule/2013" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="WF-11" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              WF-11
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:33.03101678938866%;background-color:rgb(171, 84, 0)"></div>
+  </div>
+</span>
+        </a><a href="/en/molecule/2406" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="WF-23" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              WF-23
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">32.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:32.67398301720784%;background-color:rgb(172, 83, 0)"></div>
   </div>
 </span>
         </a>
@@ -3021,11 +3045,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Support us</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">If you like what we do, you can support us by donating here:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

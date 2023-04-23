@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Поддержите нас
-</a>
-			<a role="link" href="/ru/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Блог
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/ru/blog" class="block p-2 w-full">
+    Блог
+</a>
+						<a href="/ru/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Поддержите нас
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/ru/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Поиск НПВ
 			</a>
 		</div>
@@ -246,14 +261,17 @@
       </p>
   </a>
                     
+
                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C12H17NO4/c1-7(13)4-8-5-9-11(17-6-16-9)12(15-3)10(8)14-2/h5,7H,4,6,13H2,1-3H3</span>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
                             <span class="">Синонимы:</span>
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">DMMDA-2,2,3-Dimethoxy-4,5-methylenedioxyamphetamine</span>
                         </p>
-                     <p class="break-all leading-snug text-sm mt-4">
-                      <span class="">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C12H17NO4/c1-7(13)4-8-5-9-11(17-6-16-9)12(15-3)10(8)14-2/h5,7H,4,6,13H2,1-3H3</span>
-                  </p>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -2875,11 +2893,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Поддержите нас</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Если вам нравится то, что мы делаем, вы можете поддержать нас, сделав пожертвование здесь:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Unterstütze uns
-</a>
-			<a role="link" href="/de/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Bloggen
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/de/blog" class="block p-2 w-full">
+    Bloggen
+</a>
+						<a href="/de/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Unterstütze uns
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/de/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Suche NPS
 			</a>
 		</div>
@@ -259,14 +274,17 @@
       </p>
   </a>
                     
+
                     <p class="break-all leading-snug text-sm mt-4">
-                            <span class="">Synonyme:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">Q5198127,Cyclopropyl Pemoline,FT-0665406,2-(Cyclopropylamino)-5-phenyl-1,3-oxazol-4(5H)-one,Ciclazodona [INN-Spanish],2-Oxazolin-4-one, 2-(cyclopropylamino)-5-phenyl-,UNII-O8U55ZRL9K,Cyclazodonum [INN-Latin],O8U55ZRL9K,Cyclazodonum,Phenyl-5 cyclopropylamino-2 oxazolinone-4,CYCLAZODONE,CYCLAZODONE [INN],Cyclazodone [INN:DCF],Cyclazodone,2-(Cyclopropylamino)-4,5-dihydro-5-phenyl-4-oxazolon,SCHEMBL1650015,Cyclopropyl Pemoline-[d5],DTXSID60864509,Cyclopropylpemoline,2-(Cyclopropylamino)-5-phenyl-2-oxazolin-4-one,BRN 3959190,LD 3695,Ciclazodona,J-007976,14461-91-7,CHEMBL2106536,4(5H)-Oxazolone, 2-(cyclopropylamino)-5-phenyl-</span>
-                        </p>
-                     <p class="break-all leading-snug text-sm mt-4">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C12H12N2O2/c15-11-10(8-4-2-1-3-5-8)16-12(14-11)13-9-6-7-9/h1-5,9-10H,6-7H2,(H,13,14,15)</span>
-                  </p>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Synonyme:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">2-(Cyclopropylamino)-5-phenyl-2-oxazolin-4-one,Cyclopropyl Pemoline-[d5],J-007976,2-(Cyclopropylamino)-4,5-dihydro-5-phenyl-4-oxazolon,CYCLAZODONE,O8U55ZRL9K,Cyclazodonum [INN-Latin],UNII-O8U55ZRL9K,Ciclazodona,SCHEMBL1650015,Cyclazodone [INN:DCF],Cyclazodone,Cyclopropylpemoline,CYCLAZODONE [INN],2-Oxazolin-4-one, 2-(cyclopropylamino)-5-phenyl-,Cyclazodonum,FT-0665406,Cyclopropyl Pemoline,2-(Cyclopropylamino)-5-phenyl-1,3-oxazol-4(5H)-one,Phenyl-5 cyclopropylamino-2 oxazolinone-4,LD 3695,Q5198127,DTXSID60864509,14461-91-7,4(5H)-Oxazolone, 2-(cyclopropylamino)-5-phenyl-,Ciclazodona [INN-Spanish],CHEMBL2106536,BRN 3959190</span>
+                        </p>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -314,21 +332,7 @@
       <div class="h-full rounded text-xs" style="width:48.7964433761343%;background-color:rgb(131, 124, 0)"></div>
   </div>
 </span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/23270933" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H10N2O2/c1-11-10-12-9(13)8(14-10)7-5-3-2-4-6-7/h2-6,8H,1H3,(H,11,12,13)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H10...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">48.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:48.716218434091765%;background-color:rgb(131, 124, 0)"></div>
-  </div>
-</span>
-        </div><a href="/de/molecule/587" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/de/molecule/587" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               <div class="flex flex-row items-center gap-2">
@@ -384,20 +388,6 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/155543807" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H12N2OS/c14-10-7-13-6-9(12-11(13)15-10)8-4-2-1-3-5-8/h1-5,9-10,14H,6-7H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H12...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">36.9%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:36.92353779614833%;background-color:rgb(161, 94, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
                 <a href="https://pubchem.ncbi.nlm.nih.gov/compound/12191592" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H13NO/c1-8-10(7-11(13)12-8)9-5-3-2-4-6-9/h2-6,8,10H,7H2,1H3,(H,12,13)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H13...</h2>
@@ -429,21 +419,21 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/71749088" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/125469323" target="_blank">
                         <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H12N2OS/c14-10-4-2-1-3-8(10)9-7-13-5-6-15-11(13)12-9/h1-4,9,14H,5-7H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H12...</h2>
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C13H14O/c14-13-11-7-6-10(8-11)12(13)9-4-2-1-3-5-9/h1-5,10-12H,6-8H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C13H14...</h2>
 </div>
                     </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">35.7%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">36.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:35.74449492469126%;background-color:rgb(164, 91, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:36.143780756672285%;background-color:rgb(163, 92, 0)"></div>
   </div>
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/125758" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/93492419" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H12N2OS/c14-9-3-1-8(2-4-9)10-7-13-5-6-15-11(13)12-10/h1-4,10,14H,5-7H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H12...</h2>
 </div>
@@ -474,7 +464,7 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/40562647" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/40562649" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H13NO2/c13-11(10-7-4-8-14-10)12-9-5-2-1-3-6-9/h1-3,5-6,10H,4,7-8H2,(H,12,13)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H13...</h2>
 </div>
@@ -488,7 +478,7 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/6999734" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/6995734" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C14H11NO/c16-14-13(10-6-2-1-3-7-10)11-8-4-5-9-12(11)15-14/h1-9,13H,(H,15,16)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C14H11...</h2>
 </div>
@@ -656,20 +646,6 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/54043123" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C12H17NO/c14-13-8-6-12(7-9-13)10-11-4-2-1-3-5-11/h1-5,12,14H,6-10H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C12H17...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">32.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:32.12324449953403%;background-color:rgb(173, 82, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
                 <a href="https://pubchem.ncbi.nlm.nih.gov/compound/11138278" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C11H13NO3/c1-15-10-3-2-7(4-9(10)13)8-5-11(14)12-6-8/h2-4,8,13H,5-6H2,1H3,(H,12,14)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C11H13...</h2>
@@ -712,7 +688,7 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/641621" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/757631" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H11NO/c12-10-6-9(7-11-10)8-4-2-1-3-5-8/h1-5,9H,6-7H2,(H,11,12)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H11...</h2>
 </div>
@@ -755,7 +731,62 @@
       <div class="h-full rounded text-xs" style="width:31.927054354867103%;background-color:rgb(174, 81, 0)"></div>
   </div>
 </span>
-        </div>
+        </div><a href="/de/molecule/710" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Levamisole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Levamisole
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">31.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:31.91154588433362%;background-color:rgb(174, 81, 0)"></div>
+  </div>
+</span>
+        </a><a href="/de/molecule/1105" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Ethylcypenamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Ethylcypenamine
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">31.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:31.880225984176697%;background-color:rgb(174, 81, 0)"></div>
+  </div>
+</span>
+        </a><a href="/de/molecule/366" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="phenetrazine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              phenetrazine
+            </h2>
+</div>
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Phenetrazine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Phenetrazine
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">31.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:31.876540654488846%;background-color:rgb(174, 81, 0)"></div>
+  </div>
+</span>
+        </a>
 </div>
               </li>
               <li class="w-full flex flex-col" id="affinity">
@@ -823,26 +854,6 @@
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
             <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-10-12(16,8-4-2-1-3-5-8)17-11(14-10)13-9-6-7-9/h1-5,9,16H,6-7H2,(H,13,14,15)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
-</div>
-        </span>
-    </div> 
-    <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2A6</span></div> 
-</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
-    <div class="underline">Hydroxylation from CyProduct</div>
-    <div class="flex flex-row items-center">
-        Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-10-9(8-4-2-1-3-5-8)17-11(13-10)14-12(16)6-7-12/h1-5,9,16H,6-7H2,(H,13,14,15)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
-</div>
-        </span>
-    </div> 
-    <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2D6, CYP3A4</span></div> 
-</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
-    <div class="underline">Hydroxylation from CyProduct</div>
-    <div class="flex flex-row items-center">
-        Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-9-5-1-7(2-6-9)10-11(16)14-12(17-10)13-8-3-4-8/h1-2,5-6,8,10,15H,3-4H2,(H,13,14,16)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
 </div>
         </span>
@@ -889,26 +900,6 @@
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
             <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-10-12(16,8-4-2-1-3-5-8)17-11(14-10)13-9-6-7-9/h1-5,9,16H,6-7H2,(H,13,14,15)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
-</div>
-        </span>
-    </div> 
-    <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2A6</span></div> 
-</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
-    <div class="underline">Hydroxylation from CyProduct</div>
-    <div class="flex flex-row items-center">
-        Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-10-9(8-4-2-1-3-5-8)17-11(13-10)14-12(16)6-7-12/h1-5,9,16H,6-7H2,(H,13,14,15)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
-</div>
-        </span>
-    </div> 
-    <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2D6, CYP3A4</span></div> 
-</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
-    <div class="underline">Hydroxylation from CyProduct</div>
-    <div class="flex flex-row items-center">
-        Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C12H12N2O3/c15-9-5-1-7(2-6-9)10-11(16)14-12(17-10)13-8-3-4-8/h1-2,5-6,8,10,15H,3-4H2,(H,13,14,16)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C12H12N2O3/...</h2>
 </div>
         </span>
@@ -926,11 +917,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Unterstütze uns</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Wenn Ihnen gefällt, was wir tun, können Sie uns durch eine Spende hier unterstützen:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

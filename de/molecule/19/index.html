@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Unterstütze uns
-</a>
-			<a role="link" href="/de/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Bloggen
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/de/blog" class="block p-2 w-full">
+    Bloggen
+</a>
+						<a href="/de/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Unterstütze uns
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/de/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Suche NPS
 			</a>
 		</div>
@@ -323,7 +338,7 @@
           </svg>
       </p>
   </a>
-                    <a class="flex flex-col lg:flex-row lg:items-center" href="https://pubchem.ncbi.nlm.nih.gov/compound/8650" target="_blank">
+                    <a class="flex flex-col lg:flex-row lg:items-center" href="https://pubchem.ncbi.nlm.nih.gov/compound/62948" target="_blank">
       <div class="flex flex-row items-center gap-2">
     <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Pseudoephedrine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
               Pseudoephedrine
@@ -350,14 +365,27 @@
           </svg>
       </p>
   </a>
+
                     <p class="break-all leading-snug text-sm mt-4">
-                            <span class="">Synonyme:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">EPHEDRINE [EP MONOGRAPH],BENZENEMETHANOL, .ALPHA.-(1-(METHYLAMINO)ETHYL)-, (R-(R*,S*))-,PSEUDOEPHEDRINE [WHO-DD],Pseudoephedrine, L-(+)-,DTXSID0022985,PSEUDOEPHEDRINE [MI],Neodurasina,CHEMBL211456,KBio2_001358,ephedrine-(racemic),NCGC00162174-01,(1R,2S)-2-(methylamino)-1-phenyl-propan-1-ol,PSEUDOEPHEDRINE,(1S,2S)-2-(methylamino)-1-phenyl-propan-1-ol,KBio3_002762,Ephedrinum, anhydrous,(1S,2S)-2-(Methylamino)-1-phenylpropan-1-ol,KBioGR_001763,IDI1_000451,NCGC00162174-02,NSC 8971,EINECS 206-080-5,KBioSS_001358,PSEUDOEPHEDRINE HYDROCHLORIDE IMPURITY A [EP IMPURITY],Acunaso (TN),(1R,2S)-2-methylamino-1-phenylpropan-1-ol,Isoephedrine, d-,DB01364,NSC-170951,299E423,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alphaS)-,SCHEMBL4785,HSDB 3177,Ephedrital,Pseudoephedrinum [INN-Latin],064P256,NCI60_002955,Isoephedrine,(+)-threo-Ephedrine,(1R,2S)-(-)-alpha-(1-Methylaminoethyl)benzenemethanol,Spectrum3_001771,Efedrin,AKOS016011257,EPHEDRINE [WHO-DD],C02765,DEA Code 8113,1-(S),2-(R)-ERYTHRO-(+)-EPHEDRINE,Ephedrin,(+)-Pseudoephedrine,PSEUDOEPHEDRINE [INN],Ephendronal,NSC 170951,(1S,2S)-2-Methylamino-1-phenylpropan-1-ol,1-Sedrin,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (-)-,Spectrum2_001303,Ephedrine (USP),Pseudoefedrina [INN-Spanish],EPHEDRINE [MART.],Nasol,EINECS 202-018-6,DTXSID0023537,Lopac0_000501,(L)-EPHEDRINE,(1R,2S)-1-phenyl-1-hydroxy-2-methylaminopropane,DivK1c_000451,(1R,2S)-2-(methylamino)-1-phenylpropan-1-ol,(+)-psi-Ephedrine,Spectrum5_000650,l-2-Methylamino-1-phenylpropanol,1-alpha-(1-Methylaminoethyl)benzyl alcohol,CS-4802,(1S,2S)-(+)-Pseudoephedrine, 98%,Acunaso,KBio2_006494,Pseudoephedrine (D),Psi-ephedrin,2-(Methylamino)-1-phenyl-1-propanol,1(-)ephedrine,(1R,2S)-2-(methylamino)-1-phenyl-1-propanol,Biophedrin,SBI-0051362.P003,NINDS_000451,DB00852,(1R,2S)-2-(Methylamino)-1-phenylpropan-1-ol,Ephedrol,l-alpha-(1-Methylaminoethyl)benzyl alcohol,C01575,Ephedsol,(1S,2S)-2-methylamino-1-phenylpropan-1-ol,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (S-(R*,R*))-,Ephedrosan,Pseudoefedrina,Pseudoephedrine, (+)-,L-(+)-Pseudoephedrine,alpha-Hydroxy-beta-methylaminopropylbenzene,SBI-0051498.P003,SPBio_001365,d-Isoephedrine,(1S,2S)-(+)-Pseudoephedrine,(+) threo-2-(methylamino)-1-phenyl-1-propanol,BENZENEMETHANOL, .ALPHA.-((1S)-1-(METHYLAMINO)ETHYL)-, (.ALPHA.S)-,CCG-204592,Neodurasina (TN),(+)-(1S,2S)-Pseudoephedrine,Ephedremal,Ephedrine [USAN:BAN],UNII-GN83C131XS,BENZENEMETHANOL, .ALPHA.-(1-(METHYLAMINO)ETHYL)-, (S-(R*,R*))-,J-500280,SR-01000075166-1,(1R,2S)-(-)-2-Methylamino-1-phenyl-1-propanol,Benzenemethanol, .alpha.-[(1S)-1-(methylamino)ethyl]-, (.alpha.S)-,Sudafed,(-)-Ephedrine hemisulfate,d-Pseudoephedrine,trans-Ephedrine,alpha-Hydroxy-beta-methyl amine propylbenzene,SCHEMBL4368,(-)-alpha-(1-Methylaminoethyl)benzyl alcohol,A820118,racephedrine,Q219626,Phenylpropanolmethylamine,(1R*,2S*)-2-methylamino-1-phenyl-1-propanol,Pseudoephedrine d-form,NSC-8971,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (R-(R*,S*))-,(-)-(1R,2S)-Ephedrine,PDSP2_001330,Spectrum4_001162,PSEUDOEPHEDRINE [HSDB],1-Phenyl-1-hydroxy-2-methylaminopropane,Sal-Phedrine,HY-B1195,d-psi-2-Methylamino-1-phenyl-1-propanol,Norephedrine, N-methyl-,(1S,2S)-Pseudoephedrine,Ephedrine, anhydrous,D00124,d-psi-Ephedrine,(R-(R*,S*))-.ALPHA.-(1-(METHYLAMINO)ETHYL)BENZENEMETHANOL [WHO-IP],AI3-02761,CHEMBL1590,CHEBI:51209,Q263958,Lopac-E-3250,299-42-3,Manadrin,Besan,EPHEDRINE, ANHYDROUS [WHO-IP],Lexofedrin,EPHEDRINUM, ANHYDROUS [WHO-IP LATIN],1-2-Methylamino-1-phenylpropanol,pseudophedrine sulphate,Pseudoephedrine Ephedrine,(I)-Ephedrin,Emerphed (ephedrine sulfate injection),EPHEDRINE [HSDB],(1R,2S)-2-Methylamino-1-phenyl-1-propanol,(1s, 2s) pseudoephedrine,EPHEDRINE [VANDF],7CUC9DDI9F,NCGC00178180-01,(1r, 2s)-(-)-ephedrine,ZINC20259,Mandrin,GN83C131XS,EPHEDRINE [USP MONOGRAPH],Pseudoephedrinum,Pseudoephedrine [INN:BAN],D08449,PDSP1_001347,Pseudoephedrine polistirex,HSDB 3072,(1R,2S)-(-)-2-(N-methylamino)-1-phenylpropan-1-ol,EPHEDRINE HYDROCHLORIDE IMPURITY B [EP IMPURITY],(1s, 2s)-(+)-pseudoephedrine,CHEBI:15407,Ephedrine l-form,AB00375843_06,(-)-Ephedrine,AKOS025401512,GTPL7286,(1R,2S)-2-Methylamino-1-phenylpropan-1-ol,Ephedrine, L-(-)-,EPHEDRINE [MI],l-Erythro-2-(methylamino)-1-phenylpropan-1-ol,(1S,2S)-2-(methylamino)-1-phenylpropan-1-ol,(S,S)-(+)-Pseudoephedrine solution, 1.0 mg/mL in methanol, ampule of 1 mL, certified reference material,PDSP2_001327,Zephrol,psi-Ephedrine, (+)-,Xenadrine,PSEUDOEPHEDRINE [VANDF],BSPBio_003261,L(+)-psi-Ephedrine,Vencipon,EC 202-018-6,Fedrin,Ephoxamin,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alphaR)-,NCI-C55652,L(-)-Ephedrine,NCGC00015408-01,alpha-(1-(Methylamino)ethyl)benzenemethanol,NSC170951,Pseudoephedrine (INN),BRD-K84175871-003-02-2,l-Ephedrine,Spectrum_000878,Eciphin,Psi-ephedrine,(1S,2S) pseudoephedrine,ZINC74836,Ephedrine (TN),(1R,2S)-(-)-Ephedrine, 98%,PSEUDOEPHEDRINE [MART.],1-Hydroxy-2-methylamino-1-phenylpropane,KBio1_000451,Benzenemethanol, .alpha.-[(1S)-1-(methylamino)ethyl]-, (.alpha.R)-,UNII-7CUC9DDI9F,KBio2_003926,(.ALPHA.S)-.ALPHA.-((1R)-1-(METHYLAMINO)ETHYL)BENZENEMETHANOL,Sanedrine,1-Phenyl-2-methylaminopropanol,90-82-4,d-Pseudoephedrine base,Ephedrotal,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alpha-S)-,Ephedral,EC 206-080-5,SR-01000075166,GTPL556,Kratedyn,alpha-(1-(Methylamino)ethyl)benzyl alcohol,2-Methylamino-1-phenyl-1-propanol,I-Sedrin,(+) pseudoephedrine,BIDD:GT0817</span>
-                        </p>
-                     <p class="break-all leading-snug text-sm mt-4">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C10H15NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-8,10-12H,1-2H3</span>
-                  </p>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Synonyme:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">EPHEDRINE HYDROCHLORIDE IMPURITY B [EP IMPURITY], Ephedrotal, Pseudoephedrine d-form, Sudafed (TN),1-(S),2-(R)-ERYTHRO-(+)-EPHEDRINE,KBioSS_001358, (1S,2S)-2-(methylamino)-1-phenylpropan-1-ol,NSC-170951,(1R,2S)-2-(Methylamino)-1-phenylpropan-1-ol,Benzenemethanol, .alpha.-[(1S)-1-(methylamino)ethyl]-, (.alpha.R)-,KBioGR_001763,KBio2_001358,Ephedrol, Dimetapp Decongestant,NSC-8971,CHEMBL1590,Kratedyn,(1S,2S)-2-(Methylamino)-1-phenylpropan-1-ol,d-Pseudoephedrine base,Ephedrine (USP),Sal-Phedrine,Manadrin, (+)-(1S,2S)-Pseudoephedrine,IDI1_000451,Mandrin,NSC170951,(+)-(1S,2S)-Pseudoephedrine,(1S,2S) pseudoephedrine,Pseudoefedrina [INN-Spanish], Kratedyn,(1S,2S)-2-(methylamino)-1-phenyl-propan-1-ol, Pseudoephedrinum [INN-Latin],Ephedrine, anhydrous,psi-Ephedrine, (+)-,Spectrum2_001303,NCGC00015408-01,L(+)-psi-Ephedrine,299E423, Efedrin,(1R,2S)-2-Methylamino-1-phenyl-1-propanol,Acunaso,CS-4802,Acunaso (TN),SBI-0051498.P003, Ephedsol,Biophedrin,1-Hydroxy-2-methylamino-1-phenylpropane,Pseudoephedrine Ephedrine, Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alpha-S)-(9CI),(+)-psi-Ephedrine, Ephedrine (USP),NSC 170951,ephedrine-(racemic),DivK1c_000451, Ephedrol, Efidac 24 PseudoephedrineHcl,GTPL7286,KBio1_000451,(-)-Ephedrine,EPHEDRINE [MI],Isoephedrine, Eciphin,Q263958,EINECS 202-018-6,SBI-0051362.P003,(+) pseudoephedrine,C02765,Neodurasina,Ephedral,PDSP2_001330,Benzenemethanol, .alpha.-[(1S)-1-(methylamino)ethyl]-, (.alpha.S)-,NINDS_000451,(1S,2S)-(+)-Pseudoephedrine, 98%,Spectrum3_001771,Fedrin,CHEBI:51209,alpha-(1-(Methylamino)ethyl)benzyl alcohol,AKOS016011257,NSC 8971,NCI-C55652,Spectrum_000878,1-Sedrin,EPHEDRINE [USP MONOGRAPH],l-Ephedrine,Spectrum4_001162, Sudafed Decongestant 12 Hour,BENZENEMETHANOL, .ALPHA.-((1S)-1-(METHYLAMINO)ETHYL)-, (.ALPHA.S)-,(I)-Ephedrin,(1S,2S)-2-(methylamino)-1-phenylpropan-1-ol, Lexofedrin,(.ALPHA.S)-.ALPHA.-((1R)-1-(METHYLAMINO)ETHYL)BENZENEMETHANOL,(R-(R*,S*))-.ALPHA.-(1-(METHYLAMINO)ETHYL)BENZENEMETHANOL [WHO-IP],Ephedsol, L-Ephedrine,EPHEDRINE [WHO-DD],1(-)ephedrine,trans-Ephedrine,alpha-(1-(Methylamino)ethyl)benzenemethanol,(1R,2S)-2-(methylamino)-1-phenyl-propan-1-ol,A820118,KBio2_003926,L-(+)-Pseudoephedrine,(S,S)-(+)-Pseudoephedrine solution, 1.0 mg/mL in methanol, ampule of 1 mL, certified reference material, Ephedremal,EPHEDRINE [VANDF],Balminil Decongestant Syrup,(L)-EPHEDRINE,(1r, 2s)-(-)-ephedrine, I-Sedrin, Drixoral Nasal Decongestant, (1S,2S)-2-Methylamino-1-phenyl-1-propanol,Pseudoephedrine polistirex,Pseudoephedrine, (+)-,Ephedrine (TN), Ephedrosan,Emerphed (ephedrine sulfate injection), Ephedrine (TN),AB00375843_06,DTXSID0022985,(1R,2S)-2-(methylamino)-1-phenyl-1-propanol,Ephedrotal,(1S,2S)-2-methylamino-1-phenylpropan-1-ol, Pseudoefedrina [INN-Spanish],PSEUDOEPHEDRINE [MART.],1-Phenyl-1-hydroxy-2-methylaminopropane,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alpha-S)-,(-)-alpha-(1-Methylaminoethyl)benzyl alcohol, L-(-)-Ephedrine,Psi-ephedrin, Sudafed Decongestant Extra Strength,l-alpha-(1-Methylaminoethyl)benzyl alcohol,PSEUDOEPHEDRINE [HSDB],Ephedrine, L-(-)-,Psi-ephedrine,Pseudoephedrine (INN),(1R,2S)-(-)-2-(N-methylamino)-1-phenylpropan-1-ol, (1S,2S)-Pseudoephedrine, polymer-bound, Pseudoephedrine Ephedrine,d-psi-Ephedrine, 1-EPHEDRINE,Neodurasina (TN),Spectrum5_000650,Ephendronal,alpha-Hydroxy-beta-methylaminopropylbenzene,PSEUDOEPHEDRINE,PSEUDOEPHEDRINE HYDROCHLORIDE IMPURITY A [EP IMPURITY],BIDD:GT0817, (1S,2S)-(+)-Pseudoephedrine,Pseudoephedrine [INN:BAN],BENZENEMETHANOL, .ALPHA.-(1-(METHYLAMINO)ETHYL)-, (R-(R*,S*))-,Efedrin,299-42-3, (1R,2R)-Ephedrine,Pseudoephedrinum [INN-Latin],DTXSID0023537, Vencipon,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (-)-,(+)-threo-Ephedrine, Sanedrine,(-)-(1R,2S)-Ephedrine,l-Erythro-2-(methylamino)-1-phenylpropan-1-ol,SR-01000075166,CCG-204592,PSEUDOEPHEDRINE [WHO-DD],alpha-Hydroxy-beta-methyl amine propylbenzene, Zephrol, CPDD 0049,L(-)-Ephedrine,EPHEDRINE [HSDB],CHEBI:15407,GN83C131XS,SPBio_001365,Sanedrine,Ephedrin,pseudophedrine sulphate, Manadrin, Triaminic Infant Oral Decongestant Drops,EC 206-080-5,BRD-K84175871-003-02-2, Fedrin,Xenadrine,NCGC00162174-01, Ephendronal,Zephrol,EPHEDRINE [MART.],PDSP2_001327, D-psi-2-Methylamino-1-phenyl-1-propanol,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alphaS)-, Ephedrin,Lopac-E-3250,(1s, 2s)-(+)-pseudoephedrine,D00124,HY-B1195, Ephedrine l-form, Dimetapp Decongestant Pediatric Drops,d-Pseudoephedrine,(1R,2S)-(-)-alpha-(1-Methylaminoethyl)benzenemethanol,GTPL556,J-500280,2-Methylamino-1-phenyl-1-propanol,PDSP1_001347,(1s, 2s) pseudoephedrine,Pseudoefedrina,NCGC00178180-01,Lopac0_000501,(1R,2S)-2-(methylamino)-1-phenylpropan-1-ol,racephedrine,(1S,2S)-2-Methylamino-1-phenylpropan-1-ol, (1S,2R)-Ephedrine,Pseudoephedrine, L-(+)-,AKOS025401512, Alpha-(1-(Methylamino)ethyl)benzyl alcohol,(1R,2S)-(-)-2-Methylamino-1-phenyl-1-propanol,Phenylpropanolmethylamine,EINECS 206-080-5,SCHEMBL4368,Isoephedrine, d-,Ephedrital, Ephedrine [USAN:BAN],UNII-GN83C131XS,BSPBio_003261,(1R,2S)-2-Methylamino-1-phenylpropan-1-ol,Eciphin,(+)-Pseudoephedrine, L(-)-Ephedrine,HSDB 3177,1-Phenyl-2-methylaminopropanol,EPHEDRINUM, ANHYDROUS [WHO-IP LATIN],C01575,Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, (alphaR)-,(1R,2S)-(-)-Ephedrine, 98%,AI3-02761,064P256,Pseudoephedrinum,EPHEDRINE, ANHYDROUS [WHO-IP],Nasol,1-alpha-(1-Methylaminoethyl)benzyl alcohol,PSEUDOEPHEDRINE [MI],(1R,2S)-1-phenyl-1-hydroxy-2-methylaminopropane,2-(Methylamino)-1-phenyl-1-propanol, Triaminic AM Decongestant Formula,NCGC00162174-02,Ephedremal,Q219626,(1S,2S)-Pseudoephedrine, Nasol,ZINC20259,DB00852,SCHEMBL4785,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (S-(R*,R*))-,EPHEDRINE [EP MONOGRAPH], (+)-Ephedrin,NCI60_002955,KBio2_006494,PSEUDOEPHEDRINE [INN],d-Isoephedrine,ZINC74836, Mandrin,BENZENEMETHANOL, .ALPHA.-(1-(METHYLAMINO)ETHYL)-, (S-(R*,R*))-,Pseudoephedrine d-form, Pseudoephedrine [INN:BAN], Ephedrital,(-)-Ephedrine hemisulfate, Pseudoephedrine (INN),Ephedrosan,Ephoxamin,D08449,KBio3_002762,d-psi-2-Methylamino-1-phenyl-1-propanol,Besan,l-2-Methylamino-1-phenylpropanol,(1S,2S)-(+)-Pseudoephedrine,Pseudoephedrine (D),DB01364,DEA Code 8113,I-Sedrin,Lexofedrin, (L)-EPHEDRINE, D-Ephedrine,Benzenemethanol, alpha-(1-(methylamino)ethyl)-, (R-(R*,S*))-,7CUC9DDI9F,1-2-Methylamino-1-phenylpropanol,CHEMBL211456, L-(+)-Ephedrine,HSDB 3072,EC 202-018-6,Ephedrine [USAN:BAN], 1-Sedrin,(1R,2S)-2-methylamino-1-phenylpropan-1-ol,PSEUDOEPHEDRINE [VANDF],Pseudoephedrine,UNII-7CUC9DDI9F, Ephedral,SR-01000075166-1, Ephoxamin,(+) threo-2-(methylamino)-1-phenyl-1-propanol,Vencipon,(1R*,2S*)-2-methylamino-1-phenyl-1-propanol, Racephedrine,Ephedrinum, anhydrous,90-82-4,Norephedrine, N-methyl-,Sudafed, (1S,2S)-Pseudoephedrine,Ephedrine l-form</span>
+                        </p>
+                    
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Drug data:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                              Ephedrine
+                              (<span class="">
+                                <a class="underline" href="http://drugmap.idrblab.net/data/drug/details/DMMV0KW" target="_blank" rel="noreferrer">DMMV0KW</a>, 
+                              </span><span class="">
+                                <a class="underline" href="http://drugmap.idrblab.net/data/drug/details/DMIVJ0D" target="_blank" rel="noreferrer">DMIVJ0D</a>
+                              </span>)
+                            </span>
+                        </p>
                 </div>
             </div>
         </section>
@@ -405,35 +433,7 @@
       <div class="h-full rounded text-xs" style="width:68.92109365128997%;background-color:rgb(79, 176, 0)"></div>
   </div>
 </span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/18147" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H15NO2/c1-7(11-2)10(13)8-4-3-5-9(12)6-8/h3-7,10-13H,1-2H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H15...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">68.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:68.7599208503051%;background-color:rgb(80, 175, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/89103466" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H13NO2/c1-10-9(12)8(11)7-5-3-2-4-6-7/h2-6,8-12H,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H13N...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">68.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:68.68288230230482%;background-color:rgb(80, 175, 0)"></div>
-  </div>
-</span>
-        </div><a href="/de/molecule/3301" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/de/molecule/3301" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -462,20 +462,6 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">62.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:62.08319863102548%;background-color:rgb(97, 158, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/67225417" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H12O2/c1-7(10)9(11)8-5-3-2-4-6-8/h2-7,9-11H,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H12O...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">61.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:61.1805454540981%;background-color:rgb(99, 156, 0)"></div>
   </div>
 </span>
         </div><a href="/de/molecule/3201" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -586,20 +572,6 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/67453908" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H13NO2/c1-10-9(12)6-7-3-2-4-8(11)5-7/h2-5,9-12H,6H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H13N...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">55.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:55.770264015709984%;background-color:rgb(113, 142, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
                 <a href="https://pubchem.ncbi.nlm.nih.gov/compound/164661983" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H15NOS/c1-6-4-5-8(12-6)9(11)7(2)10-3/h4-5,7,9-11H,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H15N...</h2>
@@ -610,6 +582,20 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">55.6%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:55.642853389490185%;background-color:rgb(113, 142, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/66929511" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H12ClNO/c1-6(11)9(12)7-2-4-8(10)5-3-7/h2-6,9,12H,11H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H12C...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">54.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:54.932891400978214%;background-color:rgb(115, 140, 0)"></div>
   </div>
 </span>
         </div><a href="/de/molecule/3559" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -881,16 +867,16 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/57237548" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/146238379" target="_blank">
                         <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C8H11NO2/c9-8(11)7(10)6-4-2-1-3-5-6/h1-5,7-8,10-11H,9H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C8H11N...</h2>
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C9H12BrNO/c1-6(11)9(12)7-2-4-8(10)5-3-7/h2-6,9,12H,11H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C9H12B...</h2>
 </div>
                     </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">53.2%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">53.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:53.217956790759544%;background-color:rgb(119, 136, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:53.10499122950618%;background-color:rgb(120, 135, 0)"></div>
   </div>
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -907,7 +893,58 @@
       <div class="h-full rounded text-xs" style="width:52.9658343364141%;background-color:rgb(120, 135, 0)"></div>
   </div>
 </span>
-        </div>
+        </div><a href="/de/molecule/4216" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AMPH-OH" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              AMPH-OH
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">52.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:52.7061428969933%;background-color:rgb(121, 134, 0)"></div>
+  </div>
+</span>
+        </a><a href="/de/molecule/3209" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="p-Hydroxynorephedrine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              p-Hydroxynorephedrin...
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">52.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:52.668236602253614%;background-color:rgb(121, 134, 0)"></div>
+  </div>
+</span>
+        </a><a href="/de/molecule/671" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Isopropylbenzylamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Isopropylbenzylamine
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">52.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:52.314792422328225%;background-color:rgb(122, 133, 0)"></div>
+  </div>
+</span>
+        </a>
 </div>
               </li>
               <li class="w-full flex flex-col" id="affinity">
@@ -3020,9 +3057,11 @@
     <div class="underline">Terminal desaturation</div>
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C10H13NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-7,10-12H,1H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C10H13NO/c1...</h2>
+            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/89173089" target="_blank">
+                    <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H13NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-7,10-12H,1H2,2H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H13...</h2>
 </div>
+                </a>
         </span>
     </div> 
     <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
@@ -3118,11 +3157,9 @@
     <div class="underline">Hydroxylation from CyProduct</div>
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/18147" target="_blank">
-                    <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H15NO2/c1-7(11-2)10(13)8-4-3-5-9(12)6-8/h3-7,10-13H,1-2H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H15...</h2>
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C10H15NO2/c1-7(11-2)10(13)8-4-3-5-9(12)6-8/h3-7,10-13H,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C10H15NO2/c...</h2>
 </div>
-                </a>
         </span>
     </div> 
     <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2D6</span></div> 
@@ -3210,9 +3247,11 @@
     <div class="underline">Terminal desaturation</div>
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C10H13NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-7,10-12H,1H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C10H13NO/c1...</h2>
+            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/89173089" target="_blank">
+                    <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H13NO/c1-8(11-2)10(12)9-6-4-3-5-7-9/h3-7,10-12H,1H2,2H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H13...</h2>
 </div>
+                </a>
         </span>
     </div> 
     <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
@@ -3308,11 +3347,9 @@
     <div class="underline">Hydroxylation from CyProduct</div>
     <div class="flex flex-row items-center">
         Produkt: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/18147" target="_blank">
-                    <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C10H15NO2/c1-7(11-2)10(13)8-4-3-5-9(12)6-8/h3-7,10-13H,1-2H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C10H15...</h2>
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C10H15NO2/c1-7(11-2)10(13)8-4-3-5-9(12)6-8/h3-7,10-13H,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C10H15NO2/c...</h2>
 </div>
-                </a>
         </span>
     </div> 
     <div> Enzyme: <span class="text-neutral-600 dark:text-neutral-400">CYP2D6</span></div> 
@@ -3328,11 +3365,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Unterstütze uns</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Wenn Ihnen gefällt, was wir tun, können Sie uns durch eine Spende hier unterstützen:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

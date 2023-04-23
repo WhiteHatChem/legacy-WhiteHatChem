@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Unterstütze uns
-</a>
-			<a role="link" href="/de/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Bloggen
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/de/blog" class="block p-2 w-full">
+    Bloggen
+</a>
+						<a href="/de/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Unterstütze uns
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/de/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Suche NPS
 			</a>
 		</div>
@@ -284,7 +299,7 @@
           </svg>
       </p>
   </a>
-                    <a class="flex flex-col lg:flex-row lg:items-center" href="https://pubchem.ncbi.nlm.nih.gov/compound/12831993" target="_blank">
+                    <a class="flex flex-col lg:flex-row lg:items-center" href="https://pubchem.ncbi.nlm.nih.gov/compound/16078" target="_blank">
       <div class="flex flex-row items-center gap-2">
     <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Dronabinol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
               Dronabinol
@@ -298,14 +313,25 @@
           </svg>
       </p>
   </a>
+
                     <p class="break-all leading-snug text-sm mt-4">
-                            <span class="">Synonyme:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">delta1-Tetrahydrocannabinol (VAN),Delta9-Tetrahydrocannabinol solution, 1.0 mg/mL in methanol, analytical standard, for drug analysis,L-trans-.delta.9-Tetrahydrocannabinol,Dronabinol [USAN:USP:INN],6H-dibenzo[b,d]pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR,10aR)-,Synthetic THC in sesame oil / soft gelatin,DRONABINOL [USP MONOGRAPH],δ9-thc,DB00470,delta9-THC,(-)-.DELTA.1-Tetrahydrocannabinol,INT-0010/06,CHEMBL465,7J8897W37S,DEA No. 7369,.DELTA.1-THC,HSDB 6471,GTPL2424,Q190067,(-)-delta(sup 1)-3,4-trans-Tetrahydrocannabinol,1-trans-delta(sup9)-tetrahydrocannabinol,6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR,10aR)-,delta(sup 1)-Tetrahydrocannabinol,Delta9-Tetrahydrocannabinol 250 microg/mL in Acetonitrile,(6aR,10aR)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1-ol,SCHEMBL4609,Tetrahydrocannabinol,delta9-thc,(-)-Delta9-THC (Dronabinol) 0.1 mg/ml in Methanol,delta9-Tetrahydrocannabinol,(-)-delta9-Tetrahydrocannabinol,DSSTox_RID_76083,.DELTA.1-Tetrahydrocannabinol,L-trans-delta9-Tetrahydrocannabinol,(-)-Delta9-THC (Dronabinol) 1.0 mg/ml in Methanol,Cannabinol, 1-trans-.delta.(sup9)-tetrahydro-,SCI-110 component dronabinol,CAS-1972-08-3,.DELTA.9-Tetrahydrocannabinol,3ls4,trans-.DELTA.9-Tetrahydrocannabinol,Tetrahydrocannabinols (-)-trans-.delta.9-form,NSC134454,Namisol,(-)-Delta9-Tetrahydrocannabinol (Delta9-THC) 1000 microg/mL in Methanol,Cannabinol, 1-trans-delta(sup 9)-tetrahydro-,(-)-.delta.(sup9)-trans-Tetrahydrocannabinol,PDSP2_000714,C06972,trans-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,delta1-Tetrahydrocannabinol,delta-9-tetrahydrocannabinol,(6aR,10aR)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol(DeltaE-9-THC),Tetrahydrocannabinols (-)-delta1-3,4-trans-form,ZINC1530625,Cannabinol, Delta1-tetrahydro- (7CI),delta(9)-THC,Marinol,6465-30-1,6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-,(10R,10aR)-6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,Cannabinol, delta1-tetrahydro-,delta9-tetrahydrocannabinol,Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,TETRAHYDROCANNABINOLS (-)-TRANS-.DELTA.9-FORM [MI],(-)-delta(sup 1)-3,4-trans-Tetrahydrocannabinol(l)-delta(sup 1)-Tetrahydrocannabinol,(-)-3,4-trans-Delta1-Tetrahydrocannabinol,Tox21_112616,Compassia,(-)-.DELTA.9-THC,DRONABINOL [ORANGE BOOK],(l)-delta1-Tetrahydrocannabinol,CAT-310,1-trans-delta9-Tetrahydrocannabinol,Dronabinol (USP/INN),delta-9 Tetrahydrocannabinol,D00306,cis-Δ9-THC,delta 9-Tetrahydrocannabinol,Dronabinol in sesame oil in soft gelatin capsule,8,8-Dimethyl-11-methylene-5-pentyl-3,4,8a,9,10,11,12,12a-octahydro-2H,8H-1,7-dioxa-benzo[c]phenanthrene,(-)-(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,trans-delta9-Tetrahydrocannabinol,TCI,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol(delta9-THC(delta9-tetrahydrocannabinol)),(-)-Delta9-Tetrahydrocannabinol solution, ~1 mg/mL in ethanol, analytical standard, for drug analysis,(6AR,10AR)-6,6,9-TRIMETHYL-3-PENTYL-6A,7,8,10A-TETRAHYDRO-6H-DIBENZO(B,D)PYRAN-1-OL,.DELTA.9-THC,1-trans-delta(sup 9)-Tetrahydrocannabinol,SP 104,(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,DRG-0138,trans-Δ9-THC,US9416103, Delta9-THC,δ9--tetrahydrocannabinol,J882F,.delta.(sup9)-THC,Marinol (TN),Relivar,TETRAHYDROCANNABINOL,DSSTox_CID_1327,dronabinol,(6aR-trans)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1-ol,14C-.DELTA.1-Tetrahydrocannabinol,(S)-6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,CCRIS 4726,.delta.-9-tetrahydrocannabinol,(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]chromen-1-ol,(-)-Delta9-Tetrahydrocannabinol (Delta9-THC) 100 microg/mL in Methanol,(-)-.DELTA.1-3,4-TRANS-TETRAHYDROCANNABINOL,9-tetrahydrocannabinol,QCD 84924,SP-104,Cannabinol, .DELTA.1-tetrahydro-,delta(sup 9)-Tetrahydrocannabinol,THC,L-delta1-trans-Tetrahydrocannabinol,(-)-Delta9-Tetrahydrocannabinol solution,(-)-Delta9-THC (Dronabinol) 5.0 mg/ml in Methanol,delta(sup 1)-Thc,Dronabinol (Synthetic),Abbott 40566,1972-08-3,delta1-THC,cesamet,ABBOTT-40566,UNII-7J8897W37S,(l)-delta(sup 1)-Tetrahydrocannabinol,6H-Dibenzo[b,d]pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-,.DELTA.9-trans-Tetrahydrocannabinol,DTXSID6021327,Syndros,BIDD:GT0427,NSC-134454,DTXSID001038830,L-.delta.1-trans-Tetrahydrocannabinol,Δ1-THC,DELTA-9-TETRAHYDROCANNABINOL (CANNABIS SATIVA EXTRACT),(L)-.delta.1-Tetrahydrocannabinol,Deltanyne,(-)-.DELTA.9-Tetrahydrocannabinol,6,6,9-Trimethyl-3-pentyl-7,8,9,10-tetrahydro-6H-dibenzo(b,d)pyran-1-ol,Dronabinolum [Latin],delta(1)-Tetrahydrocannabinol,NSC 134454,DSSTox_GSID_21327,CHEBI:66964,(-)-trans-Delta1-Tetrahydrocannabinol,6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-,BDBM50007391,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,Delta-9-Tetrahydrocannabinol, United States Pharmacopeia (USP) Reference Standard,delta-9-THC,delta(9)-Tetrahydrocannabinol,DRONABINOL [MART.],(-)-trans-delta9-Tetrahydrocannabinol,delta9-trans-Tetrahydrocannabinol,6,9-Trimethyl-3-pentyl-7,8,9,10-tetrahydro-6H-dibenzo[b,d]pyran-1-ol,DRONABINOL [HSDB],Tetrahydrocannabinol delta9,inverse-Δ9-THC,6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, trans-,L-.delta.1-Tetrahydrocannabinol,(-)-trans-Delta9-THC,DRONABINOL [USAN],6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, trans-,Dronabinolum,syndros,(-)-trans-Delta9-THC solution, 1.0 mg/mL in methanol, ampule of 1 mL, certified reference material,delta(sup 9)-Thc,(-)-delta9-trans-Tetrahydrocannabinol,1-trans-.delta.(sup9)-tetrahydrocannabinol,Cannabinol, tetrahydro- (6CI),TETRAHYDROCANNABINOL, DELTA-9 TRANS,(-)-.DELTA.9-trans-Tetrahydrocannabinol,6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-,Epitope ID:224552,Delta9-Tetrahydrocannabinol solution, ethanol solution,DRONABINOL [INN],(-)-trans-.DELTA.9-Tetrahydrocannabinol,(-)-delta1-Tetrahydrocannabinol,DRONABINOL [WHO-DD],BDBM60994,(6AR,10AR)-6,6,9-TRIMETHYL-3-PENTYL-6H,6AH,7H,8H,10AH-BENZO[C]ISOCHROMEN-1-OL,DRONABINOL [VANDF],1-trans-delta-9-Tetrahydrocannabinol,delta(9)-Tetrahydrocannibinol,QCD-84924,.delta.-9-THC,Dronabinol,delta9-Tetrahydrocannabinol (VAN),Δ9-THC,(6aR-trans)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,3-Pentyl-6,6,9-trimethyl-6a,7,8,10a-tetrahydro-6H-dibenzo(b,d)pyran-1-ol,(+/-)-delta9-Tetrahydrocannabinol,INT-0010</span>
-                        </p>
-                     <p class="break-all leading-snug text-sm mt-4">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C21H30O2/c1-5-6-7-8-15-12-18(22)20-16-11-14(2)9-10-17(16)21(3,4)23-19(20)13-15/h11-13,16-17,22H,5-10H2,1-4H3</span>
-                  </p>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Synonyme:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, trans-,DRONABINOL [INN],delta-9-tetrahydrocannabinol,trans-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,ZINC1530625,ABBOTT-40566, (-)-delta1-Tetrahydrocannabinol,(-)-.DELTA.9-THC,delta-9 Tetrahydrocannabinol, L-trans-delta9-Tetrahydrocannabinol,6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-,DB00470, Delta-9-tetrahydrocannabinol,inverse-Δ9-THC, 1-trans-delta(sup9)-tetrahydrocannabinol, delta1-THC,PDSP2_000714,6465-30-1, Trans-DELTA9-Tetrahydrocannabinol, delta(9)-Tetrahydrocannabinol,DSSTox_RID_76083,QCD-84924,(6AR,10AR)-6,6,9-TRIMETHYL-3-PENTYL-6H,6AH,7H,8H,10AH-BENZO[C]ISOCHROMEN-1-OL,(S)-6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,(-)-trans-delta9-Tetrahydrocannabinol, Fish oils, omega-3 fatty acid-high, (-)-trans-DELTA9-Tetrahydrocannabinol,(+/-)-delta9-Tetrahydrocannabinol,L-trans-.delta.9-Tetrahydrocannabinol,INT-0010/06,delta(sup 9)-Tetrahydrocannabinol, Delta(1)-THC, Delta9-Tetrahydrocannabinol solution, (l)-delta1-Tetrahydrocannabinol,(-)-delta1-Tetrahydrocannabinol, (-)-trans-Delta9-THC,NSC 134454, Fish oils, n-3 fatty acid-high, delta(9)-Tetrahydrocannibinol,J882F, delta(sup 9)-Thc,6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, trans-, Delta(sup 1)-Thc, delta-9-THC, Delta-9-THC,delta9-Tetrahydrocannabinol,Relivar,Cannabinol, 1-trans-delta(sup 9)-tetrahydro-,dronabinol,Dronabinol (Synthetic),(-)-Delta9-Tetrahydrocannabinol solution, ~1 mg/mL in ethanol, analytical standard, for drug analysis, (-)-DELTA9-Tetrahydrocannabinol,syndros,(-)-.DELTA.9-trans-Tetrahydrocannabinol,delta(sup 1)-Thc,(-)-trans-Delta9-THC solution, 1.0 mg/mL in methanol, ampule of 1 mL, certified reference material,DRONABINOL [MART.],L-.delta.1-Tetrahydrocannabinol, 14C-DELTA1-Tetrahydrocannabinol,(-)-.DELTA.9-Tetrahydrocannabinol,Cannabinol, .DELTA.1-tetrahydro-,Cannabinol, 1-trans-.delta.(sup9)-tetrahydro-, Delta(sup 9)-Tetrahydrocannabinol,6,6,9-Trimethyl-3-pentyl-7,8,9,10-tetrahydro-6H-dibenzo(b,d)pyran-1-ol,UNII-7J8897W37S,(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,Synthetic THC in sesame oil / soft gelatin,(-)-delta9-Tetrahydrocannabinol,6,9-Trimethyl-3-pentyl-7,8,9,10-tetrahydro-6H-dibenzo[b,d]pyran-1-ol,(-)-trans-Delta9-THC, (-)-DELTA1-Tetrahydrocannabinol,(-)-Delta9-Tetrahydrocannabinol (Delta9-THC) 100 microg/mL in Methanol,DTXSID001038830,6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-,(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]chromen-1-ol,(-)-Delta9-THC (Dronabinol) 1.0 mg/ml in Methanol, DELTA1-THC,TETRAHYDROCANNABINOLS (-)-TRANS-.DELTA.9-FORM [MI],1-trans-delta9-Tetrahydrocannabinol, L-delta1-Tetrahydrocannabinol,6H-Dibenzo(b,d)pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR,10aR)-, L-delta(sup 1)-tetrahydrocannabinol, (-)-delta9-Tetrahydrocannabinol,(-)-(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol, (-)-DELTA9-trans-Tetrahydrocannabinol,Marinol (TN), delta9-Tetrahydrocannabinol, QCD 84924,Dronabinol [USAN:USP:INN], Delta9-Tetrahydrocannabinol (VAN),(-)-delta(sup 1)-3,4-trans-Tetrahydrocannabinol, Dronabinolum [Latin], Delta1-Tetrahydrocannabinol,L-.delta.1-trans-Tetrahydrocannabinol,Tox21_112616, Trans-delta9-Tetrahydrocannabinol,delta(9)-THC,delta(sup 1)-Tetrahydrocannabinol,.DELTA.1-Tetrahydrocannabinol,Dronabinolum,delta(1)-Tetrahydrocannabinol,Cannabinol, delta1-tetrahydro-,DELTA-9-TETRAHYDROCANNABINOL (CANNABIS SATIVA EXTRACT),Namisol,trans-delta9-Tetrahydrocannabinol, Delta1-Tetrahydrocannabinol (VAN),DEA No. 7369,Delta9-Tetrahydrocannabinol solution, 1.0 mg/mL in methanol, analytical standard, for drug analysis,NSC-134454, Delta(sup 1)-Tetrahydrocannabinol,DTXSID6021327,.delta.-9-THC,9-tetrahydrocannabinol, Delta(1)-Tetrahydrocannabinol,Dronabinol in sesame oil in soft gelatin capsule,CCRIS 4726, DRG-0138, Delta(9)-Tetrahydrocannabinol, Delta9-trans-Tetrahydrocannabinol, (L)-delta1-Tetrahydrocannabinol,DRONABINOL [WHO-DD], (-)-3,4-trans-Delta1-Tetrahydrocannabinol,DRONABINOL [VANDF],δ9-thc, (-)-trans-delta9-Tetrahydrocannabinol,DRONABINOL [HSDB], Relivar,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,C06972, Delta(9)-THC, Dronabinol (USP/INN), 1-trans-delta-9-Tetrahydrocannabinol,delta(9)-Tetrahydrocannibinol, Tetrahydrocannabinols (-)-delta1-3,4-trans-form,1-trans-delta-9-Tetrahydrocannabinol,Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol, Delta9-THC, Delta(9)-Tetrahydrocannibinol,(-)-trans-.DELTA.9-Tetrahydrocannabinol,7J8897W37S, (l)-delta(sup 1)-Tetrahydrocannabinol,SP-104, TETRAHYDROCANNABINOL,.DELTA.9-THC, Delta(sup 9)-Thc, (-)-DELTA9-THC, delta(1)-Tetrahydrocannabinol, Trans-delta-9-Tetrahydrocannabinol, delta9-THC,Dronabinol (USP/INN),6H-Dibenzo[b,d]pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-,CHEMBL465, Sonergx,Delta9-Tetrahydrocannabinol 250 microg/mL in Acetonitrile, Delta9-Tetrahydrocannabinol,(10R,10aR)-6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol,GTPL2424,L-delta1-trans-Tetrahydrocannabinol,Δ9-THC, delta-9-tetrahydrocannabinol,Marinol, Marincap,TCI,(-)-3,4-trans-Delta1-Tetrahydrocannabinol, Trans-tetrahydrocannabinol,(-)-Delta9-THC (Dronabinol) 0.1 mg/ml in Methanol,(-)-delta(sup 1)-3,4-trans-Tetrahydrocannabinol(l)-delta(sup 1)-Tetrahydrocannabinol,(-)-.DELTA.1-Tetrahydrocannabinol,6H-dibenzo[b,d]pyran-1-ol, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR,10aR)-,Q190067, 9-ene-Tetrahydrocannabinol, Hashish, L-delta1-trans-Tetrahydrocannabinol,DSSTox_GSID_21327,(6AR,10AR)-6,6,9-TRIMETHYL-3-PENTYL-6A,7,8,10A-TETRAHYDRO-6H-DIBENZO(B,D)PYRAN-1-OL, 6H-Dibenzo,6H-Dibenzo[b, 6a,7,8,10a-tetrahydro-6,6,9-trimethyl-3-pentyl-, (6aR-trans)-, CAT-310,(6aR,10aR)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol,cis-Δ9-THC, Omega-3-Fatty acid,  Compassia, Deltanyne,delta9-trans-Tetrahydrocannabinol,.delta.-9-tetrahydrocannabinol,DRG-0138,(-)-Delta9-Tetrahydrocannabinol (Delta9-THC) 1000 microg/mL in Methanol,(l)-delta(sup 1)-Tetrahydrocannabinol,(L)-.delta.1-Tetrahydrocannabinol,TETRAHYDROCANNABINOL,8,8-Dimethyl-11-methylene-5-pentyl-3,4,8a,9,10,11,12,12a-octahydro-2H,8H-1,7-dioxa-benzo[c]phenanthrene, 1972/8/3, (-)-trans-Delta1-Tetrahydrocannabinol,DSSTox_CID_1327,NSC134454,(6aR,10aR)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1-ol,QCD 84924, MaxEPA, Dronabinolum,.delta.(sup9)-THC,Delta9-Tetrahydrocannabinol solution, ethanol solution,3ls4, DELTA9-trans-Tetrahydrocannabinol, Tetranabinex,TETRAHYDROCANNABINOL, DELTA-9 TRANS,Δ1-THC, SP,delta(sup 9)-Thc,INT-0010, Ganja, Namisol, 9-tetrahydrocannabinol,delta1-Tetrahydrocannabinol (VAN),L-trans-delta9-Tetrahydrocannabinol,SP 104,SCI-110 component dronabinol,Tetrahydrocannabinol,CHEBI:66964,CAT-310,(-)-.delta.(sup9)-trans-Tetrahydrocannabinol,SCHEMBL4609, THC-delta-9, Pro-Mega, delta(sup 1)-Thc,trans-Δ9-THC,(-)-Delta9-THC (Dronabinol) 5.0 mg/ml in Methanol, 1-trans-D9-Tetrahydrocannabinol,(-)-.DELTA.1-3,4-TRANS-TETRAHYDROCANNABINOL,Compassia,Tetrahydrocannabinols (-)-trans-.delta.9-form,trans-.DELTA.9-Tetrahydrocannabinol, Dronabinol [USAN:INN],1-trans-.delta.(sup9)-tetrahydrocannabinol, Delta(sup9)-THC,14C-.DELTA.1-Tetrahydrocannabinol,BIDD:GT0427,Dronabinol, Drona binol, Cannabis resin,δ9--tetrahydrocannabinol,.DELTA.9-trans-Tetrahydrocannabinol,(-)-trans-Delta1-Tetrahydrocannabinol, Marinol (TN),Cannabinol, Delta1-tetrahydro- (7CI), 1-trans-delta9-Tetrahydrocannabinol,DRONABINOL [USP MONOGRAPH],3-Pentyl-6,6,9-trimethyl-6a,7,8,10a-tetrahydro-6H-dibenzo(b,d)pyran-1-ol,delta1-THC, DELTA1-Tetrahydrocannabinol,Epitope ID:224552,DELTA9-THC, SP 104,(l)-delta1-Tetrahydrocannabinol, Abbott 40566,(6aR-trans)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo(b,d)pyran-1-ol, Fats and Glyceridic oils, fish, n-3 fatty acid-high, Cannabinol, Delta1-tetrahydro-(7CI),D00306,delta9-thc, delta(9)-THC, Delta(9)-tetrahydrocannabinol,THC,delta 9-Tetrahydrocannabinol, Cannabinol, tetrahydro-(6CI),Dronabinolum [Latin], (-)-delta(sup 1)-3,4-trans-Tetrahydrocannabinol,1-trans-delta(sup9)-tetrahydrocannabinol,Tetrahydrocannabinol delta9,DRONABINOL [ORANGE BOOK],delta9-THC,delta9-tetrahydrocannabinol,Syndros, Delta-THC, (-)-delta9-(trans)-Tetrahydrocannabinol,.DELTA.9-Tetrahydrocannabinol, Omegaven,Delta-9-Tetrahydrocannabinol, United States Pharmacopeia (USP) Reference Standard,delta9-Tetrahydrocannabinol (VAN),1-trans-delta(sup 9)-Tetrahydrocannabinol,CAS-1972-08-3,Cannabinol, tetrahydro- (6CI),BDBM50007391, (-)-delta(sup9)-trans-Tetrahydrocannabinol,(-)-delta9-trans-Tetrahydrocannabinol,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol(DeltaE-9-THC),Deltanyne,cesamet,.DELTA.1-THC, (-)-delta9-trans-Tetrahydrocannabinol, Promega,US9416103, Delta9-THC,(-)-Delta9-Tetrahydrocannabinol solution,Tetrahydrocannabinols (-)-delta1-3,4-trans-form,6,6,9-Trimethyl-3-pentyl-6a,7,8,10a-tetrahydro-6H-benzo[c]chromen-1-ol(delta9-THC(delta9-tetrahydrocannabinol)), Delta1-THC, Tetrahydrocannabinol delta9, delta1-Tetrahydrocannabinol,Abbott 40566,delta(9)-Tetrahydrocannabinol,1972-08-3,(6aR-trans)-6a,7,8,10a-Tetrahydro-6,6,9-trimethyl-3-pentyl-6H-dibenzo[b,d]pyran-1-ol, 1-trans-delta(sup 9)-Tetrahydrocannabinol, THC,delta1-Tetrahydrocannabinol,HSDB 6471,BDBM60994,DRONABINOL [USAN],delta-9-THC, 9-delta-Tetrahydrocannabinol</span>
+                        </p>
+                    
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Drug data:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                              Marinol
+                              (<span class="">
+                                <a class="underline" href="http://drugmap.idrblab.net/data/drug/details/DM70IK5" target="_blank" rel="noreferrer">DM70IK5</a>
+                              </span>)
+                            </span>
+                        </p>
                 </div>
             </div>
         </section>
@@ -440,7 +466,21 @@
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/137518224" target="_blank">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7808859" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C20H28O3/c1-4-5-6-7-13-10-17(22)19-15-12-14(21)8-9-16(15)20(2,3)23-18(19)11-13/h10-11,15-16,22H,4-9,12H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C20H28...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">57.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:57.93430131754611%;background-color:rgb(107, 148, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/139494852" target="_blank">
                         <div class="flex flex-row items-center gap-2">
     <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C19H26O3/c1-4-5-12-9-16(21)18-14-8-13(11-20)6-7-15(14)19(2,3)22-17(18)10-12/h8-10,14-15,20-21H,4-7,11H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C19H26...</h2>
 </div>
@@ -450,6 +490,20 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">57.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:57.35944011786241%;background-color:rgb(109, 146, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/23817957" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-14-8-9-17-16(11-14)20-18(23)12-15(7-5-4-6-10-22)13-19(20)24-21(17,2)3/h8,12-13,16-17,22-23H,4-7,9-11H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">57.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:57.00441138816183%;background-color:rgb(110, 145, 0)"></div>
   </div>
 </span>
         </div><a href="/de/molecule/2454" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -469,7 +523,35 @@
       <div class="h-full rounded text-xs" style="width:54.02423398614247%;background-color:rgb(117, 138, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2493" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/185651" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-4-5-6-7-14-11-18(23)20-16-10-15(13-22)8-9-17(16)21(2,3)24-19(20)12-14/h8,11-12,16-17,22-23H,4-7,9-10,13H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">53.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:53.52762286816481%;background-color:rgb(119, 136, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101105259" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-5-6-7-8-14-11-16(22)19-17(12-14)24-21(3,4)15-10-9-13(2)20(23)18(15)19/h9,11-12,15,18,20,22-23H,5-8,10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">52.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:52.48119159405423%;background-color:rgb(121, 134, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2493" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -486,7 +568,21 @@
       <div class="h-full rounded text-xs" style="width:52.11125654182583%;background-color:rgb(122, 133, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2621" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603724" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-5-6-7-17(22)14-11-18(23)20-15-10-13(2)8-9-16(15)21(3,4)24-19(20)12-14/h8,11-12,15-17,22-23H,5-7,9-10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">50.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:50.2859936442685%;background-color:rgb(127, 128, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2621" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -503,7 +599,35 @@
       <div class="h-full rounded text-xs" style="width:50.027296127362185%;background-color:rgb(127, 128, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2338" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603726" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-5-15(22)8-7-14-11-18(23)20-16-10-13(2)6-9-17(16)21(3,4)24-19(20)12-14/h6,11-12,15-17,22-23H,5,7-10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">50.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.984897370021905%;background-color:rgb(128, 127, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603727" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H30O3/c1-13-8-9-17-16(10-13)20-18(23)11-15(7-5-6-14(2)22)12-19(20)24-21(17,3)4/h8,11-12,14,16-17,22-23H,5-7,9-10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H30...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.082185685582466%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2338" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -558,7 +682,21 @@
       <div class="h-full rounded text-xs" style="width:46.22076645045862%;background-color:rgb(137, 118, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2474" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/127684" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H32O3/c1-4-5-6-7-14-11-18(23)20-16-10-15(13-22)8-9-17(16)21(2,3)24-19(20)12-14/h11-12,15-17,22-23H,4-10,13H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:45.61047695879597%;background-color:rgb(139, 116, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2474" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -575,7 +713,35 @@
       <div class="h-full rounded text-xs" style="width:44.603762156009594%;background-color:rgb(141, 114, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2475" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/71579182" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H32O3/c1-5-6-7-8-14-11-17(22)19-15-13-21(4,23)10-9-16(15)20(2,3)24-18(19)12-14/h11-12,15-16,22-23H,5-10,13H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">44.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:44.57588129222329%;background-color:rgb(141, 114, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603558" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H32O3/c1-14-8-9-17-16(11-14)20-18(23)12-15(7-5-4-6-10-22)13-19(20)24-21(17,2)3/h12-14,16-17,22-23H,4-11H2,1-3H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">44.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:44.54494793573359%;background-color:rgb(141, 114, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2475" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -592,7 +758,49 @@
       <div class="h-full rounded text-xs" style="width:42.5078032418186%;background-color:rgb(147, 108, 0)"></div>
   </div>
 </span>
-        </a><a href="/de/molecule/2729" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/42633835" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C23H32O4/c1-5-6-7-8-16-12-19(26-21(25)14-24)22-17-11-15(2)9-10-18(17)23(3,4)27-20(22)13-16/h11-13,17-18,24H,5-10,14H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C23H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">42.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:42.171146692953535%;background-color:rgb(147, 108, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603555" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H32O3/c1-5-6-7-17(22)14-11-18(23)20-15-10-13(2)8-9-16(15)21(3,4)24-19(20)12-14/h11-13,15-17,22-23H,5-10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">41.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:41.00077785697503%;background-color:rgb(150, 105, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/101603556" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C21H32O3/c1-5-15(22)8-7-14-11-18(23)20-16-10-13(2)6-9-17(16)21(3,4)24-19(20)12-14/h11-13,15-17,22-23H,5-10H2,1-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C21H32...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">40.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:40.79615205633902%;background-color:rgb(151, 104, 0)"></div>
+  </div>
+</span>
+        </div><a href="/de/molecule/2729" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
               
               
@@ -607,236 +815,6 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">40.8%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:40.79035430108869%;background-color:rgb(151, 104, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/252" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,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" class="w-4 rounded" alt="psychonaut"><h2 title="Cannabidiol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Cannabidiol
-            </h2>
-</div>
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CBD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              CBD
-            </h2>
-</div><div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="(+)-CBD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              (+)-CBD
-            </h2>
-</div><div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="epi-CBD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              epi-CBD
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">37.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:37.079916341743534%;background-color:rgb(160, 95, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2478" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="abn-CBD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              abn-CBD
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">36.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:36.17146557222275%;background-color:rgb(163, 92, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2625" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="JWH-133" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              JWH-133
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">35.6%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:35.56583510994714%;background-color:rgb(164, 91, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2744" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AM-087" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              AM-087
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">35.6%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:35.556678009032574%;background-color:rgb(164, 91, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2451" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="HU-336" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              HU-336
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">35.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:35.1797323506166%;background-color:rgb(165, 90, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2457" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4′-Fluorocannabidiol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4′-Fluorocannabidiol
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">34.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:34.81242293505466%;background-color:rgb(166, 89, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2802" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Perrottetinene" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Perrottetinene
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">34.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:34.68606224744889%;background-color:rgb(167, 88, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2898" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AMG-41" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              AMG-41
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">34.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:34.6781415911418%;background-color:rgb(167, 88, 0)"></div>
-  </div>
-</span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/70521846" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C19H24O2/c1-5-6-13-10-16(20)18-14-9-12(2)7-8-15(14)19(3,4)21-17(18)11-13/h5,9-11,14-15,20H,1,6-8H2,2-4H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C19H24...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:33.51589465168665%;background-color:rgb(170, 85, 0)"></div>
-  </div>
-</span>
-        </div><a href="/de/molecule/2750" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Hexahydrocannabinol AC" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Hexahydrocannabinol ...
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:33.37031106693215%;background-color:rgb(170, 85, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2479" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Δ6-Cannabidiol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Δ6-Cannabidiol
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.3%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:33.30881927109688%;background-color:rgb(170, 85, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2562" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="O-806" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              O-806
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">33.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:33.04347977208397%;background-color:rgb(171, 84, 0)"></div>
-  </div>
-</span>
-        </a><a href="/de/molecule/2191" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-              
-              
-              <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CBDV" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              CBDV
-            </h2>
-</div>
-              
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">32.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:32.72388139385732%;background-color:rgb(172, 83, 0)"></div>
   </div>
 </span>
         </a>
@@ -3096,11 +3074,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Unterstütze uns</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Wenn Ihnen gefällt, was wir tun, können Sie uns durch eine Spende hier unterstützen:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

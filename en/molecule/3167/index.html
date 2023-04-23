@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Support us
-</a>
-			<a role="link" href="/en/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Blog
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/en/blog" class="block p-2 w-full">
+    Blog
+</a>
+						<a href="/en/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Support us
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/en/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Search NPS
 			</a>
 		</div>
@@ -259,14 +274,17 @@
           </svg>
       </p>
   </a>
+
                     <p class="break-all leading-snug text-sm mt-4">
-                            <span class="">Synonyms:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">beta-Phenethyl chloride,phenylethyl chloride,(2-Chloroethyl)benzene, 99%,EINECS 210-725-6,SCHEMBL124719,DTXSID3060748,D70839,(.beta.-Chloroethyl)benzene,phenyl ethyl chloride,F0001-1658,2-chloro ethylbenzene,(beta-Chloroethyl)benzene,BBL027318,2-chloroethyl-benzene,2-(Chloroethyl)benzene,beta-Phenylethyl chloride,UNII-C7T86VN1QZ,CS-W016446,C7T86VN1QZ,.beta.-Phenethyl chloride,SCHEMBL5705619,A833653,chloroethylbenzene,DB-054098,(2-chloroethyl)-benzene,Ethylchlorobenzene,NSC-27886,MFCD00000977,STK802209,Q27275303,622-24-2,Phenethyl chloride,Phenethylchloride,NSC27886,NSC 27886,ZINC1641679,2-Phenyl-1-chloroethane,Benzene, (2-chloroethyl)-,CHLOROETHYL)BENZENE, (2-,W-105031,1331-31-3,HSDB 8375,(2-chloro-ethyl)-benzene,2-Phenylethyl chloride,FT-0632610,2-chloro ethyl benzene,(2-chloroethyl) benzene,AKOS000120652,2-chloroethylbenzene,1-Chloro-2-phenylethane,BENZENE, (.BETA.-CHLOROETHYL)-,.beta.-Phenylethyl chloride,alpha-Chloroethylbenzene</span>
-                        </p>
-                     <p class="break-all leading-snug text-sm mt-4">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C8H9Cl/c9-7-6-8-4-2-1-3-5-8/h1-5H,6-7H2</span>
-                  </p>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Synonyms:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">CHLOROETHYL)BENZENE, (2-,(2-chloroethyl) benzene,SCHEMBL5705619,2-(Chloroethyl)benzene,(2-chloroethyl)-benzene,STK802209,2-chloro ethyl benzene,ZINC1641679,UNII-C7T86VN1QZ,(2-chloro-ethyl)-benzene,(beta-Chloroethyl)benzene,NSC-27886,DTXSID3060748,NSC 27886,1-Chloro-2-phenylethane,Q27275303,alpha-Chloroethylbenzene,NSC27886,.beta.-Phenethyl chloride,2-Phenylethyl chloride,SCHEMBL124719,AKOS000120652,622-24-2,MFCD00000977,Benzene, (2-chloroethyl)-,DB-054098,F0001-1658,(2-Chloroethyl)benzene, 99%,CS-W016446,FT-0632610,phenylethyl chloride,1331-31-3,beta-Phenylethyl chloride,C7T86VN1QZ,2-chloroethylbenzene,(.beta.-Chloroethyl)benzene,Ethylchlorobenzene,EINECS 210-725-6,BBL027318,beta-Phenethyl chloride,2-Phenyl-1-chloroethane,2-chloro ethylbenzene,HSDB 8375,D70839,BENZENE, (.BETA.-CHLOROETHYL)-,A833653,.beta.-Phenylethyl chloride,phenyl ethyl chloride,W-105031,Phenethyl chloride,Phenethylchloride,chloroethylbenzene,2-chloroethyl-benzene</span>
+                        </p>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -360,20 +378,6 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">68.9%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:68.92109365128997%;background-color:rgb(79, 176, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/44298534" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C8H9ClO/c9-5-4-7-2-1-3-8(10)6-7/h1-3,6,10H,4-5H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C8H9Cl...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">68.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:68.7599208503051%;background-color:rgb(80, 175, 0)"></div>
   </div>
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -498,20 +502,6 @@
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">63.9%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
       <div class="h-full rounded text-xs" style="width:63.93372859650125%;background-color:rgb(92, 163, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/35683" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C7H7ClO/c8-5-6-2-1-3-7(9)4-6/h1-4,9H,5H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C7H7Cl...</h2>
-</div>
-                    </a>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">63.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:63.44280817777606%;background-color:rgb(93, 162, 0)"></div>
   </div>
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -769,7 +759,38 @@
       <div class="h-full rounded text-xs" style="width:58.17787301288963%;background-color:rgb(107, 148, 0)"></div>
   </div>
 </span>
-        </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/66648" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C7H8ClN/c8-7-4-2-1-3-6(7)5-9/h1-4H,5,9H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C7H8Cl...</h2>
+</div>
+                    </a>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">57.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:57.77646554833646%;background-color:rgb(108, 147, 0)"></div>
+  </div>
+</span>
+        </div><a href="/en/molecule/4149" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+              
+              
+              <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Cl-PEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Cl-PEA
+            </h2>
+</div>
+              
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">57.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:57.58189228238915%;background-color:rgb(108, 147, 0)"></div>
+  </div>
+</span>
+        </a>
 </div>
               </li>
               <li class="w-full flex flex-col" id="affinity">
@@ -2744,11 +2765,9 @@
     <div class="underline">Hydroxylation from CyProduct</div>
     <div class="flex flex-row items-center">
         Product: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/44298534" target="_blank">
-                    <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C8H9ClO/c9-5-4-7-2-1-3-8(10)6-7/h1-3,6,10H,4-5H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C8H9Cl...</h2>
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C8H9ClO/c9-5-4-7-2-1-3-8(10)6-7/h1-3,6,10H,4-5H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C8H9ClO/c9-...</h2>
 </div>
-                </a>
         </span>
     </div> 
     <div> Enzymes: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2E1, CYP3A4</span></div> 
@@ -2822,11 +2841,9 @@
     <div class="underline">Hydroxylation from CyProduct</div>
     <div class="flex flex-row items-center">
         Product: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
-            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/44298534" target="_blank">
-                    <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C8H9ClO/c9-5-4-7-2-1-3-8(10)6-7/h1-3,6,10H,4-5H2" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C8H9Cl...</h2>
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C8H9ClO/c9-5-4-7-2-1-3-8(10)6-7/h1-3,6,10H,4-5H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C8H9ClO/c9-...</h2>
 </div>
-                </a>
         </span>
     </div> 
     <div> Enzymes: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2E1, CYP3A4</span></div> 
@@ -2842,11 +2859,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Support us</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">If you like what we do, you can support us by donating here:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		

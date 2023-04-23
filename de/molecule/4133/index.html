@@ -29,7 +29,7 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/affinity-limits.19a58036.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/affinity-limits.a68c2a7c.css" /><script type="module" src="/_astro/hoisted.f4a50e9a.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -60,24 +60,6 @@
 		</div>
 		<!-- desktop -->
 		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
-			<a role="link" href="#support" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Unterstütze uns
-</a>
-			<a role="link" href="/de/blog" class="
-      flex items-center py-1 px-3 rounded-xl transition duration-150
-      hover:bg-indigo-100 dark:hover:bg-neutral-700
-      active:bg-indigo-200 
-      hover:text-neutral-800 dark:hover:text-neutral-200
-      text-neutral-600 dark:text-neutral-400
-    ">
-    Bloggen
-</a>
 			
 
 <label for="lang-select" class="relative flex flex-row items-center
@@ -130,12 +112,45 @@
 				</svg>
       		
 </a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/de/blog" class="block p-2 w-full">
+    Bloggen
+</a>
+						<a href="/de/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Unterstütze uns
+</a>
+					</div>
+				</div>
+			</div>
+
 			<a href="/de/list/1" class="
-          flex items-center py-1 px-3 rounded-xl          
-          text-white dark:text-black
-          bg-indigo-400 dark:bg-indigo-400
-          hover:bg-indigo-600 dark:hover:bg-indigo-200
-          transition duration-150 astro-HSP6OTUF">
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
 				Suche NPS
 			</a>
 		</div>
@@ -246,14 +261,17 @@
       </p>
   </a>
                     
+
                     <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C19H25NO2S/c1-14(20)11-16-12-18(22-3)19(13-17(16)21-2)23-10-9-15-7-5-4-6-8-15/h4-8,12-14H,9-11,20H2,1-3H3</span>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
                             <span class="">Synonyme:</span>
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">ALEPH-S-PhEt</span>
                         </p>
-                     <p class="break-all leading-snug text-sm mt-4">
-                      <span class="">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C19H25NO2S/c1-14(20)11-16-12-18(22-3)19(13-17(16)21-2)23-10-9-15-7-5-4-6-8-15/h4-8,12-14H,9-11,20H2,1-3H3</span>
-                  </p>
+                    
+                    
                 </div>
             </div>
         </section>
@@ -821,7 +839,7 @@
   <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C24H27NO3/c1-25-19-11-14-22(25)23(24(27)28-2)21(15-19)18-9-5-16(6-10-18)3-4-17-7-12-20(26)13-8-17/h3-10,12-13,19,21-23,26H,11,14-15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C24H27NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H18BrNO3S/c1-20-14-9-16(15(21-2)7-10(14)5-6-18)22-11-3-4-12(17)13(19)8-11/h3-4,7-9,19H,5-6,18H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H18BrNO3...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -833,7 +851,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H21NO3/c1-3-6-15(2)12(9-16)7-11-4-5-13-14(8-11)18-10-17-13/h4-5,8,12,16H,3,6-7,9-10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H21NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H32N4O8S/c1-2-22(14-6-4-3-5-7-14)10-11-23(35,27-21(22)34)36-13-16(19(31)25-12-18(29)30)26-17(28)9-8-15(24)20(32)33/h3-7,15-16,35H,2,8-13,24H2,1H3,(H,25,31)(H,26,28)(H,27,34)(H,29,30)(H,32,33)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H32N4O8S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">43.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:43.34080602865488%;background-color:rgb(144, 111, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H13FN2O2/c1-3-11-4-7-16-14(8-11)18(20-10-17(23)21(16)2)13-9-12(22)5-6-15(13)19/h1,4-9,22H,10H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H13FN2O2...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -845,7 +875,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C33H53NO4/c1-8-11-12-13-14-15-24(5)25-21-28(37-31(36)19-18-30(35)34(9-2)10-3)32-26-20-23(4)16-17-27(26)33(6,7)38-29(32)22-25/h21-24,30,35H,8-20H2,1-7H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C33H53NO4/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H22INO3/c1-3-10-20(22)14-8-9-16(20)17(18(21)23-2)15(11-14)12-4-6-13(19)7-5-12/h3-7,14-17H,1,8-11H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H22INO3/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -857,7 +887,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H23NOS/c1-5-11-17(16(18)6-2)13(3)12-14-7-9-15(19-4)10-8-14/h5-10,13,16,18H,1-2,11-12H2,3-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H23NOS/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H20N4O2/c21-12-10-16(25)11-13-24-18-9-5-4-8-17(18)19(23-24)20(26)22-14-15-6-2-1-3-7-15/h1-9,16,25H,10-11,13-14H2,(H,22,26)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H20N4O2/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">43.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:43.3328176749754%;background-color:rgb(145, 110, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H13ClN2O2/c1-19-12-8-7-11(17)16(21)14(12)15(18-9-13(19)20)10-5-3-2-4-6-10/h2-8,21H,9H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H13ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -869,7 +911,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H33N3O4/c1-6-35-24-13-11-22(12-14-24)27(33)26(23-9-7-8-21(16-23)17-30)20(3)32-28(34)29(4,5)36-25-15-10-19(2)18-31-25/h7-16,18,20,26-27,33H,6H2,1-5H3,(H,32,34)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H33N3O4/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H22N4O2/c21-18(25)12-6-7-13-24-17-11-5-4-10-16(17)19(23-24)20(26)22-14-15-8-2-1-3-9-15/h1-5,8-11H,6-7,12-14H2,(H2,21,25)(H,22,26)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H22N4O2/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">43.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:43.32074131797305%;background-color:rgb(145, 110, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H29FN2O4/c1-4-28-20(26)18(21(2,3)27)23-19(25)16-14-24(13-9-5-8-12-22)17-11-7-6-10-15(16)17/h6-7,10-11,14,18,27H,4-5,8-9,12-13H2,1-3H3,(H,23,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H29FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -881,7 +935,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C9H11Cl2NO/c1-9(12,13)5-6-2-3-7(10)8(11)4-6/h2-4,13H,5,12H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C9H11Cl2NO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H27FN2O4/c1-20(2,3)17(19(26)27-13-24)22-18(25)15-12-23(11-7-6-10-21)16-9-5-4-8-14(15)16/h4-5,8-9,12,17,24H,6-7,10-11,13H2,1-3H3,(H,22,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H27FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -893,7 +947,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C26H24FNO2/c1-2-3-6-15-28-17-19(16-23(28)20-11-4-5-13-22(20)27)26(30)21-12-7-9-18-10-8-14-24(29)25(18)21/h4-5,7-14,16-17,29H,2-3,6,15H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C26H24FNO2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C27H31FN2O/c28-24-11-13-25(14-12-24)30(20-16-23-9-5-2-6-10-23)26-17-19-29(21-27(26)31)18-15-22-7-3-1-4-8-22/h1-14,26-27,31H,15-21H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C27H31FN2O/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -905,7 +959,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H22N2O/c1-2-9-18(13-7-8-13)16(19)10-12-11-17-15-6-4-3-5-14(12)15/h3-6,11,13,16-17,19H,2,7-10H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H22N2O/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H23N3O2/c1-11-3-5-12(6-4-11)14-9-13-7-8-15(21(13)2)17(14)18-20-19-16(10-22)23-18/h3-6,13-15,17,22H,7-10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H23N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -917,7 +971,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H24ClNO/c1-11(2)16-14(12-4-6-13(18)7-5-12)10-17(20)9-8-15(16)19(17)3/h4-7,11,14-16,20H,8-10H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H24ClNO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H21FN2O3/c1-22(2,24)13-14-25-21-19(17-5-3-4-6-18(17)20)12-9-15-7-10-16(23)11-8-15/h3-12,23H,13-14H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H21FN2O3...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -929,7 +983,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H23NO3/c1-13(2)17(20,14-7-5-4-6-8-14)16(19)21-15-9-11-18(3)12-10-15/h4-8,15,20H,1,9-12H2,2-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H23NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H17N3O2/c1-3-9-4-10-13(19-9)5-12(18)11-6-16-17(14(10)11)7-8(2)15/h4-6,8,18H,3,7,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H17N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -941,7 +995,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H20N2OS/c1-12(18(2)3)11-19-14-6-4-5-7-16(14)21-17-9-8-13(20)10-15(17)19/h4-10,12,20H,11H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H20N2OS/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H19NS2/c1-4-17(5-2)13(3)12-14(15-8-6-10-18-15)16-9-7-11-19-16/h6-12H,3-5H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H19NS2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -952,11 +1006,9 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/46783414" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C16H21NO3/c1-10(18)16(19)17-8-6-12-3-2-11-4-5-14-13(15(11)12)7-9-20-14/h4-5,10,12,18H,2-3,6-9H2,1H3,(H,17,19)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C16H21...</h2>
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H25N3O3S/c1-19(2)8-5-14-11-18-17-15(14)9-13(10-16(17)21)12-24(22,23)20-6-3-4-7-20/h9-11,18,21H,3-8,12H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H25N3O3S...</h2>
 </div>
-                    </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">43.2%</p>
@@ -967,7 +1019,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H26FN3O2/c1-22(2,16-8-10-17(27)11-9-16)25-21(28)18-15-26(14-5-3-4-12-23)19-7-6-13-24-20(18)19/h6-11,13,15,27H,3-5,12,14H2,1-2H3,(H,25,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H26FN3O2...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H15NO2/c1-21(23)13-18(16-10-4-5-12-19(16)21)20(22)17-11-6-8-14-7-2-3-9-15(14)17/h2-13H,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H15NO2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -979,7 +1031,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H30N2O2/c25-20-9-3-8-19-18(20)14-21(26)24(19)17-10-12-23(13-11-17)22-15-4-1-5-16(22)7-2-6-15/h3,8-9,15-17,22,25H,1-2,4-7,10-14H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H30N2O2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H21ClN2O3/c22-16-6-7-18-17(11-16)21(14-4-2-1-3-5-14)23-12-20(26)24(18)8-9-27-13-15-10-19(15)25/h1-7,11,15,19,25H,8-10,12-13H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H21ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -991,7 +1043,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H29N3O2/c1-4-24(5-2)12-13-25-21-11-8-18(16-26)14-20(21)23-22(25)15-17-6-9-19(27-3)10-7-17/h6-11,14,26H,4-5,12-13,15-16H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H29N3O2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H26N2O2/c1-3-12-9-20(23)10-16-18-14(6-7-22(11-20)19(12)16)15-8-13(24-2)4-5-17(15)21-18/h4-5,8,12,16,19,21,23H,3,6-7,9-11H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H26N2O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1003,7 +1055,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C9H11Cl2NO/c1-5(12)2-6-3-7(10)9(11)8(13)4-6/h3-5,13H,2,12H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C9H11Cl2NO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H27FN2O4/c1-20(2,3)17(19(26)27-4)22-18(25)14-12-23(11-7-10-16(21)24)15-9-6-5-8-13(14)15/h5-6,8-9,12,16-17,24H,7,10-11H2,1-4H3,(H,22,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H27FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1015,7 +1067,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H20FNO3/c1-3-20-14(18)15(8-10-17(2,19)11-9-15)12-4-6-13(16)7-5-12/h4-7H,3,8-11H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H20FNO3/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H25NO5/c1-19(20,10-12-5-6-14(21)15(22)7-12)11-13-8-16(23-2)18(25-4)17(9-13)24-3/h5-9,21-22H,10-11,20H2,1-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H25NO5/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1027,7 +1079,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H23NO3/c1-12(2)20-15(19)16(8-10-17(3)11-9-16)13-6-4-5-7-14(13)18/h4-7,12,18H,8-11H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H23NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23NO2/c1-26-23(25)22-20(15-19-13-14-21(22)24-19)18-11-9-17(10-12-18)8-7-16-5-3-2-4-6-16/h2-6,9-12,19-22,24H,13-15H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23NO2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1039,7 +1091,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H29NO4S/c1-14(2)27-19-12-18(25-4)16(20(23)21(19)26-5)10-11-22-13-15-8-6-7-9-17(15)24-3/h6-9,12,14,22-23H,10-11,13H2,1-5H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H29NO4S/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H25N3O2/c1-12(2)23(4)19(24)13-8-16-15-6-5-7-17-18(15)14(10-21-17)9-20(16,25)22(3)11-13/h5-8,10,12-13,21,25H,9,11H2,1-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H25N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1051,7 +1103,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H10F2N2O2/c16-8-5-10-14(9-3-1-2-4-11(9)17)18-7-13(21)19-15(10)12(20)6-8/h1-6,20H,7H2,(H,19,21)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H10F2N2O...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H23ClN2O3/c1-20-13-6-7-15(20)17(18(23)21-16(22)8-9-24-21)14(10-13)11-2-4-12(19)5-3-11/h2-5,13-17,22H,6-10H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H23ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1063,7 +1115,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C37H56N2O4/c1-9-11-13-18-37(8,41)28(5)29-23-32(42-35(40)26(3)16-22-39-20-14-12-15-27(39)4)34-30-25-38(19-10-2)21-17-31(30)36(6,7)43-33(34)24-29/h2,23-24,26-28,41H,9,11-22,25H2,1,3-8H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C37H56N2O4/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H19F3INO3/c1-25-16-9-14(22)17(26-2)8-11(16)6-7-23-10-12-13(18(19,20)21)4-3-5-15(12)24/h3-5,8-9,23-24H,6-7,10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H19F3INO...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1075,7 +1127,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H20N2O/c18-15-13-6-2-5-12-11-4-1-3-10(11)9-17(14(12)13)8-7-16-15/h2,5-6,10-11,15-16,18H,1,3-4,7-9H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H20N2O/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H22N2O3/c1-23-16-7-8-18-17(11-16)15(13-21(18)22)9-10-20-12-14-5-3-4-6-19(14)24-2/h3-8,11,13,20-21H,9-10,12H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H22N2O3/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1087,7 +1139,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H19NOS2/c1-4-16(3)12(2)11-13(14-7-5-9-18-14)15-8-6-10-19(15)17/h5-12H,4H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H19NOS2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C26H37NO9/c1-2-27-14-8-13-18(15-27)34-25(33)26(17-11-6-7-12-17,16-9-4-3-5-10-16)36-24-21(30)19(28)20(29)22(35-24)23(31)32/h3-5,9-10,17-22,24,28-30H,2,6-8,11-15H2,1H3,(H,31,32)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C26H37NO9/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1099,7 +1151,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C24H31N3O3/c28-21-12-14(5-6-30-21)13-27-20-4-2-1-3-19(20)23(26-27)24(29)25-22-17-8-15-7-16(10-17)11-18(22)9-15/h1-4,14-18,21-22,28H,5-13H2,(H,25,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C24H31N3O3/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H24ClNO4/c1-4-25-16-8-6-5-7-13(16)12-21-19(22)10-14-9-18(24-3)15(20)11-17(14)23-2/h5-9,11,19,21-22H,4,10,12H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H24ClNO4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1110,9 +1162,11 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H25ClN4O5/c24-17-18(25)21-20(31-12-13-32-21)16(19(17)29)22-26-28(23(30)33-22)15-7-10-27(11-8-15)9-6-14-4-2-1-3-5-14/h1-5,15,29H,6-13,25H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H25ClN4O...</h2>
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/155520187" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C24H30N2O4/c1-30-23(29)24(26(22(28)13-19-27)21-10-6-3-7-11-21)14-17-25(18-15-24)16-12-20-8-4-2-5-9-20/h2-11,27H,12-19H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C24H30...</h2>
 </div>
+                    </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">43.0%</p>
@@ -1123,7 +1177,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H21NO3/c1-4-7-15(3)10(2)14(16)11-5-6-12-13(8-11)18-9-17-12/h5-6,8,10,14,16H,4,7,9H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H21NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H15FN2O2/c1-3-12-8-9-16(20-2)14(10-12)18(21-11-17(22)23)13-6-4-5-7-15(13)19/h1,4-10,20H,11H2,2H3,(H,22,23)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H15FN2O2...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1141,7 +1195,7 @@
   <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H25NO2/c1-21-13-16-10-9-15-11-18(22-2)19(23-3)12-17(15)20(16)14-7-5-4-6-8-14/h4-8,11-12,16,20-21H,9-10,13H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H25NO2/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H24BrNO4/c1-23-17-7-5-4-6-14(17)16(12-22)21-9-8-13-10-19(25-3)15(20)11-18(13)24-2/h4-7,10-11,16,21-22H,8-9,12H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H24BrNO4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1153,7 +1207,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C24H27NO3/c1-25-19-11-14-22(25)23(24(27)28-2)21(15-19)18-9-5-16(6-10-18)3-4-17-7-12-20(26)13-8-17/h3-10,12-13,19,21-23,26H,11,14-15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C24H27NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H18BrNO3S/c1-20-14-9-16(15(21-2)7-10(14)5-6-18)22-11-3-4-12(17)13(19)8-11/h3-4,7-9,19H,5-6,18H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H18BrNO3...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1165,7 +1219,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H21NO3/c1-3-6-15(2)12(9-16)7-11-4-5-13-14(8-11)18-10-17-13/h4-5,8,12,16H,3,6-7,9-10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H21NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H32N4O8S/c1-2-22(14-6-4-3-5-7-14)10-11-23(35,27-21(22)34)36-13-16(19(31)25-12-18(29)30)26-17(28)9-8-15(24)20(32)33/h3-7,15-16,35H,2,8-13,24H2,1H3,(H,25,31)(H,26,28)(H,27,34)(H,29,30)(H,32,33)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H32N4O8S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:45.01772449156991%;background-color:rgb(140, 115, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H13FN2O2/c1-3-11-4-7-16-14(8-11)18(20-10-17(23)21(16)2)13-9-12(22)5-6-15(13)19/h1,4-9,22H,10H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H13FN2O2...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1177,7 +1243,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C33H53NO4/c1-8-11-12-13-14-15-24(5)25-21-28(37-31(36)19-18-30(35)34(9-2)10-3)32-26-20-23(4)16-17-27(26)33(6,7)38-29(32)22-25/h21-24,30,35H,8-20H2,1-7H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C33H53NO4/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H22INO3/c1-3-10-20(22)14-8-9-16(20)17(18(21)23-2)15(11-14)12-4-6-13(19)7-5-12/h3-7,14-17H,1,8-11H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H22INO3/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1189,7 +1255,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H23NOS/c1-5-11-17(16(18)6-2)13(3)12-14-7-9-15(19-4)10-8-14/h5-10,13,16,18H,1-2,11-12H2,3-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H23NOS/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H20N4O2/c21-12-10-16(25)11-13-24-18-9-5-4-8-17(18)19(23-24)20(26)22-14-15-6-2-1-3-7-15/h1-9,16,25H,10-11,13-14H2,(H,22,26)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H20N4O2/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:45.01768389867156%;background-color:rgb(140, 115, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H13ClN2O2/c1-19-12-8-7-11(17)16(21)14(12)15(18-9-13(19)20)10-5-3-2-4-6-10/h2-8,21H,9H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H13ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1201,7 +1279,19 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H33N3O4/c1-6-35-24-13-11-22(12-14-24)27(33)26(23-9-7-8-21(16-23)17-30)20(3)32-28(34)29(4,5)36-25-15-10-19(2)18-31-25/h7-16,18,20,26-27,33H,6H2,1-5H3,(H,32,34)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H33N3O4/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H22N4O2/c21-18(25)12-6-7-13-24-17-11-5-4-10-16(17)19(23-24)20(26)22-14-15-8-2-1-3-9-15/h1-5,8-11H,6-7,12-14H2,(H2,21,25)(H,22,26)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H22N4O2/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:45.01762350437166%;background-color:rgb(140, 115, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H29FN2O4/c1-4-28-20(26)18(21(2,3)27)23-19(25)16-14-24(13-9-5-8-12-22)17-11-7-6-10-15(16)17/h6-7,10-11,14,18,27H,4-5,8-9,12-13H2,1-3H3,(H,23,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H29FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1213,7 +1303,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C9H11Cl2NO/c1-9(12,13)5-6-2-3-7(10)8(11)4-6/h2-4,13H,5,12H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C9H11Cl2NO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H27FN2O4/c1-20(2,3)17(19(26)27-13-24)22-18(25)15-12-23(11-7-6-10-21)16-9-5-4-8-14(15)16/h4-5,8-9,12,17,24H,6-7,10-11,13H2,1-3H3,(H,22,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H27FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1225,7 +1315,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C26H24FNO2/c1-2-3-6-15-28-17-19(16-23(28)20-11-4-5-13-22(20)27)26(30)21-12-7-9-18-10-8-14-24(29)25(18)21/h4-5,7-14,16-17,29H,2-3,6,15H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C26H24FNO2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C27H31FN2O/c28-24-11-13-25(14-12-24)30(20-16-23-9-5-2-6-10-23)26-17-19-29(21-27(26)31)18-15-22-7-3-1-4-8-22/h1-14,26-27,31H,15-21H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C27H31FN2O/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1237,7 +1327,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H22N2O/c1-2-9-18(13-7-8-13)16(19)10-12-11-17-15-6-4-3-5-14(12)15/h3-6,11,13,16-17,19H,2,7-10H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H22N2O/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H23N3O2/c1-11-3-5-12(6-4-11)14-9-13-7-8-15(21(13)2)17(14)18-20-19-16(10-22)23-18/h3-6,13-15,17,22H,7-10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H23N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1249,7 +1339,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H24ClNO/c1-11(2)16-14(12-4-6-13(18)7-5-12)10-17(20)9-8-15(16)19(17)3/h4-7,11,14-16,20H,8-10H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H24ClNO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H21FN2O3/c1-22(2,24)13-14-25-21-19(17-5-3-4-6-18(17)20)12-9-15-7-10-16(23)11-8-15/h3-12,23H,13-14H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H21FN2O3...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1261,7 +1351,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H23NO3/c1-13(2)17(20,14-7-5-4-6-8-14)16(19)21-15-9-11-18(3)12-10-15/h4-8,15,20H,1,9-12H2,2-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H23NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H17N3O2/c1-3-9-4-10-13(19-9)5-12(18)11-6-16-17(14(10)11)7-8(2)15/h4-6,8,18H,3,7,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H17N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1273,7 +1363,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H20N2OS/c1-12(18(2)3)11-19-14-6-4-5-7-16(14)21-17-9-8-13(20)10-15(17)19/h4-10,12,20H,11H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H20N2OS/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H19NS2/c1-4-17(5-2)13(3)12-14(15-8-6-10-18-15)16-9-7-11-19-16/h6-12H,3-5H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H19NS2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1284,11 +1374,9 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/46783414" target="_blank">
-                        <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C16H21NO3/c1-10(18)16(19)17-8-6-12-3-2-11-4-5-14-13(15(11)12)7-9-20-14/h4-5,10,12,18H,2-3,6-9H2,1H3,(H,17,19)" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C16H21...</h2>
+                <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C17H25N3O3S/c1-19(2)8-5-14-11-18-17-15(14)9-13(10-16(17)21)12-24(22,23)20-6-3-4-7-20/h9-11,18,21H,3-8,12H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C17H25N3O3S...</h2>
 </div>
-                    </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.0%</p>
@@ -1299,7 +1387,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H26FN3O2/c1-22(2,16-8-10-17(27)11-9-16)25-21(28)18-15-26(14-5-3-4-12-23)19-7-6-13-24-20(18)19/h6-11,13,15,27H,3-5,12,14H2,1-2H3,(H,25,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H26FN3O2...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H15NO2/c1-21(23)13-18(16-10-4-5-12-19(16)21)20(22)17-11-6-8-14-7-2-3-9-15(14)17/h2-13H,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H15NO2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1311,7 +1399,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H30N2O2/c25-20-9-3-8-19-18(20)14-21(26)24(19)17-10-12-23(13-11-17)22-15-4-1-5-16(22)7-2-6-15/h3,8-9,15-17,22,25H,1-2,4-7,10-14H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H30N2O2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H21ClN2O3/c22-16-6-7-18-17(11-16)21(14-4-2-1-3-5-14)23-12-20(26)24(18)8-9-27-13-15-10-19(15)25/h1-7,11,15,19,25H,8-10,12-13H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H21ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1323,7 +1411,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H29N3O2/c1-4-24(5-2)12-13-25-21-11-8-18(16-26)14-20(21)23-22(25)15-17-6-9-19(27-3)10-7-17/h6-11,14,26H,4-5,12-13,15-16H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H29N3O2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H26N2O2/c1-3-12-9-20(23)10-16-18-14(6-7-22(11-20)19(12)16)15-8-13(24-2)4-5-17(15)21-18/h4-5,8,12,16,19,21,23H,3,6-7,9-11H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H26N2O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1335,7 +1423,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C9H11Cl2NO/c1-5(12)2-6-3-7(10)9(11)8(13)4-6/h3-5,13H,2,12H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C9H11Cl2NO/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H27FN2O4/c1-20(2,3)17(19(26)27-4)22-18(25)14-12-23(11-7-10-16(21)24)15-9-6-5-8-13(14)15/h5-6,8-9,12,16-17,24H,7,10-11H2,1-4H3,(H,22,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H27FN2O4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1347,7 +1435,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H20FNO3/c1-3-20-14(18)15(8-10-17(2,19)11-9-15)12-4-6-13(16)7-5-12/h4-7H,3,8-11H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H20FNO3/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H25NO5/c1-19(20,10-12-5-6-14(21)15(22)7-12)11-13-8-16(23-2)18(25-4)17(9-13)24-3/h5-9,21-22H,10-11,20H2,1-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H25NO5/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1359,7 +1447,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H23NO3/c1-12(2)20-15(19)16(8-10-17(3)11-9-16)13-6-4-5-7-14(13)18/h4-7,12,18H,8-11H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H23NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23NO2/c1-26-23(25)22-20(15-19-13-14-21(22)24-19)18-11-9-17(10-12-18)8-7-16-5-3-2-4-6-16/h2-6,9-12,19-22,24H,13-15H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23NO2/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1371,7 +1459,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H29NO4S/c1-14(2)27-19-12-18(25-4)16(20(23)21(19)26-5)10-11-22-13-15-8-6-7-9-17(15)24-3/h6-9,12,14,22-23H,10-11,13H2,1-5H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H29NO4S/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H25N3O2/c1-12(2)23(4)19(24)13-8-16-15-6-5-7-17-18(15)14(10-21-17)9-20(16,25)22(3)11-13/h5-8,10,12-13,21,25H,9,11H2,1-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H25N3O2/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1383,7 +1471,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H10F2N2O2/c16-8-5-10-14(9-3-1-2-4-11(9)17)18-7-13(21)19-15(10)12(20)6-8/h1-6,20H,7H2,(H,19,21)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H10F2N2O...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H23ClN2O3/c1-20-13-6-7-15(20)17(18(23)21-16(22)8-9-24-21)14(10-13)11-2-4-12(19)5-3-11/h2-5,13-17,22H,6-10H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H23ClN2O...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1395,7 +1483,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C37H56N2O4/c1-9-11-13-18-37(8,41)28(5)29-23-32(42-35(40)26(3)16-22-39-20-14-12-15-27(39)4)34-30-25-38(19-10-2)21-17-31(30)36(6,7)43-33(34)24-29/h2,23-24,26-28,41H,9,11-22,25H2,1,3-8H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C37H56N2O4/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H19F3INO3/c1-25-16-9-14(22)17(26-2)8-11(16)6-7-23-10-12-13(18(19,20)21)4-3-5-15(12)24/h3-5,8-9,23-24H,6-7,10H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H19F3INO...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1407,7 +1495,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H20N2O/c18-15-13-6-2-5-12-11-4-1-3-10(11)9-17(14(12)13)8-7-16-15/h2,5-6,10-11,15-16,18H,1,3-4,7-9H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H20N2O/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H22N2O3/c1-23-16-7-8-18-17(11-16)15(13-21(18)22)9-10-20-12-14-5-3-4-6-19(14)24-2/h3-8,11,13,20-21H,9-10,12H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H22N2O3/...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1419,7 +1507,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H19NOS2/c1-4-16(3)12(2)11-13(14-7-5-9-18-14)15-8-6-10-19(15)17/h5-12H,4H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H19NOS2/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C26H37NO9/c1-2-27-14-8-13-18(15-27)34-25(33)26(17-11-6-7-12-17,16-9-4-3-5-10-16)36-24-21(30)19(28)20(29)22(35-24)23(31)32/h3-5,9-10,17-22,24,28-30H,2,6-8,11-15H2,1H3,(H,31,32)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C26H37NO9/c...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1431,7 +1519,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C24H31N3O3/c28-21-12-14(5-6-30-21)13-27-20-4-2-1-3-19(20)23(26-27)24(29)25-22-17-8-15-7-16(10-17)11-18(22)9-15/h1-4,14-18,21-22,28H,5-13H2,(H,25,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C24H31N3O3/...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H24ClNO4/c1-4-25-16-8-6-5-7-13(16)12-21-19(22)10-14-9-18(24-3)15(20)11-17(14)23-2/h5-9,11,19,21-22H,4,10,12H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H24ClNO4...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -1442,9 +1530,11 @@
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-                <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H25ClN4O5/c24-17-18(25)21-20(31-12-13-32-21)16(19(17)29)22-26-28(23(30)33-22)15-7-10-27(11-8-15)9-6-14-4-2-1-3-5-14/h1-5,15,29H,6-13,25H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H25ClN4O...</h2>
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/155520187" target="_blank">
+                        <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="InChI=1S/C24H30N2O4/c1-30-23(29)24(26(22(28)13-19-27)21-10-6-3-7-11-21)14-17-25(18-15-24)16-12-20-8-4-2-5-9-20/h2-11,27H,12-19H2,1H3" class="text-violet-500 text-sm leading-tight">Metabolite: InChI=1S/C24H30...</h2>
 </div>
+                    </a>
             </div>
             <span class="flex items-center w-full lg:w-min">
   <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">45.0%</p>
@@ -1455,7 +1545,7 @@
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
                 <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H21NO3/c1-4-7-15(3)10(2)14(16)11-5-6-12-13(8-11)18-9-17-12/h5-6,8,10,14,16H,4,7,9H2,1-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H21NO3/c...</h2>
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H15FN2O2/c1-3-12-8-9-16(20-2)14(10-12)18(21-11-17(22)23)13-6-4-5-7-15(13)19/h1,4-10,20H,11H2,2H3,(H,22,23)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H15FN2O2...</h2>
 </div>
             </div>
             <span class="flex items-center w-full lg:w-min">
@@ -2590,11 +2680,16 @@
 	<div id="support" class=" astro-HSP6OTUF">
 		<h1 class="text-xl mb-4 astro-HSP6OTUF">Unterstütze uns</h1>
 		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Wenn Ihnen gefällt, was wir tun, können Sie uns durch eine Spende hier unterstützen:</p>
-		<span class="w-full flex flex-col items-center astro-HSP6OTUF">
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
 			<span class="flex items-center gap-2 astro-HSP6OTUF">
 				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
 				BTC: 
 				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
 			</span>
 		</span>
 		
