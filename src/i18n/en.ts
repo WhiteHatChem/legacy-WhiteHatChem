@@ -49,5 +49,9 @@ export default {
 
   'blog.sent1': 'Here you will find a collection of informative and interesting articles on a variety of topics related to our latest findings for WHC.',
 
-  'search.placeholder': 'Search compounds'
+  'search.placeholder': 'Search compounds',
+
+  'announcement.sent1': 'WHC is still in active development.',
+  'announcement.sent2': 'Read this',
+  'announcement.sent3': 'to understand our approach.',
 }

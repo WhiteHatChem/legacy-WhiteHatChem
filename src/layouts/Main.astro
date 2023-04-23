@@ -6,8 +6,8 @@ import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import ThemeToggle from '../components/ThemeToggle';
 import LanguagePicker from '../components/LanguagePicker.astro';
+import AnnouncementBar from '../components/AnnouncementBar';
 import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
-
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,6 +26,16 @@ const t = useTranslations(lang);
 		display: none;
 	}
 </style>
+
+<AnnouncementBar
+	client:load
+	LAST_ANNOUNCE={new Date("2023-04-20T15:00:00.000Z")}
+>
+	<div>
+		{t('announcement.sent1')}
+		<a class="underline font-bold" href={i18n_href('/blog', lang)}>{t('announcement.sent2')}</a> {t('announcement.sent3')}
+	</div>
+</AnnouncementBar>
 
 <header class="py-6 md:py-10">
 	<nav class="flex justify-between items-center main-width">
