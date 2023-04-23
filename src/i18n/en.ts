@@ -17,6 +17,8 @@ export default {
 
   'molecule.checkon': "Check on",
   'molecule.synonyms': "Synonyms",
+  'molecule.market': "Market name",
+  'molecule.drugdata': "Drug data",
   'molecule.similarities': "Similarities",
   'molecule.structural': "Structural",
   'molecule.affinities': "Affinities",

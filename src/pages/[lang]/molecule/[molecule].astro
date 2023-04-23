@@ -28,6 +28,8 @@ const {
   psychonaut_names,
   tripsit_names,
   isomerd_names, isod_ids,
+  drugmap_id, drugmap_name,
+  market_name,
   hsdb_names, cid,
   synonyms, svg,
   struct_sim, binding_sim, less_addictive_sim, binding_affinities,
@@ -52,16 +54,39 @@ const default_sim = (
                     <CompoundNameLink names={psychonaut_names} ids={null} site={'psychonaut'} />
                     <CompoundNameLink names={isomerd_names} ids={isod_ids} site={'isomerdesign'} />
                     <CompoundNameLink names={hsdb_names} ids={cid} site={'pubchem'} />
+
+                    <p class="break-all leading-snug text-sm mt-4">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{inchi}</span>
+                    </p>
                     {
-                        synonyms && synonyms.length > 0 && <p class="break-all leading-snug text-sm mt-4">
+                        synonyms && synonyms.length > 0 && <p class="break-all leading-snug text-sm">
                             <span class="">{t('molecule.synonyms')}:</span>
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{synonyms.join(',')}</span>
                         </p>
                     }
-                     <p class="break-all leading-snug text-sm mt-4">
-                      <span class="">InChI:</span>
-                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{inchi}</span>
-                  </p>
+                    {
+                        market_name && <p class="break-all leading-snug text-sm">
+                            <span class="">{t('molecule.market')}:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{market_name}</span>
+                        </p>
+                    }
+                    {
+                        drugmap_name && drugmap_id && <p class="break-all leading-snug text-sm">
+                            <span class="">{t('molecule.drugdata')}:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                              {drugmap_name}
+                              ({drugmap_id.map((x, i) => <span class="">
+                                <a
+                                  class="underline"
+                                  href={`http://drugmap.idrblab.net/data/drug/details/${x}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >{x}</a>{i < drugmap_id.length - 1 ? ', ' : ''}
+                              </span>)})
+                            </span>
+                        </p>
+                    }
                 </div>
             </div>
         </section>

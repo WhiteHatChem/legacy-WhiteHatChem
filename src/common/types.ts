@@ -7,6 +7,9 @@ export interface MoleculeData {
   tripsit_names: string[] | null;
   isomerd_names: string[] | null;
   isod_ids: number[] | null;
+  drugmap_id: string[] | null;
+  drugmap_name: string | null;
+  market_name: string | null;
   hsdb_names: string[] | null;
   cid: number[] | null;
   struct_sim: Array<SimilarMolecule> | null;
