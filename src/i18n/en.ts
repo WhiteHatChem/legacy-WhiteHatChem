@@ -58,4 +58,14 @@ export default {
   'announcement.sent1': 'WHC is still in active development.',
   'announcement.sent2': 'Read this',
   'announcement.sent3': 'to understand our approach.',
+
+  'reachus.sent1': 'If you are a researcher, a lab, a company or a passionate and wants to go deeper into NPS, we provide different ways to access our work',
+  'reachus.sent2': 'We offer an API that enables you to retrieve comprehensive information about NPS compounds, including their properties, structures, along with more advanced features that are not available on the main website. For example you can perform retrosynthesis of your own molecules. Check the full ',
+  'reachus.sent3': 'For general inquiries or feedback, you can email us at',
+  'reachus.sent4': 'We would love to hear your thoughts and suggestions on how we can improve our services, or discuss potential collaborations.',
+  'reachus.sent5': 'API spec',
+  'reachus.reachus': 'Reach us',
+  'reachus.api': 'API',
+  'reachus.database': 'Database',
+  'reachus.contactus': 'Contact us',
 }
