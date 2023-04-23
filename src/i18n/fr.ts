@@ -34,6 +34,10 @@ export default {
 'molecule.sent7': "Interaction de cette molécule avec le métabolisme",
 'molecule.sent8': "Réactions qui métabolisent cette molécule",
 'molecule.sent9': "Réactions produites par le métabolisme à partir de cette molécule",
+'molecule.sent10': "Voici une série de comparaisons visant à comprendre les propriétés de ce composé. Ce site est encore très expérimental et fait l'objet d'un développement actif. Veuillez vous référer à",
+'molecule.sent11': "notre série d'articles d'articles",
+'molecule.sent12': "pour bien comprendre notre approche et ses limites.",
+'molecule.sent13': "Ces informations sont données à titre indicatif et ne doivent pas être interprétées comme des conseils médicaux.",
 
 'reaction.product': 'Produit',
 'reaction.enzymes': 'Enzymes',

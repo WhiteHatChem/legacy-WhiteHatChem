@@ -34,6 +34,10 @@ export default {
   'molecule.sent7': "Interaction of this molecule with metabolism",
   'molecule.sent8': "Reactions that metabolize this molecule",
   'molecule.sent9': "Reactions that metabolism produce from this molecule",
+  'molecule.sent10': "The following is a set of comparisons to understand the properties of this compound. This is still higly experimental and is still under active development. Please refer to",
+  'molecule.sent11': "our series of blog posts",
+  'molecule.sent12': "to fully understand our approach and its limitations.",
+  'molecule.sent13': "This information is for informational purposes only and should not be construed as medical advice.",
 
   'reaction.product': 'Product',
   'reaction.enzymes': 'Enzymes',
