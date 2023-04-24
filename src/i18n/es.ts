@@ -34,6 +34,7 @@ export default {
 'molecule.sent7': "Interacción de esta molécula con el metabolismo",
 'molecule.sent8': "Reacciones que metabolizan esta molécula",
 'molecule.sent9': "Reacciones que el metabolismo produce a partir de esta molécula",
+'molecule.solubility': "Solubilidad",
 
 'reaction.product': 'Producto',
 'reaction.enzymes': 'Enzimas',

@@ -34,6 +34,7 @@ export default {
 'molecule.sent7': "Wechselwirkung dieses Moleküls mit dem Stoffwechsel",
 'molecule.sent8': "Reaktionen, die dieses Molekül metabolisieren",
 'molecule.sent9': "Reaktionen, die der Stoffwechsel aus diesem Molekül produziert",
+'molecule.solubility': "Löslichkeit",
 
 'reaction.product': 'Produkt',
 'reaction.enzymes': 'Enzyme',

@@ -38,6 +38,7 @@ export default {
 'molecule.sent11': "notre série d'articles d'articles",
 'molecule.sent12': "pour bien comprendre notre approche et ses limites.",
 'molecule.sent13': "Ces informations sont données à titre indicatif et ne doivent pas être interprétées comme des conseils médicaux.",
+'molecule.solubitily': "Solubilité",
 
 'reaction.product': 'Produit',
 'reaction.enzymes': 'Enzymes',

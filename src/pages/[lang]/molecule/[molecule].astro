@@ -33,6 +33,7 @@ const {
   hsdb_names, cid,
   synonyms, svg,
   struct_sim, binding_sim, less_addictive_sim, binding_affinities,
+   solubility, solubility_comment,
   metabolism
 } = Astro.props as MoleculeData;
 
@@ -86,6 +87,14 @@ const default_sim = (
                               </span>)})
                             </span>
                         </p>
+                    }
+
+                    {
+                        solubility && <p class="break-all leading-snug text-sm">
+                            <span class="">{t('molecule.solubility')}:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{solubility}{solubility_comment ? ` (${solubility_comment})` : ''}</span>
+                        </p>
+
                     }
                 </div>
             </div>
@@ -145,7 +154,7 @@ const default_sim = (
                   </ul>
               </li>
               <li class="w-full flex flex-col" id="metabolism">
-                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">{t('molecule.sent7')}</span>
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">{t('molecule.sent7')} <a href="https://biotransformer.ca/about">?</a></span>
                   {metabolism && metabolism.anterior && <div>
                     <div class="my-4 text-lg">{t('molecule.sent8')}</div>
                     <div class="flex flex-col gap-2">

@@ -222,7 +222,9 @@ def useful_data(data):
 		"less_addictive_sim",
 		"binding_affinities",
 		"metabolism",
-		"metabolite"
+		"metabolite",
+		"solubility",
+		"solubility_comment",
 	]
 	return {k: data.get(k, None) for k in useful_rows}
 
@@ -258,7 +260,7 @@ def generate_jsons(
 		sdf_name = f"{v['name']}.sdf"
 		
 		svg_path = os.path.join(imgs_path, svg_name)
-		inchi_to_svg(v['inchi'], svg_path)
+	#	inchi_to_svg(v['inchi'], svg_path)
 		v['svg'] = svg_name
 
 		""" save time
@@ -328,7 +330,7 @@ def generate_jsons(
 	# Add metabolism data
 	with open(METABOLISM_PATH, 'r') as fi:
 		metabolism_data = json.load(fi)
-
+	print(metabolism_data.keys())
 	def parse_reaction(reaction):
 		useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 		return {
@@ -362,6 +364,7 @@ def generate_jsons(
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
 		if v['nogen']: continue
+		print(v.keys())
 
 		f_name = f"{v['name']}.json"
 		f_path = os.path.join(output_path, f_name)
@@ -371,7 +374,6 @@ def generate_jsons(
 		count += 1
 
 	print(f"Generated {count} jsons.")
-
 
 def inchi_to_svg(inchi, path):
 	m = Chem.inchi.MolFromInchi(inchi)

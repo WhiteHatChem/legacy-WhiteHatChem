@@ -35,6 +35,8 @@ export default {
 'molecule.sent8': "Реакции, метаболизирующие эту молекулу",
 'molecule.sent9': "Реакции, которые метаболизм образует из этой молекулы",
 
+'molecule.solubility': "Растворимость",
+
 'reaction.product': 'Продукт',
 'reaction.enzymes': 'Ферменты',
 

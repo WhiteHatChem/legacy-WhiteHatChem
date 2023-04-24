@@ -40,6 +40,7 @@ export default {
   'molecule.sent11': "our series of blog posts",
   'molecule.sent12': "to fully understand our approach and its limitations.",
   'molecule.sent13': "This information is for informational purposes only and should not be construed as medical advice.",
+  'molecule.solubitily': "Solubility",
 
   'reaction.product': 'Product',
   'reaction.enzymes': 'Enzymes',

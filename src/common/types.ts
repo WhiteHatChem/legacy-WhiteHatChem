@@ -22,7 +22,9 @@ export interface MoleculeData {
   metabolism: {
     anterior: Array<Reaction> | null
     posterior: Array<Reaction> | null
-  } | null
+  } | null,
+  solubility: number|null;
+  solubility_comment : string|null;
 }
 
 export interface Reaction {
