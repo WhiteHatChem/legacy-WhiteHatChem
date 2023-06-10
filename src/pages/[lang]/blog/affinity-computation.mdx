@@ -1,0 +1,41 @@
+---
+layout: ../../../layouts/Blog.astro
+title: "Addopted approach for calculating drug-neuroreceptor affinity"
+author: "Zach"
+date: "10 Jun 2023"
+---
+import { languagesList } from '../../../i18n/i18n';
+export async function getStaticPaths() {
+  return languagesList.map((lang) => ({
+    params: { lang: lang },
+  }));
+}
+
+
+
+To obtain the affinities between drugs and neuroreceptors, the protocol is as follows:
+
+-list neuroreceptors known to play a role in psychoactive effects
+
+-identify potential docking sites on neuroreceptors (based on this work http://www.pkumdl.cn:8000/cavityspace/about )
+
+Perform GNINA binding energy minimization for each pair of drug and docking site ( paper: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2 tool: https://github.com/gnina/gnina )
+
+-Assign an affinity score to each pose with GNINA
+
+
+# Limitations:
+
+-The same neuroreceptor may vary between individuals
+
+-A neuroreceptor is a structure that can have several "modes", be in different configurations
+
+-Only docking sites (pockets) with the highest probability identified by CavitySpace were retained
+
+-Other molecules may interact between the neuroreceptor and the drug
+
+-GNINA was used with parameters to reduce computation time and therefore accuracy (in particular, a completeness of 8 and the default scoring model)
+
+-A ligand can conform in a pocket in several ways, which are not always of minimal binding energy and impacting the nature of the interaction
+
+Many of these constraints are lack of exhautivity due to the project's limited material resources
