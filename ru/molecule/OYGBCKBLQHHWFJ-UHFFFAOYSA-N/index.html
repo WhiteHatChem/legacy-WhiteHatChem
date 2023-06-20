@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL3B24H8NW"></script>
+    
+
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<title>Compounds.</title>
+    <script>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+    
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
+	<link rel="stylesheet" href="/_astro/404.cc16d568.css" />
+<link rel="stylesheet" href="/_astro/affinity-computation.e04faf6d.css" /><script type="module" src="/_astro/hoisted.15586961.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
+		
+	
+
+<style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var c;{let d={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[e,n]=r;return e in d?d[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(c=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{var l;if(!this.hydrator||!this.isConnected||(l=this.parentElement)!=null&&l.closest("astro-island[ssr]"))return;let r=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(let s of n){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML)}let a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{let n=this.getAttribute("renderer-url"),[a,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),s=this.getAttribute("component-export")||"default";if(!s.includes("."))this.Component=a[s];else{this.Component=a;for(let i of s.split("."))this.Component=this.Component[i]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},c.observedAttributes=["props"],c))}})();</script><astro-island uid="fAACC" component-url="/_astro/AnnouncementBar.dd899e57.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;LAST_ANNOUNCE&quot;:[3,&quot;2023-04-20T15:00:00.000Z&quot;],&quot;class&quot;:[0,&quot;astro-HSP6OTUF&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;AnnouncementBar&quot;,&quot;value&quot;:true}" await-children=""><div class="
+        relative text-neutral-800 dark:text-neutral-200
+        bg-gradient-to-r from-blue-200/60 to-violet-200/60
+        hover:from-blue-200/90 hover:to-violet-200/90
+        dark:from-indigo-800/80 dark:to-violet-800/80
+        dark:hover:from-blue-800/60 dark:hover:to-violet-800/60
+    "><div class="py-1.5 px-4 flex justify-center text-center"><astro-slot>
+	<div class="astro-HSP6OTUF">
+		WHC is still in active development.
+		<a class="underline font-bold astro-HSP6OTUF" href="/ru/blog">Read this</a> to understand our approach.
+	</div>
+</astro-slot></div><button class="absolute px-1 inset-y-0 right-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button></div></astro-island>
+
+<header class="py-6 md:py-10 astro-HSP6OTUF">
+	<nav class="flex justify-between items-center main-width astro-HSP6OTUF">
+		<div class="astro-HSP6OTUF">
+			<a href="/ru/" class="flex flex-row items-center md:gap-4 gap-2 astro-HSP6OTUF">
+				<img src="/_astro/main.76ea4ae3.png" class="w-14 astro-HSP6OTUF" alt="whitehatchemistry">
+				<div class="flex flex-col items-center text-neutral-800 dark:text-neutral-200 leading-tight font-bold text-lg astro-HSP6OTUF">
+					<span class="astro-HSP6OTUF">White<span class="text-indigo-600 dark:text-indigo-400 astro-HSP6OTUF">Hat</span></span>
+					<span class=" astro-HSP6OTUF">Chemistry</span>
+				</div>
+			</a>
+		</div>
+		<!-- desktop -->
+		<div class="gap-2 items-stretch hidden md:flex astro-HSP6OTUF">
+			
+
+<label for="lang-select" class="relative flex flex-row items-center
+    rounded-xl transition duration-150
+    hover:bg-indigo-100 dark:hover:bg-neutral-700
+    active:bg-indigo-200 
+    hover:text-neutral-800 dark:hover:text-neutral-200
+    text-neutral-600 dark:text-neutral-400">
+    <svg class="absolute left-3 w-6 h-6 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+    <select class="bg-transparent cursor-pointer z-[1]
+        lg:w-full lg:text-current lg:py-2 lg:pr-1 lg:mr-2 lg:pl-11
+        text-transparent w-12 py-2" name="lang" id="lang-select">
+        <option class="text-black" value="en">
+                    English
+                </option><option class="text-black" value="fr">
+                    Français
+                </option><option class="text-black" value="de">
+                    Deutsch
+                </option><option class="text-black" value="es">
+                    Español
+                </option><option class="text-black" value="ru" selected="true">
+                    Pусский
+                </option>
+    </select>
+</label>
+      		<astro-island uid="Z1LTdhf" component-url="/_astro/ThemeToggle.177895d3.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;class&quot;:[0,&quot;astro-HSP6OTUF&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+        py-1.5 px-3 rounded-xl transition duration-150
+        hover:bg-indigo-100 dark:hover:bg-neutral-700
+        active:bg-indigo-200 
+        hover:text-neutral-800 dark:hover:text-neutral-200
+        text-neutral-600 dark:text-neutral-400
+      "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path></svg></button></astro-island>
+
+			<a role="link" href="https://discord.gg/SKGhEsWT7R" class="
+      flex items-center py-1 px-3 rounded-xl transition duration-150
+      hover:bg-indigo-100 dark:hover:bg-neutral-700
+      active:bg-indigo-200 
+      hover:text-neutral-800 dark:hover:text-neutral-200
+      text-neutral-600 dark:text-neutral-400
+    ">
+    
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor" class="w-6 h-6 astro-HSP6OTUF">
+					<g id="图层_2" data-name="图层 2" class="astro-HSP6OTUF">
+					<g id="Discord_Logos" data-name="Discord Logos" class="astro-HSP6OTUF">
+						<g id="Discord_Logo_-_Large_-_White" data-name="Discord Logo - Large - White" class="astro-HSP6OTUF">
+						<path class="cls-1 astro-HSP6OTUF" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path>
+						</g>
+					</g>
+					</g>
+				</svg>
+      		
+</a>
+
+			<div class="flex items-center astro-HSP6OTUF">
+				<input class="desktop-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="desktop-menu">
+				<label class="hamburger px-3 py-1 astro-HSP6OTUF" for="desktop-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg>
+				</label>
+				<div class="desktop-menu h-full relative bg-red-400 astro-HSP6OTUF" aria-modal="true" role="dialog">
+					<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+						<label class="absolute inset-0 z-10 astro-HSP6OTUF" for="desktop-menu" aria-hidden="true"></label>
+					</div>
+					<!-- background blur -->
+					<div class="
+						absolute right-0 top-full w-max
+						flex flex-col p-2 w-36
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5 z-20
+					 astro-HSP6OTUF">
+						<a href="/ru/blog" class="block p-2 w-full">
+    Блог
+</a>
+						<a href="/ru/reachus" class="block p-2 w-full">
+    Reach us
+</a>
+						<a href="#support" class="block p-2 w-full">
+    Поддержите нас
+</a>
+					</div>
+				</div>
+			</div>
+
+			<a href="/ru/list/1" class="
+					flex items-center py-1 px-3 rounded-xl          
+					text-white dark:text-black
+					bg-indigo-400 dark:bg-indigo-400
+					hover:bg-indigo-600 dark:hover:bg-indigo-200
+					transition duration-150 astro-HSP6OTUF">
+				Поиск НПВ
+			</a>
+		</div>
+		<!-- mobile -->
+		<div class="flex gap-2 md:hidden astro-HSP6OTUF">
+			
+
+<label for="lang-select" class="relative flex flex-row items-center
+    rounded-xl transition duration-150
+    hover:bg-indigo-100 dark:hover:bg-neutral-700
+    active:bg-indigo-200 
+    hover:text-neutral-800 dark:hover:text-neutral-200
+    text-neutral-600 dark:text-neutral-400">
+    <svg class="absolute left-3 w-6 h-6 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+    <select class="bg-transparent cursor-pointer z-[1]
+        lg:w-full lg:text-current lg:py-2 lg:pr-1 lg:mr-2 lg:pl-11
+        text-transparent w-12 py-2" name="lang" id="lang-select">
+        <option class="text-black" value="en">
+                    English
+                </option><option class="text-black" value="fr">
+                    Français
+                </option><option class="text-black" value="de">
+                    Deutsch
+                </option><option class="text-black" value="es">
+                    Español
+                </option><option class="text-black" value="ru" selected="true">
+                    Pусский
+                </option>
+    </select>
+</label>
+      		<astro-island uid="Z1LTdhf" component-url="/_astro/ThemeToggle.177895d3.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;class&quot;:[0,&quot;astro-HSP6OTUF&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><button class="
+        py-1.5 px-3 rounded-xl transition duration-150
+        hover:bg-indigo-100 dark:hover:bg-neutral-700
+        active:bg-indigo-200 
+        hover:text-neutral-800 dark:hover:text-neutral-200
+        text-neutral-600 dark:text-neutral-400
+      "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path></svg></button></astro-island>
+			<input class="mobile-menu-toggler hidden astro-HSP6OTUF" type="checkbox" id="side-menu">
+			<label class="hamburger p-2 astro-HSP6OTUF" for="side-menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+</svg></label>
+
+			<div class="mobile-menu astro-HSP6OTUF" aria-modal="true" role="dialog">
+				<!-- background blur -->
+				<div class="fixed inset-0 flex content-start p-4 astro-HSP6OTUF">
+					<label class="absolute inset-0 cursor-pointer backdrop-blur bg-neutral-900/10 z-10 astro-HSP6OTUF" for="side-menu" aria-hidden="true"></label>
+					<div class="
+						absolute inset-x-0 mx-4 mt-16 
+						flex flex-col p-4 
+						rounded-2xl bg-white
+						tracking-tight text-neutral-800 shadow-xl text-lg
+						ring-1 ring-slate-900/5
+						z-20
+					 astro-HSP6OTUF">
+					
+						<a href="https://discord.gg/SKGhEsWT7R" class="flex items-center p-2 w-full astro-HSP6OTUF">
+							Присоединиться к нашему Discord
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor" class="w-5 h-5 ml-2 astro-HSP6OTUF">
+								<g id="图层_2" data-name="图层 2" class="astro-HSP6OTUF">
+								<g id="Discord_Logos" data-name="Discord Logos" class="astro-HSP6OTUF">
+									<g id="Discord_Logo_-_Large_-_White" data-name="Discord Logo - Large - White" class="astro-HSP6OTUF">
+									<path class="cls-1 astro-HSP6OTUF" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"></path>
+									</g>
+								</g>
+								</g>
+							</svg>
+						</a>
+						<a href="/ru/blog" class="block p-2 w-full">
+    Blog
+</a>
+						<a href="/ru/list/1" class="block p-2 w-full">
+    Соединения
+</a>
+						<hr class="m-2 border-neutral-400/20 astro-HSP6OTUF">
+						<a href="/ru/about" class="block p-2 w-full">
+    О нас
+</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+        <section class="main-width mt-8">
+            <div class="w-full flex flex-col items-center mb-8">
+                <astro-island uid="1lazCW" component-url="/_astro/MoleculeViewer.90d4c804.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;svg&quot;:[0,&quot;OYGBCKBLQHHWFJ-UHFFFAOYSA-N.svg&quot;],&quot;inchi&quot;:[0,&quot;InChI=1S/C25H28N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h6-10,12-16,18,21H,3-5,11,17H2,1-2H3&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MoleculeViewer&quot;,&quot;value&quot;:true}" await-children=""><div class="relative flex justify-center w-full max-w-xl mb-4"><img class="dark:invert-[.8]" src="/svg/OYGBCKBLQHHWFJ-UHFFFAOYSA-N.svg" alt="depiction of OYGBCKBLQHHWFJ-UHFFFAOYSA-N.svg" /><button class="
+        absolute top-0 right-0 py-1 px-3
+        flex items-center gap-2 rounded-lg
+        bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
+      "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg>3D</button></div></astro-island>
+                <div class="flex flex-col text-xl gap-2">
+                    
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="https://isomerdesign.com/PiHKAL/explore.php?id=13325" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Ethylbenzyl-PeGACLONE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Ethylbenzyl-PeGACLON...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Проверить на isomerdesign
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+        
+        
+    
+
+                    <p class="text-center mt-4">Data</p>
+                    <p class="break-all leading-snug text-sm">
+                      <span class="">InChI:</span>
+                      <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">InChI=1S/C25H28N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h6-10,12-16,18,21H,3-5,11,17H2,1-2H3</span>
+                    </p>
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Синонимы:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">Ethylbenzyl-PeGACLONE</span>
+                        </p>
+                    
+                    
+
+                    <p class="break-all leading-snug text-sm">
+                            <span class="">Растворимость:</span>
+                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">-6.445</span>
+                        </p>
+                    <hr>
+                    <p class="text-center mt-4">Estimated data</p>
+
+                    <p class="break-all leading-snug text-sm">
+                          <span class="">Clinical toxicity:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.503 (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> using MTDNN-SE_ClinTox+Tox21 model)</span>
+                      </p>
+                    <p class="break-all leading-snug text-sm">
+                          <span class="">Estimated Toxicity:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.965 (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)</span>
+                      </p>
+                    
+                    <p class="break-all leading-snug text-sm">
+                          <span class="">Addictivity Prediction:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.751</span>
+                      </p>
+                </div>
+            </div>
+        </section>
+        <section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-6">Сходства</h2>
+          <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
+            The following is a set of comparisons to understand the properties of this compound. This is still higly experimental and is still under active development. Please refer to
+            <a class="underline" href="/ru/blog">our series of blog posts</a>
+            to fully understand our approach and its limitations.
+            <b>This information is for informational purposes only and should not be construed as medical advice.</b>
+          </p>
+          <astro-island uid="Zqcn4D" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;struct&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Структурные\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Аффинности\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Метаболизм\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						bg-neutral-200 dark:bg-neutral-700
+						border border-neutral-300 dark:border-neutral-600
+					">Структурные</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Аффинности</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Метаболизм</button></div></astro-island><ul class="mt-4" id="similarities-tab-content">
+              <li class="w-full flex flex-col active" id="struct">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Самые структурно похожие соединения. Процент является мерой структурного сходства этих молекул, которое часто сильно коррелирует с их эффектами.</span>
+                  <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/WAOQONBSWFLFPE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Raclopride" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Raclopride
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.6933403%;background-color:rgb(240, 15, 0)"></div>
+  </div>
+</span>
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H22ClN3O2/c1-22-15-8-13(18)12(17)7-11(15)16(21)19-9-10-4-6-20-5-2-3-14(10)20/h7-8,10,14H,2-6,9,18H2,1H3,(H,19,21)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H22ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.67229986%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H25ClFN5O3/c1-26-21(31)12-30-8-6-14(7-9-30)33-20-10-15-18(11-19(20)32-2)27-13-28-23(15)29-17-5-3-4-16(24)22(17)25/h3-5,10-11,13-14H,6-9,12H2,1-2H3,(H,26,31)(H,27,28,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H25ClFN5...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.64924479%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H22ClN3O2/c1-22-15-8-13(18)12(17)7-11(15)16(21)19-14-4-6-20-5-2-3-10(14)9-20/h7-8,10,14H,2-6,9,18H2,1H3,(H,19,21)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H22ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.64081669%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H19FN6O2/c19-15-7-10(5-6-21-15)14-8-13(16-17(20)22-9-23-25(14)16)18(27)24-11-1-3-12(26)4-2-11/h5-9,11-12,26H,1-4H2,(H,24,27)(H2,20,22,23)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H19FN6O2...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.53071499%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H26ClN3O3/c1-24-9-2-6-22-7-3-12(4-8-22)21-18(23)14-11-15(19)16(20)13-5-10-25-17(13)14/h11-12H,2-10,20H2,1H3,(H,21,23)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H26ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.47729731%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H30N6O5/c1-16-32-22-9-7-17(13-24(22)39-16)20-15-31-26-25(20)28(40-19-5-3-4-6-19)35-29(34-26)33-21-10-8-18(14-23(21)38-2)27(37)30-11-12-36/h7-10,13-15,19,36H,3-6,11-12H2,1-2H3,(H,30,37)(H2,31,33,34,35)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H30N6O5/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.41148186%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C28H28N6O4/c1-15-31-21-10-8-16(12-23(21)37-15)19-14-30-25-24(19)27(38-18-6-4-5-7-18)34-28(33-25)32-20-11-9-17(26(35)29-2)13-22(20)36-3/h8-14,18H,4-7H2,1-3H3,(H,29,35)(H2,30,32,33,34)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C28H28N6O4/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.40608168%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H31N3O4/c1-15-13-22(31-4)20(24(29)27-15)14-26-25(30)23-17(3)28(21-8-6-5-7-19(21)23)16(2)18-9-11-32-12-10-18/h5-8,13,16,18H,9-12,14H2,1-4H3,(H,26,30)(H,27,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H31N3O4/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.38003445%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H22ClN3O2/c1-20-10-3-4-11(20)6-9(5-10)19-16(21)12-7-13(17)14(18)8-15(12)22-2/h7-11H,3-6,18H2,1-2H3,(H,19,21)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H22ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.3394556%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H22FN3O3S/c1-27-16-7-4-8-17(28-2)19(16)20(26)23-13-5-3-6-14(13)24-21-25-15-10-9-12(22)11-18(15)29-21/h4,7-11,13-14H,3,5-6H2,1-2H3,(H,23,26)(H,24,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H22FN3O3...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.332732200000001%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H35FN8O4/c1-15(2)34-27(39)17-5-6-19(30)18(11-17)22-8-7-20(31)26(35-22)28(40)36-23-12-33-10-9-24(23)38-13-16(3)25(21(32)14-38)37-29(41)42-4/h5-12,15-16,21,25H,13-14,31-32H2,1-4H3,(H,34,39)(H,36,40)(H,37,41)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H35FN8O4...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.32081723%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H32N8O2S/c1-3-36-10-12-37(13-11-36)24-9-8-21(15-30-24)34-28(38)19-5-4-18(2)23(14-19)35-29(39)22-16-40-26-25(22)31-17-32-27(26)33-20-6-7-20/h4-5,8-9,14-17,20H,3,6-7,10-13H2,1-2H3,(H,34,38)(H,35,39)(H,31,32,33)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H32N8O2S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.3131938%;background-color:rgb(241, 14, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C15H20ClN3O2/c1-21-14-7-12(17)11(16)6-10(14)15(20)18-13-8-19-4-2-9(13)3-5-19/h6-7,9,13H,2-5,8,17H2,1H3,(H,18,20)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C15H20ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.208605530000001%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H30ClFN4O2/c1-14-6-7-17(26)22(21(14)27)30-24-29-18-12-16(20(33-5)13-19(18)31(24)4)23(32)28-15-8-10-25(2,3)11-9-15/h6-7,12-13,15H,8-11H2,1-5H3,(H,28,32)(H,29,30)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H30ClFN4...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.13774753%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C24H24Cl2N4O4/c1-4-20(31)28-16-7-8-34-12-17(16)30-24-27-11-14-9-13(5-6-15(14)29-24)21-22(25)18(32-2)10-19(33-3)23(21)26/h4-6,9-11,16-17H,1,7-8,12H2,2-3H3,(H,28,31)(H,27,29,30)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C24H24Cl2N4...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.11555672%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C14H20ClN3O3/c1-20-12-6-10(16)9(15)5-8(12)14(19)18-11-3-4-17-7-13(11)21-2/h5-6,11,13,17H,3-4,7,16H2,1-2H3,(H,18,19)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C14H20ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.06884456%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H22ClN3O3S/c1-27-16-7-4-8-17(28-2)19(16)20(26)23-13-5-3-6-14(13)24-21-25-15-10-9-12(22)11-18(15)29-21/h4,7-11,13-14H,3,5-6H2,1-2H3,(H,23,26)(H,24,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H22ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:5.06728292%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H24FN3O3S/c1-26(22-25-15-11-10-13(23)12-19(15)30-22)16-7-4-6-14(16)24-21(27)20-17(28-2)8-5-9-18(20)29-3/h5,8-12,14,16H,4,6-7H2,1-3H3,(H,24,27)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H24FN3O3...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.99151945%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H24N4O3S/c1-13-19(26-22(28)29-17-6-4-3-5-7-17)10-16(12-23-13)15-8-9-18-20(11-15)30-21(25-18)24-14(2)27/h8-12,17H,3-7H2,1-2H3,(H,26,28)(H,24,25,27)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H24N4O3S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.97248173%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C27H30N6O3S/c1-5-21(34)30-17-7-6-8-18(17)31-25(35)24-23-22-19(9-10-28-26(22)37-24)33(27(36)32-23)20-13-29-16(11-14(2)3)12-15(20)4/h5,9-10,12-14,17-18H,1,6-8,11H2,2-4H3,(H,30,34)(H,31,35)(H,32,36)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C27H30N6O3S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.92732525%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C32H36ClN3O5S/c1-18-12-19(2)30-21(13-18)14-24(36(30)17-28(37)38)31(39)35-32-34-29(22-15-26(41-4)23(33)16-25(22)40-3)27(42-32)11-10-20-8-6-5-7-9-20/h12-16,20H,5-11,17H2,1-4H3,(H,37,38)(H,34,35,39)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C32H36ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.90429401%;background-color:rgb(242, 13, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H20N2O4S/c1-23-12-8-7-10(9-13(12)24-2)17(22)20-18-15(16(19)21)11-5-3-4-6-14(11)25-18/h7-9H,3-6H2,1-2H3,(H2,19,21)(H,20,22)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H20N2O4S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.8002660299999995%;background-color:rgb(243, 12, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H19N3O3S2/c1-8-13(17-19-9(2)21-26-17)16(25-14(8)10-6-7-10)20-15(22)11-4-3-5-12(11)18(23)24/h10H,3-7H2,1-2H3,(H,20,22)(H,23,24)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H19N3O3S...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.76226807%;background-color:rgb(243, 12, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H20ClN3O4S/c1-26-15-4-3-5-16(27-2)18(15)19(25)22-13-9-28-10-14(13)24-20-23-12-7-6-11(21)8-17(12)29-20/h3-8,13-14H,9-10H2,1-2H3,(H,22,25)(H,23,24)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H20ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.7428250300000006%;background-color:rgb(243, 12, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H25N7O3/c1-2-31-21(30)27-15-5-3-14(4-6-15)26-20(29)16-11-17(13-7-9-23-10-8-13)28-18(16)19(22)24-12-25-28/h7-12,14-15H,2-6H2,1H3,(H,26,29)(H,27,30)(H2,22,24,25)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H25N7O3/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.64562178%;background-color:rgb(243, 12, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H27Cl2N5O6S/c1-9(8-33-3)24-19(30)16-17(20(31)32)35-21(27-16)28-6-5-11(12(7-28)34-4)26-18(29)15-14(23)13(22)10(2)25-15/h9,11-12,25H,5-8H2,1-4H3,(H,24,30)(H,26,29)(H,31,32)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H27Cl2N5...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:4.26216125%;background-color:rgb(244, 11, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H27N7O4/c1-3-33-22(31)28-15-6-4-14(5-7-15)27-21(30)16-11-17(13-8-9-24-18(10-13)32-2)29-19(16)20(23)25-12-26-29/h8-12,14-15H,3-7H2,1-2H3,(H,27,30)(H,28,31)(H2,23,25,26)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H27N7O4/...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:3.74606252%;background-color:rgb(245, 10, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H24ClN5O3S/c1-10-13-15(21)16(17(27)22-11-3-4-11)29-19(13)23-18(14(10)20)28-9-12(26)25-7-5-24(2)6-8-25/h11H,3-9,21H2,1-2H3,(H,22,27)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H24ClN5O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">2.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:2.84270644%;background-color:rgb(248, 7, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C13H14ClN3O2S/c1-5-7-9(15)10(11(18)16-6-3-4-6)20-13(7)17-12(19-2)8(5)14/h6H,3-4,15H2,1-2H3,(H,16,18)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C13H14ClN3O...</h2>
+</div>
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:0%;background-color:rgb(255, 0, 0)"></div>
+  </div>
+</span>
+        </div>
+</div>
+              </li>
+              <li class="w-full flex flex-col" id="affinity">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Сходства, рассчитанные на основе аффинностей молекул с выбранными участками стыковки белков.</span>
+                  <div class="w-full pt-4"></div>
+                  <astro-island uid="RESbN" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие аффинности\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие молекулы с низкой допаминергической аффинностью\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Профиль аффинностей\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						bg-neutral-200 dark:bg-neutral-700
+						border border-neutral-300 dark:border-neutral-600
+					">Похожие аффинности</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Похожие молекулы с низкой допаминергической аффинностью</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Профиль аффинностей</button></div></astro-island>
+                  <ul class="mt-4" id="nested-tab-content">
+                      <li class="w-full flex flex-col active" id="dist_main">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, имеющих наиболее сходные аффинности участков стыковки. Процент является мерой сходства связывающих аффинностей молекул, что должно быть заменителем того, насколько похоже они взаимодействуют с мозгом.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/AWHWTKXMUJLSRM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CUMYL-PEGACLONE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              CUMYL-PEGACLONE
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/VOCGZWPYRQJUMY-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CUMYL-CB-MEGACLONE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              CUMYL-CB-MEGACLONE
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/CVOCKGAVXLCEGM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Nufenoxole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Nufenoxole
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/GZYXCXRHVALIJD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="KM-233" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              KM-233
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/QBEFIFWEOSUTKV-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DMHP" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DMHP
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/CSXKNESDVLECTJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AM-2389" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              AM-2389
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/OTYBPWBZUDBUQS-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="JWH-185" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              JWH-185
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PPYHLSBUTAPNGT-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Testosterone isocaproate" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Testosterone isocapr...
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/LMENRXZOUBANKQ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="SGT-4" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              SGT-4
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/AKGUMDFQXWZHHS-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="JWH-182 " class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              JWH-182 
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/UCTCCIPCJZKWEZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="APINACA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              APINACA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MVEVPDCVOXJVBD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="HU-243" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              HU-243
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/BDJRWUBZMGSKHL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="JWH-359" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              JWH-359
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/RJPGJHLVEUSRRA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AM-087" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              AM-087
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/JDBOTXIRNSWBCG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="O-1269" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              O-1269
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/WIGTZVOQGIFMAV-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Testosterone caproate" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Testosterone caproat...
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MLRLLZWQYJJPEX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CUMYL-NBMINACA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              CUMYL-NBMINACA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/SHWDYCMMUPPWQM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="AB-001" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              AB-001
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HDJDHOXJDMHXTD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="RTI-387" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              RTI-387
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a>
+</div>
+                      </li>
+                      <li class="w-full flex flex-col" id="dist_dopa">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, которые имеют наиболее сходные аффинности участков стыковки и также высокое взаимодействие с допаминовыми рецепторами. Это, таким образом, является заменителем того, насколько эта молекула стимулирует допаминовые рецепторы.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/CYRSNYOFYQQEON-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-FPO" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-FPO
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HRQOYIJXQHSHOE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="BODM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              BODM
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/UIJWLWCOVQFZHF-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-2,6-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Me-2,6-DMPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/USQWRDRXXKZFDI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-MeO-MA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-MeO-MA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/OYKAQMUUZGTZBP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="BO3MM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              BO3MM
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/FUUSHPZPRNXCBZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,3-HMeMMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,3-HMeMMPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/NCSUFYPUXBKLQA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-3,5-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Me-3,5-DMPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/UEFYTJOXDDAYAC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="β,N-Me-2-MPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              β,N-Me-2-MPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HNJWKRMESUMDQE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Methylhomoveratrylamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Methylhomoveratryl...
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PIGIFXLLTQEIPK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="25H-NMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              25H-NMe
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/CFEHWNSMGUKJEU-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="β,3,4-TMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              β,3,4-TMPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/BLONZKLZWUBKMX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="β,N-Me-4-MPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              β,N-Me-4-MPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HSYSLTPRNLNOAG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(2,6-Dimethoxyphenyl)-2-(methylamino)ethan-1-ol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-(2,6-Dimethoxyphen...
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PVLFQRLVSMMSQK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="IM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              IM
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/INUNXTSAACVKJS-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="palfium" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              palfium
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Dextromoramide" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Dextromoramide
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Levomoramide" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Levomoramide
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Racemoramide" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Racemoramide
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/RJKGQUALUZJVGM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(3,5-Dimethoxyphenyl)-2-(methylamino)ethan-1-ol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-(3,5-Dimethoxyphen...
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/WKZLNEWVIAGNAW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-Carbamoyl-T" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-Carbamoyl-T
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/XYJYWUUXCUJXAI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="6-Fluoro-AMT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              6-Fluoro-AMT
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/SQKKYSLRUHVTFX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MM-GEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MM-GEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/QJJXVGKAMLYOCJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N,N-Me-2,5-HMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N,N-Me-2,5-HMPEA
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+  </div>
+</span>
+        </a>
+</div>
+                      </li>
+                      <li class="w-full flex flex-col" id="profile">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Связывающие аффинности с перечнем из 34 предопределенных участков стыковки. Эти аффинности используются для расчета сходства взаимодействий.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+    <div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/A5X5Y0" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-A5X5Y0
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 73.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.46227705%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 77.9%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.89117144%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 78.8%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.83617484999999%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 69.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.29173217%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/O95264" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-O95264
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 82.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:81.99006131%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 85.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:85.01385541%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P08588" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P08588
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 71.1%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:71.10017896000001%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 73.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.64825949%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 71.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.96013203%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P08908" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P08908
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 75.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:75.72082255%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 44.9%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:44.890500239999994%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 63.1%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:63.062797169999996%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 58.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:58.54100363%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 68.4%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.44203233%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 79.2%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:79.19836365%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P13945" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P13945
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 60.1%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.07338920000001%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 68.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.04789760999999%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 69.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.26096068000001%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 78.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.69267927%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P18089" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P18089
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 59.9%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:59.85919981%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 66.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:66.46314935999999%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 76.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:76.01769642000001%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 77.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.26603783%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P21728" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P21728
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 85.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:85.55256806%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 61.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.25483116%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_9: 68.2%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.19041578%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P21918" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P21918
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 73.8%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.77705693%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 80.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:80.27816609%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 71.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:71.28864854%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P25100" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P25100
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_11: 77.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.59925631%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_12: 64.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:64.50854891%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 70.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.6458179%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 69.9%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.92500227000001%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 77.8%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.82948741%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 78.2%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.16407776999999%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P28221" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P28221
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 78.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.57206464%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 82.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:82.01835624%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 58.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:58.5457481%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 81.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:81.67727278%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P28566" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P28566
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 83.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:83.34155691000001%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/P46098" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-P46098
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 65.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:65.62918103%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 61.2%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.22546786%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://alphafold.ebi.ac.uk/entry/Q9Y2T6" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                AF-Q9Y2T6
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 74.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:74.29971699%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/6KUX" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P08913_6KUX
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 68.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.64738777%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 59.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:59.015608220000004%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/6CM4" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P14416_6CM4
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 66.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:66.30416469%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 6: 73.6%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.57257407%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/6KUW" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P18825_6KUW
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 68.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.5247658%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 82.9%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:82.92148992%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/5WIU" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P21917_5WIU
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 71.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:71.03217916999999%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 67.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:66.98113688000001%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/4IAR" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P28222_4IAR
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 68.8%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:68.76063586%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 77.8%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.83130655000001%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/6WGT" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P28223_6WGT
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 79.1%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:79.10898453%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 4: 63.3%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:63.32892728%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/6BQH" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P28335_6BQH
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 69.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.546179%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 75.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:75.71224688%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 5: 83.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:83.73522512%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/3PBL" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P35462_3PBL
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 67.5%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:67.50261467%"></div>
+                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 3: 61.0%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.03130227%"></div>
+                        </div>
+            </div>
+        </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <a href="https://www.rcsb.org/structure/4IB4" target="_blank" class="flex flex-row gap-2">
+                <svg class="w-5 text-neutral-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m3.5 14.5.5.5"></path><path d="m20 9 .5.5"></path><path d="m6.5 12.5 1 1"></path><path d="m16.5 10.5 1 1"></path><path d="m10 16 1.5 1.5"></path>
+                </svg>
+                P41595_4IB4
+            </a>
+            <div class="flex flex-row flex-wrap gap-2">
+                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 75.7%">
+                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:75.69085646%"></div>
+                        </div>
+            </div>
+        </div>
+</div>
+                      </li>
+                  </ul>
+              </li>
+              <li class="w-full flex flex-col" id="metabolism">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Взаимодействие этой молекулы с метаболизмом <a href="https://biotransformer.ca/about">?</a></span>
+                  <div>
+                    <div class="my-4 text-lg">Реакции, метаболизирующие эту молекулу</div>
+                    <div class="flex flex-col gap-2">
+                      <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydrolysis of cyclic tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H30N2O2/c1-3-5-11-18-27-22-15-10-9-14-20(22)24(25(28)29)23(27)16-17-26-21(4-2)19-12-7-6-8-13-19/h6-10,12-17,21,26H,3-5,11,18H2,1-2H3,(H,28,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H30N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">EC 3.5.2.X</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of antepenultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-19(28)14-16-26-22-13-9-8-12-20(22)24-23(26)15-17-27(25(24)29)21(4-2)18-10-6-5-7-11-18/h5-13,15,17,19,21,28H,3-4,14,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2E1</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Hydroxylation of monosubstituted benzene</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-10-16-26-21-13-8-6-12-19(21)24-22(26)15-17-27(25(24)29)20(4-2)18-11-7-9-14-23(18)28/h6-9,11-15,17,20,28H,3-5,10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2C19, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">N-Dealkylation of tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H18N2O/c1-2-3-6-11-18-13-8-5-4-7-12(13)15-14(18)9-10-17-16(15)19/h4-5,7-10H,2-3,6,11H2,1H3,(H,17,19)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H18N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">N-Dealkylation of tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7148" target="_blank">
+                    <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="Propiophenone" class="text-violet-500 text-sm leading-tight">Metabolite: Propiophenone</h2>
+</div>
+                </a>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of non-terminal aliphatic carbon adjacent to aromatic ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-11-17-26-21-15-10-9-14-20(21)23-22(26)16-18-27(24(23)28)25(29,4-2)19-12-7-6-8-13-19/h6-10,12-16,18,29H,3-5,11,17H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-15-26-22-14-16-27(21(4-2)18-10-7-6-8-11-18)25(29)24(22)20-13-12-19(28)17-23(20)26/h6-8,10-14,16-17,21,28H,3-5,9,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-15-26-22-13-12-19(28)17-20(22)24-23(26)14-16-27(25(24)29)21(4-2)18-10-7-6-8-11-18/h6-8,10-14,16-17,21,28H,3-5,9,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of benzene on carbon para to electron donating group</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-8-16-26-22-10-7-6-9-20(22)24-23(26)15-17-27(25(24)29)21(4-2)18-11-13-19(28)14-12-18/h6-7,9-15,17,21,28H,3-5,8,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of penultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-21(19-11-5-4-6-12-19)27-17-15-23-24(25(27)29)20-13-7-8-14-22(20)26(23)16-9-10-18(2)28/h4-8,11-15,17-18,21,28H,3,9-10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of penultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-4-10-16-26-21-14-9-8-13-20(21)23-22(26)15-17-27(25(23)29)24(18(2)28)19-11-6-5-7-12-19/h5-9,11-15,17-18,24,28H,3-4,10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-16-26-21-15-17-27(20(4-2)18-11-7-6-8-12-18)25(29)23(21)19-13-10-14-22(28)24(19)26/h6-8,10-15,17,20,28H,3-5,9,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-16-26-20-13-10-14-22(28)23(20)24-21(26)15-17-27(25(24)29)19(4-2)18-11-7-6-8-12-18/h6-8,10-15,17,19,28H,3-5,9,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of terminal methyl</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-2-21(19-11-5-3-6-12-19)27-17-15-23-24(25(27)29)20-13-7-8-14-22(20)26(23)16-9-4-10-18-28/h3,5-8,11-15,17,21,28H,2,4,9-10,16,18H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of terminal methyl</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-2-3-9-16-26-22-13-8-7-12-20(22)24-23(26)14-17-27(25(24)29)21(15-18-28)19-10-5-4-6-11-19/h4-8,10-14,17,21,28H,2-3,9,15-16,18H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Terminal desaturation</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h3,6-10,12-16,18,21H,1,4-5,11,17H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Terminal desaturation</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h4,6-10,12-16,18,21H,2-3,5,11,17H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="my-4 text-lg">Реакции, которые метаболизм образует из этой молекулы</div>
+                    <div class="flex flex-col gap-2">
+                      <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydrolysis of cyclic tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H30N2O2/c1-3-5-11-18-27-22-15-10-9-14-20(22)24(25(28)29)23(27)16-17-26-21(4-2)19-12-7-6-8-13-19/h6-10,12-17,21,26H,3-5,11,18H2,1-2H3,(H,28,29)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H30N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">EC 3.5.2.X</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of antepenultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-19(28)14-16-26-22-13-9-8-12-20(22)24-23(26)15-17-27(25(24)29)21(4-2)18-10-6-5-7-11-18/h5-13,15,17,19,21,28H,3-4,14,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2E1</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Hydroxylation of monosubstituted benzene</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-10-16-26-21-13-8-6-12-19(21)24-22(26)15-17-27(25(24)29)20(4-2)18-11-7-9-14-23(18)28/h6-9,11-15,17,20,28H,3-5,10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2C19, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">N-Dealkylation of tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H18N2O/c1-2-3-6-11-18-13-8-5-4-7-12(13)15-14(18)9-10-17-16(15)19/h4-5,7-10H,2-3,6,11H2,1H3,(H,17,19)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H18N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">N-Dealkylation of tertiary carboxamide</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7148" target="_blank">
+                    <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg><h2 title="Propiophenone" class="text-violet-500 text-sm leading-tight">Metabolite: Propiophenone</h2>
+</div>
+                </a>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of non-terminal aliphatic carbon adjacent to aromatic ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-11-17-26-21-15-10-9-14-20(21)23-22(26)16-18-27(24(23)28)25(29,4-2)19-12-7-6-8-13-19/h6-10,12-16,18,29H,3-5,11,17H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-15-26-22-14-16-27(21(4-2)18-10-7-6-8-11-18)25(29)24(22)20-13-12-19(28)17-23(20)26/h6-8,10-14,16-17,21,28H,3-5,9,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-15-26-22-13-12-19(28)17-20(22)24-23(26)14-16-27(25(24)29)21(4-2)18-10-7-6-8-11-18/h6-8,10-14,16-17,21,28H,3-5,9,15H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of benzene on carbon para to electron donating group</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-8-16-26-22-10-7-6-9-20(22)24-23(26)15-17-27(25(24)29)21(4-2)18-11-13-19(28)14-12-18/h6-7,9-15,17,21,28H,3-5,8,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2C8, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of penultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-21(19-11-5-4-6-12-19)27-17-15-23-24(25(27)29)20-13-7-8-14-22(20)26(23)16-9-10-18(2)28/h4-8,11-15,17-18,21,28H,3,9-10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of penultimate aliphatic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-4-10-16-26-21-14-9-8-13-20(21)23-22(26)15-17-27(25(23)29)24(18(2)28)19-11-6-5-7-12-19/h5-9,11-15,17-18,24,28H,3-4,10,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-16-26-21-15-17-27(20(4-2)18-11-7-6-8-12-18)25(29)23(21)19-13-10-14-22(28)24(19)26/h6-8,10-15,17,20,28H,3-5,9,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Aromatic hydroxylation of fused benzene ring</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-3-5-9-16-26-20-13-10-14-22(28)23(20)24-21(26)15-17-27(25(24)29)19(4-2)18-11-7-6-8-12-18/h6-8,10-15,17,19,28H,3-5,9,16H2,1-2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of terminal methyl</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-2-21(19-11-5-3-6-12-19)27-17-15-23-24(25(27)29)20-13-7-8-14-22(20)26(23)16-9-4-10-18-28/h3,5-8,11-15,17,21,28H,2,4,9-10,16,18H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of terminal methyl</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H28N2O2/c1-2-3-9-16-26-22-13-8-7-12-20(22)24-23(26)14-17-27(25(24)29)21(15-18-28)19-10-5-4-6-11-19/h4-8,10-14,17,21,28H,2-3,9,15-16,18H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H28N2O2/...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Terminal desaturation</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h3,6-10,12-16,18,21H,1,4-5,11,17H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Terminal desaturation</div>
+    <div class="flex flex-row items-center">
+        Продукт: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N2O/c1-3-5-11-17-26-22-15-10-9-14-20(22)24-23(26)16-18-27(25(24)28)21(4-2)19-12-7-6-8-13-19/h4,6-10,12-16,18,21H,2-3,5,11,17H2,1H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N2O/c...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Ферменты: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+        </section>
+	
+
+<footer class="main-width mt-10 astro-HSP6OTUF">
+	<div id="support" class=" astro-HSP6OTUF">
+		<h1 class="text-xl mb-4 astro-HSP6OTUF">Поддержите нас</h1>
+		<p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 astro-HSP6OTUF">Если вам нравится то, что мы делаем, вы можете поддержать нас, сделав пожертвование здесь:</p>
+		<span class="w-full flex flex-col items-start astro-HSP6OTUF">
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/Bitcoin.ab4d6cfd.svg" alt="btc" class="w-4 h-4 astro-HSP6OTUF">
+				BTC: 
+				<span class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF">bc1qcumaaw58tpknthrmn5hwukf4x64qv0fdxc3l5h9ppwler66gy52q74g3yc</span>
+			</span>
+			<span class="flex items-center gap-2 astro-HSP6OTUF">
+				<img src="/_astro/github.ed5b6405.svg" alt="github" class="w-4 h-4 astro-HSP6OTUF">
+				Github Sponsors: 
+				<a class="text-neutral-600 dark:text-neutral-400 break-all astro-HSP6OTUF" href="https://github.com/sponsors/WhiteHatChem">https://github.com/sponsors/WhiteHatChem</a>
+			</span>
+		</span>
+		
+	</div>
+	<div class="flex flex-row py-10 border-t border-neutral-400/20 dark:border-neutral-600 mt-10 astro-HSP6OTUF">
+		<span class="text-sm text-neutral-600 dark:text-neutral-400 astro-HSP6OTUF">
+			Copyright © 2022 WhiteHatChemistry. All rights reserved.
+		</span>
+	</div>
+</footer>
+
+	</body></html>
