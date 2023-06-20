@@ -1,8 +1,10 @@
 ---
-import CompoundName from './CompoundName.astro';
+import CompoundName from './compound_id/CompoundName.astro';
 import type { Reaction } from '../common/types'
 import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
-export interface Props {
+import CompoundNameList from './compound_id/CompoundNameList.astro';
+
+interface Props {
   reaction: Reaction;
 }
 
@@ -29,10 +31,7 @@ const t = useTranslations(lang);
             href={i18n_href(`/molecule/${x.name}`, lang)}
             class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2"
         >
-            {x.psychonaut_names && x.psychonaut_names.map(name => <CompoundName name={name} site="psychonaut"/>)}
-            {x.tripsit_names && x.tripsit_names.map(name => <CompoundName name={name} site="tripsit"/>)}
-            {x.isomerd_names && x.isomerd_names.map(name => <CompoundName name={name} site="isomerdesign"/>)}
-            {x.hsdb_names && x.hsdb_names.map(name => <CompoundName name={name} site="pubchem"/>)}
+            <CompoundNameList id={x} />
         </a>}
     </div> 
     <div> {t('reaction.enzymes')}: <span class="text-neutral-600 dark:text-neutral-400">{reaction.enzymes.join(', ')}</span></div> 

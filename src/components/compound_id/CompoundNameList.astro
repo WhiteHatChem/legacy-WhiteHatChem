@@ -1,0 +1,26 @@
+---
+// List all compound id and link to the WHC page
+// contrary to a list of links to the different compound pages
+import CompoundName from './CompoundName.astro';
+import type { MoleculeIdentifier } from '../../common/types';
+
+interface Props {
+    id: MoleculeIdentifier;
+}
+
+const { id } = Astro.props;
+const {
+    psychonaut_names,
+    tripsit_names,
+    isomerd_names,
+    hsdb_names,
+    druglab_names,
+    name
+} = id;
+---
+
+{psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut" toxic={id.toxic} />)}
+{tripsit_names && tripsit_names.map(name => <CompoundName name={name} site="tripsit" toxic={id.toxic}/>)}
+{isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign" toxic={id.toxic}/>)}
+{hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem" toxic={id.toxic}/>)}
+{druglab_names && druglab_names.map(name => <CompoundName name={name} site="druglab" toxic={id.toxic}/>)}

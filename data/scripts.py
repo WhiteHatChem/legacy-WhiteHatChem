@@ -12,7 +12,7 @@ PATH = 'drugs_metabolites.json'
 METABOLISM_PATH = 'metabolism.json'
 
 DOCKING_SITES = [
-'AF-A5X5Y0-F1-model_v1_box_0', 'AF-A5X5Y0-F1-model_v1_box_2',
+		'AF-A5X5Y0-F1-model_v1_box_0', 'AF-A5X5Y0-F1-model_v1_box_2',
        'AF-A5X5Y0-F1-model_v1_box_3', 'AF-A5X5Y0-F1-model_v1_box_4',
        'AF-O95264-F1-model_v1_box_2', 'AF-O95264-F1-model_v1_box_3',
        'AF-P08588-F1-model_v1_box_1', 'AF-P08588-F1-model_v1_box_2',
@@ -42,39 +42,50 @@ DOCKING_SITES = [
        'P35462_3PBL_A_box_3', 'P41595_4IB4_A_box_0'
 ]
 
-def useful_data(data):
-	useful_rows = [
-		"inchi",
-		"psychonaut_names",
-		"tripsit_names",
-		"isomerd_names",
-		"isod_ids",
-		"drugmap_id",
-		"drugmap_name",
-		"market_name",
-		"synonyms",
-		"cid",
-		"hsdb_names",
-		"search",
-		"name",
-		"svg",
-		"sdf",
-		"struct_sim",
-		"binding_sim",
-		"less_addictive_sim",
-		"binding_affinities",
-		"metabolism",
-		"metabolite",
-		"solubility",
-		"solubility_comment",
-	]
-	return {k: data.get(k, None) for k in useful_rows}
+ROWS_IDENTIFIER = [
+	"inchi",
+	"name",
+	"psychonaut_names",
+	"tripsit_names",
+	"isomerd_names",
+	"isod_ids",
+	"druglab_names",
+	"druglab_href",
+	"hsdb_names",
+	"cid",
+	"search",
+	"toxic",
+	"metabolite"
+]
+
+ROWS_OTHER = [
+	"drugmap_id",
+	"drugmap_name",
+	"market_name",
+	"synonyms",
+	"svg",
+	"sdf",
+	"struct_sim",
+	"binding_sim",
+	"less_addictive_sim",
+	"binding_affinities",
+	"metabolism",
+	"solubility",
+	"solubility_comment",
+	"chemograph",
+	"clintox_pred",
+	"recursive_toxicity",
+	"addictive_prediction",
+	"bbb_permeability",
+]
 
 def generate_jsons(
 	output_path='json/',
 	imgs_path='../public/svg',
 	sdfs_path='../public/sdf',
 ):
+	
+
 	with open(PATH, 'r') as fi:
 		data = json.load(fi)
 
@@ -87,13 +98,19 @@ def generate_jsons(
 		for k2, v2 in v1.items():
 			output[k2][k1] = v2
 
+	# Add metabolism data
+	with open(METABOLISM_PATH, 'r') as fi:
+		metabolism_data = json.load(fi)
+
+	metabolites = set(metabolism_data['inchi'].values())
+
 	# add toxicity, inchi, and name
 	for k, v in output.items():
-		v['toxic'] = not(bool(v['search']))
-		v['nogen'] = bool(v['toxic']) or bool(v['metabolite'])
-		v['metabolite'] = bool(v['metabolite'])
-		v['name'] = k
 		v['inchi'] = v['index']
+		v['toxic'] = v['hsdb_names'] is not None
+		v['metabolite'] = v['inchi'] in metabolites
+		v['nogen'] = not(bool(v['search']))
+		v['name'] = inchi_to_inchikey(idx2inchi[k])
 
 	for k, v in tqdm(output.items(), desc='Generating images'):
 		if v['nogen']: continue
@@ -102,7 +119,7 @@ def generate_jsons(
 		sdf_name = f"{v['name']}.sdf"
 		
 		svg_path = os.path.join(imgs_path, svg_name)
-	#	inchi_to_svg(v['inchi'], svg_path)
+		inchi_to_svg(v['inchi'], svg_path)
 		v['svg'] = svg_name
 
 		""" save time
@@ -119,9 +136,8 @@ def generate_jsons(
 		for dist, idx in zip(v['structural_distances'], v['structural_indices']):
 			try:
 				other_molecule = output[str(idx)]
-				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 				v['struct_sim'].append({
-					**{k: other_molecule[k] for k in useful_col},
+					'id':{k: other_molecule[k] for k in ROWS_IDENTIFIER},
 					'dist': dist
 				})
 			except KeyError:
@@ -135,9 +151,8 @@ def generate_jsons(
 		for dist, idx in zip(v['affinity_distances'], v['affinity_indices']):
 			try:
 				other_molecule = output[str(idx)]
-				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
 				v['binding_sim'].append({
-					**{k: other_molecule[k] for k in useful_col},
+					'id':{k: other_molecule[k] for k in ROWS_IDENTIFIER},
 					'dist': dist
 				})
 			except KeyError:
@@ -152,9 +167,8 @@ def generate_jsons(
 		for dist, idx in zip(v['less_addictive_distances'], v['less_addictive_indices']):
 			try:
 				other_molecule = output[str(idx)]
-				useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite']
 				v['less_addictive_sim'].append({
-					**{k: other_molecule[k] for k in useful_col},
+					'id':{k: other_molecule[k] for k in ROWS_IDENTIFIER},
 					'dist': dist
 				})
 			except KeyError:
@@ -169,16 +183,11 @@ def generate_jsons(
 				affinities[site] = aff
 			v['binding_affinities'] = affinities
 
-	# Add metabolism data
-	with open(METABOLISM_PATH, 'r') as fi:
-		metabolism_data = json.load(fi)
-	print(metabolism_data.keys())
 	def parse_reaction(reaction):
-		useful_col = ['name', 'inchi', 'psychonaut_names', 'tripsit_names', 'isomerd_names', 'isod_ids', 'hsdb_names', 'cid', 'search', 'toxic', 'metabolite' ]
 		return {
 			'name': reaction[0],
 			'enzymes': reaction[2].split('\n'),
-			'product': {k: output[inchi2idx[reaction[3]]][k] for k in useful_col}
+			'product': {k: output[inchi2idx[reaction[3]]][k] for k in ROWS_IDENTIFIER}
 		}
 
 	for i, inchi in tqdm(metabolism_data['inchi'].items(), desc='Metabolism data'):
@@ -206,16 +215,22 @@ def generate_jsons(
 	count = 0
 	for k, v in tqdm(output.items(), desc='Saving JSONs'):
 		if v['nogen']: continue
-		print(v.keys())
 
 		f_name = f"{v['name']}.json"
 		f_path = os.path.join(output_path, f_name)
+		molecule_data = {
+			'id': {k: v[k] for k in ROWS_IDENTIFIER},
+			**{k: v.get(k, None) for k in ROWS_OTHER},
+		} 
 		with open(f_path, 'w+') as fo:
-			json.dump(useful_data(v), fo, indent=2)
+			json.dump(molecule_data, fo, indent=2)
 
 		count += 1
 
 	print(f"Generated {count} jsons.")
+
+def inchi_to_inchikey(inchi):
+	return Chem.inchi.InchiToInchiKey(inchi)
 
 def inchi_to_svg(inchi, path):
 	m = Chem.inchi.MolFromInchi(inchi)

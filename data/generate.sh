@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-rm ./json/*.json
-rm ../public/svg/*.svg
-rm ../public/sdf/*.sdf
+find ./json/ -maxdepth 1 -name '*.pdf' -delete
+find ../public/svg/ -maxdepth 1 -name '*.svg' -delete
+find ../public/sdf/ -maxdepth 1 -name '*.sdf' -delete
 python3 ./scripts.py

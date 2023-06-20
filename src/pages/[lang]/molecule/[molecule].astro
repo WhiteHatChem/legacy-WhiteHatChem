@@ -2,19 +2,20 @@
 import Base from '../../../layouts/Base.astro';
 import Main from '../../../layouts/Main.astro';
 import CompoundSimilarities from '../../../components/CompoundSimilarities.astro';
-import CompoundNameLink from '../../../components/CompoundNameLink.astro';
+import CompoundNameLink from '../../../components/compound_id/CompoundNameLink.astro';
 import TabGroup from '../../../components/TabGroup';
 import Reaction from '../../../components/Reaction.astro';
 import MoleculeViewer from '../../../components/MoleculeViewer';
 import ProteinAffinities from '../../../components/ProteinAffinities.astro';
 import { languagesList, useTranslations, Lang, i18n_href } from '../../../i18n/i18n';
 import type { MoleculeData } from '../../../common/types';
+import CompoundNameLinks from '../../../components/compound_id/CompoundNameLinks.astro';
 
 export async function getStaticPaths() {
 	const allNPS = await Astro.glob<MoleculeData>('../../../../data/json/*.json');
   return languagesList.map((lang) => (
     allNPS.map((x) => ({
-      params: { molecule: x.name, lang: lang },
+      params: { molecule: x.id.name, lang: lang },
       props: x
     }))
   )).flat()
@@ -24,18 +25,27 @@ const { molecule, lang } = Astro.params as { molecule: string, lang: Lang };
 const t = useTranslations(lang);
 
 const {
+  id,
+  market_name,
+  synonyms, svg,
+  struct_sim, binding_sim, less_addictive_sim, binding_affinities,
+  drugmap_id, drugmap_name,
+  solubility, solubility_comment,
+  metabolism,
+	chemograph,
+	clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
+} = Astro.props as MoleculeData;
+
+const {
   inchi, name,
   psychonaut_names,
   tripsit_names,
-  isomerd_names, isod_ids,
-  drugmap_id, drugmap_name,
-  market_name,
+  isomerd_names,
+  isod_ids,
+  druglab_names, druglab_href,
   hsdb_names, cid,
-  synonyms, svg,
-  struct_sim, binding_sim, less_addictive_sim, binding_affinities,
-   solubility, solubility_comment,
-  metabolism
-} = Astro.props as MoleculeData;
+  search, toxic, metabolite,
+} = id;
 
 const default_sim = (
   (struct_sim !== null) ? 'struct' :
@@ -51,12 +61,10 @@ const default_sim = (
             <div class="w-full flex flex-col items-center mb-8">
                 <MoleculeViewer svg={svg} inchi={inchi} client:load/>
                 <div class="flex flex-col text-xl gap-2">
-                    <CompoundNameLink names={tripsit_names} ids={null} site={'tripsit'} />
-                    <CompoundNameLink names={psychonaut_names} ids={null} site={'psychonaut'} />
-                    <CompoundNameLink names={isomerd_names} ids={isod_ids} site={'isomerdesign'} />
-                    <CompoundNameLink names={hsdb_names} ids={cid} site={'pubchem'} />
+                    <CompoundNameLinks id={id} />
 
-                    <p class="break-all leading-snug text-sm mt-4">
+                    <p class="text-center mt-4">Data</p>
+                    <p class="break-all leading-snug text-sm">
                       <span class="">InChI:</span>
                       <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{inchi}</span>
                     </p>
@@ -94,7 +102,33 @@ const default_sim = (
                             <span class="">{t('molecule.solubility')}:</span>
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{solubility}{solubility_comment ? ` (${solubility_comment})` : ''}</span>
                         </p>
+                    }
+                    <hr/>
+                    <p class="text-center mt-4">Estimated data</p>
 
+                    {
+                      clintox_pred !== null && <p class="break-all leading-snug text-sm">
+                          <span class="">{t('molecule.clintox')}:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{clintox_pred.toFixed(3)} (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> using MTDNN-SE_ClinTox+Tox21 model)</span>
+                      </p>
+                    }
+                    {
+                      recursive_toxicity !== null && <p class="break-all leading-snug text-sm">
+                          <span class="">{t('molecule.rectoxicity')}:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{recursive_toxicity.toFixed(3)} (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)</span>
+                      </p>
+                    }
+                    {
+                      bbb_permeability !== null && <p class="break-all leading-snug text-sm">
+                          <span class="">{t('molecule.bbbpermeability')}:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{bbb_permeability.toFixed(3)} (data from <a class="underline" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.858126/full">frontiersin.org</a>)</span>
+                      </p>
+                    }
+                    {
+                      addictive_prediction !== null && <p class="break-all leading-snug text-sm">
+                          <span class="">{t('molecule.addictiveprediction')}:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{addictive_prediction.toFixed(3)}</span>
+                      </p>
                     }
                 </div>
             </div>
@@ -122,7 +156,7 @@ const default_sim = (
             <ul class="mt-4" id="similarities-tab-content">
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">{t('molecule.sent1')}</span>
-                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => Math.pow(Math.max(100.0-x, 0)/100.0, 4.0) * (99.0/100.0)} />
+                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => x} />
                   : <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent2')}</span>}
               </li>
               <li class="w-full flex flex-col" id="affinity">

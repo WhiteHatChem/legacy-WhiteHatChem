@@ -1,61 +1,54 @@
 export type Theme = "light" | "dark";
 
-export interface MoleculeData {
+export interface MoleculeIdentifier {
   inchi: string
-  name: number
+  name: string
   psychonaut_names: string[] | null;
   tripsit_names: string[] | null;
   isomerd_names: string[] | null;
   isod_ids: number[] | null;
+  druglab_names: string[] | null;
+  druglab_href: string[] | null;
+  hsdb_names: string[] | null;
+  cid: number[] | null;
+  search: number;
+  toxic: boolean
+  metabolite: boolean
+}
+
+export interface MoleculeData {
+  id: MoleculeIdentifier;
   drugmap_id: string[] | null;
   drugmap_name: string | null;
   market_name: string | null;
-  hsdb_names: string[] | null;
-  cid: number[] | null;
   struct_sim: Array<SimilarMolecule> | null;
   binding_sim: Array<SimilarMolecule> | null;
   less_addictive_sim: Array<SimilarMolecule> | null;
   binding_affinities: { [key: string]: number } | null;
   synonyms: Array<string> | null;
   svg: string;
-  search: number;
   metabolism: {
     anterior: Array<Reaction> | null
     posterior: Array<Reaction> | null
   } | null,
   solubility: number|null;
   solubility_comment : string|null;
+	chemograph: boolean|null;
+	clintox_pred: number|null;
+	recursive_toxicity: number|null; 
+	addictive_prediction: number|null;
+	bbb_permeability: number|null;
 }
 
 export interface Reaction {
   name: string;
   enzymes: Array<string>;
-  product: {
-    name: string;
-    inchi: string;
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-    isod_ids: number[] | null;
-    hsdb_names: string[] | null;
-    cid: number[] | null;
-    toxic: boolean
-    metabolite: boolean
-  }
+  product: MoleculeIdentifier;
 }
 
 export interface SimilarMolecule {
-  name: string
-  inchi: string;
-  psychonaut_names: string[] | null;
-  tripsit_names: string[] | null;
-  isomerd_names: string[] | null;
-  isod_ids: number[] | null;
-  hsdb_names: string[] | null;
-  cid: number[] | null;
+  id: MoleculeIdentifier;
   dist: number
-  toxic: boolean
-  metabolite: boolean
 }
 
 export interface Blog {

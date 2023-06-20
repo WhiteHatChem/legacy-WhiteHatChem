@@ -1,12 +1,13 @@
 ---
-import psychonaut from '../assets/img/psychonaut_icon.png'
-import tripsit from '../assets/img/tripsit_icon.png'
-import isomerdesign from '../assets/img/isomerdesign_icon.png'
-import pubchem from '../assets/img/pubchem_icon.png'
+import psychonaut from '../../assets/img/psychonaut_icon.png'
+import tripsit from '../../assets/img/tripsit_icon.png'
+import isomerdesign from '../../assets/img/isomerdesign_icon.png'
+import pubchem from '../../assets/img/pubchem_icon.png'
+import druglab from '../../assets/img/druglab.ico'
 
-export interface Props {
+interface Props {
     name: string;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'none';
+    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'none';
     toxic?: boolean;
     metabolite?: boolean;
 }
@@ -29,11 +30,6 @@ function truncate(str: string, length: number) {
         ) : metabolite ? (
           <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>
           <h2 title={name} class="text-violet-500 text-sm leading-tight">Metabolite: {truncate(name,15)}</h2>
-        ) : toxic ? (  
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 text-rose-500">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-          </svg>
-          <h2 title={name} class="text-rose-500 text-sm leading-tight">{truncate(name,20)}</h2>
         ) : (
             <img
                 src={
@@ -41,6 +37,7 @@ function truncate(str: string, length: number) {
                   site === 'tripsit' ? tripsit :
                   site === 'isomerdesign' ? isomerdesign :
                   site === 'pubchem' ? pubchem :
+                  site === 'druglab' ? druglab :
                   ''
                 }
                 class="w-4 rounded"
@@ -48,7 +45,7 @@ function truncate(str: string, length: number) {
             />
             <h2
               title={name}
-              class={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight ${site === 'pubchem' && 'text-rose-500'}`}
+              class={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight ${toxic && 'text-rose-500'}`}
             >
               {truncate(name,20)}
             </h2>

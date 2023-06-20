@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Main from '../../../layouts/Main.astro';
-import CompoundCard from '../../../components/CompoundCard.astro';
+import CompoundCard from '../../../components/compound_id/CompoundCard.astro';
 import type { MoleculeData } from '../../../common/types';
 import { Lang, languagesList, useTranslations, i18n_href } from '../../../i18n/i18n';
 
@@ -18,10 +18,11 @@ const molecules = await Astro.glob<MoleculeData>('../../../../data/json/*.json')
 
 function molecule_identifiers(molecule: MoleculeData) {
     let names : Array<string> = [];
-    if (molecule.psychonaut_names) { names = names.concat(molecule.psychonaut_names);}
-    if (molecule.tripsit_names) { names = names.concat(molecule.tripsit_names);}
-    if (molecule.isomerd_names) { names = names.concat(molecule.isomerd_names);}
-    if (molecule.hsdb_names) { names = names.concat(molecule.hsdb_names);}
+    let id = molecule.id;
+    if (id.psychonaut_names) { names = names.concat(id.psychonaut_names);}
+    if (id.tripsit_names) { names = names.concat(id.tripsit_names);}
+    if (id.isomerd_names) { names = names.concat(id.isomerd_names);}
+    if (id.hsdb_names) { names = names.concat(id.hsdb_names);}
 
     let identifiers= `${names.join('_')}_${molecule.synonyms?.join('_')}`
     return identifiers.toLowerCase();
