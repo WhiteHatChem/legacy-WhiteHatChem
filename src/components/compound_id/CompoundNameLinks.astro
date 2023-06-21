@@ -17,11 +17,12 @@ const {
   isomerd_names,
   isod_ids,
   druglab_names, druglab_href,
+  drugmap_name, drugmap_id,
   hsdb_names, cid,
   search, toxic, metabolite,
 } = id;
 
-const nosite = (psychonaut_names === null && tripsit_names === null && isomerd_names === null && druglab_names === null && hsdb_names === null);
+const nosite = (psychonaut_names === null && tripsit_names === null && isomerd_names === null && druglab_names === null && hsdb_names === null && drugmap_name === null);
 ---
 
 { nosite ? 
@@ -32,5 +33,6 @@ const nosite = (psychonaut_names === null && tripsit_names === null && isomerd_n
         <CompoundNameLink names={isomerd_names} ids={isod_ids} site={'isomerdesign'} toxic={toxic} />
         <CompoundNameLink names={hsdb_names} ids={cid} site={'pubchem'} toxic={toxic} />
         <CompoundNameLink names={druglab_names} ids={druglab_href} site={'druglab'} toxic={toxic} />
+        <CompoundNameLink names={drugmap_name} ids={drugmap_id} site={'drugmap'} toxic={toxic} />
     </>
 }

@@ -15,6 +15,7 @@ const {
     isomerd_names,
     hsdb_names,
     druglab_names,
+    drugmap_name,
     name
 } = id;
 ---
@@ -24,3 +25,4 @@ const {
 {isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign" toxic={id.toxic}/>)}
 {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem" toxic={id.toxic}/>)}
 {druglab_names && druglab_names.map(name => <CompoundName name={name} site="druglab" toxic={id.toxic}/>)}
+{drugmap_name && <CompoundName name={drugmap_name} site="drugmap" toxic={id.toxic}/>}

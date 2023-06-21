@@ -80,54 +80,49 @@ const default_sim = (
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{market_name}</span>
                         </p>
                     }
-                    {
-                        drugmap_name && drugmap_id && <p class="break-all leading-snug text-sm">
-                            <span class="">{t('molecule.drugdata')}:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
-                              {drugmap_name}
-                              ({drugmap_id.map((x, i) => <span class="">
-                                <a
-                                  class="underline"
-                                  href={`http://drugmap.idrblab.net/data/drug/details/${x}`}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >{x}</a>{i < drugmap_id.length - 1 ? ', ' : ''}
-                              </span>)})
-                            </span>
-                        </p>
-                    }
 
                     {
-                        solubility && <p class="break-all leading-snug text-sm">
-                            <span class="">{t('molecule.solubility')}:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{solubility}{solubility_comment ? ` (${solubility_comment})` : ''}</span>
-                        </p>
                     }
                     <hr/>
                     <p class="text-center mt-4">Estimated data</p>
-
+                    {
+                      solubility && <p class="break-all leading-snug text-sm">
+                          <span class="">{t('molecule.solubility')}:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            {solubility}{solubility_comment ? ` (${solubility_comment})` : ''} (log(S) in mol/L prediction using <a class="underline" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8900744/">SolTranNet</a>)
+                          </span>
+                      </p>
+                    }
                     {
                       clintox_pred !== null && <p class="break-all leading-snug text-sm">
                           <span class="">{t('molecule.clintox')}:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{clintox_pred.toFixed(3)} (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> using MTDNN-SE_ClinTox+Tox21 model)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            {(clintox_pred*100).toFixed(1)}% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> with MTDNN-SE_ClinTox+Tox21 model)
+                          </span>
                       </p>
                     }
                     {
                       recursive_toxicity !== null && <p class="break-all leading-snug text-sm">
                           <span class="">{t('molecule.rectoxicity')}:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{recursive_toxicity.toFixed(3)} (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            {(recursive_toxicity*100).toFixed(1)}% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)
+                          </span>
                       </p>
                     }
                     {
                       bbb_permeability !== null && <p class="break-all leading-snug text-sm">
                           <span class="">{t('molecule.bbbpermeability')}:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{bbb_permeability.toFixed(3)} (data from <a class="underline" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.858126/full">frontiersin.org</a>)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            {bbb_permeability ? "Yes" : "No"} (prediction using <a class="underline" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.858126/full">frontiersin.org</a>)
+                          </span>
                       </p>
                     }
                     {
                       addictive_prediction !== null && <p class="break-all leading-snug text-sm">
                           <span class="">{t('molecule.addictiveprediction')}:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">{addictive_prediction.toFixed(3)}</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            {(addictive_prediction*100).toFixed(1)}% (prediction based on <a class="underline" href="https://www.mdpi.com/1420-3049/27/12/3931">www.mdpi.com</a>)
+                          </span>
                       </p>
                     }
                 </div>
@@ -156,7 +151,7 @@ const default_sim = (
             <ul class="mt-4" id="similarities-tab-content">
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">{t('molecule.sent1')}</span>
-                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => x} />
+                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => 2./(x+3)} />
                   : <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent2')}</span>}
               </li>
               <li class="w-full flex flex-col" id="affinity">
@@ -175,11 +170,11 @@ const default_sim = (
                   <ul class="mt-4" id="nested-tab-content">
                       {binding_sim && <li class="w-full flex flex-col active" id="dist_main">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent4')}</span>
-                          <CompoundSimilarities sim={binding_sim} filter={x => 1./(1.+Math.exp(-(x-0.1)/0.35))}/>
+                          <CompoundSimilarities sim={binding_sim} filter={x => 2./(x+3)}/>
                       </li>}
                       {less_addictive_sim && <li class="w-full flex flex-col" id="dist_dopa">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent5')}</span>
-                          <CompoundSimilarities sim={less_addictive_sim} filter={x => 1./(1.+Math.exp(-(x-0.001)/0.005))}/>
+                          <CompoundSimilarities sim={less_addictive_sim} filter={x => 2./(x+3)}/>
                       </li>}
                       {binding_affinities && <li class="w-full flex flex-col" id="profile">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent6')}</span>

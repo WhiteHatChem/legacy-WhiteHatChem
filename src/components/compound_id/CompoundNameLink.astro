@@ -3,13 +3,17 @@ import CompoundName from './CompoundName.astro';
 import { useTranslations, getLangFromUrl } from '../../i18n/i18n'
 
 interface Props {
-    names: string[] | null;
+    names: string | string[] | null;
     ids: number[] | string[] | null;
     toxic?: boolean;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab';
+    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap';
 }
 
-const { names, ids, toxic, site } = Astro.props;
+let { names, ids, toxic, site } = Astro.props;
+
+if (ids != null && typeof(names) === 'string') {
+  names = Array(ids.length).fill(names);
+}
 
 const getLink = (site: string, name: string, id: number | string | null) => {
   switch (site) {
@@ -23,6 +27,8 @@ const getLink = (site: string, name: string, id: number | string | null) => {
       return `https://pubchem.ncbi.nlm.nih.gov/compound/${id}`;
     case 'druglab':
       return `https://druglab.fr/substances/${id}/`;
+    case 'drugmap':
+      return `http://drugmap.idrblab.net/data/drug/details/${id}`
   }
 };
 
@@ -32,7 +38,7 @@ const t = useTranslations(lang);
 
 
 {
-  names && names.map((name, idx) => <a class="flex flex-col lg:flex-row lg:items-center" href={getLink(site, name, ids ? ids[idx] : null)} target="_blank">
+  names && Array.isArray(names) && names.map((name, idx) => <a class="flex flex-col lg:flex-row lg:items-center" href={getLink(site, name, ids ? ids[idx] : null)} target="_blank">
       <CompoundName name={name} site={site} toxic={toxic}/>
       <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
           {t('molecule.checkon')} {site}

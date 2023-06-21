@@ -51,6 +51,8 @@ ROWS_IDENTIFIER = [
 	"isod_ids",
 	"druglab_names",
 	"druglab_href",
+	"drugmap_name",
+	"drugmap_id",
 	"hsdb_names",
 	"cid",
 	"search",
@@ -59,8 +61,6 @@ ROWS_IDENTIFIER = [
 ]
 
 ROWS_OTHER = [
-	"drugmap_id",
-	"drugmap_name",
 	"market_name",
 	"synonyms",
 	"svg",

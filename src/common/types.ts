@@ -9,6 +9,8 @@ export interface MoleculeIdentifier {
   isod_ids: number[] | null;
   druglab_names: string[] | null;
   druglab_href: string[] | null;
+  drugmap_id: string[] | null;
+  drugmap_name: string | null;
   hsdb_names: string[] | null;
   cid: number[] | null;
   search: number;
@@ -18,8 +20,6 @@ export interface MoleculeIdentifier {
 
 export interface MoleculeData {
   id: MoleculeIdentifier;
-  drugmap_id: string[] | null;
-  drugmap_name: string | null;
   market_name: string | null;
   struct_sim: Array<SimilarMolecule> | null;
   binding_sim: Array<SimilarMolecule> | null;

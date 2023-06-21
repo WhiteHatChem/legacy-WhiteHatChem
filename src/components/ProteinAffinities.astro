@@ -1,4 +1,5 @@
 ---
+import AffinitiesSpider from './AffinitiesSpider.astro';
 export interface Props {
   affinities: { [key: string]: number };
 }
@@ -52,23 +53,26 @@ const protein2url = (protein : string) => {
                 </svg>
                 {protein}
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                {
-                    sites_data.map(data => {
-                        const { site, value } = data;
-                        return <div
-                            class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600"
-                            title={`Docking site ${site}: ${(100. * value).toFixed(1)}%`}
-                        >
-                            <div
-                                class="w-full bg-green-400 dark:bg-green-500"
-                                style={{
-                                    height: `${100 * value}%`,
-                                }}
-                            />
-                        </div>
-                    })
-                }
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    {
+                        sites_data.map(data => {
+                            const { site, value } = data;
+                            return <div
+                                class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600"
+                                title={`Docking site ${site}: ${(100. * value).toFixed(1)}%`}
+                            >
+                                <div
+                                    class="w-full bg-green-400 dark:bg-green-500"
+                                    style={{
+                                        height: `${100 * value}%`,
+                                    }}
+                                />
+                            </div>
+                        })
+                    }
+                </div>
+                { sites_data.length > 2 && <AffinitiesSpider data={sites_data} key={protein}/> }
             </div>
         </div>
         )
