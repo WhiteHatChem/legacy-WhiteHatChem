@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 	<head>
-
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LL3B24H8NW"></script>
     
@@ -29,8 +29,9 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/404.cc16d568.css" />
-<link rel="stylesheet" href="/_astro/affinity-computation.e04faf6d.css" /><script type="module" src="/_astro/hoisted.15586961.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
+	<link rel="stylesheet" href="/_astro/404.e344f417.css" />
+<link rel="stylesheet" href="/_astro/affinity-computation.ed76a636.css" />
+<link rel="stylesheet" href="/_astro/_molecule_.9c700757.css" /><script type="module" src="/_astro/hoisted.a4ecf4d3.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
 	
@@ -303,6 +304,7 @@
           </svg>
       </p>
   </a>
+        
     
 
                     <p class="text-center mt-4">Data</p>
@@ -318,30 +320,39 @@
                             <span class="">Market name:</span>
                             <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">5-meo-dalt</span>
                         </p>
-                    
 
-                    <p class="break-all leading-snug text-sm">
-                            <span class="">Solubilidad:</span>
-                            <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">-2.833</span>
-                        </p>
+                    
                     <hr>
                     <p class="text-center mt-4">Estimated data</p>
-
+                    <p class="break-all leading-snug text-sm">
+                          <span class="">Solubilidad:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            -2.833 (log(S) in mol/L prediction using <a class="underline" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8900744/">SolTranNet</a>)
+                          </span>
+                      </p>
                     <p class="break-all leading-snug text-sm">
                           <span class="">Clinical toxicity:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.015 (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> using MTDNN-SE_ClinTox+Tox21 model)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            1.5% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> with MTDNN-SE_ClinTox+Tox21 model)
+                          </span>
                       </p>
                     <p class="break-all leading-snug text-sm">
                           <span class="">Estimated Toxicity:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.736 (data from <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            73.6% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)
+                          </span>
                       </p>
                     <p class="break-all leading-snug text-sm">
                           <span class="">Blood Brain Barrier Permeability:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">1.000 (data from <a class="underline" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.858126/full">frontiersin.org</a>)</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            Yes (prediction using <a class="underline" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.858126/full">frontiersin.org</a>)
+                          </span>
                       </p>
                     <p class="break-all leading-snug text-sm">
                           <span class="">Addictivity Prediction:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">0.875</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            87.5% (prediction based on <a class="underline" href="https://www.mdpi.com/1420-3049/27/12/3931">www.mdpi.com</a>)
+                          </span>
                       </p>
                 </div>
             </div>
@@ -373,49 +384,583 @@
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Compuestos estructuralmente más similares. El porcentaje es una medida de cuán estructuralmente similares son esas moléculas, lo cual a menudo está fuertemente correlacionado con sus efectos.</span>
                   <div class="flex flex-col mt-4 gap-2">
-  <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H23BrN2OS/c1-3-12-24(2)13-4-5-14-25-18-10-11-19-20(15-18)26-23-21(19)16-6-8-17(22)9-7-16/h3,6-11,15H,1,4-5,12-14H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H23BrN2O...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.99829555%;background-color:rgb(240, 15, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C21H26N2O/c1-4-8-18-20(24-14-7-13-22-15(2)3)12-11-17-16-9-5-6-10-19(16)23-21(17)18/h4-6,9-12,15,22-23H,1,7-8,13-14H2,2-3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C21H26N2O/c...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.970084669999999%;background-color:rgb(240, 15, 0)"></div>
-  </div>
-</span>
-        </div><a href="/es/molecule/BXCMEIZBXNLJKM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+  <a href="/es/molecule/IIRGIIFRNBAZEX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-T-16" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-T-16
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-EtO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-EtO-DALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.5709732004847%;background-color:rgb(85, 170, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/LQEATNFJCMVKAC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="dalt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              dalt
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.49498891130364%;background-color:rgb(85, 170, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/WRHFDIBXZYYCHO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="4-aco-dalt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-aco-dalt
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-AcO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-AcO-DALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.46757157494102%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/JVIWQWJXRKVJTA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-HO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-HO-DALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.46592053971942%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMB74WP" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Methyl 2-(Diallylamino)-1H-indole-3-carboxylate" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Methyl 2-(Diallylami...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.25906237184809%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </div><a href="/es/molecule/AJHGTCBMUIJSQL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="5-meo-malt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-meo-malt
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-MeO-MALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.22373739319606%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/GXCLVBGFBYZDAG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.16582107867735%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/NWEWNVPCYZONHK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-HO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-HO-MALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.10995839595004%;background-color:rgb(86, 169, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/PGBFYUDKPCYIEB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-AcO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-AcO-MALT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:66.00796208626568%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/MRWWDVFDOFUYKB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-ALIPT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-MeO-ALIPT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.93663200736364%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/DYIILRIYTXJTNJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="ALIPT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              ALIPT
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.90422829007565%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/KMNYBYXETFKUES-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MTDALA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MTDALA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.86909434955707%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/XPSXYYVNTCFKCO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-DALT BOC" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-MeO-DALT BOC
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.82128125976449%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMWNJ84" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2,4'-Dimethoxy-5,3'-di-(2-propenyl)-biphenyl" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,4&#39;-Dimethoxy-5,3&#39;-...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.74194949715135%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DM9YE6K" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="METHYLHONOKIOL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              METHYLHONOKIOL
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.7360391328124%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </div><a href="/es/molecule/DVMQMRGYKZBKKX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MAPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MAPEA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.70230897038022%;background-color:rgb(87, 168, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/ZFMSMUAANRJZFM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Estragole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Estragole
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Estragole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Estragole
             </h2>
 </div>
 
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.7%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.9124589%;background-color:rgb(240, 15, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:65.68455485670002%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/VAMQYGHNZLRSSA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DAL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DAL
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.58001674327933%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/RRAFCDWBNXTKKO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Eugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Eugenol
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Eugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Eugenol
+            </h2>
+</div>
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Eugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Eugenol
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.54247231948551%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </a><a href="/es/molecule/NPBVQXIMTZKSBA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Chavibetol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Chavibetol
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.54247231948551%;background-color:rgb(88, 167, 0)"></div>
   </div>
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMXDGEF" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2-(2-allyl-4-chlorophenoxy)acetic acid" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-(2-allyl-4-chlorop...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.51260611415758%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </div><a href="/es/molecule/QNVPDGCJKPQARD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-AL
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.49866064574175%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMVPWML" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2,4'-Diacetoxy-5,3'-di-(2-propenyl)-biphenyl" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,4&#39;-Diacetoxy-5,3&#39;-...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.48931200518146%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMJWT3X" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="HONOKIOL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              HONOKIOL
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.4287530729693%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMVGITD" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Ro48-8071" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Ro48-8071
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:65.41020544255305%;background-color:rgb(88, 167, 0)"></div>
+  </div>
+</span>
+        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
               
         
@@ -436,443 +981,95 @@
       </p>
   </a>
         
+        
     
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.8638572700000005%;background-color:rgb(240, 15, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:65.38856921020611%;background-color:rgb(88, 167, 0)"></div>
   </div>
 </span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H27BrFNO2/c1-3-14-26(2)15-6-4-5-7-16-28-20-12-13-21(22(25)17-20)23(27)18-8-10-19(24)11-9-18/h3,8-13,17H,1,4-7,14-16H2,2H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H27BrFNO...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.76268435%;background-color:rgb(240, 15, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C18H18O2/c1-3-5-13-7-9-18(20)16(11-13)14-8-10-17(19)15(12-14)6-4-2/h3-4,7-12,19-20H,1-2,5-6H2" class="text-neutral-500 text-sm leading-tight">InChI=1S/C18H18O2/c1...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.6760072699999995%;background-color:rgb(241, 14, 0)"></div>
-  </div>
-</span>
-        </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H22O4/c1-5-7-17-9-11-22(26-16(4)24)20(13-17)18-10-12-21(25-15(3)23)19(14-18)8-6-2/h5-6,9-14H,1-2,7-8H2,3-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H22O4/c1...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.39334416%;background-color:rgb(241, 14, 0)"></div>
-  </div>
-</span>
-        </div><a href="/es/molecule/QNVPDGCJKPQARD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </div><a href="/es/molecule/BXCMEIZBXNLJKM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-AL
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-T-16" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-T-16
             </h2>
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.34975529%;background-color:rgb(241, 14, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:65.37818064656797%;background-color:rgb(88, 167, 0)"></div>
   </div>
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C11H11ClO3/c1-2-3-8-6-9(12)4-5-10(8)15-7-11(13)14/h2,4-6H,1,3,7H2,(H,13,14)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C11H11ClO3/...</h2>
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMQJ9RZ" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="1-allyl-2-[3-(isopropylamino)propoxy]-9H-carbazole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-allyl-2-[3-(isopro...
+            </h2>
 </div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.3%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.28475642%;background-color:rgb(242, 13, 0)"></div>
-  </div>
-</span>
-        </div><a href="/es/molecule/RRAFCDWBNXTKKO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Eugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Eugenol
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Eugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Eugenol
-            </h2>
-</div>
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.14564514%;background-color:rgb(242, 13, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/NPBVQXIMTZKSBA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Chavibetol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Chavibetol
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:5.14564514%;background-color:rgb(242, 13, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/VAMQYGHNZLRSSA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DAL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DAL
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:4.97094989%;background-color:rgb(242, 13, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/ZFMSMUAANRJZFM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Estragole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Estragole
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Estragole" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Estragole
-            </h2>
-</div>
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:4.48558331%;background-color:rgb(244, 11, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/DVMQMRGYKZBKKX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MAPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              MAPEA
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:4.403305049999999%;background-color:rgb(244, 11, 0)"></div>
-  </div>
-</span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C19H20O2/c1-4-6-14-8-10-18(20)17(12-14)15-9-11-19(21-3)16(13-15)7-5-2/h4-5,8-13,20H,1-2,6-7H2,3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C19H20O2/c1...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:4.247111080000001%;background-color:rgb(244, 11, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:65.36586745586823%;background-color:rgb(88, 167, 0)"></div>
   </div>
 </span>
         </div><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C20H22O2/c1-5-7-15-9-11-20(22-4)18(13-15)16-10-12-19(21-3)17(14-16)8-6-2/h5-6,9-14H,1-2,7-8H2,3-4H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C20H22O2/c1...</h2>
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMW3UHO" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="PMID22533316C4" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              PMID22533316C4
+            </h2>
 </div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Verificar en drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">4.2%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:4.21975851%;background-color:rgb(244, 11, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:65.35984118490623%;background-color:rgb(88, 167, 0)"></div>
   </div>
 </span>
-        </div><a href="/es/molecule/XPSXYYVNTCFKCO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-DALT BOC" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5-MeO-DALT BOC
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.9%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:3.85309458%;background-color:rgb(245, 10, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/KMNYBYXETFKUES-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MTDALA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              MTDALA
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.6%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:3.6325335499999998%;background-color:rgb(246, 9, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/DYIILRIYTXJTNJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="ALIPT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              ALIPT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:3.47066522%;background-color:rgb(246, 9, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/MRWWDVFDOFUYKB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-ALIPT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5-MeO-ALIPT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.3%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:3.3215284300000003%;background-color:rgb(247, 8, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/PGBFYUDKPCYIEB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-AcO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4-AcO-MALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:2.99375057%;background-color:rgb(247, 8, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/NWEWNVPCYZONHK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-HO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4-HO-MALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">2.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:2.52628326%;background-color:rgb(249, 6, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/GXCLVBGFBYZDAG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              MALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">2.3%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:2.27086544%;background-color:rgb(249, 6, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/AJHGTCBMUIJSQL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="5-meo-malt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5-meo-malt
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-MALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5-MeO-MALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">2.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:2.00651288%;background-color:rgb(250, 5, 0)"></div>
-  </div>
-</span>
-        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <div class="flex flex-row items-center gap-2">
-    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C16H18N2O2/c1-4-10-18(11-5-2)15-14(16(19)20-3)12-8-6-7-9-13(12)17-15/h4-9,17H,1-2,10-11H2,3H3" class="text-neutral-500 text-sm leading-tight">InChI=1S/C16H18N2O2/...</h2>
-</div>
-            </div>
-            <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">1.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:1.8455028500000001%;background-color:rgb(250, 5, 0)"></div>
-  </div>
-</span>
-        </div><a href="/es/molecule/JVIWQWJXRKVJTA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-HO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4-HO-DALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.9%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:0.90608597%;background-color:rgb(253, 2, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/WRHFDIBXZYYCHO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="4-aco-dalt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4-aco-dalt
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-AcO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4-AcO-DALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.9%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:0.89861155%;background-color:rgb(253, 2, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/LQEATNFJCMVKAC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="dalt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              dalt
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.8%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:0.77454448%;background-color:rgb(253, 2, 0)"></div>
-  </div>
-</span>
-        </a><a href="/es/molecule/IIRGIIFRNBAZEX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-EtO-DALT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5-EtO-DALT
-            </h2>
-</div>
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:0.43123959999999995%;background-color:rgb(254, 1, 0)"></div>
-  </div>
-</span>
-        </a>
+        </div>
 </div>
               </li>
               <li class="w-full flex flex-col" id="affinity">
@@ -909,11 +1106,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">9.7%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:9.719118666712538%;background-color:rgb(230, 25, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/NDBQQNYKLMMRRZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -927,11 +1125,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">8.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:8.357081796031892%;background-color:rgb(234, 21, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/KLRSMSBDLVDLKK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -945,11 +1144,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">8.3%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:8.25842869153078%;background-color:rgb(234, 21, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/PNHPVNBKLQWBKH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -967,11 +1167,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">8.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:8.16414439799839%;background-color:rgb(234, 21, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/DNBPMBJFRRVTSJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -997,11 +1198,12 @@
               5-MeO-DiPT
             </h2>
 </div>
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">7.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:7.125024378141768%;background-color:rgb(237, 18, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/CWMOGUBWVJQDSL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1015,11 +1217,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">7.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:7.043245532053355%;background-color:rgb(237, 18, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/OCLXZHZBMIIJLL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1033,11 +1236,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.5%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.503214764882415%;background-color:rgb(238, 17, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/LZLJUZWFWYEQLY-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1051,11 +1255,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.384073080525771%;background-color:rgb(239, 16, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/ZDFMPVDYORFGDD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1069,11 +1274,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.368784548062924%;background-color:rgb(239, 16, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/OQHFIOKNGNJPPF-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1087,11 +1293,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.3%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.306382263959273%;background-color:rgb(239, 16, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/PEACSMHHYVUVNO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1105,11 +1312,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.194625771105336%;background-color:rgb(239, 16, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/PTYYWSKZYOSFEK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1123,11 +1331,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.11189267709497%;background-color:rgb(239, 16, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/KRUGABVNKKKCJN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1145,11 +1354,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:6.056467850183245%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/IIRGIIFRNBAZEX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1163,11 +1373,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.999127365781541%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/XCBQKBNQNYAXPN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1181,11 +1392,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.955858725982169%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/GAMSOQVPHIMBSR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1199,11 +1411,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.9%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.914841745548295%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/WVGCRISHWANOTO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1217,11 +1430,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.8%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.764949787269093%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/BUMSYUQQNKAICP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1235,11 +1449,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.8%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.762907795524136%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/GGSQVEFCGQWMKV-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1257,11 +1472,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">5.7%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:5.736338979283541%;background-color:rgb(240, 15, 0)"></div>
   </div>
 </span>
         </a>
@@ -1281,11 +1497,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1603200714457755%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/TUHDNALAVIDYHT-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1299,11 +1516,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.154981554563367%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/UEFYTJOXDDAYAC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1317,11 +1535,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.15213240971675%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/SOARXDWNNULVNL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1335,11 +1554,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1506099397475484%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/AURMVDWBJNLYHE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1353,11 +1573,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.14589630878858%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/QFJRJKAFEPKJME-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1371,11 +1592,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.145744569001549%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/CGUNKAXAEZSOFA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1389,11 +1611,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.144224042961805%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/UIJWLWCOVQFZHF-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1407,11 +1630,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.143731415454804%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/MASUNTXHOBXSNG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1425,11 +1649,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.141893690906571%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/FYTOAZIRBXNPKZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1443,11 +1668,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.139911136033506%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/VDYIKJCBMMLENB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1461,11 +1687,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1384931372114946%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/GFPLJZMMCLLVHR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1479,11 +1706,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.125979457775612%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/USQWRDRXXKZFDI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1497,11 +1725,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.120505817452705%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/OYKAQMUUZGTZBP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1515,11 +1744,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1197382529089794%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/NCSUFYPUXBKLQA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1533,11 +1763,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1183889014835255%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/FUUSHPZPRNXCBZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1551,11 +1782,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1183849287709777%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/HNJWKRMESUMDQE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1569,11 +1801,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1171422145325853%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/PIGIFXLLTQEIPK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1587,11 +1820,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.1162111257260117%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/CFEHWNSMGUKJEU-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1605,11 +1839,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.114443884558926%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a><a href="/es/molecule/BLONZKLZWUBKMX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -1623,11 +1858,12 @@
 </div>
 
 
+
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">100.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:100%;background-color:rgb(0, 255, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:3.114109796472959%;background-color:rgb(247, 8, 0)"></div>
   </div>
 </span>
         </a>
@@ -1643,16 +1879,23 @@
                 </svg>
                 AF-A5X5Y0
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 41.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:41.33518159%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 55.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.63888939%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 51.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:51.94336964%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 70.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.82264058999999%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 41.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:41.33518159%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 55.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.63888939%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 51.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:51.94336964%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 70.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.82264058999999%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_0&#34;,&#34;value&#34;:0.4133518159},{&#34;site&#34;:&#34;model_v1_box_2&#34;,&#34;value&#34;:0.5563888939},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5194336964},{&#34;site&#34;:&#34;model_v1_box_4&#34;,&#34;value&#34;:0.7082264059}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/O95264" target="_blank" class="flex flex-row gap-2">
@@ -1661,12 +1904,15 @@
                 </svg>
                 AF-O95264
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 61.5%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.5359911%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 62.4%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:62.44347885%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 61.5%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.5359911%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 62.4%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:62.44347885%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P08588" target="_blank" class="flex flex-row gap-2">
@@ -1675,14 +1921,21 @@
                 </svg>
                 AF-P08588
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 56.2%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.23862189%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 78.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.89111132%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 47.0%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.034552219999995%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 56.2%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.23862189%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 78.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:78.89111132%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 47.0%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.034552219999995%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_1&#34;,&#34;value&#34;:0.5623862189},{&#34;site&#34;:&#34;model_v1_box_2&#34;,&#34;value&#34;:0.7889111132},{&#34;site&#34;:&#34;model_v1_box_5&#34;,&#34;value&#34;:0.4703455222}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P08908" target="_blank" class="flex flex-row gap-2">
@@ -1691,20 +1944,27 @@
                 </svg>
                 AF-P08908
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 57.5%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.474878669999995%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 54.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.29727492000001%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 54.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.589630369999995%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 52.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.931330970000005%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 47.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.62628249%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 59.0%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:59.02905577999999%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 57.5%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.474878669999995%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 54.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.29727492000001%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 54.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.589630369999995%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 52.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.931330970000005%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 47.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.62628249%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 59.0%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:59.02905577999999%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_0&#34;,&#34;value&#34;:0.5747487867},{&#34;site&#34;:&#34;model_v1_box_10&#34;,&#34;value&#34;:0.5429727492},{&#34;site&#34;:&#34;model_v1_box_2&#34;,&#34;value&#34;:0.5458963037},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5293133097},{&#34;site&#34;:&#34;model_v1_box_4&#34;,&#34;value&#34;:0.4762628249},{&#34;site&#34;:&#34;model_v1_box_7&#34;,&#34;value&#34;:0.5902905578}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P13945" target="_blank" class="flex flex-row gap-2">
@@ -1713,16 +1973,23 @@
                 </svg>
                 AF-P13945
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 60.5%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.47927853%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 50.2%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.24638285%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 53.0%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.014880119999994%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 49.5%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:49.4566972%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 60.5%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.47927853%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 50.2%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.24638285%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 53.0%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.014880119999994%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 49.5%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:49.4566972%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_1&#34;,&#34;value&#34;:0.6047927853},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5024638285},{&#34;site&#34;:&#34;model_v1_box_6&#34;,&#34;value&#34;:0.5301488012},{&#34;site&#34;:&#34;model_v1_box_8&#34;,&#34;value&#34;:0.494566972}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P18089" target="_blank" class="flex flex-row gap-2">
@@ -1731,16 +1998,23 @@
                 </svg>
                 AF-P18089
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 43.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:43.60787507%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 48.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.29147952%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 52.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.585215510000005%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.590925510000005%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 43.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:43.60787507%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 48.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.29147952%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 52.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.585215510000005%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.590925510000005%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_1&#34;,&#34;value&#34;:0.4360787507},{&#34;site&#34;:&#34;model_v1_box_2&#34;,&#34;value&#34;:0.4829147952},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5258521551},{&#34;site&#34;:&#34;model_v1_box_5&#34;,&#34;value&#34;:0.6059092551}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P21728" target="_blank" class="flex flex-row gap-2">
@@ -1749,14 +2023,21 @@
                 </svg>
                 AF-P21728
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 54.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.778288090000004%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 76.0%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:76.01879771%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_9: 47.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.69994518%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_10: 54.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:54.778288090000004%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 76.0%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:76.01879771%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_9: 47.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:47.69994518%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_10&#34;,&#34;value&#34;:0.5477828809},{&#34;site&#34;:&#34;model_v1_box_4&#34;,&#34;value&#34;:0.7601879771},{&#34;site&#34;:&#34;model_v1_box_9&#34;,&#34;value&#34;:0.4769994518}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P21918" target="_blank" class="flex flex-row gap-2">
@@ -1765,14 +2046,21 @@
                 </svg>
                 AF-P21918
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 48.5%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.51212934%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 50.2%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.235148210000006%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 55.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.78308078999999%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_4: 48.5%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.51212934%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 50.2%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.235148210000006%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 55.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.78308078999999%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_4&#34;,&#34;value&#34;:0.4851212934},{&#34;site&#34;:&#34;model_v1_box_6&#34;,&#34;value&#34;:0.5023514821},{&#34;site&#34;:&#34;model_v1_box_8&#34;,&#34;value&#34;:0.5578308079}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P25100" target="_blank" class="flex flex-row gap-2">
@@ -1781,20 +2069,27 @@
                 </svg>
                 AF-P25100
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_11: 52.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.26625732%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_12: 48.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.65396274%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 51.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:51.83884943%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.76467478000001%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 72.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:72.73398436000001%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 63.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:63.91209376%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_11: 52.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:52.26625732%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_12: 48.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:48.65396274%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 51.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:51.83884943%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.76467478000001%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_6: 72.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:72.73398436000001%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_8: 63.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:63.91209376%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_11&#34;,&#34;value&#34;:0.5226625732},{&#34;site&#34;:&#34;model_v1_box_12&#34;,&#34;value&#34;:0.4865396274},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5183884943},{&#34;site&#34;:&#34;model_v1_box_5&#34;,&#34;value&#34;:0.6076467478},{&#34;site&#34;:&#34;model_v1_box_6&#34;,&#34;value&#34;:0.7273398436},{&#34;site&#34;:&#34;model_v1_box_8&#34;,&#34;value&#34;:0.6391209376}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P28221" target="_blank" class="flex flex-row gap-2">
@@ -1803,16 +2098,23 @@
                 </svg>
                 AF-P28221
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 70.1%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.0653666%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 49.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:49.62231501%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 35.2%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:35.22940209%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 56.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.660773330000005%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_0: 70.1%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:70.0653666%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_1: 49.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:49.62231501%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 35.2%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:35.22940209%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 56.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.660773330000005%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;model_v1_box_0&#34;,&#34;value&#34;:0.700653666},{&#34;site&#34;:&#34;model_v1_box_1&#34;,&#34;value&#34;:0.4962231501},{&#34;site&#34;:&#34;model_v1_box_2&#34;,&#34;value&#34;:0.3522940209},{&#34;site&#34;:&#34;model_v1_box_3&#34;,&#34;value&#34;:0.5666077333}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P28566" target="_blank" class="flex flex-row gap-2">
@@ -1821,10 +2123,13 @@
                 </svg>
                 AF-P28566
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 67.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:67.78166309%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_2: 67.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:67.78166309%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/P46098" target="_blank" class="flex flex-row gap-2">
@@ -1833,12 +2138,15 @@
                 </svg>
                 AF-P46098
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.824531189999995%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 61.4%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.365219839999995%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_5: 60.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.824531189999995%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_7: 61.4%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.365219839999995%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://alphafold.ebi.ac.uk/entry/Q9Y2T6" target="_blank" class="flex flex-row gap-2">
@@ -1847,10 +2155,13 @@
                 </svg>
                 AF-Q9Y2T6
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 67.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:67.31132079%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site model_v1_box_3: 67.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:67.31132079%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/6KUX" target="_blank" class="flex flex-row gap-2">
@@ -1859,12 +2170,15 @@
                 </svg>
                 P08913_6KUX
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 72.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:72.28219662000001%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 56.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.748841829999996%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 72.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:72.28219662000001%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 56.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:56.748841829999996%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/6CM4" target="_blank" class="flex flex-row gap-2">
@@ -1873,12 +2187,15 @@
                 </svg>
                 P14416_6CM4
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 74.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:74.61393266%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 6: 57.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.79322157%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 74.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:74.61393266%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 6: 57.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.79322157%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/6KUW" target="_blank" class="flex flex-row gap-2">
@@ -1887,12 +2204,15 @@
                 </svg>
                 P18825_6KUW
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 69.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.86229844%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 64.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:64.79646749%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 69.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:69.86229844%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 64.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:64.79646749%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/5WIU" target="_blank" class="flex flex-row gap-2">
@@ -1901,12 +2221,15 @@
                 </svg>
                 P21917_5WIU
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 53.2%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.18301916%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 53.7%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.65948398%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 53.2%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.18301916%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 53.7%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:53.65948398%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/4IAR" target="_blank" class="flex flex-row gap-2">
@@ -1915,12 +2238,15 @@
                 </svg>
                 P28222_4IAR
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 55.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.62106232%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 61.0%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.95171634%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 55.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.62106232%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 1: 61.0%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:60.95171634%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/6WGT" target="_blank" class="flex flex-row gap-2">
@@ -1929,12 +2255,15 @@
                 </svg>
                 P28223_6WGT
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 71.8%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:71.84356255%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 4: 55.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.90899956999999%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 71.8%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:71.84356255%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 4: 55.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:55.90899956999999%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/6BQH" target="_blank" class="flex flex-row gap-2">
@@ -1943,14 +2272,21 @@
                 </svg>
                 P28335_6BQH
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 61.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.33302175000001%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 50.1%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.13183739%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 5: 57.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.2802974%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 61.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:61.33302175000001%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 2: 50.1%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:50.13183739%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 5: 57.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:57.2802974%"></div>
+                            </div>
+                </div>
+                
+
+
+
+<spider-chart data="[{&#34;site&#34;:&#34;0&#34;,&#34;value&#34;:0.6133302175},{&#34;site&#34;:&#34;2&#34;,&#34;value&#34;:0.5013183739},{&#34;site&#34;:&#34;5&#34;,&#34;value&#34;:0.572802974}]" class="astro-DD2SMOSY"></spider-chart>
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/3PBL" target="_blank" class="flex flex-row gap-2">
@@ -1959,12 +2295,15 @@
                 </svg>
                 P35462_3PBL
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 73.6%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.60988399%"></div>
-                        </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 3: 44.9%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:44.88681862%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 73.6%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:73.60988399%"></div>
+                            </div><div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 3: 44.9%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:44.88681862%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div><div class="group flex lg:flex-row flex-col gap-2 lg:items-center items-start justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
             <a href="https://www.rcsb.org/structure/4IB4" target="_blank" class="flex flex-row gap-2">
@@ -1973,10 +2312,13 @@
                 </svg>
                 P41595_4IB4
             </a>
-            <div class="flex flex-row flex-wrap gap-2">
-                <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 77.3%">
-                            <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.28136449%"></div>
-                        </div>
+            <div class="flex flex-col items-center w-full max-w-md">
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="w-5 h-5 rounded-md overflow-hidden flex items-end bg-neutral-200 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600" title="Docking site 0: 77.3%">
+                                <div class="w-full bg-green-400 dark:bg-green-500" style="height:77.28136449%"></div>
+                            </div>
+                </div>
+                
             </div>
         </div>
 </div>
