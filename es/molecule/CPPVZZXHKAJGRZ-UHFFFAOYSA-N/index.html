@@ -29,8 +29,8 @@
       }
       window.localStorage.setItem("theme", theme);
     </script>
-	<link rel="stylesheet" href="/_astro/404.e344f417.css" />
-<link rel="stylesheet" href="/_astro/affinity-computation.ed76a636.css" />
+	<link rel="stylesheet" href="/_astro/404.1a1c6be6.css" />
+<link rel="stylesheet" href="/_astro/affinity-computation.c286cdf8.css" />
 <link rel="stylesheet" href="/_astro/_molecule_.9c700757.css" /><script type="module" src="/_astro/hoisted.a4ecf4d3.js"></script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head>
 	<body class="bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white">
 		
@@ -267,19 +267,14 @@
                     
                     <hr>
                     <p class="text-center mt-4">Estimated data</p>
+                    <p class="break-all leading-snug text-sm">
+                          <span class="">Solubilidad:</span>
+                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
+                            -4.726 (log(S) in mol/L prediction using <a class="underline" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8900744/">SolTranNet</a>)
+                          </span>
+                      </p>
                     
-                    <p class="break-all leading-snug text-sm">
-                          <span class="">Clinical toxicity:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
-                            11.6% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a> with MTDNN-SE_ClinTox+Tox21 model)
-                          </span>
-                      </p>
-                    <p class="break-all leading-snug text-sm">
-                          <span class="">Estimated Toxicity:</span>
-                          <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
-                            11.6% (toxicity predicted using the toxicity of metabolites recursively up to order two, prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)
-                          </span>
-                      </p>
+                    
                     <p class="break-all leading-snug text-sm">
                           <span class="">Blood Brain Barrier Permeability:</span>
                           <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
@@ -303,7 +298,213 @@
             to fully understand our approach and its limitations.
             <b>This information is for informational purposes only and should not be construed as medical advice.</b>
           </p>
-          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">No hay similitudes disponibles.</span>
+          <astro-island uid="1ATdn8" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;metabolism&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;struct\&quot;],\&quot;label\&quot;:[0,\&quot;Estructural\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;affinity\&quot;],\&quot;label\&quot;:[0,\&quot;Afinidades\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;metabolism\&quot;],\&quot;label\&quot;:[0,\&quot;Metabolismo\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#similarities-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Estructural</button><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Afinidades</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						bg-neutral-200 dark:bg-neutral-700
+						border border-neutral-300 dark:border-neutral-600
+					">Metabolismo</button></div></astro-island><ul class="mt-4" id="similarities-tab-content">
+              <li class="w-full flex flex-col active" id="struct">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Compuestos estructuralmente más similares. El porcentaje es una medida de cuán estructuralmente similares son esas moléculas, lo cual a menudo está fuertemente correlacionado con sus efectos.</span>
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">No hay similitudes estructurales disponibles.</span>
+              </li>
+              <li class="w-full flex flex-col" id="affinity">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Similitudes calculadas en base a las afinidades de las moléculas con el sitio de acoplamiento de proteínas seleccionado.</span>
+                  <div class="w-full pt-4"></div>
+                  <astro-island uid="26uuEJ" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Afinidades similares\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Moléculas similares con baja afinidad dopaminérgica\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa_pred\&quot;],\&quot;label\&quot;:[0,\&quot;Less addictive similar molecules bis\&quot;],\&quot;available\&quot;:[0,false]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Perfil de Afinidades\&quot;],\&quot;available\&quot;:[0,false]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						bg-neutral-200 dark:bg-neutral-700
+						border border-neutral-300 dark:border-neutral-600
+					">Afinidades similares</button><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Moléculas similares con baja afinidad dopaminérgica</button><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Less addictive similar molecules bis</button><button disabled class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Perfil de Afinidades</button></div></astro-island>
+                  <ul class="mt-4" id="nested-tab-content">
+                      
+                      
+                      
+                      
+                  </ul>
+              </li>
+              <li class="w-full flex flex-col" id="metabolism">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Interacción de esta molécula con el metabolismo <a href="https://biotransformer.ca/about">?</a></span>
+                  <div>
+                    <div class="my-4 text-lg">Reacciones que metabolizan esta molécula</div>
+                    <div class="flex flex-col gap-2">
+                      <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Glycine conjugation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N4O6S/c1-25(13-21(30)29-24-26-9-10-36-24)18-12-20(19(34-2)11-16(18)7-8-28-25)35-17-5-3-15(4-6-17)23(33)27-14-22(31)32/h3-6,9-12,28H,7-8,13-14H2,1-2H3,(H,27,33)(H,31,32)(H,26,29,30)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N4O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.3.1.13</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Glucuronidation of aromatic acid</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H31N3O11S/c1-29(13-20(33)32-28-30-9-10-44-28)17-12-19(18(40-2)11-15(17)7-8-31-29)41-16-5-3-14(4-6-16)26(39)43-27-23(36)21(34)22(35)24(42-27)25(37)38/h3-6,9-12,21-24,27,31,34-36H,7-8,13H2,1-2H3,(H,37,38)(H,30,32,33)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H31N3O11...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.4.1.17</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Carnitine conjugation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C30H36N4O7S/c1-30(17-26(35)33-29-31-12-13-42-29)23-16-25(24(39-5)14-20(23)10-11-32-30)40-21-8-6-19(7-9-21)28(38)41-22(15-27(36)37)18-34(2,3)4/h6-9,12-14,16,22,32H,10-11,15,17-18H2,1-5H3,(H-,31,33,35,36,37)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C30H36N4O7S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.3.1.7</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Dealkylation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H21N3O5S/c1-22(12-19(27)25-21-23-8-9-31-21)16-11-18(17(26)10-14(16)6-7-24-22)30-15-4-2-13(3-5-15)20(28)29/h2-5,8-11,24,26H,6-7,12H2,1H3,(H,28,29)(H,23,25,27)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H21N3O5S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of heteroalicyclic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-23(12-20(28)25-22-24-7-8-33-22)16-11-18(17(31-2)9-14(16)10-19(27)26-23)32-15-5-3-13(4-6-15)21(29)30/h3-9,11,19,26-27H,10,12H2,1-2H3,(H,29,30)(H,24,25,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of heteroalicyclic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-23(11-20(28)26-22-24-7-8-33-22)16-10-19(18(31-2)9-15(16)17(27)12-25-23)32-14-5-3-13(4-6-14)21(29)30/h3-10,17,25,27H,11-12H2,1-2H3,(H,29,30)(H,24,26,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of methyl carbon adjacent to aliphatic ring</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-31-18-10-15-6-7-25-23(13-27,12-20(28)26-22-24-8-9-33-22)17(15)11-19(18)32-16-4-2-14(3-5-16)21(29)30/h2-5,8-11,25,27H,6-7,12-13H2,1H3,(H,29,30)(H,24,26,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="my-4 text-lg">Reacciones que el metabolismo produce a partir de esta molécula</div>
+                    <div class="flex flex-col gap-2">
+                      <span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Glycine conjugation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C25H26N4O6S/c1-25(13-21(30)29-24-26-9-10-36-24)18-12-20(19(34-2)11-16(18)7-8-28-25)35-17-5-3-15(4-6-17)23(33)27-14-22(31)32/h3-6,9-12,28H,7-8,13-14H2,1-2H3,(H,27,33)(H,31,32)(H,26,29,30)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C25H26N4O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.3.1.13</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Glucuronidation of aromatic acid</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C29H31N3O11S/c1-29(13-20(33)32-28-30-9-10-44-28)17-12-19(18(40-2)11-15(17)7-8-31-29)41-16-5-3-14(4-6-16)26(39)43-27-23(36)21(34)22(35)24(42-27)25(37)38/h3-6,9-12,21-24,27,31,34-36H,7-8,13H2,1-2H3,(H,37,38)(H,30,32,33)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C29H31N3O11...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.4.1.17</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Carnitine conjugation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C30H36N4O7S/c1-30(17-26(35)33-29-31-12-13-42-29)23-16-25(24(39-5)14-20(23)10-11-32-30)40-21-8-6-19(7-9-21)28(38)41-22(15-27(36)37)18-34(2,3)4/h6-9,12-14,16,22,32H,10-11,15,17-18H2,1-5H3,(H-,31,33,35,36,37)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C30H36N4O7S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">EC 2.3.1.7</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">O-Dealkylation</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C22H21N3O5S/c1-22(12-19(27)25-21-23-8-9-31-21)16-11-18(17(26)10-14(16)6-7-24-22)30-15-4-2-13(3-5-15)20(28)29/h2-5,8-11,24,26H,6-7,12H2,1H3,(H,28,29)(H,23,25,27)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C22H21N3O5S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2C19, CYP2D6, CYP2E1, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of heteroalicyclic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-23(12-20(28)25-22-24-7-8-33-22)16-11-18(17(31-2)9-14(16)10-19(27)26-23)32-15-5-3-13(4-6-15)21(29)30/h3-9,11,19,26-27H,10,12H2,1-2H3,(H,29,30)(H,24,25,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2, CYP2A6, CYP2C9, CYP2D6, CYP3A4</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of heteroalicyclic secondary carbon</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-23(11-20(28)26-22-24-7-8-33-22)16-10-19(18(31-2)9-15(16)17(27)12-25-23)32-14-5-3-13(4-6-14)21(29)30/h3-10,17,25,27H,11-12H2,1-2H3,(H,29,30)(H,24,26,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP1A2</span></div> 
+</span><span class="border dark:border-neutral-600 rounded p-2 text-sm leading-tight">
+    <div class="underline">Hydroxylation of methyl carbon adjacent to aliphatic ring</div>
+    <div class="flex flex-row items-center">
+        Producto: <span class="flex flex-row gap-2 items-center justify-between min-h-16 p-2">
+            <div class="flex flex-row items-center gap-2">
+    <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg><h2 title="InChI=1S/C23H23N3O6S/c1-31-18-10-15-6-7-25-23(13-27,12-20(28)26-22-24-8-9-33-22)17(15)11-19(18)32-16-4-2-14(3-5-16)21(29)30/h2-5,8-11,25,27H,6-7,12-13H2,1H3,(H,29,30)(H,24,26,28)" class="text-neutral-500 text-sm leading-tight">InChI=1S/C23H23N3O6S...</h2>
+</div>
+        </span>
+    </div> 
+    <div> Enzimas: <span class="text-neutral-600 dark:text-neutral-400">CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP3A4</span></div> 
+</span>
+                    </div>
+                  </div>
+              </li>
+            </ul>
         </section>
 	
 
