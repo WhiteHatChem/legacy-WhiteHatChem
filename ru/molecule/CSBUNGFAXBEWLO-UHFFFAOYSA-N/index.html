@@ -297,7 +297,7 @@
                     <p class="break-all leading-snug text-sm">
                           <span class="">Estimated Toxicity:</span>
                           <span class="font-gray font-light text-neutral-800 dark:text-neutral-200">
-                            1.0% (prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)
+                            1.0% (toxicity predicted using the toxicity of metabolites recursively up to order two, prediction using <a class="underline" href="https://www.nature.com/articles/s41598-023-31169-8">nature.com</a>)
                           </span>
                       </p>
                     <p class="break-all leading-snug text-sm">
@@ -342,63 +342,76 @@
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">Самые структурно похожие соединения. Процент является мерой структурного сходства этих молекул, которое часто сильно коррелирует с их эффектами.</span>
                   <div class="flex flex-col mt-4 gap-2">
-  <a href="/ru/molecule/KEUUJKBDXNQWAY-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-AL-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-AL-M
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.7%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.66666401777788%;background-color:rgb(85, 170, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/JNUAYHHGCXYBHX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+  <a href="/ru/molecule/RHCSKNNOAZULRK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAADERJREFUaEPtWXtwFPUd//xu7/Zud2937517JHcBwyuBVASkgGAMFRIDqLVMp53pTLX2MRXaqbW0OFWQmfrqP7bWGZxp1TpOq6QUpL6dEcioWO0wLUZEEDTv9yW5XHLv2873lyxiK4QEnI4dfjM7d9n77e738/18vq8Nwxd8sS+4/bgE4H/N4CUG/m8YMAyDffDBB06bzRYSRTEsCIIDQNFisQzn8/lBWZZ73G53gjFmXEzQFyyhXbt26S6Xa6kiSWtVTVvmkKSY1Wp1C4IgWK1WgzGWBZA0DKOVMfY6gH2FQuGdsrKy1MUAMm0A999/v+73+2+UJOkWp6IskmVZdjqdcKoq7HY7t81isUAQBH7Qd8b44xIA9huG8Ug4HN7PGMtfCJDpAGBbt269UtO0u2VZ/oosSaKmadB1nR8EwiFJ/2WTCcZqtXIwAIYAPFIsFncODw8PVVZWjjHGilMFMyUAGzduFL1e780et/suq80Wsdls8Hm98Pv9cLvdHICsKKDzZ1vEAgGYYCRXLBZP5fP5fgBvMcYerKio6AV4fTqvWDlvAJWVleKSRUt+KivSL22iKIs2Gzc4HA6jpKSEA1AUBZIsmx6GYYzbQJ/FYhG5XA7pVIp/dzgcn9pL2xhjfzx27Njt27ZtU61Wa8Y2NpaNVVcXRux2Y99jj418llPOF4Dlqzfc8CPF6fyVIAgyedjlcsHn8yFSWoqSQICDsTsckGWZG5zP57nBZGw2k8HIyAjGUinuWrrW4/FAnIgVMoyYyefz2RMnTty3Y8eODsZYp81mG/DPqIhkRxPvvrBnz/FpA1i3bt16TVUfB+Al6snTZLw/EEAoGOQSojggfRO4QqHAAWQyGQwMDKC/vx+FYhGqqsLv88Hn98NBxo8HNV/pdBoffvgh3njjjYFDhw415bPZFlcgVMIEQRgbGvhDU1PTK9MCUFdTU675/HsEq3A5eZSo5973+8eN8fng9Xo5A5RtaNG++OAgWltaEI/HeVBTcHvcbu55AkJAmcWCQj7PAR89ehRH3n0Xpz76CPHB4ZZsOiUputtayKVfzmez25qamk5MBwDbsG7dA6qm/SyVGk/bJBEy2OvzcYMIDB1kFDFAXu/q6sLJkyeRSqc5M5Ik8d/oO7EnkOGFAoaGh9HT04PkyAiOHDmC0VQaTLAil8vyPTarrT2fy9y3f//+nVQUpwxg9erV1YFA4AUGREjD5DUCQF7kntQ0uCZSJ+k/l82io7MTba2tEEWRG57NZnmwkuEUG8TOQH8/Ojo60NraiqGhIS430e6A7vXBqbmM9GgCKBS6C7nsboOxJw8ePPiPs2Wlcwbx+oaGe4LB0N2DQ4NcoyYAM+eT100PZ3M5dHV2oq+vj7NBgEgeZDQFKH0ODw+ju7sbnZ2dPKiJBR43dju8oVIomo4F8xcM97We/E1zc/Nxxtg7oVDoZGNjY+GsaflsPyxbtsxTVlr6kq67lnR1dXIDCADFALFAhnNJOJ0wikUuhURihMvJMIqnqy8xkBwdRV9vL3p7e7nH6R5UrcfGxngguwMhVC9Zinlz50LVXZg/I7rt8uqqHedT1M7KwDXXXLOirLTsRcagkizIU5T7SRomCDKWzlOgEkMkKzMDUbaic5SFyOvkfXICnadr6HC6PBBEO2RVx6IvL8PGhrVIFQw4jOKxdCq5dvHixa2TgTgrgLXXXntbNFb+u0RiGL19fbAKAvcaPZg+Sd+kawpaOtxuz0T+z3HdJ5NJLic6CAhlKLqWPikJzJtXiZwooXc0DSYp8IUiuLW+FjNiUcT7egvFfPaWysrKJ6cNoKG+/rdl0djm7p5x75GOKXebuZ4AWKj4FAqn0yJlKjKc9pPn6TtdR4DpUGQZsWgUFTMvQyQYxOGBEfQoXki6DmWoH6tml2PNyuXo7R+ApZD9fUVFxXenC0DYsGHD05FQ+Gtt7W0YJa0CPAZIRgSCZETGUTzQ36Rn0jd5PDEyQv3Dabl4XS7EwhHMnTMX5eUxeN0eOGQJr/Ym0euNAH2daPvrk7hiyVLc9oPvI5lKwV7INTGrUB8Oh8cffpb1mRKivmfO7Nl7g8FgfUtLC8/ntEi/xAIBMWVEIEZHR9E/MMCNp7aB9tmsVvjcHsyZORPRSIT3S+FIKfwBP3Svl2ep5kQazVkBLe+8iaONTyBS+SVs+cVW+CURRi77llW0rvH7/Z/ZA5l4PhPAokWLbLHS6J5gONTwccvHMIsYXUQAyHizcA0ODvJWoZjNwWYVOEN+jxcBn483el6PF7pLRzAYREk4DKemceMlRcZowcBLbXG8/dqraN79FNSqRdj8k9txhU+hmnKIWdiaQCCQnDID5Owb1l//p0hZ5OvEgCkhuhEZSLKhGCDJDMXjKA+G4He5OTOKU+EB7aZq7fVAU1Womg5JdcLl9XJmrJTJFJkH8POtcRx963W898zjsC9ciZu+dTNqQ04ozHh5OJm4ftasWZnpAMC66657KBqL/ZhSaCJBQ9T4oiwiSxJPl3Se0qrfqWJFVRVCHi/y1Os7ydjxaq1o2vgkJghQdZ0zSH8LVive7Eviz6fiSHS2o7D/L/AuX4uVy5fj6oADmmh5JFBSsmm6QYw1a9Z8LxaNPUpVmDLKac1NZCMCQo1cVVUV2tracOr4cSyYMRPV8xdA9XrglGQ4JAcHYKUBhzFYHQ7omnZ6Xnj8WA92nYzDKlhQZssj5HZjrlfBKr89KzP2zfLLyndPG0BNTc3iaFn0lUIh7+7q7j49nJgyojgIBAJYUF3NpzJqDw4fPgyLYWBh1XxcXlnFmeLp16nAIctglL1kGU5F4UY//97HePCfPSjaRMT8LkRkGxboNlwdEI8M9vfVrVq1qmvaAJYuXapFy6LPaZq2sr29DdTrmMvMRtQiU1ahgI6EI/yTulDqLHVFwbLFSzC3YhYHwjOXLMEiirBLElSngq54Alte/hdOGTJiXhUz3QpqPBZjjib8fOHChb+ezHj6/ZzN3Lr6+i2hSOkDAwP9GByiGfyTZZ9oKaixk2Rql20oKQnA5/Xxytze3s7BqIqCWRUVqK6aj9JIhFdvcoCkKHDKEp55/TAePZ6Aw+3DihIJdSWW1yRmfGPFihU0G0+6zglg9VVXzQ5GYy+Kojizo7ODt8JnBjOvsKLImzoa5sfncMYlRQFMsurs7EJffx8PXmq9SyOliMZi8PsDCAb8GEunseftZrw3mMVV5Z6O2qrLbqqtrf37pJZPbJh0Jm6ob7grFA7dMzQ0yGjKMgd1MxZ4dSYQOr1acfEpMZVKw2KhKq3wmZgKHIGnmpEaG+NgqV+i38kJ1HbTvGwVhCSDscMhyLsFWehtbGw8Zw2YVEK0YeXKlaFgMNioa/qK7u6uT9UEClDK6wSCDpKTy+3mqTadTiGdznAA5sqk07x3kiWZAxgdG+VBPppM8r5p/B6uNGNsCAZ27ntuH7XU53y9MikD9PA1tbW1JaHwUzZRDBEIs7UwDSN5mG/gzFmBprBCIc/ZoJpxei/NE5IMwSqgp7ubz8UkNWJWlmUjk8n0iKKYZwbb+ezfnr33ogCgh9fV1X07HAw9BMb0np5uDsKUEwUlxYL5+pA3e9K4oRbBgnz+EwC0h2LGLtoxEB+AIiug+KJ7hcPhg+83Nz9tcziGRVF8e+/evScni4XzYmDiJsL6hobvhEKRew0Y3t7eHt6BkneJY7NTpb1nAqH4MIcYy8RbC2pDVKeKXD7HmaOs5bDbD6XS6Vsffvjh4zU1NThw4AChnvTt3FQAcNtuXL9+vT8Yug/AvMHBOO9EaSg3JXQmANI3ATBfJ9rOAEMACIju0guyLL+UGRm544477zw2mcf/8/epAuDX19XVzYlGo1skh7QxkUioIyMJHpRmwJ7JAMnJXHSeAFFrQe11WVlZu91u3zk2NrZz06ZNn/QrU0AxLQB0/82bN9tlWa41isYPs9nMqlQqrVHmITmQrAiM+UbaZIJeALh0veByu1tcuv6s3WJ54qOOjubt27dP+a20iXHaAMwbbN++XU6lUlcwg60uGsUri0ZxhoUx+geHHYbBbHZ7TpaklCTLXZIkvS+JYpNhsRw4depUy4UYftEAnMk2saKqqstisbhEUZQFQWB+vz+jquqoruvx+vr65HT+B3AuRV0wA1OQ6+ey9RKAz8WtU7jpJQam4KzPZesXnoF/A87nqm0FezliAAAAAElFTkSuQmCC" class="w-4 rounded" alt="psychonaut"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Allylescaline
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="psychonaut"><h2 title="Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Mescaline
             </h2>
 </div>
 <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              allylescaline
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              mescaline
             </h2>
 </div>
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Allylescaline
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-Trideuteromescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              4-Trideuteromescalin...
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="β,β-Dideuteromescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              β,β-Dideuteromescali...
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Mescaline
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,5-Di(trideutero)mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              3,5-Di(trideutero)me...
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,6-Dideuteromescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              2,6-Dideuteromescali...
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="α,α-Dideuteromescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              α,α-Dideuteromescali...
+            </h2>
+</div><div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="α,β-Dideuteromescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              α,β-Dideuteromescali...
             </h2>
 </div>
-
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/druglab.e1835e9e.ico" class="w-4 rounded" alt="druglab"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Allylescaline
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Mescaline
             </h2>
 </div>
-
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/druglab.e1835e9e.ico" class="w-4 rounded" alt="druglab"><h2 title="Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Mescaline
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="MESCALINE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              MESCALINE
+            </h2>
+</div>
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.4%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.35534071449193%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.192910898830746%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/BPLQKQKXWHCZSS-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/GKATTZLSNLYADI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Elemicin" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Elemicin
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="TMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              TMPEA
             </h2>
 </div>
 
@@ -406,18 +419,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.3%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.30426440314253%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.19219041067131%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/QNVPDGCJKPQARD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/CGUNKAXAEZSOFA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-AL
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-TMA-6" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-TMA-6
             </h2>
 </div>
 
@@ -425,18 +438,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.3%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.2652333628779%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.19189491172978%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/ROINMNZLTKSBPR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/ZIXMCYWHHXSJOK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3C-AL
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-3-DESMETHYL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Me-3-DESMETHYL
             </h2>
 </div>
 
@@ -444,41 +457,67 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.2%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.23619811629608%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.19169620601415%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/ZYEMGPIYFIJGTP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/HNJWKRMESUMDQE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Methyleugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Methyleugenol
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Methylhomoveratrylamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Methylhomoveratryl...
             </h2>
 </div>
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Methyleugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
-              Methyleugenol
-            </h2>
-</div>
+
 
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.2%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.23179606310748%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.18959334788609%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/LGLJOVNOGICITR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+            <div class="flex flex-col">
+              
+        
+        
+        
+        
+        
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMWNJ84" target="_blank">
+      <div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2,4'-Dimethoxy-5,3'-di-(2-propenyl)-biphenyl" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,4&#39;-Dimethoxy-5,3&#39;-...
+            </h2>
+</div>
+      <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+          Проверить на drugmap
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+              <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"></path>
+              <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd"></path>
+          </svg>
+      </p>
+  </a>
+    
+            </div>
+            <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.18741883372065%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </div><a href="/ru/molecule/DFDALGJXCBUKHT-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-VI" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-VI
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-CPM-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-CPM-M
             </h2>
 </div>
 
@@ -486,18 +525,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.2%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.19189967085553%;background-color:rgb(86, 169, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.18302004669655%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/DVMQMRGYKZBKKX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/LKINXVPAOSIISW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MAPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              MAPEA
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="homo-Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              homo-Mescaline
             </h2>
 </div>
 
@@ -505,18 +544,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.03293134156246%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.18159452709171%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/BXCMEIZBXNLJKM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/BBIMHLFFOJQGNN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-T-16" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-T-16
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="25B-NB25OMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              25B-NB25OMe
             </h2>
 </div>
 
@@ -524,9 +563,222 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:66.01255520823037%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.17986066160623%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/USPSMWCGHVXKMN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Mescaline-NBOMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Mescaline-NBOMe
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.17525700728092%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/VIFKVOUQWKUXLL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-(4-Ethoxy-3,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-(4-Ethoxy-3,5-dime...
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.174729745993716%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/FSFKWEKZJSVUMI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="25B-NB23OMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              25B-NB23OMe
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.174633061942544%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/ZQYYVTABADQBTJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="c30-nbome" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              c30-nbome
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="30C-NBOMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              30C-NBOMe
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.166187687009234%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/ALKVNYLINLGCJH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-HO-TMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-HO-TMA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.161784834757206%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/FTXAZQUDSNEXMB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-B-E" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-B-E
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.1602243884224%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/OMAIONYQWKOIEJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-CCCI-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-CCCI-M
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.15910231268673%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HRNUZLNPJAFQML-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Et-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Et-DMPEA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.152092895399235%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/OTXANOLOOUNVSR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="METHYL-MESCALINE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              METHYL-MESCALINE
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.15170337583442%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/RDOMWNSTCLMGGA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DOVI" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DOVI
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.14171104598932%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/KNGUSWJQDIVIQN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Pr-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Pr-M
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.13582840861556%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
         </a><a href="/ru/molecule/FOXJFBFFGULACD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -555,18 +807,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.97866270303633%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.13391668833975%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/KNGUSWJQDIVIQN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/BXCMEIZBXNLJKM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Pr-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-Pr-M
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-T-16" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-T-16
             </h2>
 </div>
 
@@ -574,18 +826,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.97343479757498%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.12116297444689%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/RDOMWNSTCLMGGA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/DVMQMRGYKZBKKX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DOVI" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DOVI
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="MAPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              MAPEA
             </h2>
 </div>
 
@@ -593,18 +845,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">66.0%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.95710001323582%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.11317671834012%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/OTXANOLOOUNVSR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/LGLJOVNOGICITR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="METHYL-MESCALINE" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              METHYL-MESCALINE
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-VI" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-VI
             </h2>
 </div>
 
@@ -612,18 +864,41 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.92847659896262%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.04039861002348%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/HRNUZLNPJAFQML-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/ZYEMGPIYFIJGTP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Et-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-Et-DMPEA
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Methyleugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Methyleugenol
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Methyleugenol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Methyleugenol
+            </h2>
+</div>
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:49.01831239156355%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/ROINMNZLTKSBPR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3C-AL
             </h2>
 </div>
 
@@ -631,18 +906,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.9273379818486%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:49.01575320144165%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/OMAIONYQWKOIEJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/QNVPDGCJKPQARD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-CCCI-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-CCCI-M
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-AL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-AL
             </h2>
 </div>
 
@@ -650,18 +925,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.90654927619268%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:48.99819234892587%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/FTXAZQUDSNEXMB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/BPLQKQKXWHCZSS-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-B-E" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-B-E
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Elemicin" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Elemicin
             </h2>
 </div>
 
@@ -669,18 +944,49 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">49.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.9031681736931%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:48.97248408569798%;background-color:rgb(130, 125, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/ALKVNYLINLGCJH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/JNUAYHHGCXYBHX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            <div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="psychonaut"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Allylescaline
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              allylescaline
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Allylescaline
+            </h2>
+</div>
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/druglab.e1835e9e.ico" class="w-4 rounded" alt="druglab"><h2 title="Allylescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Allylescaline
+            </h2>
+</div>
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">48.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:48.9343297082786%;background-color:rgb(130, 125, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/KEUUJKBDXNQWAY-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-HO-TMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-HO-TMA
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-AL-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-AL-M
             </h2>
 </div>
 
@@ -688,22 +994,49 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">46.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.89844142853173%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:46.02280443401519%;background-color:rgb(138, 117, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/ZQYYVTABADQBTJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a>
+</div>
+              </li>
+              <li class="w-full flex flex-col" id="affinity">
+                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Сходства, рассчитанные на основе аффинностей молекул с выбранными участками стыковки белков.</span>
+                  <div class="w-full pt-4"></div>
+                  <astro-island uid="Z23fXy" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие аффинности\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие молекулы с низкой допаминергической аффинностью\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa_pred\&quot;],\&quot;label\&quot;:[0,\&quot;Less addictive similar molecules bis\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Профиль аффинностей\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						bg-neutral-200 dark:bg-neutral-700
+						border border-neutral-300 dark:border-neutral-600
+					">Похожие аффинности</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Похожие молекулы с низкой допаминергической аффинностью</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Less addictive similar molecules bis</button><button class="
+						disabled:opacity-50 disabled:cursor-not-allowed
+						px-3 py-1 rounded-xl
+						
+						border border-neutral-300 dark:border-neutral-600
+					">Профиль аффинностей</button></div></astro-island>
+                  <ul class="mt-4" id="nested-tab-content">
+                      <li class="w-full flex flex-col active" id="dist_main">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, имеющих наиболее сходные аффинности участков стыковки. Процент является мерой сходства связывающих аффинностей молекул, что должно быть заменителем того, насколько похоже они взаимодействуют с мозгом.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/MNDUBHIMJZFXDI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
+
 <div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="c30-nbome" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              c30-nbome
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="30C-NBOMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              30C-NBOMe
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Me-3,5-DOM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Me-3,5-DOM
             </h2>
 </div>
 
@@ -711,18 +1044,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.5%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.88494830400352%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.52991806980688%;background-color:rgb(39, 216, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/FSFKWEKZJSVUMI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/DVBZPPVSVLQDKE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="25B-NB23OMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              25B-NB23OMe
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4,2,6-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4,2,6-DOET
             </h2>
 </div>
 
@@ -730,18 +1063,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.5%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.85840777711861%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.51863209084595%;background-color:rgb(39, 216, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/VIFKVOUQWKUXLL-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/IGMMJULXSJSRCB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-(4-Ethoxy-3,5-dimethoxyphenyl)-N-[(2-methoxyphenyl)methyl]ethan-1-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-(4-Ethoxy-3,5-dime...
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Br-3,5-DMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Br-3,5-DMA
             </h2>
 </div>
 
@@ -749,18 +1082,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.5%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.85809884140414%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.4684291372199%;background-color:rgb(40, 215, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/USPSMWCGHVXKMN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/KDQRIFZRBIPQEW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Mescaline-NBOMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              Mescaline-NBOMe
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DOMAD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DOMAD
             </h2>
 </div>
 
@@ -768,18 +1101,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.9%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.5%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.85641202393184%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.46565384238225%;background-color:rgb(40, 215, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/BBIMHLFFOJQGNN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/ROKMKYBLAPLLER-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="25B-NB25OMe" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              25B-NB25OMe
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="SB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              SB
             </h2>
 </div>
 
@@ -787,18 +1120,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.8415355891848%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.44785132998142%;background-color:rgb(40, 215, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/LKINXVPAOSIISW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/WHUXWWJFRBXUOQ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="homo-Mescaline" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              homo-Mescaline
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-TME" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-TME
             </h2>
 </div>
 
@@ -806,18 +1139,18 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.83586306915726%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.42747660347754%;background-color:rgb(40, 215, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/DFDALGJXCBUKHT-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/WVKXXCDIUCCHOE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-CPM-M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-CPM-M
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-3,5-DMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Me-3,5-DMA
             </h2>
 </div>
 
@@ -825,9 +1158,402 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.83117051095545%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:84.40158548230377%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/WVNJEHORYAZBRZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="TA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              TA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.3832683759444%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/UJYMLOWSDODCLN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="M(3OP)M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              M(3OP)M
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.31230246789471%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MYNGUVCYHDQOCQ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,3,4-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,3,4-DOB
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.25619420083504%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PKIBNXZRXDBQFA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4C-2,4-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4C-2,4-DMPEA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.1608815039662%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/CCZARCIXJNNALJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5,2,3-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5,2,3-DOET
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.14675374696795%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/JZNQOQZDPWRYGP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="homo-TMA-3" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              homo-TMA-3
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.12739819341542%;background-color:rgb(40, 215, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/VWRBZVVDOOPKLA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(6,7-Dimethoxy-2H-1,3-benzodioxol-4-yl)propan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              1-(6,7-Dimethoxy-2H-...
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:84.08153309260231%;background-color:rgb(41, 214, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MASUNTXHOBXSNG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-TM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-TM
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:83.96905309482892%;background-color:rgb(41, 214, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/JQJRESSXOVAECC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="don" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              don
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DON" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DON
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">84.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:83.95126417122094%;background-color:rgb(41, 214, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PIRQWUIMACYMEK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,5-DNNA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3,5-DNNA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">83.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:83.52647769039766%;background-color:rgb(42, 213, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/JQDWYDNRCICUCN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,2,5-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3,2,5-DOET
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">83.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:83.43932972625467%;background-color:rgb(42, 213, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HCZXNFSMGJKVHO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-DOB
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">82.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:82.89781015104208%;background-color:rgb(44, 211, 0)"></div>
+  </div>
+</span>
+        </a>
+</div>
+                      </li>
+                      <li class="w-full flex flex-col" id="dist_dopa">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, которые имеют наиболее сходные аффинности участков стыковки и также высокое взаимодействие с допаминовыми рецепторами. Это, таким образом, является заменителем того, насколько эта молекула стимулирует допаминовые рецепторы.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/UPEAOFCHTFWNFG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2Me3Ph glycidate" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2Me3Ph glycidate
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">88.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:88.51788033552984%;background-color:rgb(29, 226, 0)"></div>
+  </div>
+</span>
+        </a>
+</div>
+                      </li>
+                      <li class="w-full flex flex-col" id="dist_dopa_pred">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">List of compounds which have the most similar docking sites affinities and have also high dopamine receptor interactions, but now using addictive data predicted by a Machine Learning model. In practive this one is slightly more reliable than the other approach. This is thus a proxy to how much this molecule stimulates the dopamine receptors.</span>
+                          <div class="flex flex-col mt-4 gap-2">
+  <a href="/ru/molecule/ISJCIACBPBDNKH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,5-DES-Me-DOM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2,5-DES-Me-DOM
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.600970846019656%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/VKEQBMCRQDSRET-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            <div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="psychonaut"><h2 title="Methylone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Methylone
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="methylone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              methylone
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Methylone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Methylone
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="pubchem"><h2 title="Methylone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Methylone
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/druglab.e1835e9e.ico" class="w-4 rounded" alt="druglab"><h2 title="Méthylone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight text-rose-500">
+              Méthylone
+            </h2>
+</div>
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.598992076471568%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/GPBOYXOSSQEJBH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-HO-3-MeO-A" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-HO-3-MeO-A
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.5790479954737%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/ZVTVIPHSXNUZQH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DH-α-Et-PEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              DH-α-Et-PEA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.5708737388942%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/FPWLTKFZPJGKSX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="BO3M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              BO3M
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.6%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.565378846001526%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/KCTJOEASAHXBBW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-Methylamphetamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-Methylamphetamine
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.507317060164834%;background-color:rgb(213, 42, 0)"></div>
   </div>
 </span>
         </a><div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -838,10 +1564,10 @@
         
         
         
-        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMWNJ84" target="_blank">
+        <a class="flex flex-col lg:flex-row lg:items-center" href="http://drugmap.idrblab.net/data/drug/details/DMVS9WQ" target="_blank">
       <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2,4'-Dimethoxy-5,3'-di-(2-propenyl)-biphenyl" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2,4&#39;-Dimethoxy-5,3&#39;-...
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Nitisinone" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Nitisinone
             </h2>
 </div>
       <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
@@ -855,18 +1581,18 @@
     
             </div>
             <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.4%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.81652494062142%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:16.447448533200916%;background-color:rgb(213, 42, 0)"></div>
   </div>
 </span>
-        </div><a href="/ru/molecule/HNJWKRMESUMDQE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </div><a href="/ru/molecule/JQNMKHHJXLRJQV-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Methylhomoveratrylamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-Methylhomoveratryl...
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-D-FLY" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-D-FLY
             </h2>
 </div>
 
@@ -874,18 +1600,41 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.3%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.80919169183358%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:16.32687462883696%;background-color:rgb(213, 42, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/ZIXMCYWHHXSJOK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/YAGBSNMZQKEFCO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-3-DESMETHYL" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-Me-3-DESMETHYL
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Ethylamphetamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Ethylamphetamine
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Etilamfetamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Etilamfetamine
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.287952977027693%;background-color:rgb(213, 42, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/IKZAQEOVPHFTQN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Ro-17-4582" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Ro-17-4582
             </h2>
 </div>
 
@@ -893,18 +1642,64 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.2%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.80204073544252%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:16.240713128236674%;background-color:rgb(214, 41, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/CGUNKAXAEZSOFA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/CFSOJZTUTOQNIA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-TMA-6" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2C-TMA-6
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Ro-15-4513" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Ro-15-4513
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="[3H]Ro154513" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              [3H]Ro154513
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.11582043499195%;background-color:rgb(214, 41, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/ZEYRDXUWJDGTLD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Ethyl-5-MeO-DMT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Ethyl-5-MeO-DMT
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="EDMT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              EDMT
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:16.101565954905816%;background-color:rgb(214, 41, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/BHRKXOYRRFPATI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Ro-05-3061" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Ro-05-3061
             </h2>
 </div>
 
@@ -912,18 +1707,22 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">16.1%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.80136198381236%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:16.098953212020177%;background-color:rgb(214, 41, 0)"></div>
   </div>
 </span>
-        </a><a href="/ru/molecule/GKATTZLSNLYADI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/KQXHTNJNMWVWIK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
-
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="TMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              TMPEA
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="4,4-dmar" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4,4-dmar
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4,4-Dimethylaminorex" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4,4-Dimethylaminorex
             </h2>
 </div>
 
@@ -931,9 +1730,299 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.9%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.80035162734723%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:15.872048857724469%;background-color:rgb(215, 40, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/DLQZIEVOXQWXIO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Amino-1-(2,6-dimethoxyphenyl)ethan-1-ol" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Amino-1-(2,6-dimet...
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.754788154957962%;background-color:rgb(215, 40, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/NACANDWMBXGSTD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-DFM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-DFM
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.713398239702414%;background-color:rgb(215, 40, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PJYVGMRFPFNZCT-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="CP-93129" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              CP-93129
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="CP 93129" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              CP 93129
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.68369052760742%;background-color:rgb(215, 40, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/JPDVAVONMYSOMF-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="ORTHO-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              ORTHO-DOB
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.499144925818054%;background-color:rgb(215, 40, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MSYKRHVOOPPJKU-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Brivaracetam" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Brivaracetam
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="Brivaracetam" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Brivaracetam
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.2%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.229070434786724%;background-color:rgb(216, 39, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/KJHJIEUXRKAETR-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-2,3-DMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              N-Me-2,3-DMA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.1%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.077758655916835%;background-color:rgb(217, 38, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/OGNJZVNNKBZFRM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            <div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,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" class="w-4 rounded" alt="psychonaut"><h2 title="5-MeO-aMT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-MeO-aMT
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="5-meo-amt" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-meo-amt
+            </h2>
+</div>
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5-MeO-AMT" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              5-MeO-AMT
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="2-(5-Methoxy-1H-indol-3-yl)-1-methyl-ethylamine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-(5-Methoxy-1H-indo...
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">15.0%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:15.02885262519191%;background-color:rgb(217, 38, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MSQFWXSLQJYKQE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2C-I-DFLY" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2C-I-DFLY
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">14.7%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:14.705917807157473%;background-color:rgb(217, 38, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MOZIBWIMROMFIX-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="6-C-IBF5AP" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              6-C-IBF5AP
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">14.5%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:14.506635685843246%;background-color:rgb(218, 37, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/XMBDJBGDUKIOFM-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-CDMC" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-CDMC
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">12.8%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:12.792419752918729%;background-color:rgb(222, 33, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/PHCFFGXVMHXBGD-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Br-4,5-MDA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              2-Br-4,5-MDA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">12.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:12.307499844868373%;background-color:rgb(224, 31, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/HYEQXGLKYYIRFH-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4-EtO-N,N-Me-PEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              4-EtO-N,N-Me-PEA
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">12.3%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:12.252343637378676%;background-color:rgb(224, 31, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/MWMFMCTUGUZSJJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="Amantadine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              Amantadine
+            </h2>
+</div>
+
+
+
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">11.9%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:11.879578390241766%;background-color:rgb(225, 30, 0)"></div>
+  </div>
+</span>
+        </a><a href="/ru/molecule/KKIMDKMETPPURN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+          <div class="flex flex-col">
+            
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="TFMPP" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              TFMPP
+            </h2>
+</div>
+
+
+<div class="flex flex-row items-center gap-2">
+    <img src="/_astro/drugmap.070b1518.ico" class="w-4 rounded" alt="drugmap"><h2 title="TFMPP" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              TFMPP
+            </h2>
+</div>
+          </div>
+          <span class="flex items-center w-full lg:w-min">
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">11.4%</p>
+  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+      <div class="h-full rounded text-xs" style="width:11.351580760677574%;background-color:rgb(226, 29, 0)"></div>
   </div>
 </span>
         </a><a href="/ru/molecule/RHCSKNNOAZULRK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
@@ -994,44 +2083,18 @@
 </div>
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">65.8%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">10.6%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:65.79788328570042%;background-color:rgb(87, 168, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:10.605718292381141%;background-color:rgb(228, 27, 0)"></div>
   </div>
 </span>
-        </a>
-</div>
-              </li>
-              <li class="w-full flex flex-col" id="affinity">
-                  <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Сходства, рассчитанные на основе аффинностей молекул с выбранными участками стыковки белков.</span>
-                  <div class="w-full pt-4"></div>
-                  <astro-island uid="RESbN" component-url="/_astro/TabGroup.393b19d9.js" component-export="default" renderer-url="/_astro/client.79b3293c.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;dist_main&quot;],&quot;tabs&quot;:[1,&quot;[[0,{\&quot;id\&quot;:[0,\&quot;dist_main\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие аффинности\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;dist_dopa\&quot;],\&quot;label\&quot;:[0,\&quot;Похожие молекулы с низкой допаминергической аффинностью\&quot;],\&quot;available\&quot;:[0,true]}],[0,{\&quot;id\&quot;:[0,\&quot;profile\&quot;],\&quot;label\&quot;:[0,\&quot;Профиль аффинностей\&quot;],\&quot;available\&quot;:[0,true]}]]&quot;],&quot;tabsSelector&quot;:[0,&quot;#nested-tab-content&gt;li&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="flex flex-wrap flex-row gap-2"><button class="
-						disabled:opacity-50 disabled:cursor-not-allowed
-						px-3 py-1 rounded-xl
-						bg-neutral-200 dark:bg-neutral-700
-						border border-neutral-300 dark:border-neutral-600
-					">Похожие аффинности</button><button class="
-						disabled:opacity-50 disabled:cursor-not-allowed
-						px-3 py-1 rounded-xl
-						
-						border border-neutral-300 dark:border-neutral-600
-					">Похожие молекулы с низкой допаминергической аффинностью</button><button class="
-						disabled:opacity-50 disabled:cursor-not-allowed
-						px-3 py-1 rounded-xl
-						
-						border border-neutral-300 dark:border-neutral-600
-					">Профиль аффинностей</button></div></astro-island>
-                  <ul class="mt-4" id="nested-tab-content">
-                      <li class="w-full flex flex-col active" id="dist_main">
-                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, имеющих наиболее сходные аффинности участков стыковки. Процент является мерой сходства связывающих аффинностей молекул, что должно быть заменителем того, насколько похоже они взаимодействуют с мозгом.</span>
-                          <div class="flex flex-col mt-4 gap-2">
-  <a href="/ru/molecule/HCZXNFSMGJKVHO-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
+        </a><a href="/ru/molecule/GNVWCHJJRGNCLA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
           <div class="flex flex-col">
             
 
 <div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3-DOB
+    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-EtO-N,N-Me-PEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
+              3-EtO-N,N-Me-PEA
             </h2>
 </div>
 
@@ -1039,380 +2102,9 @@
 
           </div>
           <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">7.5%</p>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">0.0%</p>
   <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:7.54848277849222%;background-color:rgb(236, 19, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/JQDWYDNRCICUCN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,2,5-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3,2,5-DOET
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">7.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:7.045849846041696%;background-color:rgb(237, 18, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/PIRQWUIMACYMEK-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3,5-DNNA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3,5-DNNA
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">7.0%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.966597083259762%;background-color:rgb(237, 18, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/JQJRESSXOVAECC-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-<div class="flex flex-row items-center gap-2">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAh9JREFUWEfdlr+reWEcx9/XDZll8CMUi6Qo7GIxoGRwowyUskgG+Q8MBovFYKCkpLjK5JaZogyykMhiEIVYuD2n7ul+7/YcOur7mc85r9f5PJ8fzxuAO14Yb/+FgE6ng1AoxGw2o87lUzKQSCSg0WiQyWReI9Dv96HX66FSqfgXEAgEOJ/PEIvFkEgkuFwuVBIPH4Hf70ez2cTtdoNcLsd2u+VXoN1uw+v14nq9Qq1W8yug1Woxn89BjuF0OjE1sN/v+ctAPp9HOp1mgOv1mumE+51urnGuAZFIhMViAaVSyQh8fX3B5XJR/T15mLNAOBxGtVplgblcDtlslj+B8XgMs9nMAiORCCqVCj8Cbrcb3W73H5jRaMR0OuVH4PPzEx6Ph4WRHWAwGKjhnGqAgP7+aaFQQCqV4kcgmUyCAH+H3W7HcDjkR6BWq+Hj44OFkVYk65hrULfhaDSCxWJheaVSCfF4nCufbg7IZDJm4pHN9xM+nw+kKLkGVQZMJhMmkwnLOh6PzPjd7XZc+XQZsNlsGAwGLKxcLiMajXKGU7chmXxkAv4EKcZ6vc6fgEKhwGq1wvv7Ow6HA8g6pl2/f22paoC8vFwumXPvdDrMReTRoBbo9XpwOp0IBALMVezRoBZoNBoMnNx+NpvNo3y6LiC0YrGIYDAIqVT6MJy6C8gLsVgMDocDoVDoNQJWq5VJf6vVeo3AU6i/PkJdhM8W+AavDsgBibC/cwAAAABJRU5ErkJggg==" class="w-4 rounded" alt="tripsit"><h2 title="don" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              don
-            </h2>
-</div>
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DON" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DON
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.6%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.5868398322743715%;background-color:rgb(238, 17, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/MASUNTXHOBXSNG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-TM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3-TM
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.6%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.571174374089497%;background-color:rgb(238, 17, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/VWRBZVVDOOPKLA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="1-(6,7-Dimethoxy-2H-1,3-benzodioxol-4-yl)propan-2-amine" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              1-(6,7-Dimethoxy-2H-...
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.5%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.4725650809373745%;background-color:rgb(238, 17, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/JZNQOQZDPWRYGP-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="homo-TMA-3" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              homo-TMA-3
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.432576190357074%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/CCZARCIXJNNALJ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="5,2,3-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              5,2,3-DOET
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.415738782034548%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/PKIBNXZRXDBQFA-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4C-2,4-DMPEA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4C-2,4-DMPEA
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.4%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.403463403793511%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/MYNGUVCYHDQOCQ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2,3,4-DOB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2,3,4-DOB
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.3%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.320964760394686%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/UJYMLOWSDODCLN-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="M(3OP)M" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              M(3OP)M
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.3%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.27265823271415%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/WVNJEHORYAZBRZ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="TA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              TA
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.211834585926927%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/WVKXXCDIUCCHOE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="N-Me-3,5-DMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              N-Me-3,5-DMA
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.196185145673963%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/WHUXWWJFRBXUOQ-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="3-TME" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              3-TME
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.174099651478615%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/ROKMKYBLAPLLER-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="SB" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              SB
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.156748468735174%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/KDQRIFZRBIPQEW-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="DOMAD" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              DOMAD
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.141608525463981%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/IGMMJULXSJSRCB-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Br-3,5-DMA" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-Br-3,5-DMA
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.139250050205192%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/DVBZPPVSVLQDKE-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="4,2,6-DOET" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              4,2,6-DOET
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.096668220630862%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a><a href="/ru/molecule/MNDUBHIMJZFXDI-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2-Me-3,5-DOM" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2-Me-3,5-DOM
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">6.1%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:6.087116711334669%;background-color:rgb(239, 16, 0)"></div>
-  </div>
-</span>
-        </a>
-</div>
-                      </li>
-                      <li class="w-full flex flex-col" id="dist_dopa">
-                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">Список соединений, которые имеют наиболее сходные аффинности участков стыковки и также высокое взаимодействие с допаминовыми рецепторами. Это, таким образом, является заменителем того, насколько эта молекула стимулирует допаминовые рецепторы.</span>
-                          <div class="flex flex-col mt-4 gap-2">
-  <a href="/ru/molecule/UPEAOFCHTFWNFG-UHFFFAOYSA-N" class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-          <div class="flex flex-col">
-            
-
-<div class="flex flex-row items-center gap-2">
-    <img src="/_astro/isomerdesign_icon.722004d1.png" class="w-4 rounded" alt="isomerdesign"><h2 title="2Me3Ph glycidate" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight false">
-              2Me3Ph glycidate
-            </h2>
-</div>
-
-
-
-          </div>
-          <span class="flex items-center w-full lg:w-min">
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">3.2%</p>
-  <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
-      <div class="h-full rounded text-xs" style="width:3.203502745545433%;background-color:rgb(247, 8, 0)"></div>
+      <div class="h-full rounded text-xs" style="width:0.03451343711726584%;background-color:rgb(255, 0, 0)"></div>
   </div>
 </span>
         </a>
