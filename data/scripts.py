@@ -45,6 +45,7 @@ DOCKING_SITES = [
 ROWS_IDENTIFIER = [
 	"inchi",
 	"name",
+	"svg",
 	"psychonaut_names",
 	"tripsit_names",
 	"isomerd_names",
@@ -63,7 +64,6 @@ ROWS_IDENTIFIER = [
 ROWS_OTHER = [
 	"market_name",
 	"synonyms",
-	"svg",
 	"sdf",
 	"struct_sim",
 	"binding_sim",
@@ -114,8 +114,6 @@ def generate_jsons(
 		v['name'] = inchi_to_inchikey(idx2inchi[k])
 
 	for k, v in tqdm(output.items(), desc='Generating images'):
-		if v['nogen']: continue
-
 		svg_name = f"{v['name']}.svg"
 		sdf_name = f"{v['name']}.sdf"
 		
