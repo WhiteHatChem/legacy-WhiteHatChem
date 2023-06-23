@@ -5,10 +5,11 @@ import isomerdesign from '../../assets/img/isomerdesign_icon.png'
 import pubchem from '../../assets/img/pubchem_icon.png'
 import druglab from '../../assets/img/druglab.ico'
 import drugmap from '../../assets/img/drugmap.ico'
+import wikipedia from '../../assets/img/drugmap.ico'
 
 interface Props {
     name: string;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'none';
+    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki' | 'none';
     toxic?: boolean;
     metabolite?: boolean;
 }
@@ -40,6 +41,7 @@ function truncate(str: string, length: number) {
                   site === 'pubchem' ? pubchem :
                   site === 'druglab' ? druglab :
                   site === 'drugmap' ? drugmap :
+                  site === 'wiki' ? wikipedia :
                   ''
                 }
                 class="w-4 rounded"

@@ -1,11 +1,10 @@
 ---
-import CompoundName from './compound_id/CompoundName.astro';
 import PercentBar from './PercentBar.astro';
 import type { SimilarMolecule } from '../common/types';
 import { getLangFromUrl, i18n_href } from '../i18n/i18n';
 import CompoundNameList from './compound_id/CompoundNameList.astro';
-import CompoundNameLink from './compound_id/CompoundNameLink.astro';
 import CompoundNameLinks from './compound_id/CompoundNameLinks.astro';
+import ComponentSvg from './ComponentSvg.astro';
 
 export interface Props {
   sim: Array<SimilarMolecule>,
@@ -14,28 +13,86 @@ export interface Props {
 
 const { sim, filter } = Astro.props as Props;
 const lang = getLangFromUrl(Astro.url);
+
+let ordered_sim = sim.sort((a,b) => (filter(b.dist) - filter(a.dist)));
+let _sim = ordered_sim.map((x,i) => ({...x, idx: i+1}));
+const top3 = _sim.slice(0,3);
+const rest = _sim.slice(3);
 ---
 
-
 <div class="flex flex-col mt-4 gap-2">
-  { sim.sort((a,b) => (filter(b.dist) - filter(a.dist))).map((x) => {
-      const sim = filter(x.dist);
-      const { id, dist } = x;
-      return (
-        !id.search ? <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2">
-            <div class="flex flex-col">
-              <CompoundNameLinks id={id} />
+  <!-- TOP 3 -->
+  <div class="flex lg:flex-row flex-col lg:items-stretch gap-8">
+    {
+      top3.map((x,i) => {
+        const sim = filter(x.dist);
+        const { id, dist, idx } = x;
+        return (
+          !id.search ?
+            <div
+              class="flex flex-col items-center justify-between group m-4 p-4 border border-neutral-300 dark:border-neutral-600 hover:border-neutral-400 hover:dark:border-neutral-400 rounded-lg bg-neutral-200 dark:bg-neutral-800"
+            >
+              <div class="flex flex-row items-center grow">
+                <span class="mr-10 text-indigo-400 dark:text-indigo-200 text-3xl">{idx}</span>
+                <div class="flex flex-col">
+                  <CompoundNameLinks id={id} col={true}/>
+                </div>
+              </div>
+              <div class="w-full mt-4 border-t border-neutral-400/20 dark:border-neutral-600 mt-2">
+                <ComponentSvg svg={id.svg} name={id.name.toString()}/>
+              </div>
             </div>
-            <PercentBar sim={sim}/>
-        </div> : <a
-          href={i18n_href(`/molecule/${id.name}`, lang)}
-          class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16 border dark:border-neutral-600 rounded p-2"
-        >
-          <div class="flex flex-col">
-            <CompoundNameList id={id} />
-          </div>
-          <PercentBar sim={sim}/>
-        </a> 
-      )
+          :
+            <a
+              href={i18n_href(`/molecule/${id.name}`, lang)}
+              class="flex flex-col items-center justify-between group m-4 p-4 border border-neutral-300 dark:border-neutral-600 hover:border-neutral-400 hover:dark:border-neutral-400 rounded-lg bg-neutral-200 dark:bg-neutral-800"
+            >
+              <div class="flex flex-row items-center grow">
+                <span class="mr-10 text-indigo-400 dark:text-indigo-200 text-3xl">{idx}</span>
+                <div class="flex flex-col">
+                  <CompoundNameList id={id} />
+                </div>
+              </div>
+              <div class="w-full mt-4 pt-4 border-t border-neutral-400/20 dark:border-neutral-600 mt-2">
+                <ComponentSvg svg={id.svg} name={id.name.toString()}/>
+              </div>
+            </a>
+        )
+      })
+    }
+  </div>
+  <!-- REST -->
+
+  { rest.map((x,i) => {
+      const sim = filter(x.dist);
+      const { id, dist, idx } = x;
+      return <>
+        {
+          !id.search ?
+            <div class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
+              <div class="flex flex-row items-center justify-start w-full grow">
+                <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{idx}</span>
+                <div class="flex flex-col">
+                  <CompoundNameLinks id={id} />
+                </div>
+              </div>
+              <PercentBar sim={sim}/>
+            </div>
+          :
+            <a
+              href={i18n_href(`/molecule/${id.name}`, lang)}
+              class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
+            >
+              <div class="flex flex-row items-center justify-start w-full grow">
+                <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{idx}</span>
+                <div class="flex flex-col">
+                  <CompoundNameList id={id} />
+                </div>
+              </div>
+              <PercentBar sim={sim}/>
+            </a>
+        }
+        { i !== ordered_sim.length && <hr class="border-neutral-300 dark:border-neutral-600"/>}
+      </>
   })}
 </div>

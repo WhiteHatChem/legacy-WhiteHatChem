@@ -6,8 +6,8 @@ import CompoundNameList from './CompoundNameList.astro';
 
 type Props = MoleculeData;
 
-const { id, svg } = Astro.props;
-const { name } = id;
+const { id } = Astro.props;
+const { name, svg } = id;
 const lang = getLangFromUrl(Astro.url);
 ---
 

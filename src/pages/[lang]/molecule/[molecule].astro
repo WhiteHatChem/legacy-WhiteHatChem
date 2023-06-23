@@ -2,7 +2,6 @@
 import Base from '../../../layouts/Base.astro';
 import Main from '../../../layouts/Main.astro';
 import CompoundSimilarities from '../../../components/CompoundSimilarities.astro';
-import CompoundNameLink from '../../../components/compound_id/CompoundNameLink.astro';
 import TabGroup from '../../../components/TabGroup';
 import Reaction from '../../../components/Reaction.astro';
 import MoleculeViewer from '../../../components/MoleculeViewer';
@@ -27,7 +26,7 @@ const t = useTranslations(lang);
 const {
   id,
   market_name,
-  synonyms, svg,
+  synonyms,
   struct_sim, binding_sim, less_addictive_sim, less_addictive_predictive_sim, binding_affinities,
   solubility, solubility_comment,
   metabolism,
@@ -36,7 +35,7 @@ const {
 } = Astro.props as MoleculeData;
 
 const {
-  inchi, name,
+  inchi, name, svg,
   psychonaut_names,
   tripsit_names,
   isomerd_names,

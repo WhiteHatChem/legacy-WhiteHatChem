@@ -49,6 +49,7 @@ ROWS_IDENTIFIER = [
 	"psychonaut_names",
 	"tripsit_names",
 	"isomerd_names",
+	"wiki_name",
 	"isod_ids",
 	"druglab_names",
 	"druglab_href",

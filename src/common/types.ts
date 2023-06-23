@@ -3,6 +3,7 @@ export type Theme = "light" | "dark";
 export interface MoleculeIdentifier {
   inchi: string
   name: string
+  svg: string;
   psychonaut_names: string[] | null;
   tripsit_names: string[] | null;
   isomerd_names: string[] | null;
@@ -13,6 +14,7 @@ export interface MoleculeIdentifier {
   drugmap_name: string | null;
   hsdb_names: string[] | null;
   cid: number[] | null;
+  wiki_name: string[] | null;
   search: number;
   toxic: boolean
   metabolite: boolean
@@ -27,7 +29,6 @@ export interface MoleculeData {
   less_addictive_predictive_sim: Array<SimilarMolecule> | null;
   binding_affinities: { [key: string]: number } | null;
   synonyms: Array<string> | null;
-  svg: string;
   metabolism: {
     anterior: Array<Reaction> | null
     posterior: Array<Reaction> | null
