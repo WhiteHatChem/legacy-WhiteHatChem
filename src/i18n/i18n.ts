@@ -9,7 +9,7 @@ export const languages = {
   fr: 'Français',
   de:'Deutsch',
   es:'Español',
-  ru:'Pусский',
+  // ru:'Pусский',
 };
 
 export const languagesList = Object.keys(languages);
@@ -21,7 +21,7 @@ export const ui = {
   fr: fr_ui,
   de:de_ui,
   es:es_ui,
-  ru:ru_ui
+  // ru:ru_ui
 } as const;
 
 export type Lang = keyof typeof ui;
