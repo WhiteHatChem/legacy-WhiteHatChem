@@ -24,6 +24,7 @@ export interface MoleculeData {
   struct_sim: Array<SimilarMolecule> | null;
   binding_sim: Array<SimilarMolecule> | null;
   less_addictive_sim: Array<SimilarMolecule> | null;
+  less_addictive_predictive_sim: Array<SimilarMolecule> | null;
   binding_affinities: { [key: string]: number } | null;
   synonyms: Array<string> | null;
   svg: string;

@@ -68,6 +68,7 @@ ROWS_OTHER = [
 	"struct_sim",
 	"binding_sim",
 	"less_addictive_sim",
+	"less_addictive_predictive_sim",
 	"binding_affinities",
 	"metabolism",
 	"solubility",
@@ -168,6 +169,23 @@ def generate_jsons(
 			try:
 				other_molecule = output[str(idx)]
 				v['less_addictive_sim'].append({
+					'id':{k: other_molecule[k] for k in ROWS_IDENTIFIER},
+					'dist': dist
+				})
+			except KeyError:
+				print(f"KeyError: {idx} not found in output")
+
+
+	for k, v in tqdm(output.items(), desc='Generating less addictive affinities predicted'):
+		if v['nogen']: continue
+		if v['less_addictive_predictive_distances'] is None or v['less_addictive_predictive_indices'] is None: continue
+		if len(v['less_addictive_predictive_distances']) == 0 or len(v['less_addictive_predictive_indices']) == 0: continue
+
+		v['less_addictive_predictive_sim'] = []
+		for dist, idx in zip(v['less_addictive_predictive_distances'], v['less_addictive_predictive_indices']):
+			try:
+				other_molecule = output[str(idx)]
+				v['less_addictive_predictive_sim'].append({
 					'id':{k: other_molecule[k] for k in ROWS_IDENTIFIER},
 					'dist': dist
 				})
