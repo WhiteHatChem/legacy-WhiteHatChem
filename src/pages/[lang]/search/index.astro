@@ -23,6 +23,9 @@ function molecule_identifiers(molecule: MoleculeData) {
     if (id.tripsit_names) { names = names.concat(id.tripsit_names);}
     if (id.isomerd_names) { names = names.concat(id.isomerd_names);}
     if (id.hsdb_names) { names = names.concat(id.hsdb_names);}
+    if (id.druglab_names) { names = names.concat(id.druglab_names);}
+    if (id.drugmap_name) { names = names.concat(id.drugmap_name);}
+    if (id.wiki_name) { names = names.concat(id.wiki_name);}
 
     let identifiers= `${names.join('_')}_${molecule.synonyms?.join('_')}`
     return identifiers.toLowerCase();

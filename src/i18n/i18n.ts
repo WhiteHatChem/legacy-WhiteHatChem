@@ -7,7 +7,7 @@ import ru_ui from './ru';
 export const languages = {
   en: 'English',
   fr: 'Français',
-  de:'Deutsch',
+  // de:'Deutsch',
   es:'Español',
   // ru:'Pусский',
 };
@@ -19,7 +19,7 @@ export const defaultLang = 'en';
 export const ui = {
   en: en_ui,
   fr: fr_ui,
-  de:de_ui,
+  // de:de_ui,
   es:es_ui,
   // ru:ru_ui
 } as const;

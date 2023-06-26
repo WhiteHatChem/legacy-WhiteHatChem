@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max_old_space_size=32768\" astro dev",
+    "dev": "NODE_OPTIONS=\"--max_old_space_size=65536\" astro dev",
     "start": "astro dev",
-    "build": "NODE_OPTIONS=\"--max_old_space_size=32768\" astro build",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=65536\" astro build --experimental-static-build",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "gh-pages -d dist -t"
