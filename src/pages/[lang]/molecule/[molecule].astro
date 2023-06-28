@@ -149,8 +149,26 @@ const default_sim = (
             <ul class="mt-4" id="similarities-tab-content">
               <li class="w-full flex flex-col active" id="struct">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2 leading-snug">{t('molecule.sent1')}</span>
-                  {struct_sim ? <CompoundSimilarities sim={struct_sim} filter={x => 1/(1+Math.pow(x, -0.01))} />
-                  : <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent2')}</span>}
+                  <div class="w-full pt-4" />
+                  <TabGroup
+                    client:load
+                    defaultActiveTab="struct_main"
+                    tabs={[
+                      { id: 'struct_main', label: t('molecule.struct_tab1'), available: struct_sim !== null },
+                      { id: 'struct_dopa', label: t('molecule.struct_tab2'), available: less_addictive_predictive_sim !== null },
+                    ]}
+                    tabsSelector="#struct-tab-content>li"
+                  />
+                  <ul class="mt-4" id="struct-tab-content">
+                      {struct_sim && <li class="w-full flex flex-col active" id="struct_main">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent15')}</span>
+                          <CompoundSimilarities sim={struct_sim} filter={x => 1/(1+Math.pow(x, -0.5))} />
+                      </li>}
+                      {less_addictive_predictive_sim && <li class="w-full flex flex-col" id="struct_dopa">
+                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent16')}</span>
+                          <CompoundSimilarities sim={less_addictive_predictive_sim} filter={x => 1/(1+Math.pow(x, -0.5))}/>
+                      </li>}
+                  </ul>
               </li>
               <li class="w-full flex flex-col" id="affinity">
                   <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent3')}</span>
@@ -161,7 +179,6 @@ const default_sim = (
                     tabs={[
                       { id: 'dist_main', label: t('molecule.aff_tab1'), available: binding_sim !== null },
                       { id: 'dist_dopa', label: t('molecule.aff_tab2'), available: less_addictive_sim !== null },
-                      { id: 'dist_dopa_pred', label: t('molecule.aff_tab4'), available: less_addictive_predictive_sim !== null },
                       { id: 'profile', label: t('molecule.aff_tab3'), available: binding_affinities !== null },
                     ]}
                     tabsSelector="#nested-tab-content>li"
@@ -174,10 +191,6 @@ const default_sim = (
                       {less_addictive_sim && <li class="w-full flex flex-col" id="dist_dopa">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent5')}</span>
                           <CompoundSimilarities sim={less_addictive_sim} filter={x => 1/(1+Math.pow(x, -0.5))}/>
-                      </li>}
-                      {less_addictive_predictive_sim && <li class="w-full flex flex-col" id="dist_dopa_pred">
-                          <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent14')}</span>
-                          <CompoundSimilarities sim={less_addictive_predictive_sim} filter={x => 1/(1+Math.pow(x, -0.5))}/>
                       </li>}
                       {binding_affinities && <li class="w-full flex flex-col" id="profile">
                           <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent6')}</span>
