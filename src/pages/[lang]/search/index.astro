@@ -1,65 +1,25 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Main from '../../../layouts/Main.astro';
-import CompoundCard from '../../../components/compound_id/CompoundCard.astro';
+import { CompoundCard } from '../../../components/compound';
 import type { MoleculeData } from '../../../common/types';
 import { Lang, languagesList, useTranslations, i18n_href } from '../../../i18n/i18n';
-
-export async function getStaticPaths() {
-  return languagesList.map((lang) => ({
-    params: { lang: lang },
-  }));
-}
+import { postSearch } from '../../../common/api';
 
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 
-const molecules = await Astro.glob<MoleculeData>('../../../../data/json/*.json');
+const search = Astro.url.searchParams.get('q') || '';
+const page = parseInt(Astro.url.searchParams.get('p') || '0');
 
-function molecule_identifiers(molecule: MoleculeData) {
-    let names : Array<string> = [];
-    let id = molecule.id;
-    if (id.psychonaut_names) { names = names.concat(id.psychonaut_names);}
-    if (id.tripsit_names) { names = names.concat(id.tripsit_names);}
-    if (id.isomerd_names) { names = names.concat(id.isomerd_names);}
-    if (id.hsdb_names) { names = names.concat(id.hsdb_names);}
-    if (id.druglab_names) { names = names.concat(id.druglab_names);}
-    if (id.drugmap_name) { names = names.concat(id.drugmap_name);}
-    if (id.wiki_name) { names = names.concat(id.wiki_name);}
+const { data, done } = await postSearch(search, page);
 
-    let identifiers= `${names.join('_')}_${molecule.synonyms?.join('_')}`
-    return identifiers.toLowerCase();
-}
+const previousPage = (page > 0) ? (page - 1) : null;
+const nextPage = done ? null : page + 1;
+
+const previousHref = (previousPage !== null) ? i18n_href(`/search?q=${search}&p=${previousPage}`, lang) : null;
+const nextHref = (nextPage !== null) ? i18n_href(`/search?q=${search}&p=${nextPage}`, lang) : null;
 ---
-
-<script>
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
-    const searchBar = document.querySelector<HTMLInputElement>('#search')!;
-
-    function setQuery(query: string) {
-        searchBar.value = query;
-        const elements = document.querySelectorAll<HTMLElement>('.searchable');
-        elements.forEach(element => {
-            const text = element.id;
-            if (text.toLowerCase().includes(query.toLowerCase())) {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-    }
-
-    searchBar.addEventListener('input', (e) => {
-        const search = (e.target as HTMLInputElement).value;
-        setQuery(search);
-    });
-
-    let query = params.q || '';
-
-    setQuery(query);
-</script>
-
 
 <Base title="Compounds">
 	<Main>
@@ -72,34 +32,37 @@ function molecule_identifiers(molecule: MoleculeData) {
             </h1>
 
             <form action={i18n_href("/search", lang)} class="w-full flex flex-col items-center mb-16">
-              <div class="w-full max-w-lg flex items-center gap-2">
-                  <label for="search">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-neutral-600 dark:text-neutral-400">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                  </label>
-                  <input
-                      class="w-full text-xl outline-none bg-transparent border-b border-neutral-300 dark:border-neutral-600 focus:border-indigo-400 dark:focus:border-indigo-400"
-                      type="text"
-                      name="q"
-                      id="search"
-                      placeholder={t('search.placeholder')}
-                  />
-              </div>
-          </form>
+                <div class="w-full max-w-lg flex items-center gap-2">
+                    <label for="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-neutral-600 dark:text-neutral-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                          </svg>
+                    </label>
+                    <input
+                        class="w-full text-xl outline-none bg-transparent border-b border-neutral-300 dark:border-neutral-600 focus:border-indigo-400 dark:focus:border-indigo-400"
+                        type="text"
+                        name="q"
+                        id="search"
+                        value={search}
+                        placeholder={t('search.placeholder')}
+                    />
+                </div>
+            </form>
 
             <!-- NPS grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8 items-end">
                 {
-                    molecules.map((x: MoleculeData) => (
-                        <span
-                            id={molecule_identifiers(x)}
-                            class="searchable"
-                        >
-                            <CompoundCard {...x}/>
-                        </span>
-                    ))
+                  data.map((x: MoleculeData) =>
+                      <CompoundCard data={x} lang={lang}/>
+                  )
                 }
+            </div>
+
+            <!-- Page selection -->
+            <div class="flex gap-4 justify-center w-full lg:mt-12 mt-10">
+                {previousHref ? <a href={previousHref}>{previousPage}</a> : null}
+                <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> {page} </p>
+                {nextHref ? <a href={nextHref}>{nextPage}</a> : null}
             </div>
         </section>
 	</Main>

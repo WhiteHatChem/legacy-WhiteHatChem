@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "preact/hooks";
+import type { ComponentChildren } from "preact";
 
 interface MoleculeViewerProps {
-  svg: string | null;
+  children: ComponentChildren
   inchi: string;
 }
 
@@ -30,7 +31,7 @@ const useScript = (url: string) => {
   return scriptLoadedSuccessfully;
 }
 
-export default function MoleculeViewer({ svg, inchi }: MoleculeViewerProps) {
+export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [view3D, setView3D] = useState(false);
   const [SDF, setSDF] = useState<string | null>(null);
@@ -86,19 +87,7 @@ export default function MoleculeViewer({ svg, inchi }: MoleculeViewerProps) {
 
 
   return <div class="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
-    {
-      !view3D ? (
-        svg ? <img
-            class="dark:invert-[.8]"
-            src={`/svg/${svg}`}
-            alt={`depiction of ${svg}`}
-        /> : <span class="text-sm font-light text-red-400 my-auto">
-            img not found
-        </span>
-      ) : (
-        <div id="glmol" class="w-full h-[400px]"></div> 
-      )
-    }
+    { !view3D && children }
     <button
       onClick={() => setView3D(!view3D)}
       class={`

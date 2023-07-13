@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Main from '../../layouts/Main.astro';
 import { Lang, languagesList, useTranslations, i18n_href } from '../../i18n/i18n';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   return languagesList.map((lang) => ({
     params: { lang: lang },

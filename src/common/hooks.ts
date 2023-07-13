@@ -1,6 +1,6 @@
 // https://usehooks.com/useLocalStorage/
 
-import { useState } from "preact/hooks";
+import { useCallback, useState } from "preact/hooks";
 
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -60,3 +60,20 @@ export function useTheme(key: string, initialValue: string): [string, (value: st
 
   return [storedValue, setValue];
 };
+
+type DataLoaderState<T> = { state: "error", message: string } | { state: "loading" } | { state: "data", data: T }
+
+export function useDataLoader<T>() {
+  const [ state, setState ] = useState<DataLoaderState<T>>({ state: "loading"})
+  const setLoading = useCallback(() => {setState({state:'loading'})}, [setState]);
+  const setError = useCallback((m: string) => {setState({state:'error', message: m})}, [setState]);
+  const setData = useCallback((d: T) => {setState({state:'data', data: d})}, [setState]);
+  return {
+    error: state.state === "error" ? state : null,
+    loading: state.state === "loading" ? state : null,
+    data: state.state === "data" ? state : null,
+    setLoading: setLoading,
+    setError: setError,
+    setData: setData
+  }
+}

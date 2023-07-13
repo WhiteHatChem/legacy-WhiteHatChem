@@ -1,0 +1,76 @@
+import type { SimilarityType } from "../components/similarities";
+import type { MoleculeData, SimilarMolecules } from "./types";
+
+const SERVER = "http://whitehatchem.duckdns.org:8000";
+const PAGE_SIZE = 30;
+
+export function svg_path(_id: string): string {
+  return `${SERVER}/static/svg/${_id}.svg`;
+}
+
+export async function getMoleculeByInchikey(inchikey: string): Promise<Array<MoleculeData>> {
+  const r = await fetch(`${SERVER}/get/inchikey/${inchikey}`);
+  const data: Array<MoleculeData> = await r.json();
+  return data
+}
+
+export async function getMoleculeByID(_id: string): Promise<MoleculeData> {
+  const r = await fetch(`${SERVER}/get/_id/${_id}`);
+  const data: MoleculeData = await r.json();
+  return data
+}
+
+export async function postSearch(query: string, page: number) {
+  const r = await fetch(
+    `${SERVER}/search`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: query,
+        offset: page * PAGE_SIZE
+      }),
+    }
+  );
+  const data: Array<MoleculeData> = await r.json();
+  return {
+    data: data,
+    done: data.length < PAGE_SIZE
+  }
+}
+
+export async function getSimilarities(
+  mol_data: MoleculeData,
+  sim_type: SimilarityType,
+  addict: number,
+  clintox_pred: number,
+  rec_tox: number,
+  bbb_perm: boolean,
+  controller: AbortController
+): Promise<SimilarMolecules> {
+  const vector = (
+    sim_type === "docking" ? mol_data.embeddings.docking :
+    sim_type === "mol2vec" ? mol_data.embeddings.mol2vec :
+    null
+  )
+
+  const r = await fetch(
+    `${SERVER}/similar_search`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
+      body: JSON.stringify({
+        vector: vector,
+        similarity_type: sim_type,
+        addictive_prediction: addict,
+        clintox_pred: clintox_pred,
+        recursive_toxicity: rec_tox,
+        bbb_permeability: bbb_perm,
+        category: 'all'
+      }),
+    }
+  );
+  const data: SimilarMolecules = await r.json();
+  return data
+}

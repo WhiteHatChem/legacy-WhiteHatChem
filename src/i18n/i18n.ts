@@ -25,6 +25,7 @@ export const ui = {
 } as const;
 
 export type Lang = keyof typeof ui;
+export type LangKey = { lang: Lang };
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/');

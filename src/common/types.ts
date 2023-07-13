@@ -1,8 +1,8 @@
 export type Theme = "light" | "dark";
 
-export interface MoleculeIdentifier {
-  inchi: string
-  name: string
+export interface MoleculeData {
+  inchi: string;
+  _id: string;
   svg: string;
   psychonaut_names: string[] | null;
   tripsit_names: string[] | null;
@@ -18,21 +18,8 @@ export interface MoleculeIdentifier {
   search: number;
   toxic: boolean
   metabolite: boolean
-}
-
-export interface MoleculeData {
-  id: MoleculeIdentifier;
   market_name: string | null;
-  struct_sim: Array<SimilarMolecule> | null;
-  binding_sim: Array<SimilarMolecule> | null;
-  less_addictive_sim: Array<SimilarMolecule> | null;
-  less_addictive_predictive_sim: Array<SimilarMolecule> | null;
-  binding_affinities: { [key: string]: number } | null;
   synonyms: Array<string> | null;
-  metabolism: {
-    anterior: Array<Reaction> | null
-    posterior: Array<Reaction> | null
-  } | null,
   solubility: number|null;
   solubility_comment : string|null;
 	chemograph: boolean|null;
@@ -40,17 +27,16 @@ export interface MoleculeData {
 	recursive_toxicity: number|null; 
 	addictive_prediction: number|null;
 	bbb_permeability: number|null;
+  embeddings: {
+    docking: Array<number>,
+    mol2vec: Array<number>,
+  }
 }
 
 export interface Reaction {
   name: string;
   enzymes: Array<string>;
-  product: MoleculeIdentifier;
-}
-
-export interface SimilarMolecule {
-  id: MoleculeIdentifier;
-  dist: number
+  product: MoleculeData;
 }
 
 export interface Blog {
@@ -58,3 +44,5 @@ export interface Blog {
   date: string
   author: string
 }
+
+export type SimilarMolecules = Array<MoleculeData & { proximity_distance: number }>

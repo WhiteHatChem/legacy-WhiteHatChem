@@ -28,10 +28,10 @@ const t = useTranslations(lang);
                 </a>)
             : <CompoundName name={x.inchi} site="none"/>}
         </span> : <a
-            href={i18n_href(`/molecule/${x.name}`, lang)}
+            href={i18n_href(`/molecule/${x._id}`, lang)}
             class="group flex flex-row gap-2 items-center justify-between min-h-16 rounded p-2"
         >
-            <CompoundNameList id={x} />
+            <CompoundNameList data={x} />
         </a>}
     </div> 
     <div> {t('reaction.enzymes')}: <span class="text-neutral-600 dark:text-neutral-400">{reaction.enzymes.join(', ')}</span></div> 
