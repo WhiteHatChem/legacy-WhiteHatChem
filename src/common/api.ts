@@ -1,5 +1,5 @@
 import type { SimilarityType } from "../components/similarities";
-import type { MoleculeData, SimilarMolecules } from "./types";
+import type { MoleculeData, SimilarMolecules, Result } from "./types";
 
 const SERVER = "http://whitehatchem.duckdns.org:8000";
 const PAGE_SIZE = 30;
@@ -8,34 +8,52 @@ export function svg_path(_id: string): string {
   return `${SERVER}/static/svg/${_id}.svg`;
 }
 
-export async function getMoleculeByInchikey(inchikey: string): Promise<Array<MoleculeData>> {
-  const r = await fetch(`${SERVER}/get/inchikey/${inchikey}`);
-  const data: Array<MoleculeData> = await r.json();
-  return data
+export async function getMoleculeByInchikey(inchikey: string): Promise<Result<Array<MoleculeData>>> {
+  try {
+    const r = await fetch(`${SERVER}/get/inchikey/${inchikey}`);
+    const data: Array<MoleculeData> = await r.json();
+    return { _type:'data', data: data }
+  } catch (e: any) {
+    return { _type:'error', m: e.message}
+  }
 }
 
-export async function getMoleculeByID(_id: string): Promise<MoleculeData> {
-  const r = await fetch(`${SERVER}/get/_id/${_id}`);
-  const data: MoleculeData = await r.json();
-  return data
+export async function getMoleculeByID(_id: string): Promise<Result<MoleculeData>> {
+  try {
+    const r = await fetch(`${SERVER}/get/_id/${_id}`);
+    const data: MoleculeData = await r.json();
+    return { _type:'data', data: data }
+  } catch (e: any) {
+    return { _type:'error', m: e.message}
+  }
 }
 
-export async function postSearch(query: string, page: number) {
-  const r = await fetch(
-    `${SERVER}/search`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query: query,
-        offset: page * PAGE_SIZE
-      }),
+export async function postSearch(
+  query: string,
+  page: number
+) : Promise<Result<{data: MoleculeData[], done: boolean}>> {
+  try {
+    const r = await fetch(
+      `${SERVER}/search`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: query,
+          offset: page * PAGE_SIZE
+        }),
+      }
+    );
+    const data: Array<MoleculeData> = await r.json();
+    return {
+      _type: 'data',
+      data: {
+        data: data,
+        done: data.length < PAGE_SIZE
+      }
     }
-  );
-  const data: Array<MoleculeData> = await r.json();
-  return {
-    data: data,
-    done: data.length < PAGE_SIZE
+  } catch (e: any) {
+    return { _type:'error', m: e.message}
   }
 }
 

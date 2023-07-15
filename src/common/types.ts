@@ -46,3 +46,5 @@ export interface Blog {
 }
 
 export type SimilarMolecules = Array<MoleculeData & { proximity_distance: number }>
+
+export type Result<T> = { _type: 'error', m: string } | { _type: 'data', data: T};

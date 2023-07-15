@@ -10,27 +10,13 @@ import type { MoleculeData } from '../../../common/types';
 import { CompoundNameLinks, CompoundSvg } from '../../../components/compound';
 import { getMoleculeByID } from '../../../common/api';
 import { CompoundSimilarities } from '../../../components/similarities';
+import { ErrorMessage } from '../../../components/error';
 
 const { _id, lang } = Astro.params as { _id: string, lang: Lang };
 const t = useTranslations(lang);
 
-const data = await getMoleculeByID(_id);
+const result = await getMoleculeByID(_id);
 
-const {
-  inchi, svg,
-  psychonaut_names,
-  tripsit_names,
-  isomerd_names,
-  isod_ids,
-  druglab_names, druglab_href,
-  hsdb_names, cid,
-  search, toxic, metabolite,
-  market_name,
-  synonyms,
-  solubility, solubility_comment,
-	chemograph,
-	clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
-} = data;
 
 /*
 const default_sim = (
@@ -44,7 +30,24 @@ const default_sim = (
 
 <Base title="Compounds.">
 	<Main>
-        <section class="main-width mt-8">
+        { result._type === 'data' ? (() => {
+          const data = result.data;
+          const {
+            inchi, svg,
+            psychonaut_names,
+            tripsit_names,
+            isomerd_names,
+            isod_ids,
+            druglab_names, druglab_href,
+            hsdb_names, cid,
+            search, toxic, metabolite,
+            market_name,
+            synonyms,
+            solubility, solubility_comment,
+            chemograph,
+            clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
+          } = data;
+          return <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
                 <MoleculeViewer inchi={inchi} client:load>
                   <CompoundSvg _id={_id} />
@@ -128,6 +131,9 @@ const default_sim = (
             <b>{t('molecule.sent13')}</b>
           </p>
           <CompoundSimilarities data={data} lang={lang} client:load/>
+        </section>
+        })() : <section class="main-width">
+          <ErrorMessage message="Molecule not found" log={result.m} />}
         </section>
         <!--
         <section class="main-width flex flex-col items-left mt-16">
