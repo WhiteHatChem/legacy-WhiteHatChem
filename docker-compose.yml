@@ -1,11 +1,10 @@
 version: '3'
-name: 'whc_astro'
 
 services:
   astro:
     build: .
-    container_name: whc_astro
-    restart: unless_stopped
+    container_name: nodejs
+    restart: unless-stopped
     networks:
       - app-network
 
@@ -21,6 +20,7 @@ services:
       - ./conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
     depends_on:
       - astro
     networks:
@@ -35,7 +35,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email contact@whitehatchemistry.com --agree-tos --no-eff-email --staging -d whitehatchemistry.com  -d www.whitehatchemistry.com 
+    command: certonly --webroot --webroot-path=/var/www/html --email contact@whitehatchemistry.com --agree-tos --no-eff-email --force-renewal -d whitehatchemistry.com
 
 volumes:
   certbot-etc:
@@ -46,6 +46,13 @@ volumes:
       type: none
       device: .
       o: bind
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./conf/
+      o: bind
+
 
 networks:
   app-network:
