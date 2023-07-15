@@ -3,7 +3,7 @@ version: '3'
 services:
   astro:
     build: .
-    container_name: nodejs
+    container_name: astro
     restart: unless-stopped
     networks:
       - app-network
@@ -30,9 +30,9 @@ services:
     image: certbot/certbot:latest
     container_name: certbot
     volumes:
+      - web-root:/var/www/html
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - web-root:/var/www/html
     depends_on:
       - webserver
     command: certonly --webroot --webroot-path=/var/www/html --email contact@whitehatchemistry.com --agree-tos --no-eff-email --force-renewal -d whitehatchemistry.com
@@ -44,7 +44,6 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: .
       o: bind
   dhparam:
     driver: local
