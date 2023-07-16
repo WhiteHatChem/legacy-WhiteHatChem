@@ -52,23 +52,29 @@ const result = await postSearch(search, page);
 
               const previousHref = (previousPage !== null) ? i18n_href(`/search?q=${search}&p=${previousPage}`, lang) : null;
               const nextHref = (nextPage !== null) ? i18n_href(`/search?q=${search}&p=${nextPage}`, lang) : null;
-              return <>
-                <!-- NPS grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8 items-end">
-                    {
-                      data.map((x: MoleculeData) =>
-                          <CompoundCard data={x} lang={lang}/>
-                      )
-                    }
-                </div>
 
-                <!-- Page selection -->
-                <div class="flex gap-4 justify-center w-full lg:mt-12 mt-10">
-                    {previousHref ? <a href={previousHref}>{previousPage}</a> : null}
-                    <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> {page} </p>
-                    {nextHref ? <a href={nextHref}>{nextPage}</a> : null}
-                </div>
-              </>
+              const no_results = data.length === 0;
+              return (
+                no_results ? <div class="h-36">
+                  <p class="text-center italic text-neutral-400 dark:text-neutral-400/60">Example: alcohol, LSD, H4-CBD, 2cb-fly, ...</p>
+                </div> : <>
+                  <!-- NPS grid -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8 items-end">
+                      {
+                        data.map((x: MoleculeData) =>
+                            <CompoundCard data={x} lang={lang}/>
+                        )
+                      }
+                  </div>
+
+                  <!-- Page selection -->
+                  <div class="flex gap-4 justify-center w-full lg:mt-12 mt-10">
+                      {previousHref ? <a href={previousHref}>{previousPage}</a> : null}
+                      <p class="font-bold px-2 text-white bg-indigo-400 rounded-full"> {page} </p>
+                      {nextHref ? <a href={nextHref}>{nextPage}</a> : null}
+                  </div>
+                </>
+              )
             })() : <ErrorMessage message="Couldn't fetch data" log={result.m} />}
         </section>
 	</Main>

@@ -133,8 +133,9 @@ const default_sim = (
           <CompoundSimilarities data={data} lang={lang} client:load/>
         </section>
         })() : <section class="main-width">
-          <ErrorMessage message="Molecule not found" log={result.m} />}
+          <ErrorMessage message="Molecule not found" log={result.m} />
         </section>
+      }
         <!--
         <section class="main-width flex flex-col items-left mt-16">
           <h2 class="font-bold text-2xl mb-6">{t('molecule.similarities')}</h2>

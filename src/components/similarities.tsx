@@ -4,13 +4,7 @@ import { i18n_href, type LangKey } from "../i18n/i18n";
 import type { ComponentChildren } from "preact";
 import { getSimilarities } from "../common/api";
 import { CompoundNameLinks, CompoundNameList } from "./compound";
-import { useCallback } from "react";
 import { useDataLoader } from "../common/hooks";
-
-
-interface ICompoundSimilarities {
-  data: MoleculeData
-}
 
 export type SimilarityType = "docking" | "mol2vec"
 
@@ -20,7 +14,14 @@ function sim2string(sim: SimilarityType): string {
   return ""
 }
 
+
+interface ICompoundSimilarities {
+  data: MoleculeData
+}
+
 export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & LangKey) => {
+  const [ more_options, set_more_options ] = useState<boolean>(false);
+
   const [ sim_type, set_sim_type ] = useState<SimilarityType>("docking");
   const [ addict, set_addict ] = useState<number>(1.);
   const [ clintox_pred, set_clintox_pred ] = useState<number>(1.);
@@ -65,23 +66,40 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
         </select>
       </div> 
 
-      <RangeSlider name="sim_type" value={addict} set_value={set_addict} min={0.} max={1.}>
-        Max predicted addictivity
-      </RangeSlider>
 
-      <RangeSlider name="clintox_pred" value={clintox_pred} set_value={set_clintox_pred} min={0.} max={1.}>
-        Max clinical toxicity 
-      </RangeSlider>
+      <button className="flex items-center gap-1 text-left text-indigo-400" onClick={() => {set_more_options(!more_options)}}>
+        More options
+        {
+          more_options ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+          </svg> : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+            <path fillRule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clipRule="evenodd" />
+          </svg>
 
-      <RangeSlider name="rec_tox" value={rec_tox} set_value={set_rec_tox} min={0.} max={1.}>
-        Max clinical toxicity 
-      </RangeSlider>
+        }
+      </button>
+      {
+        more_options ? <>
+          <RangeSlider name="sim_type" value={addict} set_value={set_addict} min={0.} max={1.}>
+            Max predicted addictivity
+          </RangeSlider>
 
-      <Toggle name='bbb_perm' value={bbb_perm} set_value={set_bbb_perm}>
-        BBB Permeability
-      </Toggle>
+          <RangeSlider name="clintox_pred" value={clintox_pred} set_value={set_clintox_pred} min={0.} max={1.}>
+            Max clinical toxicity 
+          </RangeSlider>
+
+          <RangeSlider name="rec_tox" value={rec_tox} set_value={set_rec_tox} min={0.} max={1.}>
+            Max clinical toxicity 
+          </RangeSlider>
+
+          <Toggle name='bbb_perm' value={bbb_perm} set_value={set_bbb_perm}>
+            BBB Permeability
+          </Toggle>
+        </> : null
+      }
     </div>
-    <p>Here are the most similar molecules satisfying the given constraints:</p>
+    <hr className="m-4 border-neutral-600"/>
+    <p className="">Here are the most similar molecules satisfying the given constraints:</p>
     <div class="flex flex-col mt-4 gap-2">
 
       { sim_loader.data ? sim_loader.data.data.map((x,i) => {
