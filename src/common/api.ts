@@ -1,7 +1,7 @@
 import type { SimilarityType } from "../components/similarities";
 import type { MoleculeData, SimilarMolecules, Result } from "./types";
 
-const SERVER = "http://whitehatchem.duckdns.org:8000";
+const SERVER = "http://api.whitehatchemistry.com:8000";
 const PAGE_SIZE = 30;
 
 export function svg_path(_id: string): string {
@@ -53,6 +53,7 @@ export async function postSearch(
       }
     }
   } catch (e: any) {
+    console.log(e);
     return { _type:'error', m: e.message}
   }
 }
