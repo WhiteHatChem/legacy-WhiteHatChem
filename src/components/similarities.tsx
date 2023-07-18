@@ -140,7 +140,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
     <p className="">Here are the most similar molecules satisfying the given constraints:</p>
     <div class="flex flex-col mt-4 gap-2">
 
-      { sim_loader.data ? sim_loader.data.data.map((x,i) => {
+      { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {
           const sim = filter(x.proximity_distance);
           return <>
             {
