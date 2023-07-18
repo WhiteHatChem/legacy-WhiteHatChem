@@ -4,6 +4,7 @@ import Main from '../../layouts/Main.astro';
 
 import screenshot from '../../assets/img/website_screen.png'
 import { Lang, i18n_href, languagesList, useTranslations } from '../../i18n/i18n';
+import { WLink } from '../../components/components';
 
 export const prerender = true;
 
@@ -121,10 +122,10 @@ const t = useTranslations(lang);
 				py-28 lg:py-24
 			">
 				<div class="main-width text-justify flex flex-col gap-8">
-					<h2 class="text-xl lg:text-xl font-bold text-neutral-800 dark:text-neutral-200">
+					<h2 class="text-xl lg:text-xl font-bold text-neutral-800 dark:text-neutral-200 text-center">
 						{t('home.why')}
 					</h2>
-					<p class="text-neutral-600 dark:text-neutral-400 leading-snug">
+					<p class="text-neutral-600 dark:text-neutral-400 leading-snug text-center">
 						{t('home.sent4')}
 					</p>
 				</div>
@@ -136,8 +137,36 @@ const t = useTranslations(lang);
 				dark:from-transparent dark:via-transparent dark:to-transparent
 				flex justify-center
 			">
-
+        <div class="main-width grid grid-cols-3">
+          <div class="px-4 border-r dark:border-neutral-800">
+            <svg class="w-12 h-12 mb-4 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+            <div class="font-semibold mb-2">Compound Analysis API</div>
+            <p class="leading-snug text-neutral-800 dark:text-neutral-200">Our <WLink href="/api">powerful API</WLink> allows seamless integration of your systems to analyze your own compounds. Leveraging advanced deep-learning models, we offer rapid and accurate analysis that can streamline your research and reduce time to discovery.</p>
+          </div>
+          <div class="px-4 border-r dark:border-neutral-800">
+            <svg class="w-12 h-12 mb-4 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /> </svg>
+            <div class="font-semibold mb-2">Reliable NPS Database</div>
+            <p class="leading-snug text-neutral-800 dark:text-neutral-200">Gain access to our <WLink href="/api">comprehensive database</WLink> of NPS molecules, meticulously compiled and continually updated. This resource provides extensive information on molecular properties, toxicity, metabolism, and more, serving as a valuable foundation for your research.</p>
+          </div>
+          <div class="mx-4">
+            <svg class="w-12 h-12 mb-4 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/><path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2"/></svg>
+            <div class="font-semibold mb-2">Spectral Identification</div>
+            <p class="leading-snug text-neutral-800 dark:text-neutral-200">Our innovative spectral identification tool uses machine learning algorithms to swiftly and reliably identify compounds, through robust prediction of their infrared spectra</p>
+          </div>
+        </div>
 			</section>
+
+      <section class="flex flex-col items-center main-width px-16 pt-32 lg:pt-36 mb-48">
+        <h1 class="font-bold text-3xl text-center">Get started with us today and gain access to our extensive database and tools for a safer and more informed approach to NPS.</h1>
+        <p class="pt-8 text-xl text-center">Have questions, suggestions, or need more information about our services? <br/> We'd love to hear from you.</p>
+        <a
+          class="mt-8 rounded-lg bg-indigo-400 px-6 py-3 text-white font-bold text-xl"
+          target="_blank"
+          href="mailto:whitehatchem@gmail.com"
+        >
+          Reach us
+        </a>
+      </section>
 
 		</main>
 	</Main>

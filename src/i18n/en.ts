@@ -5,7 +5,7 @@ export default {
   'home.reachus': "Reach us",
   'home.latest': "Latest Research",
   'home.explore': "Explore",
-  'home.why': "Why this platform?",
+  'home.why': "Our mission",
   'home.discord': "Join the community on Discord",
   'home.hero1': "Keeping up with the",
   'home.hero2': "ever-changing",
@@ -60,7 +60,7 @@ export default {
   'layout.about': 'About',
   'layout.blog': 'Blog',
 
-  'support.sent1': 'If you like what we do, you can support us by donating here',
+  'support.sent1': 'Your financial contributions directly support our research and development, allowing us to continuously improve our services. If you appreciate our mission and find this site useful, consider making a donation to help us maintain and enhance our tools and resources.',
 
   'blog.sent1': 'Here you will find a collection of informative and interesting articles on a variety of topics related to our latest findings for WHC.',
 
