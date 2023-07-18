@@ -47,6 +47,26 @@ export const CategoryItem = ({ cat }: ICategoryItem) => {
   </a>
 }
 
+interface ICategoryGrid {
+  cat: Record<Category, boolean>
+}
+
+export const CategoryGrid = ({ cat }: ICategoryGrid) => {
+  return <div class="grid grid-cols-2 lg:grid-cols-3 text-sm gap-1">
+    {(Object.keys(cat) as Category[]).map((key, i) => (
+      <a
+        href={CATEGORIES[key]}
+        class={`
+          px-2 py-1 rounded-md text-center break-words
+          ${cat[key] && 'bg-green-200 hover:bg-green-300 dark:bg-green-800 hover:dark:bg-green-700'}
+          ${!cat[key] && 'bg-red-200 hover:bg-red-300 dark:bg-red-800 hover:dark:bg-red-700'}
+        `}
+      >
+        {cat2name(key)}
+      </a>
+    ))}
+  </div>
+}
 
 interface ICategoryToggle {
   cat: Category
