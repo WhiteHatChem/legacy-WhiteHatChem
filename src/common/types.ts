@@ -1,3 +1,4 @@
+import type { Category } from "../components/categories"
 export type Theme = "light" | "dark";
 
 export interface MoleculeData {
@@ -27,10 +28,11 @@ export interface MoleculeData {
 	recursive_toxicity: number|null; 
 	addictive_prediction: number|null;
 	bbb_permeability: number|null;
+  categories: Record<Category, boolean>;
   embeddings: {
     docking: Array<number>,
     mol2vec: Array<number>,
-  }
+  };
 }
 
 export interface Reaction {
@@ -47,4 +49,4 @@ export interface Blog {
 
 export type SimilarMolecules = Array<MoleculeData & { proximity_distance: number }>
 
-export type Result<T> = { _type: 'error', m: string } | { _type: 'data', data: T};
+export type Result<T> = { _type: 'error', m: string } | { _type: 'data', data: T};

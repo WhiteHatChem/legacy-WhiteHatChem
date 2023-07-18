@@ -61,11 +61,12 @@ export async function postSearch(
 export async function getSimilarities(
   mol_data: MoleculeData,
   sim_type: SimilarityType,
-  addict: number,
-  clintox_pred: number,
-  rec_tox: number,
-  bbb_perm: boolean,
-  controller: AbortController
+  addict: number | null,
+  clintox_pred: number | null,
+  rec_tox: number | null,
+  bbb_perm: boolean | null,
+  controller: AbortController,
+  category: string
 ): Promise<SimilarMolecules> {
   const vector = (
     sim_type === "docking" ? mol_data.embeddings.docking :
@@ -86,7 +87,7 @@ export async function getSimilarities(
         clintox_pred: clintox_pred,
         recursive_toxicity: rec_tox,
         bbb_permeability: bbb_perm,
-        category: 'all'
+        category: category
       }),
     }
   );

@@ -1,13 +1,47 @@
 ---
 import AffinitiesSpider from './AffinitiesSpider.astro';
 export interface Props {
-  affinities: { [key: string]: number };
+  embedding: Array<number>
 }
 
-const { affinities } = Astro.props as Props;
+const DOCKING_SITES = [
+  'AF-A5X5Y0-F1-model_v1_box_0', 'AF-A5X5Y0-F1-model_v1_box_2',
+  'AF-A5X5Y0-F1-model_v1_box_3', 'AF-A5X5Y0-F1-model_v1_box_4',
+  'AF-O95264-F1-model_v1_box_2', 'AF-O95264-F1-model_v1_box_3',
+  'AF-P08588-F1-model_v1_box_1', 'AF-P08588-F1-model_v1_box_2',
+  'AF-P08588-F1-model_v1_box_5', 'AF-P08908-F1-model_v1_box_0',
+  'AF-P08908-F1-model_v1_box_10', 'AF-P08908-F1-model_v1_box_2',
+  'AF-P08908-F1-model_v1_box_3', 'AF-P08908-F1-model_v1_box_4',
+  'AF-P08908-F1-model_v1_box_7', 'AF-P13945-F1-model_v1_box_1',
+  'AF-P13945-F1-model_v1_box_3', 'AF-P13945-F1-model_v1_box_6',
+  'AF-P13945-F1-model_v1_box_8', 'AF-P18089-F1-model_v1_box_1',
+  'AF-P18089-F1-model_v1_box_2', 'AF-P18089-F1-model_v1_box_3',
+  'AF-P18089-F1-model_v1_box_5', 'AF-P21728-F1-model_v1_box_10',
+  'AF-P21728-F1-model_v1_box_4', 'AF-P21728-F1-model_v1_box_9',
+  'AF-P21918-F1-model_v1_box_4', 'AF-P21918-F1-model_v1_box_6',
+  'AF-P21918-F1-model_v1_box_8', 'AF-P25100-F1-model_v1_box_11',
+  'AF-P25100-F1-model_v1_box_12', 'AF-P25100-F1-model_v1_box_3',
+  'AF-P25100-F1-model_v1_box_5', 'AF-P25100-F1-model_v1_box_6',
+  'AF-P25100-F1-model_v1_box_8', 'AF-P28221-F1-model_v1_box_0',
+  'AF-P28221-F1-model_v1_box_1', 'AF-P28221-F1-model_v1_box_2',
+  'AF-P28221-F1-model_v1_box_3', 'AF-P28566-F1-model_v1_box_2',
+  'AF-P46098-F1-model_v1_box_5', 'AF-P46098-F1-model_v1_box_7',
+  'AF-Q9Y2T6-F1-model_v1_box_3', 'P08913_6KUX_A_box_0',
+  'P08913_6KUX_A_box_1', 'P14416_6CM4_A_box_0', 'P14416_6CM4_A_box_6',
+  'P18825_6KUW_A_box_0', 'P18825_6KUW_A_box_1', 'P21917_5WIU_A_box_0',
+  'P21917_5WIU_A_box_2', 'P28222_4IAR_A_box_0', 'P28222_4IAR_A_box_1',
+  'P28223_6WGT_C_box_2', 'P28223_6WGT_C_box_4', 'P28335_6BQH_A_box_0',
+  'P28335_6BQH_A_box_2', 'P28335_6BQH_A_box_5', 'P35462_3PBL_A_box_0',
+  'P35462_3PBL_A_box_3', 'P41595_4IB4_A_box_0'
+]
+
+const { embedding } = Astro.props as Props;
+const affinities = DOCKING_SITES.map((x, i) => [x, embedding[i]] as const);
+
+console.log(embedding.length, DOCKING_SITES.length);
 
 // Group affinities by protein prefix
-const grouped_affinities = Object.entries(affinities).reduce((acc, [key, value]) => {
+const grouped_affinities = affinities.reduce((acc, [key, value]) => {
     let protein = '';
     let docking_site = '';
     let score = value;
@@ -26,6 +60,7 @@ const grouped_affinities = Object.entries(affinities).reduce((acc, [key, value])
     return acc;
 }, {} as { [key: string]: { site: string; value: number }[] });
 
+console.log(grouped_affinities)
 const protein2url = (protein : string) => {
   const docking_type = protein[0];
   const id = docking_type === 'P' ? protein.split('_')[1] : protein.split('-')[1];

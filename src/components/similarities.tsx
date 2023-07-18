@@ -5,6 +5,7 @@ import type { ComponentChildren } from "preact";
 import { getSimilarities } from "../common/api";
 import { CompoundNameLinks, CompoundNameList } from "./compound";
 import { useDataLoader } from "../common/hooks";
+import { CATEGORIES, Category, CategoryItem, cat2name } from "./categories";
 
 export type SimilarityType = "docking" | "mol2vec"
 
@@ -14,6 +15,11 @@ function sim2string(sim: SimilarityType): string {
   return ""
 }
 
+const DEFAULT_ADDICT = 1.;
+const DEFAULT_CLINTOX_PRED = 1.;
+const DEFAULT_REC_TOX = 1.;
+
+function check_default<T>(val: T, def: T): T | null { return (val === def) ? null : val; }
 
 interface ICompoundSimilarities {
   data: MoleculeData
@@ -23,10 +29,12 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
   const [ more_options, set_more_options ] = useState<boolean>(false);
 
   const [ sim_type, set_sim_type ] = useState<SimilarityType>("docking");
-  const [ addict, set_addict ] = useState<number>(1.);
-  const [ clintox_pred, set_clintox_pred ] = useState<number>(1.);
-  const [ rec_tox, set_rec_tox ] = useState<number>(1.);
-  const [ bbb_perm, set_bbb_perm ] = useState<boolean>(true);
+  const [ addict, set_addict ] = useState<number>(DEFAULT_ADDICT);
+  const [ clintox_pred, set_clintox_pred ] = useState<number>(DEFAULT_CLINTOX_PRED);
+  const [ rec_tox, set_rec_tox ] = useState<number>(DEFAULT_REC_TOX);
+  const [ bbb_perm, set_bbb_perm ] = useState<boolean>(false);
+  const [ cat, set_cat ] = useState<string>("all");
+  const [ showcat, set_showcat] = useState<boolean>(false);
 
   const sim_loader = useDataLoader<SimilarMolecules>();
 
@@ -37,7 +45,15 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
     let handler = async () => {
       sim_loader.setLoading();
       try {
-        const _data = await getSimilarities( data, sim_type, addict, clintox_pred, rec_tox, bbb_perm, abortController );
+        const _data = await getSimilarities(
+          data, sim_type,
+          check_default(addict, DEFAULT_ADDICT),
+          check_default(clintox_pred, DEFAULT_CLINTOX_PRED),
+          check_default(rec_tox, DEFAULT_REC_TOX),
+          bbb_perm ? false : null,
+          abortController,
+          cat
+        );
         sim_loader.setData(_data)
       } catch (e: any) {
         sim_loader.setError(e.message)
@@ -48,14 +64,14 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
     return () => {
       abortController.abort()
     }
-  }, [sim_type, addict, clintox_pred, rec_tox, bbb_perm])
+  }, [sim_type, addict, clintox_pred, rec_tox, bbb_perm, cat])
 
   return <div class="flex flex-col gap-2">
     <div class="flex flex-col gap-2">
 
 
       <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
-        <label for={sim_type}>Similarity type</label>
+        <label for="sim_type">Similarity type</label>
         <select
           id="sim_type"
           onChange={(e:any) => {set_sim_type(e.target.value)}}
@@ -93,8 +109,29 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           </RangeSlider>
 
           <Toggle name='bbb_perm' value={bbb_perm} set_value={set_bbb_perm}>
-            BBB Permeability
+            No BBB Permeability
           </Toggle>
+
+          <div class="rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2">
+            <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 lg:flex-row">
+              <label for="category">Compound category</label>
+              <select
+                id="category"
+                onChange={(e:any) => {set_cat(e.target.value)}}
+                class="py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
+              >
+                <option value="all">All</option>
+                {(Object.keys(CATEGORIES) as Category[]).map((key, i) => <option value={key}>{cat2name(key)}</option>)}
+              </select>
+
+            </div>
+            <div class="flex flex-col">
+              <button onClick={() => set_showcat(!showcat)} class="text-center text-sm dark:text-neutral-400 hover:text-neutral-200">Learn more about each category</button>
+              { showcat && <span class="flex flex-wrap gap-2 dark:text-neutral-200 mt-4">
+                {(Object.keys(CATEGORIES) as Category[]).map((key, i) => <CategoryItem cat={key}/>)}
+              </span>}
+            </div>
+          </div> 
         </> : null
       }
     </div>

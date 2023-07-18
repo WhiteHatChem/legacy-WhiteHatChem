@@ -8,6 +8,7 @@ import ProteinAffinities from '../../../components/ProteinAffinities.astro';
 import { languagesList, useTranslations, Lang, i18n_href } from '../../../i18n/i18n';
 import type { MoleculeData } from '../../../common/types';
 import { CompoundNameLinks, CompoundSvg } from '../../../components/compound';
+import { Category, CategoryItem } from '../../../components/categories';
 import { getMoleculeByID } from '../../../common/api';
 import { CompoundSimilarities } from '../../../components/similarities';
 import { ErrorMessage } from '../../../components/error';
@@ -46,6 +47,7 @@ const default_sim = (
             solubility, solubility_comment,
             chemograph,
             clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
+            categories, embeddings
           } = data;
           return <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
@@ -73,8 +75,13 @@ const default_sim = (
                         </p>
                     }
 
-                    {
-                    }
+                    <p class="break-all leading-snug text-sm">
+                        <span class="">Categories:</span>
+                        <span class="font-gray font-light text-neutral-800 dark:text-neutral-200 leading-8">
+                          {(Object.keys(categories) as Category[]).filter((key, i) => categories[key]).map((key, i) => <CategoryItem cat={key}/>)}
+                        </span>
+                    </p>
+
                     <hr/>
                     <p class="text-center mt-4">Estimated data</p>
                     {
@@ -131,6 +138,17 @@ const default_sim = (
             <b>{t('molecule.sent13')}</b>
           </p>
           <CompoundSimilarities data={data} lang={lang} client:load/>
+        </section>
+
+        <section class="main-width flex flex-col items-left mt-16">
+          <h2 class="font-bold text-2xl mb-6">{t('molecule.affinities')}</h2>
+          <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
+            {t('molecule.sent6')}
+          </p>
+          <div class="w-full flex flex-col" id="profile">
+            <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent6')}</span>
+            <ProteinAffinities embedding={embeddings.docking} />
+          </div>
         </section>
         })() : <section class="main-width">
           <ErrorMessage message="Molecule not found" log={result.m} />
