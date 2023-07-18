@@ -87,7 +87,7 @@ export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps)
 
 
   return <div class="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
-    { !view3D && children }
+    { !view3D ? children : <div id="glmol" class="w-full h-[400px]"/> }
     <button
       onClick={() => setView3D(!view3D)}
       class={`
