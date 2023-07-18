@@ -202,7 +202,7 @@ interface IRangeSlider {
   children: ComponentChildren
 }
 export const RangeSlider = ({name, value, set_value, min, max, children}: IRangeSlider) => {
-  const step = (max-min) / 100.;
+  const step = (max-min) / 10.;
   return <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
     <label for={name}>{children}</label>
     <div class="flex gap-2">
