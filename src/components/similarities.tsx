@@ -29,7 +29,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
   const docking = data.embeddings.docking !== null;
   const [ more_options, set_more_options ] = useState<boolean>(false);
 
-  const [ sim_type, set_sim_type ] = useState<SimilarityType>(docking ? "docking" : "mol2vec");
+  const [ sim_type, set_sim_type ] = useState<SimilarityType>("mol2vec");
   const [ addict, set_addict ] = useState<number>(DEFAULT_ADDICT);
   const [ clintox_pred, set_clintox_pred ] = useState<number>(DEFAULT_CLINTOX_PRED);
   const [ rec_tox, set_rec_tox ] = useState<number>(DEFAULT_REC_TOX);
@@ -106,7 +106,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           </RangeSlider>
 
           <RangeSlider name="rec_tox" value={rec_tox} set_value={set_rec_tox} min={0.} max={1.}>
-            Max clinical toxicity 
+            Max recursive toxicity
           </RangeSlider>
 
           <Toggle name='bbb_perm' value={bbb_perm} set_value={set_bbb_perm}>
