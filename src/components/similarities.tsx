@@ -126,7 +126,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
 
             </div>
             <div class="flex flex-col">
-              <button onClick={() => set_showcat(!showcat)} class="text-center text-sm dark:text-neutral-400 hover:text-neutral-200">Learn more about each category</button>
+              <button onClick={() => set_showcat(!showcat)} class="text-center text-sm text-neutral-800 hover:text-neutral-600 dark:text-neutral-400 hover:dark:text-neutral-200">Learn more about each category</button>
               { showcat && <span class="flex flex-wrap gap-2 dark:text-neutral-200 mt-4">
                 {(Object.keys(CATEGORIES) as Category[]).map((key, i) => <CategoryItem cat={key}/>)}
               </span>}
