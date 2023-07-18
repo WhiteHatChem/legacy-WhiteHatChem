@@ -26,9 +26,10 @@ interface ICompoundSimilarities {
 }
 
 export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & LangKey) => {
+  const docking = data.embeddings.docking !== null;
   const [ more_options, set_more_options ] = useState<boolean>(false);
 
-  const [ sim_type, set_sim_type ] = useState<SimilarityType>("docking");
+  const [ sim_type, set_sim_type ] = useState<SimilarityType>(docking ? "docking" : "mol2vec");
   const [ addict, set_addict ] = useState<number>(DEFAULT_ADDICT);
   const [ clintox_pred, set_clintox_pred ] = useState<number>(DEFAULT_CLINTOX_PRED);
   const [ rec_tox, set_rec_tox ] = useState<number>(DEFAULT_REC_TOX);
@@ -77,8 +78,8 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           onChange={(e:any) => {set_sim_type(e.target.value)}}
           class="px-4 py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
         >
-          <option value="docking">{sim2string("docking")}</option>
           <option value="mol2vec">{sim2string("mol2vec")}</option>
+          {docking ? <option value="docking">{sim2string("docking")}</option> : null}
         </select>
       </div> 
 

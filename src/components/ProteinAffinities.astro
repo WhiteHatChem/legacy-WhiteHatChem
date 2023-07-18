@@ -38,7 +38,6 @@ const DOCKING_SITES = [
 const { embedding } = Astro.props as Props;
 const affinities = DOCKING_SITES.map((x, i) => [x, embedding[i]] as const);
 
-console.log(embedding.length, DOCKING_SITES.length);
 
 // Group affinities by protein prefix
 const grouped_affinities = affinities.reduce((acc, [key, value]) => {
@@ -60,7 +59,6 @@ const grouped_affinities = affinities.reduce((acc, [key, value]) => {
     return acc;
 }, {} as { [key: string]: { site: string; value: number }[] });
 
-console.log(grouped_affinities)
 const protein2url = (protein : string) => {
   const docking_type = protein[0];
   const id = docking_type === 'P' ? protein.split('_')[1] : protein.split('-')[1];

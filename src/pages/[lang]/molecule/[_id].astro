@@ -49,7 +49,8 @@ const default_sim = (
             clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
             categories, embeddings
           } = data;
-          return <section class="main-width mt-8">
+          return <>
+          <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
                 <MoleculeViewer inchi={inchi} client:load>
                   <CompoundSvg _id={_id} />
@@ -126,31 +127,30 @@ const default_sim = (
                     }
                 </div>
             </div>
-        </section>
+          </section>
 
 
-        <section class="main-width flex flex-col items-left mt-16">
-          <h2 class="font-bold text-2xl mb-6">{t('molecule.similarities')}</h2>
-          <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
-            {t('molecule.sent10')}
-            <a class="underline" href={i18n_href('/blog', lang)}>{t('molecule.sent11')}</a>
-            {t('molecule.sent12')}
-            <b>{t('molecule.sent13')}</b>
-          </p>
-          <CompoundSimilarities data={data} lang={lang} client:load/>
-        </section>
+          <section class="main-width flex flex-col items-left mt-16">
+            <h2 class="font-bold text-2xl mb-6">{t('molecule.similarities')}</h2>
+            <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
+              {t('molecule.sent10')}
+              <a class="underline" href={i18n_href('/blog', lang)}>{t('molecule.sent11')}</a>
+              {t('molecule.sent12')}
+              <b>{t('molecule.sent13')}</b>
+            </p>
+            <CompoundSimilarities data={data} lang={lang} client:load/>
+          </section>
 
-        <section class="main-width flex flex-col items-left mt-16">
-          <h2 class="font-bold text-2xl mb-6">{t('molecule.affinities')}</h2>
-          <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
-            {t('molecule.sent6')}
-          </p>
-          <div class="w-full flex flex-col" id="profile">
-            <span class="text-neutral-600 dark:text-neutral-400 text-sm mt-2">{t('molecule.sent6')}</span>
-            <ProteinAffinities embedding={embeddings.docking} />
-          </div>
-        </section>
-        })() : <section class="main-width">
+          {(embeddings.docking !== null) && <section class="main-width flex flex-col items-left mt-16">
+            <h2 class="font-bold text-2xl mb-6">{t('molecule.affinities')}</h2>
+            <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
+              {t('molecule.sent6')}
+            </p>
+            <div class="w-full flex flex-col">
+              <ProteinAffinities embedding={embeddings.docking} />
+            </div>
+          </section>}
+        </>})() : <section class="main-width">
           <ErrorMessage message="Molecule not found" log={result.m} />
         </section>
       }

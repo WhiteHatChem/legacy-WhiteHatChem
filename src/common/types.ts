@@ -30,7 +30,7 @@ export interface MoleculeData {
 	bbb_permeability: number|null;
   categories: Record<Category, boolean>;
   embeddings: {
-    docking: Array<number>,
+    docking: Array<number> | null,
     mol2vec: Array<number>,
   };
 }
