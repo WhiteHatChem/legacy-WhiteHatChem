@@ -137,7 +137,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
             No BBB Permeability
           </Toggle>
 
-          <div class="border dark:border-neutral-800 rounded-lg p-2">
+          <div class="border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
             <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 lg:flex-row">
               <label for="category">Compound category</label>
               <select
@@ -192,7 +192,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
                   <PercentBar x={sim}/>
                 </a>
             }
-            { i+1 < sim_loader.data!.data.length && <hr class="border-neutral-300 dark:border-neutral-600"/>}
+            { i+1 < sim_loader.data!.data.length && <hr class="dark:border-neutral-800"/>}
           </>
         }) : sim_loader.error ? <p class="text-red-400">
           Error, couldn't fetch data: {sim_loader.error.message}
@@ -229,7 +229,7 @@ interface IRangeOption {
 }
 export const RangeOption  = ({name, value, default_val, set_value, min, max, children, toggleString}: IRangeOption) => {
   const step = (max-min) / 10.;
-  return <div class="flex flex-col gap-2 border dark:border-neutral-800 rounded-lg p-2">
+  return <div class="flex flex-col gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
     <div className="flex flex-row gap-2 items-center">
       <input
         onChange={(e:any) => {set_value((e.target.checked as boolean) ? default_val : null)}}
@@ -267,7 +267,7 @@ interface IToggle {
   children: ComponentChildren
 }
 export const Toggle = ({name, value, set_value, children}: IToggle) => {
-  return <div class="flex flex-row items-center gap-2 border dark:border-neutral-800 rounded-lg p-2">
+  return <div class="flex flex-row items-center gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
     <input
       onChange={(e:any) => {set_value(e.target.checked as boolean)}}
       type="checkbox"
