@@ -142,7 +142,11 @@ interface ICompoundNameLinks  {
 export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangKey) => {
 
   const {
-    inchi,
+    inchi, sources,
+    search, toxic, metabolite,
+  } = data;
+
+  const {
     psychonaut_names,
     tripsit_names,
     isomerd_names,
@@ -151,8 +155,7 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
     drugmap_name, drugmap_id,
     hsdb_names, cid,
     wiki_name,
-    search, toxic, metabolite,
-  } = data;
+  } = sources;
 
   const nosite = (
     psychonaut_names === null &&
@@ -195,7 +198,7 @@ export const CompoundNameList = ({ data }: ICompoundNameList) => {
     druglab_names,
     drugmap_name,
     wiki_name,
-  } = data;
+  } = data.sources;
 
   return <>
     {psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut" toxic={data.toxic} />)}

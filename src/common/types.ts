@@ -5,25 +5,27 @@ export interface MoleculeData {
   inchi: string;
   _id: string;
   svg: string;
-  psychonaut_names: string[] | null;
-  tripsit_names: string[] | null;
-  isomerd_names: string[] | null;
-  isod_ids: number[] | null;
-  druglab_names: string[] | null;
-  druglab_href: string[] | null;
-  drugmap_id: string[] | null;
-  drugmap_name: string | null;
-  hsdb_names: string[] | null;
-  cid: number[] | null;
-  wiki_name: string[] | null;
+  sources: {
+    psychonaut_names: string[] | null;
+    tripsit_names: string[] | null;
+    isomerd_names: string[] | null;
+    isod_ids: number[] | null;
+    druglab_names: string[] | null;
+    druglab_href: string[] | null;
+    drugmap_id: string[] | null;
+    drugmap_name: string | null;
+    hsdb_names: string[] | null;
+    cid: number[] | null;
+    wiki_name: string[] | null;
+    market_name: string | null;
+    chemograph: boolean|null;
+  }
   search: number;
   toxic: boolean
   metabolite: boolean
-  market_name: string | null;
   synonyms: Array<string> | null;
   solubility: number|null;
   solubility_comment : string|null;
-	chemograph: boolean|null;
 	clintox_pred: number|null;
 	recursive_toxicity: number|null; 
 	addictive_prediction: number|null;

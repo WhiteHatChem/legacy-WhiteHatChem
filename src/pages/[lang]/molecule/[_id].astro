@@ -18,7 +18,6 @@ const t = useTranslations(lang);
 
 const result = await getMoleculeByID(_id);
 
-
 /*
 const default_sim = (
   (struct_sim !== null) ? 'struct' :
@@ -34,21 +33,23 @@ const default_sim = (
         { result._type === 'data' ? (() => {
           const data = result.data;
           const {
-            inchi, svg,
+            inchi, svg, sources,
+            search, toxic, metabolite,
+            synonyms,
+            solubility, solubility_comment,
+            clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
+            categories, embeddings
+          } = data;
+          const {
             psychonaut_names,
             tripsit_names,
             isomerd_names,
             isod_ids,
             druglab_names, druglab_href,
             hsdb_names, cid,
-            search, toxic, metabolite,
             market_name,
-            synonyms,
-            solubility, solubility_comment,
             chemograph,
-            clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
-            categories, embeddings
-          } = data;
+          } = sources;
           return <>
           <section class="main-width mt-8">
             <div class="w-full flex flex-col items-center mb-8">
