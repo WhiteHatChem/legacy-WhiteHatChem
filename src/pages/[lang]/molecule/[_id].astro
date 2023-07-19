@@ -12,6 +12,7 @@ import { Category, CategoryItem, CategoryGrid} from '../../../components/categor
 import { getMoleculeByID } from '../../../common/api';
 import { CompoundSimilarities } from '../../../components/similarities';
 import { ErrorMessage } from '../../../components/error';
+import { WLink } from '../../../components/components';
 
 const { _id, lang } = Astro.params as { _id: string, lang: Lang };
 const t = useTranslations(lang);
@@ -38,7 +39,7 @@ const default_sim = (
             synonyms,
             solubility, solubility_comment,
             clintox_pred, recursive_toxicity, addictive_prediction, bbb_permeability,
-            categories, embeddings
+            categories, embeddings, metabolism
           } = data;
           const {
             psychonaut_names,
@@ -149,6 +150,22 @@ const default_sim = (
               <ProteinAffinities embedding={embeddings.docking} />
             </div>
           </section>}
+
+          {(metabolism !== undefined) && <section class="main-width w-full flex flex-col mt-16">
+              <span class="font-bold text-2xl mb-6">{t('molecule.sent7')} (<WLink href="https://biotransformer.ca/about">source</WLink>)</span>
+              {metabolism.anteriors.length > 0 && <div>
+                <div class="mb-4 text-neutral-800 dark:text-neutral-200 leading-snug">{t('molecule.sent8')}</div>
+                <div class="flex flex-col gap-2">
+                  {metabolism.anteriors.map(x => <Reaction reaction={x} reaction_type='anterior'/>)}
+                </div>
+              </div>}
+              {metabolism.posteriors.length > 0 && <div>
+                <div class="mb-4 text-neutral-800 dark:text-neutral-200 leading-snug">{t('molecule.sent9')}</div>
+                <div class="flex flex-col gap-2">
+                  {metabolism.posteriors.map(x => <Reaction reaction={x} reaction_type='posterior'/>)}
+                </div>
+              </div>}
+            </section>}
         </>})() : <section class="main-width">
           <ErrorMessage message="Molecule not found" log={result.m} />
         </section>

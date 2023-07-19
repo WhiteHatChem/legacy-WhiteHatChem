@@ -186,7 +186,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
                   <div class="flex py-1 flex-row items-center justify-start w-full grow">
                     <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
                     <div class="flex flex-col">
-                      <CompoundNameList data={x} />
+                      <CompoundNameList src={x.sources} />
                     </div>
                   </div>
                   <PercentBar x={sim}/>

@@ -1,25 +1,27 @@
 import type { Category } from "../components/categories"
 export type Theme = "light" | "dark";
 
+export interface MoleculeSource {
+  psychonaut_names: string[] | null;
+  tripsit_names: string[] | null;
+  isomerd_names: string[] | null;
+  isod_ids: number[] | null;
+  druglab_names: string[] | null;
+  druglab_href: string[] | null;
+  drugmap_id: string[] | null;
+  drugmap_name: string | null;
+  hsdb_names: string[] | null;
+  cid: number[] | null;
+  wiki_name: string[] | null;
+  market_name: string | null;
+  chemograph: boolean|null;
+}
+
 export interface MoleculeData {
   inchi: string;
   _id: string;
   svg: string;
-  sources: {
-    psychonaut_names: string[] | null;
-    tripsit_names: string[] | null;
-    isomerd_names: string[] | null;
-    isod_ids: number[] | null;
-    druglab_names: string[] | null;
-    druglab_href: string[] | null;
-    drugmap_id: string[] | null;
-    drugmap_name: string | null;
-    hsdb_names: string[] | null;
-    cid: number[] | null;
-    wiki_name: string[] | null;
-    market_name: string | null;
-    chemograph: boolean|null;
-  }
+  sources: MoleculeSource; 
   search: number;
   toxic: boolean
   metabolite: boolean
@@ -35,12 +37,19 @@ export interface MoleculeData {
     docking: Array<number> | null,
     mol2vec: Array<number>,
   };
+  metabolism?: {
+    anteriors: Reaction[];
+    posteriors: Reaction[];
+  }
 }
 
 export interface Reaction {
-  name: string;
-  enzymes: Array<string>;
-  product: MoleculeData;
+  reaction_name: string;
+  reaction_id: string;
+  enzymes: string;
+  inchi: string;
+  _id?: string;
+  sources?: MoleculeSource
 }
 
 export interface Blog {

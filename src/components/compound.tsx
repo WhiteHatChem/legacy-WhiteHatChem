@@ -7,9 +7,12 @@ import drugmap from '../assets/img/drugmap.ico'
 import wikipedia from '../assets/img/wikipedia.svg'
 import { truncate } from '../common/utils'
 import { useTranslations, LangKey, i18n_href } from '../i18n/i18n'
-import type { MoleculeData } from '../common/types'
+import type { MoleculeData, MoleculeSource } from '../common/types'
 import { svg_path } from '../common/api'
 
+
+type Sources = 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki' | 'none';
+function is_toxic(src: MoleculeSource) { return src.hsdb_names !== null;}
 
 /* CompoundSvg */
 
@@ -35,7 +38,7 @@ export const CompoundSvg = ({ _id }: ICompoundSvg) => {
 
 interface ICompoundName {
   name: string;
-  site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki' | 'none';
+  site: Sources;
   toxic?: boolean;
   metabolite?: boolean;
 }
@@ -43,12 +46,12 @@ interface ICompoundName {
 export const CompoundName = ({ name, site, toxic, metabolite}: ICompoundName ) => {
   return <div class="flex flex-row items-center gap-2">
     {
-      site === 'none' ? <>
-          <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
-          <h2 title={name} class="text-neutral-500 text-sm leading-tight">{truncate(name,20)}</h2>
-      </> : metabolite ? <>
+      metabolite ? <>
           <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>
           <h2 title={name} class="text-violet-500 text-sm leading-tight">Metabolite: {truncate(name,15)}</h2>
+      </> : site === 'none' ? <>
+          <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+          <h2 title={name} class="text-neutral-500 text-sm leading-tight">{truncate(name,20)}</h2>
       </> : <>
         <img
             src={
@@ -94,6 +97,8 @@ const getLink = (site: string, name: string, id: number | string | null) => {
       return `http://drugmap.idrblab.net/data/drug/details/${id}`
     case 'wiki':
       return `https://en.wikipedia.org/wiki/${name}`;
+    default:
+      return ""
   }
 };
 
@@ -102,7 +107,7 @@ interface ICompoundNameLink  {
     ids: number[] | string[] | null;
     toxic?: boolean;
     col?: boolean;
-    site: 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki';
+    site: Sources;
 }
 
 export const CompoundNameLink = ({ names, ids, toxic, col, site, lang }: ICompoundNameLink & LangKey) => {
@@ -143,8 +148,8 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
 
   const {
     inchi, sources,
-    search, toxic, metabolite,
   } = data;
+  const toxic = is_toxic(sources);
 
   const {
     psychonaut_names,
@@ -168,8 +173,7 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
   );
 
   return (
-    nosite ? 
-    <CompoundName site='none' name={inchi} toxic={toxic} />
+    nosite ? <CompoundName site='none' name={inchi} toxic={toxic} />
     : <>
         <CompoundNameLink lang={lang} names={tripsit_names} ids={null} site={'tripsit'} toxic={toxic} col={col} />
         <CompoundNameLink lang={lang} names={psychonaut_names} ids={null} site={'psychonaut'} toxic={toxic} col={col} />
@@ -186,10 +190,10 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
 /* CompoundNameList */
 
 interface ICompoundNameList  {
-    data: MoleculeData;
+  src: MoleculeSource;
 }
 
-export const CompoundNameList = ({ data }: ICompoundNameList) => {
+export const CompoundNameList = ({ src }: ICompoundNameList) => {
   const {
     psychonaut_names,
     tripsit_names,
@@ -198,16 +202,17 @@ export const CompoundNameList = ({ data }: ICompoundNameList) => {
     druglab_names,
     drugmap_name,
     wiki_name,
-  } = data.sources;
+  } = src;
+  const toxic = is_toxic(src);
 
   return <>
-    {psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut" toxic={data.toxic} />)}
-    {tripsit_names && tripsit_names.map(name => <CompoundName name={name} site="tripsit" toxic={data.toxic}/>)}
-    {isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign" toxic={data.toxic}/>)}
-    {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem" toxic={data.toxic}/>)}
-    {druglab_names && druglab_names.map(name => <CompoundName name={name} site="druglab" toxic={data.toxic}/>)}
-    {drugmap_name && <CompoundName name={drugmap_name} site="drugmap" toxic={data.toxic}/>}
-    {wiki_name && wiki_name.map(name => <CompoundName name={name} site="wiki" toxic={data.toxic}/>)}
+    {psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut" toxic={toxic} />)}
+    {tripsit_names && tripsit_names.map(name => <CompoundName name={name} site="tripsit" toxic={toxic}/>)}
+    {isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign" toxic={toxic}/>)}
+    {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem" toxic={toxic}/>)}
+    {druglab_names && druglab_names.map(name => <CompoundName name={name} site="druglab" toxic={toxic}/>)}
+    {drugmap_name && <CompoundName name={drugmap_name} site="drugmap" toxic={toxic}/>}
+    {wiki_name && wiki_name.map(name => <CompoundName name={name} site="wiki" toxic={toxic}/>)}
   </>
 }
 
@@ -215,18 +220,17 @@ export const CompoundNameList = ({ data }: ICompoundNameList) => {
 /* CompoundCard */
 
 interface ICompoundCard  {
-  data: MoleculeData;
+  src: MoleculeSource;
+  _id: string;
 }
 
-export const CompoundCard = ({ data, lang }: ICompoundCard & LangKey) => {
-  const { _id } = data;
-
+export const CompoundCard = ({ src, _id, lang }: ICompoundCard & LangKey) => {
   return <a
     href={i18n_href(`/molecule/${_id}`, lang)}
     class="flex flex-col items-center group"
 >
     <div class="flex flex-col">
-        <CompoundNameList data={data}/>
+        <CompoundNameList src={src}/>
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
     <CompoundSvg _id={_id}/>
