@@ -27,12 +27,12 @@ interface ICompoundSimilarities {
 
 export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & LangKey) => {
   const docking = data.embeddings.docking !== null;
-  const [ more_options, set_more_options ] = useState<boolean>(false);
+  const [ more_options, set_more_options ] = useState<boolean>(false);
 
-  const [ sim_type, set_sim_type ] = useState<SimilarityType>("mol2vec");
-  const [ addict, set_addict ] = useState<number>(DEFAULT_ADDICT);
-  const [ clintox_pred, set_clintox_pred ] = useState<number>(DEFAULT_CLINTOX_PRED);
-  const [ rec_tox, set_rec_tox ] = useState<number>(DEFAULT_REC_TOX);
+  const [ sim_type, set_sim_type ] = useState<SimilarityType>("mol2vec");
+  const [ addict, set_addict ] = useState<number | null>(null);
+  const [ clintox_pred, set_clintox_pred ] = useState<number | null>(null);
+  const [ rec_tox, set_rec_tox ] = useState<number | null>(null);
   const [ bbb_perm, set_bbb_perm ] = useState<boolean>(false);
   const [ cat, set_cat ] = useState<string>("all");
   const [ showcat, set_showcat] = useState<boolean>(false);
@@ -96,24 +96,48 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
         }
       </button>
       {
-        more_options ? <>
-          <RangeSlider name="sim_type" value={addict} set_value={set_addict} min={0.} max={1.}>
+        more_options ? <div className="flex flex-col gap-4">
+          <RangeOption
+            name="sim_type"
+            value={addict}
+            default_val={DEFAULT_ADDICT}
+            set_value={set_addict}
+            min={0.}
+            max={1.}
+            toggleString="Filter by addictivity"
+          >
             Max predicted addictivity
-          </RangeSlider>
+          </RangeOption>
 
-          <RangeSlider name="clintox_pred" value={clintox_pred} set_value={set_clintox_pred} min={0.} max={1.}>
+          <RangeOption
+            name="clintox_pred"
+            value={clintox_pred}
+            default_val={DEFAULT_CLINTOX_PRED}
+            set_value={set_clintox_pred}
+            min={0.}
+            max={1.}
+            toggleString="Filter by clinical toxicity"
+          >
             Max clinical toxicity 
-          </RangeSlider>
+          </RangeOption>
 
-          <RangeSlider name="rec_tox" value={rec_tox} set_value={set_rec_tox} min={0.} max={1.}>
+          <RangeOption
+            name="rec_tox"
+            value={rec_tox}
+            default_val={DEFAULT_REC_TOX}
+            set_value={set_rec_tox}
+            min={0.}
+            max={1.}
+            toggleString="Filter by recursive toxicity"
+          >
             Max recursive toxicity
-          </RangeSlider>
+          </RangeOption>
 
           <Toggle name='bbb_perm' value={bbb_perm} set_value={set_bbb_perm}>
             No BBB Permeability
           </Toggle>
 
-          <div class="rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2">
+          <div class="border dark:border-neutral-800 rounded-lg p-2">
             <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 lg:flex-row">
               <label for="category">Compound category</label>
               <select
@@ -133,7 +157,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
               </span>}
             </div>
           </div> 
-        </> : null
+        </div> : null
       }
     </div>
     <hr className="m-4 border-neutral-600"/>
@@ -181,7 +205,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
 }
 
 
-interface ISpinner {
+interface ISpinner {
   className?: string
 }
 
@@ -193,32 +217,46 @@ export const Spinner = ({ className }: ISpinner) => {
 }
 
 
-interface IRangeSlider {
+interface IRangeOption {
   name: string,
-  value: number,
-  set_value: (x: number) => void
+  value: number | null,
+  default_val: number,
+  set_value: (x: number | null) => void
   min: number,
   max: number,
+  toggleString: string,
   children: ComponentChildren
 }
-export const RangeSlider = ({name, value, set_value, min, max, children}: IRangeSlider) => {
-  const step = (max-min) / 10.;
-  return <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
-    <label for={name}>{children}</label>
-    <div class="flex gap-2">
-      <span class="font-bold dark:text-indigo-400 text-indigo-600">{value}</span>
+export const RangeOption  = ({name, value, default_val, set_value, min, max, children, toggleString}: IRangeOption) => {
+  const step = (max-min) / 10.;
+  return <div class="flex flex-col gap-2 border dark:border-neutral-800 rounded-lg p-2">
+    <div className="flex flex-row gap-2 items-center">
       <input
-        onChange={(e:any) => {set_value(e.target.value)}}
-        type="range"
-        id={name}
-        name={name}
-        min={min}
-        max={max}
-        value={value}
-        step={step}
+        onChange={(e:any) => {set_value((e.target.checked as boolean) ? default_val : null)}}
+        type="checkbox"
+        id={`${name}_toggle`}
+        name={`${name}_toggle`}
+        checked={value !== null}
       />
+      <label for={`${name}_toggle`}>{toggleString}</label>
     </div>
-  </div> 
+    {value !== null && <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
+      <label for={name}>{children}</label>
+      <div class="flex gap-2">
+        <span class="font-bold dark:text-indigo-400 text-indigo-600">{value}</span>
+        <input
+          onChange={(e:any) => {set_value(e.target.value)}}
+          type="range"
+          id={name}
+          name={name}
+          min={min}
+          max={max}
+          value={value}
+          step={step}
+        />
+      </div>
+    </div>}
+  </div>
 }
 
 
@@ -229,15 +267,15 @@ interface IToggle {
   children: ComponentChildren
 }
 export const Toggle = ({name, value, set_value, children}: IToggle) => {
-  return <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
-    <label for={name}>{children}</label>
+  return <div class="flex flex-row items-center gap-2 border dark:border-neutral-800 rounded-lg p-2">
     <input
-      onChange={(e:any) => {set_value(e.target.checked)}}
+      onChange={(e:any) => {set_value(e.target.checked as boolean)}}
       type="checkbox"
-      id={name}
-      name={name}
+      id={`${name}_toggle`}
+      name={`${name}_toggle`}
       checked={value}
     />
+    <label for={`${name}_toggle`}>{children}</label>
   </div> 
 }
 
