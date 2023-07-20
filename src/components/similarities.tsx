@@ -168,7 +168,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           const sim = filter(x.proximity_distance);
           return <>
             {
-              !x.search ?
+              (x.sources === null) ?
                 <div class="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
                   <div class="flex flex-row items-center justify-start w-full grow">
                     <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>

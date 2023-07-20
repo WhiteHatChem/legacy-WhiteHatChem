@@ -64,7 +64,7 @@ export function useTheme(key: string, initialValue: string): [string, (value: st
 type DataLoaderState<T> = { state: "error", message: string } | { state: "loading" } | { state: "data", data: T }
 
 export function useDataLoader<T>() {
-  const [ state, setState ] = useState<DataLoaderState<T>>({ state: "loading"})
+  const [ state, setState ] = useState<DataLoaderState<T>>({ state: "loading"});
   const setLoading = useCallback(() => {setState({state:'loading'})}, [setState]);
   const setError = useCallback((m: string) => {setState({state:'error', message: m})}, [setState]);
   const setData = useCallback((d: T) => {setState({state:'data', data: d})}, [setState]);

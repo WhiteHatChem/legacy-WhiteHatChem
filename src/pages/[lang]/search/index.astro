@@ -16,7 +16,7 @@ const page = parseInt(Astro.url.searchParams.get('p') || '0');
 const result = await postSearch(search, page);
 ---
 
-<Base title="Compounds">
+<Base title={search === "" ? `Search compounds`: `Results for ${search}` }>
 	<Main>
         <section class="main-width">
             <h1 class="

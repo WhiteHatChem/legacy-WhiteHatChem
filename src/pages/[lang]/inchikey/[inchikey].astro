@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 const result = await getMoleculeByInchikey(inchikey);
 ---
 
-<Base title="Compounds">
+<Base title={`Inchikey results for ${inchikey}`}>
 	<Main>
     <section class="main-width">
       {result._type === 'data' ? (() => {
