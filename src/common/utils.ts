@@ -1,4 +1,3 @@
-import { p } from "../../dist/client/_astro/hooks.module.8de731b1";
 import type { MoleculeData, MoleculeSource } from "./types";
 
 export function truncate(str: string, length: number) {
