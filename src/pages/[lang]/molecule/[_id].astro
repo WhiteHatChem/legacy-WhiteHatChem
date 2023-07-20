@@ -29,6 +29,16 @@ const default_sim = (
 */
 ---
 
+<style>
+.tabs.active {
+	display: block;
+}
+
+.tabs:not(.active) {
+	display: none;
+}
+</style>
+
 <Base title="Compounds.">
 	<Main>
         { result._type === 'data' ? (() => {
@@ -130,7 +140,20 @@ const default_sim = (
           </section>
 
 
-          <section class="main-width flex flex-col items-left mt-16">
+          <div class="main-width mt-16 mb-8">
+            <TabGroup
+              client:load
+              tabs={[
+                {id:"similarities", label:"Similarities", available: true},
+                {id:"affinities", label:"Affinities", available: (embeddings.docking !== null)},
+                {id:"metabolism", label:"Metabolism", available: (metabolism !== undefined)},
+              ]}
+              defaultActiveTab='similarities'
+              tabsSelector='.tabs'
+            />
+          </div>
+
+          <section id="similarities" class="tabs active main-width flex flex-col items-left">
             <h2 class="font-bold text-2xl mb-6">{t('molecule.similarities')}</h2>
             <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
               {t('molecule.sent10')}
@@ -141,7 +164,7 @@ const default_sim = (
             <CompoundSimilarities data={data} lang={lang} client:load/>
           </section>
 
-          {(embeddings.docking !== null) && <section class="main-width flex flex-col items-left mt-16">
+          {(embeddings.docking !== null) && <section id="affinities" class="tabs main-width flex flex-col items-left">
             <h2 class="font-bold text-2xl mb-6">{t('molecule.affinities')}</h2>
             <p class="text-neutral-800 dark:text-neutral-200 leading-snug mb-4">
               {t('molecule.sent6')}
@@ -151,7 +174,7 @@ const default_sim = (
             </div>
           </section>}
 
-          {(metabolism !== undefined) && <section class="main-width w-full flex flex-col mt-16">
+          {(metabolism !== undefined) && <section id="metabolism" class="tabs main-width w-full flex flex-col">
               <span class="font-bold text-2xl mb-6">{t('molecule.sent7')} (<WLink href="https://biotransformer.ca/about">source</WLink>)</span>
               {metabolism.anteriors.length > 0 && <div>
                 <div class="mb-4 text-neutral-800 dark:text-neutral-200 leading-snug">{t('molecule.sent8')}</div>
