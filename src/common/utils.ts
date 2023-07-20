@@ -1,3 +1,4 @@
+import { p } from "../../dist/client/_astro/hooks.module.8de731b1";
 import type { MoleculeData, MoleculeSource } from "./types";
 
 export function truncate(str: string, length: number) {
@@ -6,16 +7,45 @@ export function truncate(str: string, length: number) {
   } else return str;
 }
 
-export function mol_name(src: MoleculeSource) {
+export function shortest(l: string[]): string {
+  return l.reduce((acc, curr) => (curr.length < acc.length) ? curr : acc);
+}
+
+export function mol_name(src: MoleculeData) {
+  const { inchi, sources } = src;
+  const {
+    psychonaut_names,
+    tripsit_names,
+    isomerd_names,
+    druglab_names,
+    drugmap_name,
+    hsdb_names,
+    wiki_name,
+    market_name
+  } = sources;
   const names = [
-    src.psychonaut_names,
-    src.tripsit_names,
-    src.isomerd_names,
-    src.druglab_names,
-    src.drugmap_name,
-    src.hsdb_names,
-    src.wiki_name,
-    src.market_name
+    psychonaut_names,
+    tripsit_names,
+    isomerd_names,
+    druglab_names,
+    drugmap_name,
+    hsdb_names,
+    wiki_name,
+    market_name
   ].flat().filter(x => x !== null) as string[];
-  return names.reduce((acc, curr) => (curr.length < acc.length) ? curr : acc);
+  return names.length === 0 ? inchi : shortest(names)
+}
+
+export function no_names(src: MoleculeSource): boolean {
+  const {
+    psychonaut_names,
+    tripsit_names,
+    isomerd_names,
+    druglab_names,
+    drugmap_name,
+    hsdb_names,
+    wiki_name,
+    market_name
+  } = src;
+  return (psychonaut_names === null && tripsit_names === null && isomerd_names === null && druglab_names === null && drugmap_name === null && hsdb_names === null && wiki_name === null && market_name === null);
 }

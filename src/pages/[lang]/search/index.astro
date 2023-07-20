@@ -61,9 +61,9 @@ const result = await postSearch(search, page);
                   <!-- NPS grid -->
                   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8 items-end">
                       {
-                        data.map((x: MoleculeData) =>
-                            <CompoundCard src={x.sources} _id={x._id} lang={lang}/>
-                        )
+                        data.map((x: MoleculeData) => <>
+                            <CompoundCard data={x} _id={x._id} lang={lang}/>
+                        </>)
                       }
                   </div>
 

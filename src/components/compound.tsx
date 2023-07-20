@@ -9,6 +9,7 @@ import { truncate } from '../common/utils'
 import { useTranslations, LangKey, i18n_href } from '../i18n/i18n'
 import type { MoleculeData, MoleculeSource } from '../common/types'
 import { svg_path } from '../common/api'
+import { no_names, shortest } from '../common/utils';
 
 
 type Sources = 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki' | 'none';
@@ -220,17 +221,23 @@ export const CompoundNameList = ({ src }: ICompoundNameList) => {
 /* CompoundCard */
 
 interface ICompoundCard  {
-  src: MoleculeSource;
+  data: MoleculeData;
   _id: string;
 }
 
-export const CompoundCard = ({ src, _id, lang }: ICompoundCard & LangKey) => {
+export const CompoundCard = ({ data, _id, lang }: ICompoundCard & LangKey) => {
+  const { sources, synonyms } = data;
   return <a
     href={i18n_href(`/molecule/${_id}`, lang)}
     class="flex flex-col items-center group"
->
+  >
     <div class="flex flex-col">
-        <CompoundNameList src={src}/>
+      <CompoundNameList src={sources}/>
+      {(no_names(sources) && synonyms !== null) && <h2
+        class={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight`}
+      >
+        {shortest(synonyms)}
+      </h2>}
     </div>
     <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
     <CompoundSvg _id={_id}/>

@@ -19,15 +19,6 @@ const { _id, lang } = Astro.params as { _id: string, lang: Lang };
 const t = useTranslations(lang);
 
 const result = await getMoleculeByID(_id);
-
-/*
-const default_sim = (
-  (struct_sim !== null) ? 'struct' :
-  (binding_sim !== null || less_addictive_sim !== null || binding_affinities !== null) ? 'affinity' :
-  (metabolism !== null) ? 'metabolism' :
-  null
-);
-*/
 ---
 
 <style>
@@ -40,7 +31,7 @@ const default_sim = (
 }
 </style>
 
-<Base title={result._type === 'data' ? mol_name(result.data.sources) : result.m}>
+<Base title={result._type === 'data' ? mol_name(result.data) : result.m}>
 	<Main>
         { result._type === 'data' ? (() => {
           const data = result.data;
