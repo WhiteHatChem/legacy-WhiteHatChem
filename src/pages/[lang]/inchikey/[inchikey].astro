@@ -18,22 +18,24 @@ const result = await getMoleculeByInchikey(inchikey);
     <section class="main-width">
       {result._type === 'data' ? (() => {
         const data = result.data;
-        return 
-        <h1 class="
-          font-bold text-4xl mb-20
-          text-center lg:text-left
-        ">
-          {t('nps')}
-        </h1>
+        console.log(data)
+        return <>
+          <h1 class="
+            font-bold text-4xl mb-20
+            text-center lg:text-left
+          ">
+            {t('nps')}
+          </h1>
 
-        <!-- NPS grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
-          {
-            data.map((x: MoleculeData) =>
-              <CompoundCard src={x.sources} _id={x._id} lang={lang}/>
-            )
-          }
-        </div>
+          <!-- NPS grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-16 gap-8">
+            {
+              data.map((x: MoleculeData) =>
+                <CompoundCard src={x.sources} _id={x._id} lang={lang}/>
+              )
+            }
+          </div>
+        </>
       })() : <ErrorMessage message="InchiKey not found" log={result.m} />}
     </section>
 	</Main>
