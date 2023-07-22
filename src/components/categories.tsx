@@ -25,6 +25,17 @@ export const CATEGORIES = {
   "25nb": "https://en.wikipedia.org/wiki/25-NB", 
   "2c": "https://en.wikipedia.org/wiki/2C_(psychedelics)", 
   "substituted_amphetamine": "https://en.wikipedia.org/wiki/Category:Substituted_amphetamines",
+
+  "naphthoylindole": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "phenylacetylindole": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "benzoylindole": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "cyclohexylphenol": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "check_naphthoylpyrrole": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "naphthylmethylindene": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "tetramethylcyclopropanoylindoles": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "adamantoylindoles": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "indole3carboxylate_ester": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids",
+  "indazole3carboxamide": "https://en.wikipedia.org/wiki/Structural_scheduling_of_synthetic_cannabinoids"
 }
 
 export type Category = keyof typeof CATEGORIES;

@@ -165,7 +165,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
     <div class="flex flex-col mt-4 gap-2">
 
       { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {
-          const sim = filter(x.proximity_distance);
+          const sim = x.proximity_distance;
           return <>
             {
               (x.sources === null) ?
