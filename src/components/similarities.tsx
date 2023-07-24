@@ -180,7 +180,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
                 </div>
               :
                 <a
-                  href={i18n_href(`/molecule/${x._id}`, lang)}
+                  href={i18n_href(`/compound/${x._id}`, lang)}
                   class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
                 >
                   <div class="flex py-1 flex-row items-center justify-start w-full grow">

@@ -220,7 +220,7 @@ export const CompoundNameList = ({ src }: ICompoundNameList) => {
 
 /* CompoundCard */
 
-interface ICompoundCard  {
+interface ICompoundCard {
   data: MoleculeData;
   _id: string;
 }
@@ -228,7 +228,7 @@ interface ICompoundCard  {
 export const CompoundCard = ({ data, _id, lang }: ICompoundCard & LangKey) => {
   const { sources, synonyms } = data;
   return <a
-    href={i18n_href(`/molecule/${_id}`, lang)}
+    href={i18n_href(`/compound/${_id}`, lang)}
     class="flex flex-col items-center group"
   >
     <div class="flex flex-col">

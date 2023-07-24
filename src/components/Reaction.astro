@@ -23,7 +23,7 @@ const t = useTranslations(lang);
       <span class="font-bold text-indigo-900 dark:text-indigo-100 mb-2">{reaction_type === 'anterior' ? 'Reagents' : 'Products'}</span>
       <div class="flex flex-row items-center">
         {(_id !== undefined && sources !== undefined) ? <a
-          href={i18n_href(`/molecule/${_id}`, lang)}
+          href={i18n_href(`/compound/${_id}`, lang)}
           class="group flex flex-col gap-1 items-end"
         >
           <CompoundNameList src={sources}/>
