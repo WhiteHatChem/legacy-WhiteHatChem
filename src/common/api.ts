@@ -10,7 +10,7 @@ export function svg_path(_id: string): string {
 
 export async function getMoleculeByInchikey(inchikey: string): Promise<Result<Array<MoleculeData>>> {
   try {
-    const r = await fetch(`${SERVER}/get/inchikey/${inchikey}`);
+    const r = await fetch(`${SERVER}/compound/inchikey/${inchikey}`);
     const data: Array<MoleculeData> = await r.json();
     return { _type:'data', data: data }
   } catch (e: any) {
@@ -20,7 +20,7 @@ export async function getMoleculeByInchikey(inchikey: string): Promise<Result<Ar
 
 export async function getMoleculeByID(_id: string): Promise<Result<MoleculeData>> {
   try {
-    const r = await fetch(`${SERVER}/get/_id/${_id}`);
+    const r = await fetch(`${SERVER}/compound/_id/${_id}`);
     const data: MoleculeData = await r.json();
     return { _type:'data', data: data }
   } catch (e: any) {
