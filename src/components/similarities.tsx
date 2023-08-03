@@ -15,37 +15,39 @@ function sim2string(sim: SimilarityType): string {
   return ""
 }
 
+/*
 const DEFAULT_ADDICT = 1.;
 const DEFAULT_CLINTOX_PRED = 1.;
 const DEFAULT_REC_TOX = 1.;
 
 function check_default<T>(val: T, def: T): T | null { return (val === def) ? null : val; }
+*/
 
 interface ICompoundSimilarities {
   data: MoleculeData
 }
 
-export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & LangKey) => {
+export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & LangKey) => {
   const docking = data.embeddings.docking !== null;
-  const [ more_options, set_more_options ] = useState<boolean>(false);
 
   const [ sim_type, set_sim_type ] = useState<SimilarityType>("mol2vec");
+  /*
+  const [ more_options, set_more_options ] = useState<boolean>(false);
   const [ addict, set_addict ] = useState<number | null>(null);
   const [ clintox_pred, set_clintox_pred ] = useState<number | null>(null);
   const [ rec_tox, set_rec_tox ] = useState<number | null>(null);
   const [ bbb_perm, set_bbb_perm ] = useState<boolean>(false);
   const [ cat, set_cat ] = useState<string>("all");
   const [ showcat, set_showcat] = useState<boolean>(false);
-
+  */
   const sim_loader = useDataLoader<SimilarMolecules>();
 
-  const filter = (x: number) => (1. / (1. + Math.log(x+1.)));
-  
   useEffect(() => {
     const abortController = new AbortController();
     let handler = async () => {
       sim_loader.setLoading();
       try {
+        /*
         const _data = await getSimilarities(
           data, sim_type,
           check_default(addict, DEFAULT_ADDICT),
@@ -55,6 +57,8 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           abortController,
           cat
         );
+        */
+        const _data = await getSimilarities( data, sim_type, abortController );
         sim_loader.setData(_data)
       } catch (e: any) {
         sim_loader.setError(e.message)
@@ -65,7 +69,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
     return () => {
       abortController.abort()
     }
-  }, [sim_type, addict, clintox_pred, rec_tox, bbb_perm, cat])
+  }, [sim_type ]) //, addict, clintox_pred, rec_tox, bbb_perm, cat])
 
   return <div class="flex flex-col gap-2">
     <div class="flex flex-col gap-2">
@@ -84,6 +88,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
       </div> 
 
 
+      {/* CODE FOR SIMILARITIES OPTIONS
       <button className="flex items-center gap-1 text-left text-indigo-400" onClick={() => {set_more_options(!more_options)}}>
         More options
         {
@@ -159,9 +164,10 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & La
           </div> 
         </div> : null
       }
-    </div>
-    <hr className="m-4 border-neutral-600"/>
-    <p className="">Here are the most similar molecules satisfying the given constraints:</p>
+      */}
+      </div>
+    {/* <hr className="m-4 border-neutral-600"/> */}
+    <p className="">Here are the most similar molecules:</p>
     <div class="flex flex-col mt-4 gap-2">
 
       { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {

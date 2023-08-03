@@ -19,7 +19,7 @@ export async function getMoleculeByInchikey(inchikey: string): Promise<Result<Ar
 }
 
 export async function getMoleculeByID(_id: string): Promise<Result<MoleculeData>> {
-  try {
+  try {
     const r = await fetch(`${SERVER}/compound/_id/${_id}`);
     const data: MoleculeData = await r.json();
     return { _type:'data', data: data }
@@ -32,7 +32,7 @@ export async function postSearch(
   query: string,
   page: number
 ) : Promise<Result<{data: MoleculeData[], done: boolean}>> {
-  try {
+  try {
     const r = await fetch(
       `${SERVER}/search`,
       {
@@ -58,6 +58,34 @@ export async function postSearch(
   }
 }
 
+export async function postFeed(
+  page: number
+) : Promise<Result<{data: MoleculeData[], done: boolean}>> {
+  try {
+    const r = await fetch(
+      `${SERVER}/feed`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          offset: page * PAGE_SIZE
+        }),
+      }
+    );
+    const data: Array<MoleculeData> = await r.json();
+    return {
+      _type: 'data',
+      data: {
+        data: data,
+        done: data.length < PAGE_SIZE
+      }
+    }
+  } catch (e: any) {
+    return { _type:'error', m: e.message}
+  }
+}
+
+/* getSimilarities WITH CONSTRAINTS / OPTIONS
 export async function getSimilarities(
   mol_data: MoleculeData,
   sim_type: SimilarityType,
@@ -92,5 +120,33 @@ export async function getSimilarities(
     }
   );
   const data: SimilarMolecules = await r.json();
+  return data
+} */
+
+export async function getSimilarities(
+  mol_data: MoleculeData,
+  sim_type: SimilarityType,
+  controller: AbortController,
+): Promise<SimilarMolecules> {
+  const vector = (
+    sim_type === "docking" ? mol_data.embeddings.docking :
+    sim_type === "mol2vec" ? mol_data.embeddings.mol2vec :
+    null
+  )
+
+  const r = await fetch(
+    `${SERVER}/similar_search`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
+      body: JSON.stringify({
+        vector: vector,
+        similarity_type: sim_type,
+      }),
+    }
+  );
+  const data: SimilarMolecules = await r.json();
+  console.log(data);
   return data
 }
