@@ -8,7 +8,6 @@ interface ISearchBox {
 
 export const SearchBox = ({ search, discover, lang }: ISearchBox & LangKey) => {
   const t = useTranslations(lang);
-  console.log(discover)
   return <form action={i18n_href("/search", lang)} class="w-full flex flex-col items-center mb-16">
       <div class="w-full max-w-lg flex items-center gap-2">
           <label for="search">
@@ -25,6 +24,6 @@ export const SearchBox = ({ search, discover, lang }: ISearchBox & LangKey) => {
               placeholder={t('search.placeholder')}
           />
       </div>
-      { discover && <span class="my-4"> Or <WLink href={i18n_href("/discover", lang)}>discover</WLink> known molecules </span> }
+      { !discover && <span class="my-4 text-neutral-700 dark:text-neutral-200"> Or check <WLink href={i18n_href("/search", lang)}>example compounds</WLink> </span> }
   </form>
 }

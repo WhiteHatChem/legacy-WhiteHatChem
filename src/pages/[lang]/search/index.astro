@@ -5,16 +5,18 @@ import { CompoundCard } from '../../../components/compound';
 import { ErrorMessage } from '../../../components/error';
 import type { MoleculeData } from '../../../common/types';
 import { Lang, languagesList, useTranslations, i18n_href } from '../../../i18n/i18n';
-import { postSearch } from '../../../common/api';
+import { postSearch, postFeed } from '../../../common/api';
 import { SearchBox } from '../../../components/search';
 
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 
-const search = Astro.url.searchParams.get('q') || '';
+const search = Astro.url.searchParams.get('q');
 const page = parseInt(Astro.url.searchParams.get('p') || '0');
 
-const result = await postSearch(search, page);
+const discover = search === null;
+
+const result = discover ? (await postFeed(page)) : (await postSearch(search, page));
 ---
 
 <Base title={search === "" ? `Search compounds`: `Results for ${search}` }>
@@ -27,7 +29,7 @@ const result = await postSearch(search, page);
         {t('search_nps')}
       </h1>*/}
 
-      <SearchBox search={search} lang={lang} discover/>
+      <SearchBox search={search || ''} lang={lang} discover={discover}/>
 
       {result._type === 'data' ? (() => {
         let { data, done }= result.data;
@@ -41,7 +43,7 @@ const result = await postSearch(search, page);
         const no_results = data.length === 0;
         return (
           no_results ? <div class="h-36">
-            <p class="text-center italic text-neutral-400 dark:text-neutral-400/60">Example: alcohol, LSD, H4-CBD, 2cb-fly, ...</p>
+            <p class="text-center italic text-neutral-400 dark:text-neutral-400/60">No molecules found, try to correct your query <br> Example: alcohol, LSD, H4-CBD, 2cb-fly, ...</p>
           </div> : <>
             <!-- NPS grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8 items-end">
