@@ -212,13 +212,13 @@ export const CompoundNameList = ({ src }: ICompoundNameList) => {
   const toxic = is_toxic(src);
 
   return <>
-    {psychonaut_names && psychonaut_names.map(name => <CompoundName name={name} site="psychonaut" toxic={toxic} />)}
-    {tripsit_names && tripsit_names.map(name => <CompoundName name={name} site="tripsit" toxic={toxic}/>)}
-    {isomerd_names && isomerd_names.map(name => <CompoundName name={name} site="isomerdesign" toxic={toxic}/>)}
-    {hsdb_names && hsdb_names.map(name => <CompoundName name={name} site="pubchem" toxic={toxic}/>)}
-    {druglab_names && druglab_names.map(name => <CompoundName name={name} site="druglab" toxic={toxic}/>)}
+    {psychonaut_names && psychonaut_names.map(name => <CompoundName key={name} name={name} site="psychonaut" toxic={toxic} />)}
+    {tripsit_names && tripsit_names.map(name => <CompoundName key={name} name={name} site="tripsit" toxic={toxic}/>)}
+    {isomerd_names && isomerd_names.map(name => <CompoundName key={name} name={name} site="isomerdesign" toxic={toxic}/>)}
+    {hsdb_names && hsdb_names.map(name => <CompoundName key={name} name={name} site="pubchem" toxic={toxic}/>)}
+    {druglab_names && druglab_names.map(name => <CompoundName key={name} name={name} site="druglab" toxic={toxic}/>)}
     {drugmap_name && <CompoundName name={drugmap_name} site="drugmap" toxic={toxic}/>}
-    {wiki_name && wiki_name.map(name => <CompoundName name={name} site="wiki" toxic={toxic}/>)}
+    {wiki_name && wiki_name.map(name => <CompoundName key={name} name={name} site="wiki" toxic={toxic}/>)}
   </>
 }
 
