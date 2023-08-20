@@ -2,13 +2,13 @@
 import HeaderButton from '../components/HeaderButton.astro';
 import HamburgerButton from '../components/HamburgerButton.astro';
 import MainLogo from '../assets/icons/main.png';
-import Hamburger from '../assets/icons/Hamburger.astro';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import Github from '../assets/icons/github.svg';
 import ThemeToggle from '../components/ThemeToggle';
 import LanguagePicker from '../components/LanguagePicker.astro';
 import AnnouncementBar from '../components/AnnouncementBar';
 import { getLangFromUrl, i18n_href, useTranslations } from '../i18n/i18n';
+import { Menu } from 'lucide-react';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -94,7 +94,7 @@ const t = useTranslations(lang);
 					class="hamburger px-3 py-1"
 					for="desktop-menu"
 				>
-					<Hamburger style="cursor-pointer w-6 h-6"/>
+          <Menu className='cursor-pointer w-6 h-6'/>
 				</label>
 				<div class="desktop-menu h-full relative bg-red-400" aria-modal="true" role="dialog">
 					<div class="fixed inset-0 flex content-start p-4">
@@ -136,7 +136,7 @@ const t = useTranslations(lang);
 			<LanguagePicker />
       <ThemeToggle client:load/>
 			<input class="mobile-menu-toggler hidden" type="checkbox" id="side-menu"/>
-			<label class="hamburger p-2" for="side-menu"><Hamburger style="cursor-pointer w-6 h-6"/></label>
+			<label class="hamburger p-2" for="side-menu"><Menu className='cursor-pointer w-6 h-6' strokeWidth={1.5}/></label>
 
 			<div class="mobile-menu" aria-modal="true" role="dialog">
 				<!-- background blur -->

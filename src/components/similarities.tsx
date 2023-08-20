@@ -171,7 +171,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
 
       { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {
           const sim = x.proximity_distance;
-          return <>
+          return <div key={x._id}>
             {
               (x.sources === null) ?
                 <div className="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
@@ -198,7 +198,7 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
                 </a>
             }
             { i+1 < sim_loader.data!.data.length && <hr className="dark:border-neutral-800"/>}
-          </>
+          </div>
         }) : sim_loader.error ? <p className="text-red-400">
           Service under maintenance, couldn't fetch data: {sim_loader.error.message}
         </p> : sim_loader.loading ? <div className="w-full h-96 p-8 flex items-center justify-center">

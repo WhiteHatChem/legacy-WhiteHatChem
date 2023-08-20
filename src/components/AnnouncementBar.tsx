@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { useLocalStorage } from "../common/hooks";
+import { X } from "lucide-react";
 
 export function useAnnouncementBar(lastAnnouncementDate: Date): [boolean, () => void] {
     const [ lastAckAnnounce, setLastAckAnnounce ] = useLocalStorage<number | null>("lastackannounce", null);
@@ -38,15 +39,7 @@ function AnnouncementBar({ LAST_ANNOUNCE, children }: Props) {
             onClick={toggleAnnounce}
             className="absolute px-1 inset-y-0 right-0"
         >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+          <X strokeWidth={1.5} className="w-6 h-6" />
         </button>
     </div> : null)
 }

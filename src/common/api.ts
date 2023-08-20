@@ -147,6 +147,5 @@ export async function getSimilarities(
     }
   );
   const data: SimilarMolecules = await r.json();
-  console.log(data);
   return data
 }

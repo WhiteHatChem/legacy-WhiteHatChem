@@ -66,6 +66,7 @@ export const CategoryGrid = ({ cat }: ICategoryGrid) => {
   return <div className="grid grid-cols-2 lg:grid-cols-3 text-sm gap-1">
     {(Object.keys(cat) as Category[]).map((key, i) => (
       <a
+        key={key}
         href={CATEGORIES[key]}
         className={`
           px-2 py-1 rounded-md text-center break-words
