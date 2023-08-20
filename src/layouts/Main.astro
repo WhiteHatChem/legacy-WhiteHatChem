@@ -1,6 +1,6 @@
 ---
-import HeaderButton from '../components/HeaderButton.astro';
-import HamburgerButton from '../components/HamburgerButton.astro';
+import { HeaderButton } from '../components/components';
+import { HamburgerButton } from '../components/components';
 import MainLogo from '../assets/icons/main.png';
 import Bitcoin from '../assets/icons/Bitcoin.svg';
 import Github from '../assets/icons/github.svg';
@@ -94,7 +94,7 @@ const t = useTranslations(lang);
 					class="hamburger px-3 py-1"
 					for="desktop-menu"
 				>
-          <Menu className='cursor-pointer w-6 h-6'/>
+          <Menu className='cursor-pointer w-6 h-6' strokeWidth={1.5}/>
 				</label>
 				<div class="desktop-menu h-full relative bg-red-400" aria-modal="true" role="dialog">
 					<div class="fixed inset-0 flex content-start p-4">

@@ -7,7 +7,6 @@ export default function ThemeToggle() {
   const onClick = useCallback(() => {
     setTheme(theme === "light" ? "dark" : "light");
   }, [theme]);
-  console.log(theme)
 
   useEffect(() => {
     if (theme === "dark") {
