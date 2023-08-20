@@ -1,11 +1,12 @@
 import { useCallback, useEffect } from "react";
-import { useTheme } from "../common/hooks";
+import { useLocalStorage } from "../common/hooks";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useTheme("theme", "light");
+  // const [theme, setTheme] = useTheme("theme", "light");
+  const [theme, setTheme] = useLocalStorage<"light" | "dark">("theme", "light");
 
   const onClick = useCallback(() => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme((theme === "light") ? "dark" : "light");
   }, [theme]);
 
   useEffect(() => {

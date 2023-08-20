@@ -1,65 +1,56 @@
 // https://usehooks.com/useLocalStorage/
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
-  const [storedValue, setStoredValue] = useState<T>(() => {
-    if (typeof window === "undefined") {
+const isServer = typeof window === 'undefined';
+
+export function useLocalStorage<T>(key: string, initialValue: T) {
+  // State to store our value
+  // Pass initial state function to useState so logic is only executed once
+  const [storedValue, setStoredValue] = useState(() => initialValue);
+
+  const initialize = () => {
+    if (isServer) {
       return initialValue;
     }
-
     try {
+      // Get from local storage by key
       const item = window.localStorage.getItem(key);
+      // Parse stored json or if none return initialValue
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
+      // If error also return initialValue
       console.log(error);
       return initialValue;
     }
-  });
+  };
 
+  /* prevents hydration error so that state is only initialized after server is defined */
+  useEffect(() => {
+    if (!isServer) {
+      setStoredValue(initialize());
+    }
+  }, []);
+
+  // Return a wrapped version of useState's setter function that ...
+  // ... persists the new value to localStorage.
   const setValue = (value: T) => {
     try {
-      setStoredValue(value);
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(key, JSON.stringify(value));
+      // Allow value to be a function so we have same API as useState
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      // Save state
+      setStoredValue(valueToStore);
+      // Save to local storage
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
+      // A more advanced implementation would handle the error case
       console.log(error);
     }
   };
-
-  return [storedValue, setValue];
-};
-
-
-export function useTheme(key: string, initialValue: string): [string, (value: string) => void] {
-  const [storedValue, setStoredValue] = useState<string>(() => {
-    if (typeof window === "undefined") {
-      return initialValue;
-    }
-
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? item : initialValue;
-    } catch (error) {
-      console.log(error);
-      return initialValue;
-    }
-  });
-
-  const setValue = (value: string) => {
-    try {
-      setStoredValue(value);
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(key, value);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  return [storedValue, setValue];
-};
+  return [storedValue, setValue] as const;
+}
 
 type DataLoaderState<T> = { state: "error", message: string } | { state: "loading" } | { state: "data", data: T }
 
