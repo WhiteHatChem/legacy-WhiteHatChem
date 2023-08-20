@@ -1,6 +1,7 @@
 export default {
   'search_nps': 'Search NPS',
   'discover_nps': 'Discover NPS',
+  'inchikey': 'Molecules corresponding with inchikey',
 
   'home.mission': "We provide Deep Learning solutions that can identify and analyse new psychoactive substances (NPS).",
   'home.reachus': "Reach us",
