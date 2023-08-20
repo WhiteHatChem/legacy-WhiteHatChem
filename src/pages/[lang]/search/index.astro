@@ -62,7 +62,7 @@ const result = discover ? (await postFeed(page)) : (await postSearch(search, pag
             </div>
           </>
         )
-      })() : <ErrorMessage message="Couldn't fetch data" log={result.m} />}
+      })() : <ErrorMessage message="Couldn't fetch data: Service under maintenance" log={result.m} />}
     </section>
 	</Main>
 </Base>

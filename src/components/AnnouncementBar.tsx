@@ -1,4 +1,4 @@
-import { useCallback } from "preact/hooks";
+import { useCallback } from "react";
 import { useLocalStorage } from "../common/hooks";
 
 export function useAnnouncementBar(lastAnnouncementDate: Date): [boolean, () => void] {

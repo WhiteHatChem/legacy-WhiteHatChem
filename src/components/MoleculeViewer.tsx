@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "preact/hooks";
-import type { ComponentChildren } from "preact";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 interface MoleculeViewerProps {
-  children: ComponentChildren
+  children: ReactNode
   inchi: string;
 }
 
@@ -86,11 +85,11 @@ export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps)
   }, [rootRef]);
 
 
-  return <div class="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
-    { !view3D ? children : <div id="glmol" class="w-full h-[400px]"/> }
+  return <div className="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
+    { !view3D ? children : <div id="glmol" className="w-full h-[400px]"/> }
     <button
       onClick={() => setView3D(!view3D)}
-      class={`
+      className={`
         absolute top-0 right-0 py-1 px-3
         flex items-center gap-2 rounded-lg
         ${
@@ -100,7 +99,7 @@ export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps)
           }
       `}
     >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
       </svg>
       3D

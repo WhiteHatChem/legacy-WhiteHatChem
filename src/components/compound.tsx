@@ -25,10 +25,10 @@ export const CompoundSvg = ({ _id }: ICompoundSvg) => {
   const svg = svg_path(_id);
   return (
     svg ? <img
-        class="dark:invert-[.8]"
+        className="dark:invert-[.8]"
         src={svg}
         loading="lazy"
-    /> : <span class="text-sm font-light text-red-400 my-auto">
+    /> : <span className="text-sm font-light text-red-400 my-auto">
         img not found
     </span>
   )
@@ -45,14 +45,14 @@ interface ICompoundName {
 }
 
 export const CompoundName = ({ name, site, toxic, metabolite}: ICompoundName ) => {
-  return <div class="flex flex-row items-center gap-2">
+  return <div className="flex flex-row items-center gap-2">
     {
       metabolite ? <>
-          <svg class="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>
-          <h2 title={name} class="text-violet-500 text-sm leading-tight">Metabolite: {truncate(name,15)}</h2>
+          <svg className="w-4 text-violet-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>
+          <h2 title={name} className="text-violet-500 text-sm leading-tight">Metabolite: {truncate(name,15)}</h2>
       </> : site === 'none' ? <>
-          <svg class="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
-          <h2 title={name} class="text-neutral-500 text-sm leading-tight">{truncate(name,20)}</h2>
+          <svg className="w-4 text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+          <h2 title={name} className="text-neutral-500 text-sm leading-tight">{truncate(name,20)}</h2>
       </> : <>
         <img
             src={
@@ -65,12 +65,12 @@ export const CompoundName = ({ name, site, toxic, metabolite}: ICompoundName ) =
               site === 'wiki' ? wikipedia :
               ''
             }
-            class="w-4 rounded"
+            className="w-4 rounded"
             alt={site}
         />
         <h2
           title={name}
-          class={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight ${toxic && 'text-rose-500'}`}
+          className={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight ${toxic && 'text-rose-500'}`}
         >
           {truncate(name,20)}
         </h2>
@@ -122,11 +122,11 @@ export const CompoundNameLink = ({ names, ids, toxic, col, site, lang }: ICompou
     (names && Array.isArray(names)) ?
       <>
         {names.map((name, idx) =>
-          <a class={`flex ${col ? 'lg:flex-col' : 'lg:flex-row'} flex-col lg:items-center`} href={getLink(site, name, ids ? ids[idx] : null)} target="_blank">
+          <a className={`flex ${col ? 'lg:flex-col' : 'lg:flex-row'} flex-col lg:items-center`} href={getLink(site, name, ids ? ids[idx] : null)} target="_blank">
             <CompoundName name={name} site={site} toxic={toxic}/>
-            <p class="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
+            <p className="text-sm text-neutral-400 dark:text-neutral-400 flex flex-row items-center gap-2 lg:ml-2">
                 {t('molecule.checkon')} {site}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-sm text-neutral-400 dark:text-neutral-600">
                     <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
                     <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
                 </svg>
@@ -229,17 +229,17 @@ export const CompoundCard = ({ data, _id, lang }: ICompoundCard & LangKey) => {
   const { sources, synonyms } = data;
   return <a
     href={i18n_href(`/compound/${_id}`, lang)}
-    class="flex flex-col items-center group"
+    className="flex flex-col items-center group"
   >
-    <div class="flex flex-col">
+    <div className="flex flex-col">
       <CompoundNameList src={sources}/>
       {(no_names(sources) && synonyms !== null) && <h2
-        class={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight`}
+        className={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight`}
       >
         {shortest(synonyms)}
       </h2>}
     </div>
-    <div class="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
+    <div className="w-full border-t border-neutral-400/20 dark:border-neutral-600 mt-2 group-hover:border-indigo-400/50 dark:group-hover:border-indigo-400"/>
     <CompoundSvg _id={_id}/>
 </a>
 }

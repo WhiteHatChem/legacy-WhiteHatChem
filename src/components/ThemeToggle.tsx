@@ -1,7 +1,5 @@
-import type { FunctionalComponent } from "preact";
-import { useCallback, useEffect, useState } from "preact/hooks";
-import { useLocalStorage, useTheme } from "../common/hooks";
-import type { Theme } from "../common/types";
+import { useCallback, useEffect } from "react";
+import { useTheme } from "../common/hooks";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useTheme("theme", "light");
@@ -22,7 +20,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={onClick}
-      class="
+      className="
         py-1.5 px-3 rounded-xl transition duration-150
         hover:bg-indigo-100 dark:hover:bg-neutral-700
         active:bg-indigo-200 

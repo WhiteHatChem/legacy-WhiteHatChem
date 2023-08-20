@@ -1,7 +1,6 @@
-import { useEffect, useState } from "preact/hooks";
+import { ReactNode, useEffect, useState } from "react";
 import type { MoleculeData, SimilarMolecules } from "../common/types";
 import { i18n_href, type LangKey } from "../i18n/i18n";
-import type { ComponentChildren } from "preact";
 import { getSimilarities } from "../common/api";
 import { CompoundNameLinks, CompoundNameList } from "./compound";
 import { useDataLoader } from "../common/hooks";
@@ -71,16 +70,16 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
     }
   }, [sim_type ]) //, addict, clintox_pred, rec_tox, bbb_perm, cat])
 
-  return <div class="flex flex-col gap-2">
-    <div class="flex flex-col gap-2">
+  return <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2">
 
 
-      <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
-        <label for="sim_type">Similarity type</label>
+      <div className="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
+        <label htmlFor="sim_type">Similarity type</label>
         <select
           id="sim_type"
           onChange={(e:any) => {set_sim_type(e.target.value)}}
-          class="px-4 py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
+          className="px-4 py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
         >
           <option value="mol2vec">{sim2string("mol2vec")}</option>
           {docking ? <option value="docking">{sim2string("docking")}</option> : null}
@@ -142,22 +141,22 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
             No BBB Permeability
           </Toggle>
 
-          <div class="border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
-            <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 lg:flex-row">
-              <label for="category">Compound category</label>
+          <div className="border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
+            <div className="flex flex-col justify-between items-center gap-2 lg:gap-4 lg:flex-row">
+              <label htmlFor="category">Compound category</label>
               <select
                 id="category"
                 onChange={(e:any) => {set_cat(e.target.value)}}
-                class="py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
+                className="py-1 rounded-md dark:bg-indigo-800 bg-indigo-100"
               >
                 <option value="all">All</option>
                 {(Object.keys(CATEGORIES) as Category[]).map((key, i) => <option value={key}>{cat2name(key)}</option>)}
               </select>
 
             </div>
-            <div class="flex flex-col">
-              <button onClick={() => set_showcat(!showcat)} class="text-center text-sm text-neutral-800 hover:text-neutral-600 dark:text-neutral-400 hover:dark:text-neutral-200">Learn more about each category</button>
-              { showcat && <span class="flex flex-wrap gap-2 dark:text-neutral-200 mt-4">
+            <div className="flex flex-col">
+              <button onClick={() => set_showcat(!showcat)} className="text-center text-sm text-neutral-800 hover:text-neutral-600 dark:text-neutral-400 hover:dark:text-neutral-200">Learn more about each category</button>
+              { showcat && <span className="flex flex-wrap gap-2 dark:text-neutral-200 mt-4">
                 {(Object.keys(CATEGORIES) as Category[]).map((key, i) => <CategoryItem cat={key}/>)}
               </span>}
             </div>
@@ -168,17 +167,17 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
       </div>
     {/* <hr className="m-4 border-neutral-600"/> */}
     <p className="">Here are the most similar molecules:</p>
-    <div class="flex flex-col mt-4 gap-2">
+    <div className="flex flex-col mt-4 gap-2">
 
       { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {
           const sim = x.proximity_distance;
           return <>
             {
               (x.sources === null) ?
-                <div class="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
-                  <div class="flex flex-row items-center justify-start w-full grow">
-                    <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
-                    <div class="flex flex-col">
+                <div className="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
+                  <div className="flex flex-row items-center justify-start w-full grow">
+                    <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
+                    <div className="flex flex-col">
                       <CompoundNameLinks data={x} lang={lang} />
                     </div>
                   </div>
@@ -187,22 +186,22 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
               :
                 <a
                   href={i18n_href(`/compound/${x._id}`, lang)}
-                  class="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
+                  className="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
                 >
-                  <div class="flex py-1 flex-row items-center justify-start w-full grow">
-                    <span class="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
-                    <div class="flex flex-col">
+                  <div className="flex py-1 flex-row items-center justify-start w-full grow">
+                    <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
+                    <div className="flex flex-col">
                       <CompoundNameList src={x.sources} />
                     </div>
                   </div>
                   <PercentBar x={sim}/>
                 </a>
             }
-            { i+1 < sim_loader.data!.data.length && <hr class="dark:border-neutral-800"/>}
+            { i+1 < sim_loader.data!.data.length && <hr className="dark:border-neutral-800"/>}
           </>
-        }) : sim_loader.error ? <p class="text-red-400">
-          Error, couldn't fetch data: {sim_loader.error.message}
-        </p> : sim_loader.loading ? <div class="w-full h-96 p-8 flex items-center justify-center">
+        }) : sim_loader.error ? <p className="text-red-400">
+          Service under maintenance, couldn't fetch data: {sim_loader.error.message}
+        </p> : sim_loader.loading ? <div className="w-full h-96 p-8 flex items-center justify-center">
           <Spinner />
         </div> : null
       }
@@ -216,9 +215,9 @@ interface ISpinner {
 }
 
 export const Spinner = ({ className }: ISpinner) => {
-  return <svg class={`animate-spin -ml-1 mr-3 h-5 w-5 text-white ${className}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  return <svg className={`animate-spin -ml-1 mr-3 h-5 w-5 text-white ${className}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
   </svg>
 }
 
@@ -231,11 +230,11 @@ interface IRangeOption {
   min: number,
   max: number,
   toggleString: string,
-  children: ComponentChildren
+  children: ReactNode
 }
 export const RangeOption  = ({name, value, default_val, set_value, min, max, children, toggleString}: IRangeOption) => {
   const step = (max-min) / 10.;
-  return <div class="flex flex-col gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
+  return <div className="flex flex-col gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
     <div className="flex flex-row gap-2 items-center">
       <input
         onChange={(e:any) => {set_value((e.target.checked as boolean) ? default_val : null)}}
@@ -244,12 +243,12 @@ export const RangeOption  = ({name, value, default_val, set_value, min, max, chi
         name={`${name}_toggle`}
         checked={value !== null}
       />
-      <label for={`${name}_toggle`}>{toggleString}</label>
+      <label htmlFor={`${name}_toggle`}>{toggleString}</label>
     </div>
-    {value !== null && <div class="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
-      <label for={name}>{children}</label>
-      <div class="flex gap-2">
-        <span class="font-bold dark:text-indigo-400 text-indigo-600">{value}</span>
+    {value !== null && <div className="flex flex-col justify-between items-center gap-2 lg:gap-4 rounded-lg bg-neutral-200/50 dark:bg-neutral-800/50 p-2 lg:flex-row">
+      <label htmlFor={name}>{children}</label>
+      <div className="flex gap-2">
+        <span className="font-bold dark:text-indigo-400 text-indigo-600">{value}</span>
         <input
           onChange={(e:any) => {set_value(e.target.value)}}
           type="range"
@@ -270,10 +269,11 @@ interface IToggle {
   name: string,
   value: boolean,
   set_value: (x: boolean) => void
-  children: ComponentChildren
+  children: ReactNode
 }
+
 export const Toggle = ({name, value, set_value, children}: IToggle) => {
-  return <div class="flex flex-row items-center gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
+  return <div className="flex flex-row items-center gap-2 border dark:border-neutral-800 bg-neutral-200/20 dark:bg-neutral-800/20 rounded-lg p-2">
     <input
       onChange={(e:any) => {set_value(e.target.checked as boolean)}}
       type="checkbox"
@@ -281,7 +281,7 @@ export const Toggle = ({name, value, set_value, children}: IToggle) => {
       name={`${name}_toggle`}
       checked={value}
     />
-    <label for={`${name}_toggle`}>{children}</label>
+    <label htmlFor={`${name}_toggle`}>{children}</label>
   </div> 
 }
 
@@ -293,11 +293,11 @@ export interface IPercentBar {
 export const PercentBar = ({ x }: IPercentBar) => {
   const green = Math.round(255 * x);
   const red = Math.round(255 * (1-x));
-  return <span class="flex items-center w-full lg:w-min">
-    <p class="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">{`${(Math.round(x * 1000) / 10).toFixed(1)}%`}</p>
-    <div class="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
+  return <span className="flex items-center w-full lg:w-min">
+    <p className="text-sm text-neutral-600 dark:text-neutral-400 text-sm mr-2">{`${(Math.round(x * 1000) / 10).toFixed(1)}%`}</p>
+    <div className="w-full lg:w-60 h-5 bg-neutral-200 dark:bg-neutral-700 rounded border border-neutral-300 dark:border-neutral-600 overflow-hidden">
         <div
-            class="h-full rounded text-xs"
+            className="h-full rounded text-xs"
             style={{
                 width: `${100 * x}%`,
                 backgroundColor: `rgb(${red}, ${green}, 0)`,

@@ -51,7 +51,7 @@ interface ICategoryItem {
 
 export const CategoryItem = ({ cat }: ICategoryItem) => {
   return <a
-    class="bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 hover:dark:bg-neutral-700 px-2 py-1 rounded-full whitespace-nowrap"
+    className="bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 hover:dark:bg-neutral-700 px-2 py-1 rounded-full whitespace-nowrap"
     href={CATEGORIES[cat]}
   >
     {cat2name(cat)}
@@ -63,11 +63,11 @@ interface ICategoryGrid {
 }
 
 export const CategoryGrid = ({ cat }: ICategoryGrid) => {
-  return <div class="grid grid-cols-2 lg:grid-cols-3 text-sm gap-1">
+  return <div className="grid grid-cols-2 lg:grid-cols-3 text-sm gap-1">
     {(Object.keys(cat) as Category[]).map((key, i) => (
       <a
         href={CATEGORIES[key]}
-        class={`
+        className={`
           px-2 py-1 rounded-md text-center break-words
           ${cat[key] && 'bg-green-200 hover:bg-green-300 dark:bg-green-800 hover:dark:bg-green-700'}
           ${!cat[key] && 'bg-red-200 hover:bg-red-300 dark:bg-red-800 hover:dark:bg-red-700'}
@@ -87,7 +87,7 @@ interface ICategoryToggle {
 
 export const CategoryToggle = ({ cat, state, setState }: ICategoryToggle) => {
   return <a
-    class="bg-neutral-200 hover:bg-neutral-300 px-2 py-1 rounded-full whitespace-nowrap"
+    className="bg-neutral-200 hover:bg-neutral-300 px-2 py-1 rounded-full whitespace-nowrap"
     href={CATEGORIES[cat]}
   >
     {cat2name(cat)}
