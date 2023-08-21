@@ -26,7 +26,7 @@ const t = useTranslations(lang);
           href={i18n_href(`/compound/${_id}`, lang)}
           class="group flex flex-col gap-1 items-end"
         >
-          <CompoundNameList src={sources}/>
+          <CompoundNameList src={sources} inchi={inchi}/>
         </a> : <CompoundName name={inchi} metabolite={true} site='none' />}
       </div> 
     </div>

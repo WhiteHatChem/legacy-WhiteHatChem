@@ -14,6 +14,19 @@ import { no_names, shortest } from '../common/utils';
 
 type Sources = 'psychonaut' | 'tripsit' | 'isomerdesign' | 'pubchem' | 'druglab' | 'drugmap' | 'wiki' | 'none';
 function is_toxic(src: MoleculeSource) { return src.hsdb_names !== null;}
+function no_src(src: MoleculeSource | null): boolean {
+  return src === null || (
+    src.psychonaut_names === null &&
+    src.tripsit_names === null &&
+    src.isomerd_names === null &&
+    src.druglab_names === null &&
+    src.hsdb_names === null &&
+    src.drugmap_name === null &&
+    src.wiki_name === null &&
+    src.market_name === null &&
+    src.wiki_name === null
+  );
+}
 
 /* CompoundSvg */
 
@@ -168,18 +181,8 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
     wiki_name,
   } = sources;
 
-  const nosite = (
-    psychonaut_names === null &&
-    tripsit_names === null &&
-    isomerd_names === null &&
-    druglab_names === null &&
-    hsdb_names === null &&
-    drugmap_name === null &&
-    wiki_name === null
-  );
-
   return (
-    nosite ? <CompoundName site='none' name={inchi} toxic={toxic} />
+    no_src(sources) ? <CompoundName site='none' name={inchi} toxic={toxic} />
     : <>
         <CompoundNameLink lang={lang} names={tripsit_names} ids={null} site={'tripsit'} toxic={toxic} col={col} />
         <CompoundNameLink lang={lang} names={psychonaut_names} ids={null} site={'psychonaut'} toxic={toxic} col={col} />
@@ -197,9 +200,10 @@ export const CompoundNameLinks = ({ data, col, lang}: ICompoundNameLinks & LangK
 
 interface ICompoundNameList  {
   src: MoleculeSource;
+  inchi?: string;
 }
 
-export const CompoundNameList = ({ src }: ICompoundNameList) => {
+export const CompoundNameList = ({ src, inchi }: ICompoundNameList) => {
   const {
     psychonaut_names,
     tripsit_names,
@@ -211,7 +215,8 @@ export const CompoundNameList = ({ src }: ICompoundNameList) => {
   } = src;
   const toxic = is_toxic(src);
 
-  return <>
+  return (no_src(src) && (inchi !== undefined)) ? <CompoundName site='none' name={inchi} toxic={toxic} /> : 
+    (no_src(src) && (inchi === undefined)) ? <div className='text-red-500'>Shouldn't occur</div> : <>
     {psychonaut_names && psychonaut_names.map(name => <CompoundName key={name} name={name} site="psychonaut" toxic={toxic} />)}
     {tripsit_names && tripsit_names.map(name => <CompoundName key={name} name={name} site="tripsit" toxic={toxic}/>)}
     {isomerd_names && isomerd_names.map(name => <CompoundName key={name} name={name} site="isomerdesign" toxic={toxic}/>)}
@@ -237,7 +242,7 @@ export const CompoundCard = ({ data, _id, lang }: ICompoundCard & LangKey) => {
     className="flex flex-col items-center group"
   >
     <div className="flex flex-col">
-      <CompoundNameList src={sources}/>
+      <CompoundNameList src={sources} inchi={data.inchi}/>
       {(no_names(sources) && synonyms !== null) && <h2
         className={`group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-sm leading-tight`}
       >

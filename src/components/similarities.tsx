@@ -172,31 +172,30 @@ export const CompoundSimilarities = ({ data, lang }: ICompoundSimilarities & Lan
       { sim_loader.data ? sim_loader.data.data.filter(x => (x._id !== data._id)).map((x,i) => {
           const sim = x.proximity_distance;
           return <div key={x._id}>
-            {
-              (x.sources === null) ?
-                <div className="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
-                  <div className="flex flex-row items-center justify-start w-full grow">
-                    <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
-                    <div className="flex flex-col">
-                      <CompoundNameLinks data={x} lang={lang} />
-                    </div>
+            {/* PROBABLY DEPRECTATED I DONT KNOW
+            (x.sources === null) ?
+              <div className="group py-1 flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16">
+                <div className="flex flex-row items-center justify-start w-full grow">
+                  <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
+                  <div className="flex flex-col">
+                    <CompoundNameLinks data={x} lang={lang} />
                   </div>
-                  <PercentBar x={sim}/>
                 </div>
-              :
-                <a
-                  href={i18n_href(`/compound/${x._id}`, lang)}
-                  className="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
-                >
-                  <div className="flex py-1 flex-row items-center justify-start w-full grow">
-                    <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
-                    <div className="flex flex-col">
-                      <CompoundNameList src={x.sources} />
-                    </div>
-                  </div>
-                  <PercentBar x={sim}/>
-                </a>
-            }
+                <PercentBar x={sim}/>
+              </div>
+            */}
+            <a
+              href={i18n_href(`/compound/${x._id}`, lang)}
+              className="group flex lg:flex-row flex-col gap-2 items-center justify-between min-h-16"
+            >
+              <div className="flex py-1 flex-row items-center justify-start w-full grow">
+                <span className="w-12 text-center text-indigo-400 dark:text-indigo-200 text-xl">{i}</span>
+                <div className="flex flex-col">
+                  <CompoundNameList src={x.sources} inchi={x.inchi} />
+                </div>
+              </div>
+              <PercentBar x={sim}/>
+            </a>
             { i+1 < sim_loader.data!.data.length && <hr className="dark:border-neutral-800"/>}
           </div>
         }) : sim_loader.error ? <p className="text-red-400">
