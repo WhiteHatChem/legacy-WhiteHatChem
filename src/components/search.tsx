@@ -20,7 +20,6 @@ export const SearchBox = ({ search, discover, lang }: ISearchBox & LangKey) => {
               name="q"
               id="search"
               value={search}
-              readOnly
               placeholder={t('search.placeholder')}
           />
       </div>
