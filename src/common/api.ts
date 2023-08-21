@@ -149,3 +149,18 @@ export async function getSimilarities(
   const data: SimilarMolecules = await r.json();
   return data
 }
+
+export async function getSDF(
+  _id: string,
+  controller: AbortController,
+): Promise<string> {
+  const r = await fetch(
+    `${SERVER}/static/sdf/${_id}.sdf`,
+    {
+      method: 'GET',
+      signal: controller.signal,
+    }
+  );
+  const data = await r.text();
+  return data
+}

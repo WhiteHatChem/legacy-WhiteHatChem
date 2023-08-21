@@ -1,9 +1,12 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { Box } from 'lucide-react';
+import { getSDF } from "../common/api";
+import { useDataLoader } from "../common/hooks";
+import { Spinner } from "./components";
 
 interface MoleculeViewerProps {
   children: ReactNode
-  inchi: string;
+  _id: string;
 }
 
 const useScript = (url: string) => {
@@ -31,29 +34,33 @@ const useScript = (url: string) => {
   return scriptLoadedSuccessfully;
 }
 
-export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps) {
+export default function MoleculeViewer({ children, _id }: MoleculeViewerProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [view3D, setView3D] = useState(false);
-  const [SDF, setSDF] = useState<string | null>(null);
+  const sdf_loader = useDataLoader<string>();
   const nglScriptLoaded = useScript("/ngl.js");
 
-  // Fetch SDF
   useEffect(() => {
     const abortController = new AbortController();
-    try {
-      fetch(
-        `https://cactus.nci.nih.gov/chemical/structure/${inchi}/file?format=sdf&get3d=True`,
-        { signal: abortController.signal }
-      ).then((res) => res.text()).then((sdf) => setSDF(sdf));
-    } catch (e) {
-      if (!abortController.signal.aborted) {console.log(`Aborted: ${e}`)}
+    let handler = async () => {
+      sdf_loader.setLoading();
+      try {
+        const _data = await getSDF( _id, abortController );
+        sdf_loader.setData(_data)
+      } catch (e: any) {
+        sdf_loader.setError(e.message)
+      }
     }
-    return () => abortController.abort();
-  }, [inchi]);
+
+    handler()
+    return () => {
+      abortController.abort()
+    }
+  }, [_id])
 
   // Load NGL
   useEffect(() => {
-    if (!view3D || !nglScriptLoaded || !SDF) return;
+    if (!view3D || !nglScriptLoaded || !sdf_loader.data) return;
 
     // @ts-ignore
     var stage = new NGL.Stage( "glmol", {cameraFov: 10} );
@@ -63,11 +70,11 @@ export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps)
         stage.handleResize();
     }, false );
 
-    var blob = new Blob([SDF], { type: 'text/plain' });
+    var blob = new Blob([sdf_loader.data.data], { type: 'text/plain' });
     var file = new File([blob], "foo.sdf", {type: "text/plain"});
     stage.loadFile( file , { defaultRepresentation: true } );
 
-  }, [view3D, SDF]);
+  }, [view3D, sdf_loader.data]);
 
   // Set canvas background transparent
   useEffect(() => {
@@ -87,7 +94,15 @@ export default function MoleculeViewer({ children, inchi }: MoleculeViewerProps)
 
 
   return <div className="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
-    { !view3D ? children : <div id="glmol" className="w-full h-[400px]"/> }
+    {
+      !view3D ?  children :
+      sdf_loader.loading ? <div className="w-full h-[400px]"><Spinner /></div> :
+      sdf_loader.error ? <p className="text-red-400 w-full h-96">
+        Service under maintenance, couldn't fetch data: {sdf_loader.error.message}
+      </p> :
+      sdf_loader.data ? <div id="glmol" className="w-full h-[400px]"/>
+      : null
+    }
     <button
       onClick={() => setView3D(!view3D)}
       className={`
