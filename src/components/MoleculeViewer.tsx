@@ -38,6 +38,7 @@ export default function MoleculeViewer({ children, _id }: MoleculeViewerProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [view3D, setView3D] = useState(false);
   const sdf_loader = useDataLoader<string>();
+  const [ngl_fail, set_ngl_fail] = useState<string | null>(null);
   const nglScriptLoaded = useScript("/ngl.js");
 
   useEffect(() => {
@@ -60,20 +61,25 @@ export default function MoleculeViewer({ children, _id }: MoleculeViewerProps) {
 
   // Load NGL
   useEffect(() => {
-    if (!view3D || !nglScriptLoaded || !sdf_loader.data) return;
+    try {
+      if (!view3D || !nglScriptLoaded || !sdf_loader.data) return;
+      set_ngl_fail(null);
 
-    // @ts-ignore
-    var stage = new NGL.Stage( "glmol", {cameraFov: 10} );
-    
-    // Handle window resizing
-    window.addEventListener( "resize", function( event ){
-        stage.handleResize();
-    }, false );
+      // @ts-ignore
+      var stage = new NGL.Stage( "glmol", {cameraFov: 10} );
 
-    var blob = new Blob([sdf_loader.data.data], { type: 'text/plain' });
-    var file = new File([blob], "foo.sdf", {type: "text/plain"});
-    stage.loadFile( file , { defaultRepresentation: true } );
+      // Handle window resizing
+      window.addEventListener( "resize", function( event ){
+          stage.handleResize();
+      }, false );
 
+      var blob = new Blob([sdf_loader.data.data], { type: 'text/plain' });
+      var file = new File([blob], "foo.sdf", {type: "text/plain"});
+      stage.loadFile( file , { defaultRepresentation: true } );
+
+    } catch (e: any) {
+      set_ngl_fail(e.message);
+    }
   }, [view3D, sdf_loader.data]);
 
   // Set canvas background transparent
@@ -96,8 +102,11 @@ export default function MoleculeViewer({ children, _id }: MoleculeViewerProps) {
   return <div className="relative flex justify-center w-full max-w-xl mb-4" ref={rootRef}>
     {
       !view3D ?  children :
-      sdf_loader.loading ? <div className="w-full h-[400px]"><Spinner /></div> :
-      sdf_loader.error ? <p className="text-red-400 w-full h-96">
+      (ngl_fail !== null) ? <p className="text-red-400 w-full text-center my-28">
+        3D visualization isn't supported by your browser: {ngl_fail}
+      </p> :
+      sdf_loader.loading ? <div className="w-full h-[400px] flex items-center justify-center"><Spinner /></div> :
+      sdf_loader.error ? <p className="text-red-400 w-full text-center my-28">
         Service under maintenance, couldn't fetch data: {sdf_loader.error.message}
       </p> :
       sdf_loader.data ? <div id="glmol" className="w-full h-[400px]"/>
