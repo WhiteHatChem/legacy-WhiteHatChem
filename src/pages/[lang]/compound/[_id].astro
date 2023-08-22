@@ -30,7 +30,7 @@ const result = await getMoleculeByID(_id);
 }
 </style>
 
-<Base title={result._type === 'data' ? mol_name(result.data) : result.m}>
+<Base title={result._type === 'data' ? mol_name(result.data) : result.m} chartjs>
 	<Main>
         { result._type === 'data' ? (() => {
           const data = result.data;
